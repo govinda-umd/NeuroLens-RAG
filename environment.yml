@@ -1,0 +1,35 @@
+name: neurolens
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # Scientific Python
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - nilearn
+
+  # Notebooks and visualization
+  - jupyterlab
+  - ipykernel
+  - matplotlib
+  - plotly
+
+  # Configuration and utilities
+  - pyyaml
+  - tqdm
+
+  # Development
+  - pytest
+  - ruff
+
+  # PyTorch and later application packages
+  - pip:
+      - torch
+      
+prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens

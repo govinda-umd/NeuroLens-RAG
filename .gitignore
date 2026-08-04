@@ -1,0 +1,65 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Conda / virtual environments
+.conda/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing and linting
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# VS Code machine-specific settings
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Raw and processed datasets
+data/raw/
+data/interim/
+data/processed/
+data/external/
+
+# Neuroimaging files
+*.nii
+*.nii.gz
+*.dtseries.nii
+*.dscalar.nii
+*.dlabel.nii
+
+# Model checkpoints and experiment artifacts
+models/
+checkpoints/
+artifacts/
+outputs/
+logs/
+runs/
+wandb/
+mlruns/
+
+# Common checkpoint formats
+*.pt
+*.pth
+*.ckpt
+
+# Temporary files
+*.tmp
+*.temp

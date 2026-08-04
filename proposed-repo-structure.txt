@@ -1,0 +1,61 @@
+neurolens-rag/
+│
+├── README.md
+├── environment.yml
+├── conda-lock.yml
+├── .gitignore
+├── pyproject.toml
+│
+├── notebooks/
+│   ├── 00_environment_check.ipynb
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_gru_baseline.ipynb
+│   ├── 03_transformer_baseline.ipynb
+│   └── 04_embedding_retrieval.ipynb
+│
+├── src/
+│   └── neurolens/
+│       ├── __init__.py
+│       ├── data_setup.py
+│       ├── model_builder.py
+│       ├── engine.py
+│       ├── evaluation.py
+│       ├── retrieval.py
+│       ├── explainability.py
+│       └── utils.py
+│
+├── scripts/
+│   ├── train_gru.py
+│   ├── train_transformer.py
+│   └── build_embedding_index.py
+│
+├── configs/
+│   ├── gru_baseline.yaml
+│   └── transformer_small.yaml
+│
+├── tests/
+│   ├── test_data_setup.py
+│   ├── test_models.py
+│   └── test_retrieval.py
+│
+├── data/
+│   └── README.md
+│
+├── models/
+│   └── .gitkeep
+│
+└── .github/
+    └── workflows/
+        └── tests.yml
+
+
+#=========================
+Dataset/DataLoader       → data_setup.py
+Model classes            → model_builder.py
+Training/test loops      → engine.py
+Metrics                   → evaluation.py
+Save/load functions      → utils.py
+Embedding search         → retrieval.py
+Saliency and lesions     → explainability.py
+
+We will prototype each part in a notebook first and modularize only after it works.
