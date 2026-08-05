@@ -26,3 +26,9 @@ and scientific documents.
 conda env create -f environment.yml
 conda activate neurolens
 ```
+
+### PyTorch
+
+PyTorch installation may vary by operating system and accelerator.
+After creating the environment, verify the installation using
+`notebooks/00_environment_check.ipynb`.

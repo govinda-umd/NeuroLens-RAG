@@ -13,6 +13,7 @@ dependencies:
   - scipy
   - scikit-learn
   - nilearn
+  - nibabel
 
   # Notebooks and visualization
   - jupyterlab
@@ -28,8 +29,12 @@ dependencies:
   - pytest
   - ruff
 
-  # PyTorch and later application packages
+  # Packages installed from PyPI
   - pip:
       - torch
-      
-prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens
+      - pymupdf4llm
+      - sentence-transformers
+      - streamlit
+
+
+# prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens

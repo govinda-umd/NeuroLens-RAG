@@ -38,6 +38,13 @@ data/interim/
 data/processed/
 data/external/
 
+# Local papers
+data/papers/*
+!data/papers/README.md
+
+# Generated retrieval indexes
+artifacts/
+
 # Neuroimaging files
 *.nii
 *.nii.gz
