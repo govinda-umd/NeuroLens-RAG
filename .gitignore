@@ -31,6 +31,8 @@ htmlcov/
 .env
 .env.*
 !.env.example
+.aws/
+*.pem
 
 # Raw and processed datasets
 data/raw/

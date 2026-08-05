@@ -35,6 +35,8 @@ dependencies:
       - pymupdf4llm
       - sentence-transformers
       - streamlit
+      - awscli
+      - boto3
 
 
 # prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens
