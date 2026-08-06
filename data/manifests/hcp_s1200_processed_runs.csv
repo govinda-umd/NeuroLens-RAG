@@ -1,0 +1,22 @@
+subject_id,task,run,status,output_dir,n_timepoints,n_rois,n_conditions,message
+100307,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_LR,,,,Processed metadata already exists.
+100307,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
+100307,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
+100307,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100307,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100408,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
+100408,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
+100408,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100408/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100408,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100408/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101006,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
+101006,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
+101006,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101006/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101006,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101006/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101107,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
+101107,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
+101107,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101107/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101107,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101107/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101309,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
+101309,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
+101309,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101309,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
