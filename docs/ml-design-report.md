@@ -1,6 +1,6 @@
 # NeuroLens-RAG — ML Design Report: Brain Decoding
 
-> **Status: design specification, not a results report.** No model has been trained yet. The data pipeline (`02_data.ipynb`) is complete and processed HCP MOTOR-task bundles exist under `data/processed/hcp_ya_s1200/runs/`. `03_dataset_dataloaders.ipynb` (Dataset/DataLoader construction) has not been implemented yet, and none of the four planned experiments (GRU / Transformer × classification-only / +HRF) have been run. This document specifies the design so implementation and results can be filled in incrementally. Expands on [§8 Learning Setup](project-handoff-summary.md#8-learning-setup) of the project handoff summary.
+> **Status: v1 implemented and trained.** All four planned experiments (GRU / Transformer × classification-only / +HRF) have been implemented in `src/neurolens/` and run end-to-end via `notebooks/03_dataset_dataloaders.ipynb` → `04_models.ipynb` → `05_train_eval_compare.ipynb`. This is a first pass (5 subjects, 5 epochs) — see §9 for results and caveats, and §11 for what's still open. Expands on [§8 Learning Setup](project-handoff-summary.md#8-learning-setup) of the project handoff summary.
 
 ## 1. Problem Statement
 
@@ -79,21 +79,23 @@ hrf_loss = mse_loss(pred_hrf, true_y_hrf)
 total_loss = classification_loss + lambda_hrf * hrf_loss   # lambda_hrf = 0.1 initial
 ```
 
-- `lambda_hrf` is a starting guess — must be re-tuned once the two losses' numerical magnitudes are measured empirically (they are not naturally on the same scale: cross-entropy over 6 classes vs. MSE over normalized continuous targets).
+- `lambda_hrf = 0.1` was used as-is for v1 (untuned). §9 shows evidence it may be too small — the HRF head's per-condition R² is mostly negative despite positive correlation, suggesting the regression loss isn't dominant enough to fit amplitude/scale well.
 - **Class weights** computed from training subjects only: `weight[c] = num_training_samples / (num_classes × samples_in_class_c)`.
 
-**Not yet decided (open):**
-- Optimizer (AdamW is the default assumption, unconfirmed)
-- Learning rate / schedule
-- Batch size (bounded by 16GB unified memory + MPS backend behavior, not yet profiled)
-- Number of epochs / early-stopping criterion (proposed: early stop on validation macro F1 plateau)
-- Weight decay, gradient clipping
+**v1 choices (untuned, first pass):**
+- Optimizer: AdamW, `lr=1e-3`, `weight_decay=1e-4`
+- Schedule: `CosineAnnealingLR` over the 5 training epochs
+- Batch size: 64 (worked fine on 16GB unified memory / MPS; not stress-tested at larger sizes)
+- Epochs: fixed at 5 (chosen for fast iteration, not early-stopped) — training curves in `05_train_eval_compare.ipynb` suggest val macro F1 was still trending upward for most runs at epoch 5
+- Weight decay: 1e-4; no gradient clipping
 
-## 5. Training Protocol (planned)
+**Still open**: a real LR/batch-size/optimizer sweep, early stopping instead of a fixed epoch count, and `lambda_hrf` tuning (see §11).
 
-- **Split**: subject-level (never window-level) — 3 train / 1 val / 1 test subjects initially, to avoid near-duplicate overlapping windows leaking across splits.
-- **Checkpointing**: save best checkpoint by validation macro F1; convention TBD (likely `models/<experiment_name>/best.pt` + a metrics JSON, consistent with the modular PyTorch project structure already used elsewhere in the repo).
-- **Experiment tracking**: none wired up yet. Given portfolio-quality documentation goals, a lightweight tracker (e.g. a plain CSV/JSON run log, or a local MLflow/W&B-offline instance) should be decided before Experiment 1 runs, not after.
+## 5. Training Protocol
+
+- **Split**: subject-level (never window-level) — train = `100307, 100408, 101006`, val = `101107`, test = `101309`.
+- **Checkpointing**: best checkpoint by validation macro F1, saved to `models/<experiment_name>/best.pt` (gitignored — local artifacts only).
+- **Experiment tracking**: none wired up yet beyond the consolidated `results/motor_v1_results.json` (full per-epoch history + final metrics for all 4 experiments). A lightweight tracker (CSV/JSON run log, or local MLflow/W&B-offline) is still worth adding once the number of experiments grows beyond what fits in one notebook run.
 
 ## 6. Evaluation Protocol
 
@@ -103,14 +105,16 @@ total_loss = classification_loss + lambda_hrf * hrf_loss   # lambda_hrf = 0.1 in
 
 Report both per-experiment and side-by-side across the 4-experiment ladder so the effect of (a) architecture and (b) the auxiliary HRF objective can each be isolated.
 
-## 7. Experimental Ladder (planned runs)
+## 7. Experimental Ladder
 
 | # | Encoder | Objective | Status |
 |---|---|---|---|
-| 1 | GRU | classification-only | not started |
-| 2 | GRU | classification + HRF | not started |
-| 3 | Transformer | classification-only | not started |
-| 4 | Transformer | classification + HRF | not started |
+| 1 | GRU | classification-only | **done** |
+| 2 | GRU | classification + HRF | **done** |
+| 3 | Transformer | classification-only | **done** |
+| 4 | Transformer | classification + HRF | **done** |
+
+Run in [`05_train_eval_compare.ipynb`](../notebooks/05_train_eval_compare.ipynb), 5 epochs each, AdamW + cosine LR annealing, `lambda_hrf = 0.1`, seed 42, batch size 64. Full per-epoch history: [`results/motor_v1_results.json`](../results/motor_v1_results.json).
 
 ## 8. Current Implementation Status
 
@@ -118,22 +122,31 @@ Report both per-experiment and side-by-side across the 4-experiment ladder so th
 |---|---|
 | `01_pdf_ingestion.ipynb` | done |
 | `02_data.ipynb` (HCP → ROI bundles) | done — processed MOTOR runs exist under `data/processed/hcp_ya_s1200/runs/` |
-| `03_dataset_dataloaders.ipynb` | not started (next notebook) |
-| `04_gru_baseline.ipynb` | not started |
-| `05_transformer_baseline.ipynb` | not started |
-| `src/` training/eval loop modules | not started |
-| Any trained model / results | **none yet** |
+| `03_dataset_dataloaders.ipynb` | done — `src/neurolens/data_setup.py` |
+| `04_models.ipynb` | done — `src/neurolens/model_builder.py` |
+| `05_train_eval_compare.ipynb` | done — `src/neurolens/engine.py`, `src/neurolens/evaluation.py` |
+| Trained models / results | **done for v1** — checkpoints under `models/` (local, gitignored), metrics in `results/motor_v1_results.json` |
 
 ## 9. Results
 
-_No experiments have been run yet. This section is a placeholder to fill in once Experiments 1–4 are trained._
+First pass, 5 subjects (3 train / 1 val / 1 test), 5 epochs. **Caveat: a single test subject (101309) means these numbers carry high variance — not yet a reliable estimate of generalization.** Treat as a first checkpoint to compare future changes against, not a final number.
 
-| Experiment | Val macro F1 | Test macro F1 | Val balanced acc | HRF val MSE | Notes |
-|---|---|---|---|---|---|
-| 1 — GRU, cls-only | — | — | — | n/a | |
-| 2 — GRU, cls+HRF | — | — | — | — | |
-| 3 — Transformer, cls-only | — | — | — | n/a | |
-| 4 — Transformer, cls+HRF | — | — | — | — | |
+| Experiment | Params | Best val macro F1 | Test macro F1 | Test balanced acc | Test HRF MSE | Test HRF MAE |
+|---|---|---|---|---|---|---|
+| 1 — GRU, cls-only | 165,894 | 0.682 | 0.558 | 0.572 | n/a | n/a |
+| 2 — GRU, cls+HRF | 166,539 | 0.681 | 0.586 | 0.596 | 0.118 | 0.249 |
+| 3 — Transformer, cls-only | 304,262 | 0.709 | 0.621 | 0.629 | n/a | n/a |
+| 4 — Transformer, cls+HRF | 304,907 | 0.685 | 0.632 | 0.638 | 0.150 | 0.303 |
+
+**Observations:**
+
+- **Transformer > GRU** on this split for both objectives (test macro F1 0.62–0.63 vs. 0.56–0.59), consistent with the extra capacity (~305K vs ~166K params) and full-window self-attention vs. a single recurrent hidden state.
+- **The auxiliary HRF objective modestly helped classification** for both encoders (GRU: 0.558→0.586 test macro F1; Transformer: 0.621→0.632), supporting the hypothesis in §1 that the auxiliary task regularizes the shared representation — though with n=1 test subject this could also be noise, not a real effect.
+- **HRF regression is only partially working**: per-condition correlations between predicted and true HRF regressors are positive and moderate (GRU: 0.32–0.44; Transformer: 0.17–0.51 across conditions), but **R² is mostly negative** (e.g. Transformer: -0.07 to -0.53). This means the model tracks the general shape/timing but not the amplitude/scale — predictions correlate with the target but have subpar absolute fit. Plausible causes worth investigating before trusting the HRF head: `lambda_hrf = 0.1` may be too small to actually fit the regression well (classification loss dominates), only 5 epochs may be too few for the regression head to converge, or the HRF targets' scale/normalization may need revisiting. Not investigated further in this pass, per the "5 epochs to run fast" scope for v1.
+- **Per-class F1 is uneven** (e.g. GRU exp1: tongue F1=0.71 vs. right_foot F1=0.39), plausibly reflecting real motor-cortex signal differences (e.g. tongue movements activate a larger, less spatially overlapping cortical region than foot movements) but also plausibly an artifact of the tiny 5-subject sample — worth re-examining once more subjects are added.
+- Best-validation-epoch selection landed at epoch 5/5 for GRU experiments and epoch 4/5 for Transformer experiments — training curves in the notebook show val macro F1 still trending upward at 5 epochs for most runs, suggesting more epochs (not just LR scheduling) may still help; not explored in this pass to keep training fast.
+
+**Not yet done** (explicitly out of scope for this first pass, candidates for the next iteration): more than 5 subjects, more than 5 epochs, `lambda_hrf` tuning, hyperparameter sweep (LR/batch size/optimizer), alternative Transformer pooling, and any of the tokenization/architecture alternatives in [literature-notes-tokenization.md](literature-notes-tokenization.md).
 
 ## 10. Hardware/Compute Considerations (Apple M3, 16GB unified memory)
 
@@ -149,7 +162,9 @@ _No experiments have been run yet. This section is a placeholder to fill in once
 3. **`lambda_hrf` tuning strategy** — grid search vs. uncertainty-weighted multi-task loss (e.g. Kendall et al. homoscedastic uncertainty weighting) instead of a fixed scalar.
 4. **Pooling strategy for the Transformer** — final-token vs. mean-pooling vs. attention-pooling vs. a `[CLS]` token.
 5. **Local LLM/RAG interface** — how does a trained brain/task representation eventually connect to a RAG pipeline running entirely on this iMac? Candidate directions: (a) generate a structured text description of decoded state + active networks and feed it as a retrieval query against the existing `01_pdf_ingestion` paper index; (b) project `z_brain` into the embedding space of a local small LLM via a learned adapter; (c) run a quantized local LLM (e.g. via Ollama, llama.cpp, or Apple MLX) purely for the generation/interpretation step, keeping retrieval separate and classical (dense + optional BM25/rerank, per §1 of the handoff summary). Needs a hardware/memory budget decision given the 16GB ceiling shared with model training.
-6. **Optimizer/LR/batch-size sweep** — none of these have been chosen yet; needs a short calibration pass before Experiment 1.
+6. **Optimizer/LR/batch-size/epoch-count sweep** — v1 used untuned defaults (AdamW, lr=1e-3, batch=64, 5 fixed epochs); val macro F1 was still rising at epoch 5 for most runs, so more epochs and/or a real sweep is the most likely easy win before anything more elaborate.
+7. **Why is HRF R² negative despite positive correlation?** — v1's multi-task experiments show the HRF head tracks direction/timing (correlation 0.17–0.51) but fits amplitude poorly (R² mostly negative). Worth checking whether this is `lambda_hrf` being too small, too few epochs, or a target-scaling issue, before reading too much into the auxiliary-task hypothesis from §1.
+8. **More subjects** — v1's 1-subject test set makes every number here high-variance; the ladder should be re-run on more subjects before drawing real conclusions about GRU vs. Transformer or classification-only vs. multi-task.
 
 ## References
 
