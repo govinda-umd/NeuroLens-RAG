@@ -23,7 +23,7 @@ from sentence_transformers import SentenceTransformer
 from torch import nn
 
 from .interpretability import NETWORK_NAMES, compare_methods
-from .retrieval import TextChunk, retrieve_chunks
+from .retrieval import TextChunk, retrieve_and_rerank, retrieve_chunks
 
 METHODS = ["saliency", "integrated_gradients", "shapley", "lime"]
 GRADIENT_METHODS = ["saliency", "integrated_gradients"]
@@ -170,11 +170,19 @@ def explain_decoded_window(
     corpus_chunks: list[TextChunk],
     corpus_embeddings: np.ndarray,
     generate_fn=stub_generate,
+    reranker=None,
+    candidate_k: int = 20,
     top_k: int = 8,
 ) -> dict:
     """The one-file pipeline: ROI window -> decode -> RSN attribution ->
-    query -> retrieval -> LLM text. Returns every intermediate artifact for
-    auditability, not just the final text."""
+    query -> retrieval (optionally reranked) -> LLM text. Returns every
+    intermediate artifact for auditability, not just the final text.
+
+    Pass a `reranker` (from `retrieval.load_reranker()`) to retrieve
+    `candidate_k` dense candidates and rerank down to `top_k` with a
+    cross-encoder — no training data needed, see
+    docs/case1-summary-report.md §10. Omit it to use plain dense retrieval.
+    """
     decoded = decode_window(model, x, device)
     condition = class_to_condition[str(decoded["pred_class"])]
 
@@ -182,13 +190,24 @@ def explain_decoded_window(
 
     query_text = build_query_text(condition, decoded["confidence"], rsn_attribution, subject_id, task, run)
 
-    retrieved_df = retrieve_chunks(
-        query_text,
-        model=embedding_model,
-        embeddings=corpus_embeddings,
-        chunks=corpus_chunks,
-        top_k=top_k,
-    )
+    if reranker is not None:
+        retrieved_df = retrieve_and_rerank(
+            query_text,
+            model=embedding_model,
+            embeddings=corpus_embeddings,
+            chunks=corpus_chunks,
+            reranker=reranker,
+            candidate_k=candidate_k,
+            top_k=top_k,
+        )
+    else:
+        retrieved_df = retrieve_chunks(
+            query_text,
+            model=embedding_model,
+            embeddings=corpus_embeddings,
+            chunks=corpus_chunks,
+            top_k=top_k,
+        )
     retrieved = retrieved_df.to_dict(orient="records")
 
     prompt = build_llm_prompt(query_text, retrieved)

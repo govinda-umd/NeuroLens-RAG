@@ -76,9 +76,24 @@ Per-window predictions and per-window attribution (all 4 methods × 7 networks, 
 - **Prompt design**: a structured stance-labeling prompt forces the model to label each retrieved excerpt SUPPORTS/CONTRADICTS/UNRELATED with a citation before synthesizing — auditable, and discourages fabricating connections to weakly-related material.
 - **Observed effect of corpus quality**: with the original single-paper corpus, retrieval similarity topped out at ~0.34 and the LLM over-agreed (marked an unrelated paper as "supporting" a decode). After growing to 6 targeted papers, similarity rose to ~0.46–0.585 and the LLM correctly distinguished a genuinely relevant excerpt (Barch 2013, explicitly describing the "motor mapping task" and right-hand activation) from tangential background material (Yeo 2011, Schaefer 2018), marking those UNRELATED instead of stretching for a connection. **Corpus quality, not just model choice, was the dominant lever.**
 
-## 8. What is *not* evaluated yet — an honest gap
+## 8. RAG evaluation and cross-encoder reranking
 
-There is currently **no systematic evaluation of retrieval quality or LLM generation quality**. The only evaluation that exists anywhere in the repo is a small hand-labeled "hit@5" page-retrieval benchmark in `01_pdf_ingestion.ipynb` (5 example queries against the *original single paper's* page numbers) — it doesn't apply to the current 6-paper corpus (page numbering isn't unique across papers) and says nothing about the actual RSN-derived queries `pipeline.py` generates, or about whether the LLM's SUPPORTS/CONTRADICTS/UNRELATED labels are actually correct. Building a real evaluation set (a handful of decoded-state queries with hand-verified relevant papers, plus a rubric for checking the LLM's stance labels against that) is the most important missing piece before trusting this pipeline's output at face value.
+[`08_rag_evaluation.ipynb`](../notebooks/08_rag_evaluation.ipynb) builds a small, honestly-labeled evaluation set — reading all 6 corpus papers to make real relevance judgments (not guessing) about which 3 of the 6 directly ground a MOTOR-condition decoded-state query (Barch 2013, Yeo 2011, Schaefer 2018) versus which 3 don't (Van Essen 2013, van den Heuvel & Sporns 2013, Misra & Surampudi 2021) — then measures retrieval and generation against it. **Caveat**: 5 near-identical queries against 6 papers is a small, first-pass evaluation, good for catching an obviously broken component, not for certifying quality at scale.
+
+**Retrieval — dense-only vs. dense + cross-encoder rerank** (`cross-encoder/ms-marco-MiniLM-L-6-v2`, no training data needed, added to `src/neurolens/retrieval.py::retrieve_and_rerank`):
+
+| Method | Precision@5 | Recall (relevant papers)@5 |
+|---|---|---|
+| Dense-only | 1.00 | 0.80 |
+| Dense + rerank | 1.00 | **1.00** |
+
+Precision was already perfect at this corpus size — every top-5 chunk came from a relevant paper either way. Reranking's real, measured benefit was **recall**: dense-only retrieval sometimes let one relevant paper get crowded out of the top-5 by chunks from the other two (2.4/3 papers represented on average); reranking recovered full 3-of-3 coverage on every query. A genuine, if modest, improvement for zero training cost — now the default recommended retrieval path in `pipeline.py` (pass a `reranker` from `retrieval.load_reranker()`).
+
+**LLM stance-label spot-check** (2 examples, real `generate_fn` calls) — mixed, worth internalizing before trusting generated text at face value:
+- One example was clean and accurate: correctly labeled the two genuinely relevant excerpts SUPPORTS (citing the actual "motor mapping task" / "right hand" content) and three background excerpts UNRELATED.
+- The other got the coarse SUPPORTS/UNRELATED label defensible but stated a **factually wrong justification** — describing the SomMot network as involved in "working memory/cognitive control" (that's the *Cont* network's role, not SomMot's).
+
+**Bottom line**: retrieval is solid and measured, not assumed, at this corpus size. Generation is more fragile — the 3B model can produce specific, confident-sounding, and simply *wrong* neuroscience claims even when its coarse relevance judgment is fine. Treat this pipeline's generated text as a retrieval-grounded draft for a researcher to verify, not a citable explanation, until stance-label accuracy is evaluated at more than 2-example scale.
 
 ## 9. Engineering notes worth remembering
 
@@ -90,8 +105,8 @@ There is currently **no systematic evaluation of retrieval quality or LLM genera
 Roughly in order of expected value for effort, given the hardware ceiling already established (small models train in seconds; the actual bottleneck throughout has been *data volume*, not compute):
 
 1. **More subjects.** The epoch sweep's own evidence (val/test divergence) points here directly — 3 test subjects is a small generalization estimate. This is the highest-value next step and is mechanically already solved (same idempotent pipeline, just more S3 downloads/AWS cost).
-2. **Cross-encoder reranking for retrieval** — no training data needed, same-day change, would likely fix a meaningful chunk of the "no RAG/LLM evaluation" gap's downstream risk by improving precision on top of the existing dense retrieval.
-3. **A real (small) RAG/LLM evaluation set** — even 10-20 hand-checked (decoded-state query, correct stance label) pairs would turn "seems to work" into a measured number.
+2. ~~**Cross-encoder reranking for retrieval**~~ — **done** (§8): improved paper-level recall from 0.80 to 1.00 at zero training cost.
+3. ~~**A real (small) RAG/LLM evaluation set**~~ — **done** (§8), though still small (5 retrieval queries, 2 generation spot-checks). Scaling this to 10-20+ generation-quality checks specifically (retrieval already looks solid) is the natural next step — the one real quality issue found so far (a factually wrong network-function claim) came from generation, not retrieval.
 4. **Per-architecture `lambda_hrf`** — the sweep shows GRU and Transformer want different values (GRU benefits from higher `lambda_hrf` for free; Transformer has a real tradeoff at 0.1). Worth using per-architecture values rather than one shared default.
 5. **Concept-based interpretability (Been Kim line)** — TCAV/ACE-style concept vectors, potentially seeded by literature excerpts retrieved via RAG itself (see [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses)) — more semantically meaningful than raw network attribution, and the RAG plumbing to seed it already exists.
 6. **Resolving the gradient-vs-perturbation interpretability disagreement** — currently unresolved; worth digging into whether it's a real signal or a gradient-method artifact before trusting either family's attribution in a production RAG query.

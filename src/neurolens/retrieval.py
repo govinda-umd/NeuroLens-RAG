@@ -15,9 +15,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import pymupdf4llm
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import CrossEncoder, SentenceTransformer
 
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+RERANKER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 DEFAULT_CHUNK_SIZE = 220
 DEFAULT_OVERLAP = 50
 
@@ -215,3 +216,34 @@ def retrieve_chunks(
             }
         )
     return pd.DataFrame(rows)
+
+
+def load_reranker(model_name: str = RERANKER_MODEL_NAME) -> CrossEncoder:
+    return CrossEncoder(model_name)
+
+
+def retrieve_and_rerank(
+    query: str,
+    *,
+    model: SentenceTransformer,
+    embeddings: np.ndarray,
+    chunks: list[TextChunk],
+    reranker: CrossEncoder,
+    candidate_k: int = 20,
+    top_k: int = 5,
+) -> pd.DataFrame:
+    """Dense retrieval for recall (cheap, `candidate_k` candidates), then a
+    cross-encoder reranks by jointly scoring (query, chunk) pairs for
+    precision. No training data needed - `reranker` is an off-the-shelf
+    pretrained passage-ranking model. See docs/case1-summary-report.md §10.
+    """
+    candidates = retrieve_chunks(
+        query, model=model, embeddings=embeddings, chunks=chunks, top_k=candidate_k
+    )
+    pairs = [(query, text) for text in candidates["text"]]
+    rerank_scores = reranker.predict(pairs)
+    candidates = candidates.assign(dense_score=candidates["score"], rerank_score=rerank_scores)
+    candidates = candidates.sort_values("rerank_score", ascending=False).head(top_k).reset_index(drop=True)
+    candidates["rank"] = candidates.index + 1
+    candidates["score"] = candidates["rerank_score"]  # alias for interface parity with retrieve_chunks
+    return candidates[["rank", "score", "rerank_score", "dense_score", "source_file", "page", "chunk_id", "text"]]
