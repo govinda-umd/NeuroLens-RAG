@@ -48,6 +48,24 @@ A meaningfully different research direction from everything above, worth trackin
 
 **Why this matters for NeuroLens-RAG specifically**: instead of (or in addition to) "SomMot network, 40% attribution," a concept-based approach could let you define concepts as known functional signatures — e.g. "bilateral motor coordination," "unimanual vs. bimanual movement," or literature-derived co-activation patterns spanning multiple networks — extract CAVs from the Transformer's pooled 128-dim representation (the natural probe point, right before the classification/HRF heads), and test whether a given decode is sensitive to those concept directions. That would produce a semantically richer, more literature-friendly RAG query than a raw network-percentage breakdown. **Flagged as a promising future direction, not implemented in v1** — it requires first deciding what concepts are worth defining (hand-labeled, per TCAV/Concept Bottleneck, or auto-discovered, per ACE/ConceptSHAP), which is a design decision on its own.
 
+### 4.1 A NeuroLens-RAG-specific variant: literature-derived concept hypotheses
+
+TCAV, ACE, and Concept Bottleneck Models all need concepts to come from *somewhere* — either a human hand-labels them, or they're auto-discovered by clustering the model's own internal representations. NeuroLens-RAG has a third option neither of those does: **use the RAG retrieval step itself as the concept-hypothesis generator.**
+
+Once Level 2 retrieval exists (`src/neurolens/pipeline.py`), every decoded window already produces a set of retrieved literature excerpts labeled supports/contradicts/unrelated (per the structured prompt in `build_llm_prompt`). Those supporting/contradicting excerpts are themselves candidate concept descriptions written by domain experts (the papers' authors) — e.g. an excerpt discussing "bilateral coordination during unimanual tasks" directly hands you a concept phrase to formalize as a CAV, rather than requiring a human to guess useful concepts up front or hoping unsupervised clustering finds something semantically nameable. Concretely, the loop would be:
+
+```
+decoded window → RSN attribution → RAG retrieves literature
+        → LLM extracts candidate concept phrases from supporting/contradicting excerpts
+        → each phrase becomes a hand-labeled-by-proxy concept (build a small positive/negative
+          example set for it, e.g. via further retrieval or existing task labels)
+        → train a CAV for that concept in the Transformer's pooled representation
+        → test decode sensitivity to the concept direction
+        → feed the CAV result back into the generated text or the next retrieval round
+```
+
+This turns the literature into a source of testable hypotheses about *what the model might be representing*, rather than only a source of text to compare the decode against — the RAG and interpretability halves of the pipeline stop being sequential stages and become a loop. **Not implemented — noted here as the concrete shape this would take once Level 2 retrieval is real and tested; the open design question is how to turn an extracted concept *phrase* into the labeled example set TCAV needs without heavy manual curation.**
+
 ## 5. Parking lot: Level-3 brain-representation → LLM-embedding integration
 
 Noted for a dedicated future discussion, not analyzed here: directly projecting the Transformer's learned brain representation (e.g. its pooled 128-dim hidden state) into a pretrained LLM's embedding space via a learned adapter, so the LLM can generate text conditioned on brain activity end-to-end, rather than going through the template → retrieval → grounded-generation pipeline (Levels 0–2) described in [decoded-state-to-text-report.md](decoded-state-to-text-report.md). That report's §3(b) already surveys the closest field precedents (Tang et al. 2023; Horikawa 2025 "Mind Captioning") — revisit this note once ready to scope out what NeuroLens-RAG's own version would need.
