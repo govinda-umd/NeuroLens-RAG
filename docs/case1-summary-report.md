@@ -127,7 +127,29 @@ Written systems-forward on purpose — the rest of the resume already carries th
 - Ran a 26-configuration hyperparameter sweep across loss-weighting and training-length axes, discovering that one architecture's auxiliary-task loss weight could be increased **10×** at zero accuracy cost while additional training epochs produced no reliable test-set improvement — redirecting subsequent effort toward data scaling over blind hyperparameter tuning.
 - Diagnosed and resolved a production-breaking PyTorch installation conflict introduced by an unrelated ML library's dependency chain, restoring full training-pipeline functionality within minutes via targeted dependency isolation, with zero loss of in-progress experimental results.
 
-**On format**: these follow Google's XYZ structure (result → metric → method) rather than a chronological "did X, then Y" narrative, and each leads with a number a recruiter or hiring manager can scan in isolation. If you want STAR instead (Situation/Task/Action/Result) — better suited to a cover letter or interview narrative than a resume bullet — the same underlying facts restructure easily; ask if you want that version too.
+**On format**: these follow Google's XYZ structure (result → metric → method) rather than a chronological "did X, then Y" narrative, and each leads with a number a recruiter or hiring manager can scan in isolation.
+
+### STAR versions (for cover letters / interview narratives, not the resume itself)
+
+STAR doesn't compress into one scannable line the way XYZ does — these are meant for "tell me about a project" interview answers or a cover letter paragraph, not bullet points. Same underlying facts as above, restructured as narratives.
+
+**1. Scaling exposed (and resolved) a real data-scarcity problem, not a modeling flaw.**
+*Situation*: An initial 5-subject fMRI motor-decoding model showed a puzzling result — its auxiliary regression head had positive correlation with ground truth but negative R², meaning it tracked direction but not magnitude.
+*Task*: Determine whether this was a genuine modeling flaw (wrong loss design, wrong architecture) before building anything further on top of it.
+*Action*: Rather than immediately changing the model, I designed a controlled 4-experiment ladder (GRU vs. Transformer × single-task vs. multi-task) to isolate variables, then scaled the training data 4× (5→20 subjects) via an idempotent automated pipeline I built against HCP's AWS S3 data, and reran the full comparison plus a 26-configuration hyperparameter sweep.
+*Result*: Test macro-F1 rose from 61% to 92.5%, and R² flipped fully positive (0.61–0.73) — confirming the original result was a data-scarcity artifact, not a design flaw. Saved significant wasted effort that would have gone into "fixing" a model that wasn't actually broken.
+
+**2. Built and evaluated a fully local RAG system, end to end.**
+*Situation*: The project's goal was to make a neural network's fMRI-decoding output interpretable in natural language, grounded in real scientific literature, running entirely on local hardware for cost and data-privacy reasons — no cloud LLM APIs.
+*Task*: Design and build a complete retrieval-augmented generation pipeline: literature ingestion, retrieval, and grounded generation, and — critically — verify it actually works rather than assuming it does.
+*Action*: Built PDF ingestion and semantic chunking, dense-embedding retrieval, and a cross-encoder reranking stage; deployed a quantized 3B-parameter LLM locally via Apple's MLX framework with a structured prompt that forces the model to cite and justify each claim; then built a small hand-labeled evaluation set (reading every source paper myself to establish ground truth) to measure retrieval and generation quality instead of eyeballing outputs.
+*Result*: Reranking measurably improved retrieval recall from 80% to 100%. The evaluation also caught a real generation-quality issue — the LLM stated a factually incorrect neuroscience claim in one case — which I documented rather than hid, since knowing a system's failure modes is part of shipping it responsibly.
+
+**3. Diagnosed and fixed a silent production-breaking dependency conflict.**
+*Situation*: Partway through the project, installing a new library for local LLM inference silently broke the existing PyTorch training pipeline — any subsequent training run would have failed, and the breakage wasn't obvious from the install output.
+*Task*: Diagnose the root cause and restore full functionality without losing hours of already-completed experimental results or further destabilizing the environment.
+*Action*: Ran an immediate smoke test that isolated the failure to a missing shared library pulled in transitively by an unrelated dependency, then performed a targeted, dependency-scoped reinstall rather than rebuilding the environment from scratch.
+*Result*: Restored full pipeline functionality within minutes, verified against existing smoke tests, with zero loss of in-progress work — and documented the fix so it wouldn't silently recur.
 
 **On your friend's bullets**: I don't have any information about what they actually built or contributed, so I can't write real, honest bullets for them — doing so would mean fabricating accomplishments, which I won't do even with good intentions. If they share their own repo, results, or a rough description of what they did, I can write equivalent XYZ-format bullets grounded in their real work the same way these are grounded in this repo's actual numbers.
 
