@@ -16,18 +16,13 @@ Everything needed already exists in the trained model's output: predicted class,
 
 This is essentially free to build — the numbers exist, only the string-formatting doesn't. **Limitation**: no anatomical grounding ("why does the model think this?"), no literature connection, and it's stiff, repetitive prose.
 
-### Level 1 — template + spatial attribution ("which brain regions drove this")
+### Level 1 — template + spatial attribution ("which brain regions drove this") — **implemented**
 
-The original project vision (handoff §19) wants "model attribution or active networks" as part of the structured description — but the current `TransformerDecoder` architecture doesn't give you this for free. Its `input_proj = Linear(300 → 128)` mixes all 300 ROIs together at every timestep, so there's no built-in per-ROI signal to point to. Getting one requires an explicit attribution step layered on top of the already-trained model, e.g.:
+The original project vision (handoff §19) wants "model attribution or active networks" as part of the structured description — but the `TransformerDecoder` architecture doesn't give you this for free (its `input_proj = Linear(300 → 128)` mixes all 300 ROIs together at every timestep). [`06_interpretability_rsn.ipynb`](../notebooks/06_interpretability_rsn.ipynb) implements this as a post-hoc step (no retraining) using four established methods — Saliency, Integrated Gradients, exact Shapley values, and LIME — pooled to the 7 Yeo networks via `roi_labels.tsv`, giving exactly the kind of output this section originally sketched:
 
-- **Gradient-based saliency / Integrated Gradients**: gradient of the predicted class logit w.r.t. each of the 300 input ROI channels, averaged over the window.
-- **Occlusion/ablation**: zero out each ROI (or each of the 7 Yeo networks) one at a time, measure the drop in predicted-class probability.
+> "...driven primarily by the Somatomotor network (44% of attribution), consistent with hand-movement decoding."
 
-Either approach can be aggregated through `roi_labels.tsv` (already saved per bundle — labels like `7Networks_LH_SomMot_3`) up to the **network level** (Visual, SomMot, DorsAttn, SalVentAttn, Limbic, Cont, Default), giving something like:
-
-> "...driven primarily by the Somatomotor network (62% of attribution), consistent with hand-movement decoding."
-
-No retraining needed — this is a post-hoc analysis step, not a model change.
+**One caveat surfaced by actually running this**: the four methods don't fully agree. Gradient-based (Saliency, IG) and perturbation-based (Shapley, LIME) methods cluster internally (~90-95% top-1-network agreement within each pair) but only ~65% across the two families — see [interpretability-methods-notes.md §2](interpretability-methods-notes.md#2-an-empirical-finding-worth-tracking) for the specific disagreement pattern (gradient methods over-weight the Default network relative to perturbation methods). Worth resolving which family to trust — or reporting both — before wiring this into production RAG queries. That doc also surveys methods not yet implemented and Been Kim's concept-based interpretability line as a further alternative to raw network attribution.
 
 ### Level 2 — retrieval-grounded generation (RAG, properly)
 
@@ -80,11 +75,11 @@ The MOTOR task is actually a good fit for this scaled-down approach: the mapping
 
 ## 5. Recommended concrete next step (if/when you want to build this)
 
-1. Extend the training/eval notebook (or a new one) to save **per-window predictions**, not just aggregate metrics — `results/motor_v1_results.json` currently only has confusion matrices and summary stats, not the individual decoded states needed to generate example text.
-2. Add a **gradient- or occlusion-based attribution step** mapped through `roi_labels.tsv` to the 7 Yeo networks (Level 1).
-3. Write a small deterministic templating function: `{decoded label, confidence, network attribution} → 1-2 sentences` — pure code, no LLM (Levels 0+1 combined).
-4. Only after that: wire the templated text into `01_pdf_ingestion`'s retrieval and add a local LLM call for the final synthesis (Level 2).
-5. **Not recommended yet**: Level 3 (learned brain-to-LLM adapter) — revisit only if the subject/data pool grows substantially.
+1. ~~Extend the training/eval notebook (or a new one) to save **per-window predictions**~~ — **done**, `engine.py::predict_all` + `results/motor_v1_per_window_predictions.csv`.
+2. ~~Add a **gradient- or occlusion-based attribution step** mapped through `roi_labels.tsv` to the 7 Yeo networks~~ — **done**, `06_interpretability_rsn.ipynb` + `results/rsn_attribution_per_window.csv` (Level 1). Cross-method disagreement noted above still needs resolving.
+3. Write a small deterministic templating function: `{decoded label, confidence, network attribution} → 1-2 sentences` — pure code, no LLM (Levels 0+1 combined). A minimal version of this exists in `06_interpretability_rsn.ipynb`'s final example; not yet factored into a reusable function.
+4. Not yet done: wire the templated text into `01_pdf_ingestion`'s retrieval and add a local LLM call for the final synthesis (Level 2).
+5. **Not recommended yet**: Level 3 (learned brain-to-LLM adapter) — revisit only if the subject/data pool grows substantially. Also want to explore direct brain-representation → LLM-embedding integration here per ongoing discussion — see [interpretability-methods-notes.md §5](interpretability-methods-notes.md#5-parking-lot-level-3-brain-representation--llm-embedding-integration).
 
 ## 6. Open questions for discussion
 

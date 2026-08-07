@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
@@ -161,3 +162,42 @@ def train_experiment(
         "best_val_macro_f1": best_val_macro_f1,
         "test_metrics": test_metrics,
     }
+
+
+def predict_all(model: nn.Module, loader: DataLoader, device: torch.device) -> pd.DataFrame:
+    """One row per window: decoded state at that timepoint, not just epoch-aggregate metrics.
+
+    This is what makes per-timepoint RSN interpretation and RAG querying
+    possible — each row is enough on its own to run an interpretability
+    method and build a decoded-state-to-text query for that timepoint.
+    """
+    model.eval()
+    rows = []
+    with torch.no_grad():
+        for batch in loader:
+            x = batch["x"].to(device)
+            logits, hrf_pred = model(x)
+            probs = torch.softmax(logits, dim=1)
+            pred_y = probs.argmax(dim=1)
+
+            batch_size = x.shape[0]
+            probs_np = probs.cpu().numpy()
+            hrf_true_np = batch["y_hrf"].numpy()
+            hrf_pred_np = hrf_pred.cpu().numpy() if hrf_pred is not None else None
+
+            for i in range(batch_size):
+                rows.append(
+                    {
+                        "subject_id": batch["subject_id"][i],
+                        "task": batch["task"][i],
+                        "run": batch["run"][i],
+                        "target_volume": int(batch["target_volume"][i]),
+                        "true_y": int(batch["y"][i]),
+                        "pred_y": int(pred_y[i]),
+                        "pred_proba": probs_np[i].tolist(),
+                        "confidence": float(probs_np[i, pred_y[i]]),
+                        "true_y_hrf": hrf_true_np[i].tolist(),
+                        "pred_y_hrf": None if hrf_pred_np is None else hrf_pred_np[i].tolist(),
+                    }
+                )
+    return pd.DataFrame(rows)

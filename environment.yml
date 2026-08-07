@@ -37,6 +37,8 @@ dependencies:
       - streamlit
       - awscli
       - boto3
+      - captum
+      - lime
 
 
 # prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens
