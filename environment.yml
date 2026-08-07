@@ -39,6 +39,7 @@ dependencies:
       - boto3
       - captum
       - lime
+      - mlx-lm
 
 
 # prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens

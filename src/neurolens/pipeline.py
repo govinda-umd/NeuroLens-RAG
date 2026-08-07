@@ -125,14 +125,35 @@ INSTRUCTIONS:
 
 
 def stub_generate(prompt: str) -> str:
-    """Placeholder for the not-yet-installed local LLM. Exercises the full
-    pipeline without fabricating a generated interpretation."""
+    """Placeholder generate_fn for testing the pipeline without loading an LLM
+    (e.g. in unit tests, or when no local LLM is installed)."""
     n_excerpts = prompt.count("[Excerpt")
     return (
-        "[STUB — no local LLM installed yet; see docs/decoded-state-to-text-report.md] "
+        "[STUB — no generate_fn provided] "
         f"Prompt built successfully with {n_excerpts} retrieved excerpts. "
-        "Replace `generate_fn` with a real local-LLM call to get an actual synthesis."
+        "Pass a real generate_fn (e.g. make_mlx_generate_fn()) to get an actual synthesis."
     )
+
+
+DEFAULT_LOCAL_LLM = "mlx-community/Llama-3.2-3B-Instruct-4bit"
+
+
+def make_mlx_generate_fn(model_name: str = DEFAULT_LOCAL_LLM, max_tokens: int = 400):
+    """Loads a local quantized LLM once via mlx-lm (Apple Silicon) and returns
+    a generate_fn(prompt) -> str closure for use with explain_decoded_window.
+    Loading the model is the expensive part (~seconds); reuse the returned
+    closure across many calls rather than re-creating it per window."""
+    from mlx_lm import generate as mlx_generate
+    from mlx_lm import load as mlx_load
+
+    model, tokenizer = mlx_load(model_name)
+
+    def generate_fn(prompt: str) -> str:
+        messages = [{"role": "user", "content": prompt}]
+        chat_prompt = tokenizer.apply_chat_template(messages, add_generation_prompt=True)
+        return mlx_generate(model, tokenizer, prompt=chat_prompt, max_tokens=max_tokens, verbose=False)
+
+    return generate_fn
 
 
 def explain_decoded_window(
