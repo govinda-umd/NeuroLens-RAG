@@ -1,5 +1,4 @@
 subject_id,task,run,status,output_dir,n_timepoints,n_rois,n_conditions,message
-100307,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_LR,,,,Processed metadata already exists.
 100307,EMOTION,LR,failed,,,,,ValueError: At least one event extends beyond the run.
 100307,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
 100307,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
@@ -20,3 +19,43 @@ subject_id,task,run,status,output_dir,n_timepoints,n_rois,n_conditions,message
 101309,EMOTION,RL,failed,,,,,ValueError: At least one event extends beyond the run.
 101309,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
 101309,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100206,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100206/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100206,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100206/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100307,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_LR,,,,Complete processed bundle already exists.
+100307,MOTOR,RL,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100307/tfMRI_MOTOR_RL,,,,Complete processed bundle already exists.
+100408,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100408/tfMRI_MOTOR_LR,,,,Complete processed bundle already exists.
+100408,MOTOR,RL,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100408/tfMRI_MOTOR_RL,,,,Complete processed bundle already exists.
+100610,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100610/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+100610,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-100610/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101006,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101006/tfMRI_MOTOR_LR,,,,Complete processed bundle already exists.
+101006,MOTOR,RL,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101006/tfMRI_MOTOR_RL,,,,Complete processed bundle already exists.
+101107,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101107/tfMRI_MOTOR_LR,,,,Complete processed bundle already exists.
+101107,MOTOR,RL,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101107/tfMRI_MOTOR_RL,,,,Complete processed bundle already exists.
+101309,MOTOR,LR,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_LR,,,,Complete processed bundle already exists.
+101309,MOTOR,RL,skipped_existing_processed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101309/tfMRI_MOTOR_RL,,,,Complete processed bundle already exists.
+101410,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101410/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101410,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101410/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101915,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101915/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+101915,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-101915/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102008,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102008/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102008,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102008/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102109,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102109/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102109,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102109/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102311,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102311/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102311,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102311/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102513,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102513/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102513,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102513/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102614,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102614/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102614,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102614/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102715,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102715/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102715,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102715/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102816,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102816/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+102816,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-102816/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103010,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103010/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103010,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103010/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103111,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103111/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103111,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103111/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103212,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103212/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103212,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103212/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103414,MOTOR,LR,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103414/tfMRI_MOTOR_LR,284.0,300.0,5.0,Processed successfully; temporary source files deleted.
+103414,MOTOR,RL,completed,/Users/srinivasgovindasurampudi/Projects/neurolens-rag/data/processed/hcp_ya_s1200/runs/sub-103414/tfMRI_MOTOR_RL,284.0,300.0,5.0,Processed successfully; temporary source files deleted.

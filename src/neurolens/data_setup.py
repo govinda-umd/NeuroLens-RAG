@@ -16,12 +16,18 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, Dataset
 
-# Subject-level split. These five subjects are the only ones with completed
-# MOTOR bundles on disk; splits must never mix windows from the same subject
-# across train/val/test (see docs/project-handoff-summary.md §14).
-MOTOR_TRAIN_SUBJECTS = ["100307", "100408", "101006"]
-MOTOR_VAL_SUBJECTS = ["101107"]
-MOTOR_TEST_SUBJECTS = ["101309"]
+# Subject-level split over the 20 subjects with completed MOTOR bundles on
+# disk (5 original + 15 added for the v2 scale-up). Splits must never mix
+# windows from the same subject across train/val/test (see
+# docs/project-handoff-summary.md §14). 14/3/3 split, fixed seed-42 shuffle
+# over the sorted subject list for reproducibility (see data_setup_v2 notes
+# in docs/ml-design-report.md).
+MOTOR_TRAIN_SUBJECTS = [
+    "103414", "101107", "102715", "101006", "102008", "102614", "102816",
+    "103212", "101309", "102513", "103111", "102109", "100307", "102311",
+]
+MOTOR_VAL_SUBJECTS = ["100408", "103010", "101410"]
+MOTOR_TEST_SUBJECTS = ["101915", "100206", "100610"]
 MOTOR_RUNS = ["LR", "RL"]
 
 DEFAULT_WINDOW_LENGTH = 32

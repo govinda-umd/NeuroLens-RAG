@@ -121,15 +121,36 @@ Run in [`05_train_eval_compare.ipynb`](../notebooks/05_train_eval_compare.ipynb)
 | Component | Status |
 |---|---|
 | `01_pdf_ingestion.ipynb` | done |
-| `02_data.ipynb` (HCP → ROI bundles) | done — processed MOTOR runs exist under `data/processed/hcp_ya_s1200/runs/` |
-| `03_dataset_dataloaders.ipynb` | done — `src/neurolens/data_setup.py` |
+| `02_data.ipynb` / `02_data_complete.ipynb` (HCP → ROI bundles) | done — **20 subjects** processed under `data/processed/hcp_ya_s1200/runs/` (5 original + 15 added for the v2 scale-up) |
+| `03_dataset_dataloaders.ipynb` | done — `src/neurolens/data_setup.py`, 14/3/3 subject split |
 | `04_models.ipynb` | done — `src/neurolens/model_builder.py` |
 | `05_train_eval_compare.ipynb` | done — `src/neurolens/engine.py`, `src/neurolens/evaluation.py` |
-| Trained models / results | **done for v1** — checkpoints under `models/` (local, gitignored), metrics in `results/motor_v1_results.json` |
+| `06_interpretability_rsn.ipynb` | done — `src/neurolens/interpretability.py` |
+| `src/neurolens/retrieval.py`, `pipeline.py` | done — multi-paper RAG retrieval + one-file brain-signal-to-LLM-text pipeline, real local LLM (`mlx-community/Llama-3.2-3B-Instruct-4bit`) |
+| Trained models / results | **done for v2 (20 subjects)** — checkpoints under `models/` (local, gitignored), metrics in `results/motor_v1_results.json` |
 
 ## 9. Results
 
-First pass, 5 subjects (3 train / 1 val / 1 test), 5 epochs. **Caveat: a single test subject (101309) means these numbers carry high variance — not yet a reliable estimate of generalization.** Treat as a first checkpoint to compare future changes against, not a final number.
+**v2, 20 subjects (14 train / 3 val / 3 test), 5 epochs.** Supersedes the original 5-subject v1 numbers below the table — kept for comparison since the jump between them is itself informative.
+
+| Experiment | Params | Best val macro F1 | Test macro F1 | Test balanced acc | Test HRF MSE | Test HRF MAE |
+|---|---|---|---|---|---|---|
+| 1 — GRU, cls-only | 165,894 | 0.861 | 0.912 | 0.910 | n/a | n/a |
+| 2 — GRU, cls+HRF | 166,539 | 0.865 | 0.911 | 0.910 | 0.048 | 0.169 |
+| 3 — Transformer, cls-only | 304,262 | 0.855 | 0.920 | 0.918 | n/a | n/a |
+| 4 — Transformer, cls+HRF | 304,907 | 0.876 | **0.925** | **0.925** | 0.036 | 0.143 |
+
+**Observations (v2, 20 subjects):**
+
+- **Test macro F1 jumped from the 0.56–0.63 range (5 subjects, n=1 test subject) to 0.91–0.93** — the single biggest lever so far was simply more data and, just as importantly, a 3-subject test set instead of 1, which makes these numbers far more trustworthy as a generalization estimate.
+- **Transformer > GRU still holds** (0.92–0.925 vs 0.91–0.912), though the gap narrowed relative to the 5-subject run — with more data, the GRU's simpler recurrent representation closes some of the distance to the Transformer's full self-attention.
+- **The auxiliary HRF objective's effect on classification is now mixed, not uniformly positive**: it helped the Transformer (0.920→0.925) but very slightly hurt the GRU (0.912→0.911, within noise). The clean "auxiliary task always helps" story from the 5-subject run doesn't fully hold up — worth treating as a per-architecture effect, not a universal one.
+- **HRF regression quality improved dramatically and is now genuinely working**: R² is **positive across all conditions for both multi-task experiments** (GRU: 0.52–0.67; Transformer: 0.61–0.73), a full reversal from the 5-subject run's uniformly negative R² despite positive correlation. This resolves the earlier open question (§11, old item 7) — the negative R² was very likely a data-scarcity problem (too few examples to fit amplitude/scale), not a fundamental flaw in `lambda_hrf` or the loss design.
+- **Per-class F1 is now even** (0.87–0.97 across all 6 classes for Experiment 4, vs. 0.39–0.75 at 5 subjects) — confirms the earlier hypothesis that the uneven per-class performance was a small-sample artifact, not a real asymmetry in how well different movement types are decodable.
+- Validation macro F1 for Experiment 4 across epochs: 0.837 → 0.853 → 0.856 → 0.876 → 0.873 — now plateauing by epoch 4-5, unlike the 5-subject run where it was still clearly rising at epoch 5. 5 epochs looks like a reasonable stopping point at this data scale (not proof it's optimal — no early-stopping/more-epochs sweep has been run).
+
+<details>
+<summary>v1 results (5 subjects, 3 train / 1 val / 1 test) — superseded, kept for reference</summary>
 
 | Experiment | Params | Best val macro F1 | Test macro F1 | Test balanced acc | Test HRF MSE | Test HRF MAE |
 |---|---|---|---|---|---|---|
@@ -138,15 +159,10 @@ First pass, 5 subjects (3 train / 1 val / 1 test), 5 epochs. **Caveat: a single 
 | 3 — Transformer, cls-only | 304,262 | 0.709 | 0.621 | 0.629 | n/a | n/a |
 | 4 — Transformer, cls+HRF | 304,907 | 0.685 | 0.632 | 0.638 | 0.150 | 0.303 |
 
-**Observations:**
+At this scale, HRF R² was mostly negative despite positive correlation, and per-class F1 was uneven (e.g. tongue F1=0.71 vs. right_foot F1=0.39) — both effects reversed at 20-subject scale (see above), suggesting they were data-scarcity artifacts rather than real findings.
+</details>
 
-- **Transformer > GRU** on this split for both objectives (test macro F1 0.62–0.63 vs. 0.56–0.59), consistent with the extra capacity (~305K vs ~166K params) and full-window self-attention vs. a single recurrent hidden state.
-- **The auxiliary HRF objective modestly helped classification** for both encoders (GRU: 0.558→0.586 test macro F1; Transformer: 0.621→0.632), supporting the hypothesis in §1 that the auxiliary task regularizes the shared representation — though with n=1 test subject this could also be noise, not a real effect.
-- **HRF regression is only partially working**: per-condition correlations between predicted and true HRF regressors are positive and moderate (GRU: 0.32–0.44; Transformer: 0.17–0.51 across conditions), but **R² is mostly negative** (e.g. Transformer: -0.07 to -0.53). This means the model tracks the general shape/timing but not the amplitude/scale — predictions correlate with the target but have subpar absolute fit. Plausible causes worth investigating before trusting the HRF head: `lambda_hrf = 0.1` may be too small to actually fit the regression well (classification loss dominates), only 5 epochs may be too few for the regression head to converge, or the HRF targets' scale/normalization may need revisiting. Not investigated further in this pass, per the "5 epochs to run fast" scope for v1.
-- **Per-class F1 is uneven** (e.g. GRU exp1: tongue F1=0.71 vs. right_foot F1=0.39), plausibly reflecting real motor-cortex signal differences (e.g. tongue movements activate a larger, less spatially overlapping cortical region than foot movements) but also plausibly an artifact of the tiny 5-subject sample — worth re-examining once more subjects are added.
-- Best-validation-epoch selection landed at epoch 5/5 for GRU experiments and epoch 4/5 for Transformer experiments — training curves in the notebook show val macro F1 still trending upward at 5 epochs for most runs, suggesting more epochs (not just LR scheduling) may still help; not explored in this pass to keep training fast.
-
-**Not yet done** (explicitly out of scope for this first pass, candidates for the next iteration): more than 5 subjects, more than 5 epochs, `lambda_hrf` tuning, hyperparameter sweep (LR/batch size/optimizer), alternative Transformer pooling, and any of the tokenization/architecture alternatives in [literature-notes-tokenization.md](literature-notes-tokenization.md).
+**Not yet done** (candidates for the next iteration): more than 20 subjects, more than 5 epochs / early stopping, `lambda_hrf` tuning, a real hyperparameter sweep (LR/batch size/optimizer/model size/heads/dims), alternative Transformer pooling, and any of the tokenization/architecture alternatives in [literature-notes-tokenization.md](literature-notes-tokenization.md).
 
 ## 10. Hardware/Compute Considerations (Apple M3, 16GB unified memory)
 
@@ -163,8 +179,8 @@ First pass, 5 subjects (3 train / 1 val / 1 test), 5 epochs. **Caveat: a single 
 4. **Pooling strategy for the Transformer** — final-token vs. mean-pooling vs. attention-pooling vs. a `[CLS]` token.
 5. **Local LLM/RAG interface** — how does a trained brain/task representation eventually connect to a RAG pipeline running entirely on this iMac? Candidate directions: (a) generate a structured text description of decoded state + active networks and feed it as a retrieval query against the existing `01_pdf_ingestion` paper index; (b) project `z_brain` into the embedding space of a local small LLM via a learned adapter; (c) run a quantized local LLM (e.g. via Ollama, llama.cpp, or Apple MLX) purely for the generation/interpretation step, keeping retrieval separate and classical (dense + optional BM25/rerank, per §1 of the handoff summary). Needs a hardware/memory budget decision given the 16GB ceiling shared with model training.
 6. **Optimizer/LR/batch-size/epoch-count sweep** — v1 used untuned defaults (AdamW, lr=1e-3, batch=64, 5 fixed epochs); val macro F1 was still rising at epoch 5 for most runs, so more epochs and/or a real sweep is the most likely easy win before anything more elaborate.
-7. **Why is HRF R² negative despite positive correlation?** — v1's multi-task experiments show the HRF head tracks direction/timing (correlation 0.17–0.51) but fits amplitude poorly (R² mostly negative). Worth checking whether this is `lambda_hrf` being too small, too few epochs, or a target-scaling issue, before reading too much into the auxiliary-task hypothesis from §1.
-8. **More subjects** — v1's 1-subject test set makes every number here high-variance; the ladder should be re-run on more subjects before drawing real conclusions about GRU vs. Transformer or classification-only vs. multi-task.
+7. ~~**Why is HRF R² negative despite positive correlation?**~~ — **resolved by more data.** v1 (5 subjects) showed positive correlation but mostly negative R²; v2 (20 subjects) shows positive R² across the board (0.52–0.73). Very likely was a data-scarcity problem, not a `lambda_hrf` or loss-design issue.
+8. ~~**More subjects**~~ — **done, 20 subjects (v2)**, up from 5. Test macro F1 rose from 0.56–0.63 to 0.91–0.93, and per-class F1 evened out substantially — confirms most v1 findings were partly small-sample artifacts. Still worth going further than 20 if the AWS cost/time is acceptable, since 3 test subjects is still a small generalization estimate.
 9. **Causal attention masking inside the Transformer window** — v1's `TransformerDecoder` (`src/neurolens/model_builder.py`) applies no attention mask, so within a 32-token window attention is fully bidirectional: position 5 can attend to position 31 and vice versa. "Causal" in v1 only holds at the sample-construction level (a window never includes volumes after its own target time `t`), not inside the encoder's self-attention. Worth investigating whether adding a true causal (triangular) attention mask — so position `i` can only attend to positions `<= i` — changes performance or better supports an eventual streaming/real-time use case, versus the current full-window bidirectional attention.
 
 ## References

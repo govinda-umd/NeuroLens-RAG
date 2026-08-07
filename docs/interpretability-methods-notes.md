@@ -17,13 +17,18 @@ Four methods, chosen because they span the two fundamentally different ways to a
 
 ## 2. An empirical finding worth tracking
 
-Running all four methods on every test-set window (`06_interpretability_rsn.ipynb`) surfaced a **two-cluster disagreement pattern**, not one consensus:
+Running all four methods on every test-set window (`06_interpretability_rsn.ipynb`) surfaced a **two-cluster disagreement pattern**, not one consensus. Measured twice — at 5-subject and 20-subject scale — and the pattern persists, though it softens as the model gets better:
 
-- Saliency and Integrated Gradients (both gradient-based) agree strongly with each other: 90.6% top-1-network agreement, 0.96 mean rank correlation.
-- Shapley and LIME (both perturbation-based) likewise agree strongly with each other: 94.9%, 0.94.
-- **Across the two families, agreement drops to ~65% top-1 / ~0.39 rank correlation.**
+| | 5 subjects (v1) | 20 subjects (v2) |
+|---|---|---|
+| Saliency ↔ IG top-1 agreement | 90.6% | 97.0% |
+| Shapley ↔ LIME top-1 agreement | 94.9% | 97.0% |
+| **Cross-family top-1 agreement** | **~65%** | **~78%** |
+| Cross-family rank correlation | ~0.39 | ~0.43–0.47 |
+| Mean Default-network attribution (gradient methods) | ~21% | ~18% |
+| Mean Default-network attribution (perturbation methods) | ~10% | ~8% |
 
-The disagreement has a specific shape: gradient-based methods put meaningfully more attribution on the **Default** network (~21% average) than perturbation-based methods do (~10%), while perturbation-based methods concentrate more on **SomMot** (~40% vs ~25%). For MOTOR-task decoding, SomMot dominance is the neuroanatomically expected answer — the perturbation-based methods' result is the more literature-plausible one here. The gradient methods' extra Default-network mass could be a genuine finding (auxiliary HRF regression pulling in DMN-related temporal structure?) or a known gradient-method artifact — vanilla gradients and even path-integrated gradients can reflect local loss-landscape curvature near the input/baseline rather than true causal importance, especially for inputs (like z-scored fMRI) where "zero" isn't a semantically neutral baseline the way black pixels are for images. **Not resolved — flagged as an open question before trusting either family's attribution unquestioningly in a downstream RAG query.**
+The disagreement has a specific, stable shape: gradient-based methods consistently put more attribution on the **Default** network than perturbation-based methods do, while perturbation-based methods concentrate more on **SomMot**. For MOTOR-task decoding, SomMot dominance is the neuroanatomically expected answer — the perturbation-based methods' result is the more literature-plausible one here. The gradient methods' extra Default-network mass could be a genuine finding (auxiliary HRF regression pulling in DMN-related temporal structure?) or a known gradient-method artifact — vanilla gradients and even path-integrated gradients can reflect local loss-landscape curvature near the input/baseline rather than true causal importance, especially for inputs (like z-scored fMRI) where "zero" isn't a semantically neutral baseline the way black pixels are for images. **Cross-family agreement improving with more data and a more confident model is itself informative** — it suggests at least part of the disagreement was driven by the 5-subject model's genuine uncertainty (wrong or low-confidence predictions have less "true" attribution structure for either method family to recover), rather than purely a fixed methodological gap between the two families. **Still not resolved — flagged as an open question before trusting either family's attribution unquestioningly in a downstream RAG query.**
 
 ## 3. Methods surveyed but not implemented (candidates for later)
 
