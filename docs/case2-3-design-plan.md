@@ -54,12 +54,11 @@ Once `z_brain`/`z_text` exist, they can condition a small generative decoder to 
 
 Unchanged from the previous plan, confirmed to come after Case 2: fit a recurrent switching linear dynamical system via **`lindermanlab/ssm`** on the raw ROI time series, and test whether its unsupervised discrete regimes correspond to the known movement conditions — a PGM-native, structurally interpretable alternative to Case 2's learned embedding space. Once both Case 2 and Case 3 exist, their representations can be compared directly (does contrastive alignment and unsupervised dynamical regime-switching converge on similar task structure, discovered two independent ways?).
 
-## 4. Concept Activation Vector (CAV/TCAV) testing for Case 1 — building now
+## 4. Concept Activation Vector (CAV/TCAV) testing for Case 1 — **done**
 
-Confirmed as an immediate build, not deferred. See the companion notebook/module (`src/neurolens/concepts.py`, `09_concept_vectors.ipynb`) for the actual implementation. Scope for this first pass: **label-derived concepts** (not literature-derived yet — that remains the harder open problem from [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses), since it needs a way to turn a retrieved concept *phrase* into a labeled example set, which label-derived concepts sidestep by construction). Concepts worth testing on Case 1's Transformer, probed at the same pooled 128-dim representation used for both heads:
+Implemented in `src/neurolens/concepts.py` and [`09_concept_vectors.ipynb`](../notebooks/09_concept_vectors.ipynb). Scope: **label-derived concepts** (not literature-derived yet — that remains the harder open problem from [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses)). Five concepts tested on Case 1's Transformer, probed at the pooled 128-dim representation shared by both heads: `hand`, `foot`, `tongue` (each vs. everything else), and `right_side`/`left_side` (lateralized movements against each other).
 
-- **Effector concepts**: "hand" (left_hand ∪ right_hand) vs. everything else; "foot" (left_foot ∪ right_foot) vs. everything else; "tongue" vs. everything else.
-- **Laterality concept**: "right-side" (right_hand ∪ right_foot) vs. "left-side" (left_hand ∪ left_foot).
+**Result**: effector concepts scored exactly as expected (TCAV 1.0 for their own classes, 0.0 elsewhere, >0.99 probe accuracy). Laterality concepts surfaced a real, documented limitation — a CAV fit only on lateralized classes extrapolated a specific (not random) direction onto `baseline`/`tongue`, which were never part of its training set; see [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses) for the full write-up. This validates the TCAV mechanism against ground truth before the literature-derived version is attempted.
 
 For each: gather positive/negative example windows from the training set by true label, extract pooled representations from the trained model, fit a linear probe (the CAV direction), then compute TCAV sensitivity scores against each class's logit for held-out test windows. This is real, verifiable science on this dataset (we know the true labels), and validates the CAV *mechanism* before ever attempting the much harder literature-derived version.
 
@@ -77,7 +76,7 @@ Unchanged from before — Case 2's two small encoders plus a contrastive loss ar
 
 ## 8. Proposed build sequencing
 
-1. **CAV/TCAV for Case 1** (§4) — smallest, most immediately valuable, no new architecture needed, uses the already-trained checkpoint.
+1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.
 2. **Paper corpus correction** (§5) — find and add real HCP MOTOR-decoding comparison papers.
 3. **Case 2 v1**: contrastive brain-encoder + learned class-prototype label encoder, evaluated via zero-shot classification.
 4. **Case 2 v2**: swap the label encoder for MiniLM-encoded text descriptions (optionally RSN-enriched), add cross-modal retrieval evaluation reusing `retrieval.py`.

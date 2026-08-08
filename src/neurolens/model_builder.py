@@ -56,9 +56,15 @@ class GRUDecoder(nn.Module):
         self.classifier = nn.Linear(hidden_size, num_classes)
         self.hrf_head = nn.Linear(hidden_size, num_conditions) if include_hrf_head else None
 
-    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
+    def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+        """The pooled representation before either head — the actual
+        multi-task-learned representation (see docs/case2-3-design-plan.md
+        §1), used directly by concept-activation-vector probing."""
         _, h_n = self.gru(x)
-        h = h_n[-1]  # final layer's hidden state, [B, hidden_size]
+        return h_n[-1]  # final layer's hidden state, [B, hidden_size]
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
+        h = self.forward_features(x)
         logits = self.classifier(h)
         hrf_pred = self.hrf_head(h) if self.hrf_head is not None else None
         return logits, hrf_pred
@@ -94,11 +100,17 @@ class TransformerDecoder(nn.Module):
         self.classifier = nn.Linear(d_model, num_classes)
         self.hrf_head = nn.Linear(d_model, num_conditions) if include_hrf_head else None
 
-    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
+    def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+        """The pooled representation before either head — the actual
+        multi-task-learned representation (see docs/case2-3-design-plan.md
+        §1), used directly by concept-activation-vector probing."""
         h = self.input_proj(x)
         h = self.pos_encoding(h)
         h = self.encoder(h)  # [B, L, d_model]
-        pooled = h[:, -1, :]  # final temporal token (v1 pooling choice; see open questions)
+        return h[:, -1, :]  # final temporal token (v1 pooling choice; see open questions)
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
+        pooled = self.forward_features(x)
         logits = self.classifier(pooled)
         hrf_pred = self.hrf_head(pooled) if self.hrf_head is not None else None
         return logits, hrf_pred
