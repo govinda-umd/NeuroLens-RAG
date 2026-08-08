@@ -1,99 +1,94 @@
-# Case 2 & 3: Next-Timepoint ROI Forecasting — Design Plan
+# Cases 1-3: A Representation Learning Throughline — Design Plan
 
-> Design specification, not implemented. Written per discussion after Case 1 was brought to a good stopping point (see [case1-summary-report.md](case1-summary-report.md)). **Working definition, stated explicitly for confirmation before building anything**: Case 2 and Case 3 are the *same underlying task* — predicting the next ROI timepoint(s), a forecasting/generative problem, distinct from Case 1's decoding — tackled by two different modeling families for direct comparison. **Case 2** = deep sequence models (GRU/Transformer, extending Case 1's architecture family). **Case 3** = Bayesian PGM + dynamical-systems models (SLDS/rSLDS-style), the research direction the user wants to pursue as a differentiated angle. If this isn't the intended split, everything below needs re-scoping.
+> Design specification for Case 2 and Case 3, revised after correcting the framing of the whole project. **The organizing theme across all three cases is representation learning** — decoding (Case 1), contrastive multimodal alignment (Case 2), and probabilistic/generative dynamics (Case 3) — the same throughline as Eva Dyer's group's work (POYO, POSSM; see [literature-notes-tokenization.md](literature-notes-tokenization.md)). This supersedes the previous version of this document, which mis-scoped Case 2 as plain next-timestep forecasting.
 
-## 1. Why this is a genuinely different problem from Case 1
+## 0. Corrected framing
 
-Case 1 is discriminative: `X[t-31:t] → y[t]` (a label for a timepoint that's *inside* the input window). Case 2/3 is generative/forecasting: `X[t-L:t] → X[t+1]` (or a short horizon `X[t+1:t+h]`) — the target is never in the input, and there's no task label involved at all. This matters for three concrete reasons:
+**Case 1** was originally conceived as a stepping stone toward representation learning — build a working encoder, verify it end-to-end, learn the pipeline. It ended up also being a strong standalone result (92.5% test macro-F1 multi-task decoding) — a genuine bonus, not the point. Reframed correctly: Case 1's Transformer produces a pooled 128-dim representation trained jointly for classification and HRF regression; that representation *is* the actual artifact of interest, and the decoding accuracy is one way (not the only way) of evidencing that it's good. This reframing doesn't require new code — it changes how the existing work gets described (see §5, resume framing) and motivates the concept-activation-vector work in §4.
 
-- **No leakage subtlety to worry about** the way Case 1 had (§2 of [ml-design-report.md](ml-design-report.md) — the window included its own target timepoint). Here causality is unambiguous: input strictly precedes target.
-- **No classes, no class imbalance, no HRF targets.** The task is continuous-valued regression over all 300 ROIs simultaneously — evaluation shifts entirely to regression metrics (MSE, R², possibly held-out log-likelihood for Case 3's probabilistic models).
-- **Baseline vs. task period no longer matters the same way.** Case 1 treated "baseline" as a real class; here, forecasting should probably run over the *entire* continuous run (task blocks and inter-block rest alike), since the goal is modeling brain dynamics generally, not decoding a specific condition.
+**Case 2** is not forecasting. It's **contrastive multimodal representation learning**: two encoders — one for ROI time series, one for the condition/label — trained to align in a shared embedding space via a contrastive objective, CLIP-style (Radford et al. 2021). "Predicting the next timepoint" reappears here, but properly motivated, as an optional generative capability *conditioned on* the learned joint representation (§2.4) — not as the primary objective the way the previous version of this doc had it.
 
-## 2. Data reuse — no new pipeline needed
+**Case 3** is unchanged in spirit from before: a Bayesian PGM + dynamical-systems model (SLDS/rSLDS) — deferred until after Case 2, per direction.
 
-Both cases can reuse the exact same processed bundles from Case 1 (`data/processed/hcp_ya_s1200/runs/`, 20 subjects, MOTOR task) — `X.npy` already contains the full continuous ROI time series; nothing about `02_data.ipynb` needs to change. Only the **windowing logic** changes:
+## 1. Case 1, reframed (no new code, just correct the story)
 
-```python
-# Case 1 (existing, data_setup.py):
-X[t-31:t] -> y[t], y_hrf[t]        # target inside the window
+Nothing to build here — this section exists so the resume writeup and any future paper/writeup describes Case 1 accurately:
 
-# Case 2/3 (new):
-X[t-L:t] -> X[t+1]                  # one-step-ahead forecast, target strictly after
-# or, for multi-step:
-X[t-L:t] -> X[t+1 : t+1+h]          # h-step horizon
-```
+- The shared Transformer encoder (`model_builder.py::TransformerDecoder`, minus its heads) is a **multi-task-trained representation** of a 32-timepoint window of brain activity into a 128-dim vector, optimized jointly for a discriminative signal (movement class) and a continuous generative signal (HRF regression).
+- The strong decoding accuracy (92.5% macro-F1) is evidence the representation captures task-relevant structure — but it's one probe among several. §4 (CAV testing) adds a second, independent probe: does the representation's *directions* correspond to human-interpretable concepts (movement effector, laterality), not just its ability to feed a linear classifier well.
 
-Same subject-level 14/3/3 split (`MOTOR_TRAIN/VAL/TEST_SUBJECTS` in `data_setup.py`) applies unchanged — reuse, don't re-derive. A new `build_forecasting_window_index()` alongside the existing `build_window_index()` in `data_setup.py` is the only new data-layer code needed (same file, new function, not a new module).
+## 2. Case 2 — Contrastive multimodal representation learning (ROI timeseries ↔ condition)
 
-## 3. Case 2 — deep sequence forecasting baselines
+### 2.1 The setup
 
-Directly reuses `model_builder.py`'s `GRUDecoder`/`TransformerDecoder` shapes with a different head: instead of a classifier (→6) and HRF regressor (→5), a single **forecast head**: `Linear(hidden_size or d_model → 300)`, trained with MSE (or Gaussian NLL, see below) against `X[t+1]`.
-
-- **v1 (recommended starting point)**: one-step-ahead, sequence-to-one — architecturally almost identical to Case 1's existing models, swap the loss and output dimension. Cheapest possible way to get a real baseline number before investing in Case 3.
-- **v2 (stretch)**: multi-step autoregressive rollout (feed the model's own t+1 prediction back in to predict t+2, etc.) — the real test of whether the model has learned actual dynamics vs. just short-range smoothing. Rollout error growth rate is itself a diagnostic (models that learn true dynamics degrade slower over the horizon than ones that memorize local correlations).
-- **Loss choice worth deciding up front**: plain MSE assumes homoscedastic, isotropic noise across all 300 ROIs, which is almost certainly wrong (different ROIs have different noise characteristics). A Gaussian NLL with a learned per-ROI (or full covariance) variance is a small change with a real payoff: it gives you a proper likelihood, which is what makes Case 2 and Case 3 **comparable on the same footing** (§5) rather than comparing MSE against a Bayesian model's marginal likelihood, which isn't apples-to-apples.
-
-## 4. Case 3 — Bayesian PGM + dynamical-systems models
-
-**Core model: Switching Linear Dynamical System (SLDS)**, specifically the **recurrent SLDS (rSLDS)** formulation (Linderman et al. 2017), implemented via **`lindermanlab/ssm`** (github.com/lindermanlab/ssm) rather than from scratch — a purpose-built, actively-referenced library for exactly this model class, with existing tutorial notebooks for rSLDS specifically. Building this from scratch would be a large, error-prone undertaking (variational EM / Gibbs sampling for a switching model is nontrivial); using an established library is the right call here, the same way Captum was the right call for interpretability rather than hand-rolling gradient attribution.
-
-Model structure (for grounding, not final spec — tune during implementation):
+Two encoders, trained jointly with a contrastive objective — structurally identical to CLIP's image-text setup, with brain windows in place of images and condition descriptions in place of captions:
 
 ```
-discrete regime:     z_t  ~  Categorical(recurrent transition depending on continuous state)
-continuous state:    x_t  =  A_{z_t} x_{t-1} + b_{z_t} + noise      (regime-dependent linear dynamics)
-observation:         y_t  =  C x_t + d + noise                       (y_t = the 300-dim ROI vector)
+brain encoder:  X[t-31:t]  (32 x 300 ROI window)  -> z_brain   (d-dim)
+label encoder:  condition description               -> z_text    (d-dim)
+
+contrastive loss (InfoNCE / CLIP-style, symmetric, temperature-scaled):
+  for a batch of (X_i, condition_i) pairs, pull z_brain_i toward z_text_i
+  and push it away from every non-matching z_text_j in the batch (and vice versa)
 ```
 
-- The **discrete regimes `z_t` are themselves interpretable outputs** — a structural advantage over Case 2's black-box hidden state. This creates a direct, falsifiable research question: *do the model's unsupervised discrete regimes correspond to the known MOTOR task conditions, without ever being told the labels?* If yes, that's a genuinely interesting, portfolio-worthy result (unsupervised discovery of task structure from dynamics alone) — testable by cross-tabulating inferred `z_t` against the existing `y` labels from Case 1's bundles (already on disk, free to reuse for this validation even though Case 2/3 training itself doesn't use them).
-- **POSSM as a stretch/v2 direction, not v1**: POSSM (Azabou & Dyer, discussed in [literature-notes-tokenization.md](literature-notes-tokenization.md)) hybridizes a spike/event-style tokenizer with a recurrent SSM backbone for speed and cross-session generalization — a substantially bigger engineering lift (custom tokenization + hybrid architecture) than a library-backed rSLDS. Reasonable to reference conceptually now, but not a v1 build target given the 20-subject data scale.
-- **Continuous-state dimensionality** is a real hyperparameter to sweep (state dim likely << 300, since the ROI observations are assumed to be a linear/noisy projection of a lower-dimensional latent dynamical state) — this is itself an interesting output: what's the effective dimensionality of MOTOR-task brain dynamics, per this model class?
+- **Brain encoder**: reuse `model_builder.py`'s `GRUDecoder`/`TransformerDecoder` architecture, with the classification/HRF heads removed and replaced by a projection head to the shared embedding dimension `d` (small MLP, standard CLIP-style projection).
+- **Label encoder**: two options, worth building the cheap one first —
+  1. **v1 (cheap)**: a learned embedding table, one vector per class (6 learnable prototypes) — the label side degenerates to a small lookup, but the brain-side representation is still learned contrastively rather than via a plain softmax classifier, which is already a meaningfully different (and more modern) objective than Case 1's cross-entropy head.
+  2. **v2 (the actually interesting version)**: encode the condition's **natural-language description** ("right hand movement") with the same MiniLM sentence-transformer already used in `retrieval.py` for paper retrieval — reusing an existing model, not adding a new dependency. This makes the setup genuinely CLIP-like (text side, not just class-index side) and opens the door to richer descriptions than a bare class name — e.g. incorporating Case 1's RSN attribution output ("right hand movement, primarily somatomotor") as the paired text, connecting Case 2 directly to the interpretability work in Case 1 rather than being a disconnected new project.
 
-## 5. Evaluation — designed to connect back to Case 1, not float free
+### 2.2 Why this is a meaningfully different (and more modern) objective than Case 1
 
-| Metric | Case 2 | Case 3 |
-|---|---|---|
-| One-step-ahead MSE / R² per ROI | ✓ | ✓ (via posterior predictive mean) |
-| Held-out log-likelihood | only if using Gaussian-NLL loss (§3) | ✓ natively (it's a generative model) |
-| Multi-step rollout error growth | ✓ (v2) | ✓ (v2, via simulating from the fitted dynamics) |
-| **Regime/label correspondence** | n/a (no discrete state) | ✓ — cross-tabulate `z_t` against Case 1's `y` labels |
-| **Downstream decoding probe** | linear probe on hidden state → predict `y` | linear probe on `x_t` (continuous latent) → predict `y` |
+Case 1 asks "does a linear/softmax layer on top of this representation predict the label" (discriminative probing). Case 2 asks "can the representation be trained so that brain activity and condition semantics live in the same geometric space" (representation alignment) — the difference between training a classifier and training an embedding space, which is the same distinction between a standard CNN classifier and CLIP in computer vision. It's self-supervised in the sense that the label is used as a *pairing signal* for contrastive alignment, not as a direct supervised target the way Case 1's cross-entropy loss uses it.
 
-The **downstream decoding probe** is the most valuable cross-case comparison: train a simple linear classifier on top of each model's learned internal representation (Case 2's hidden state, Case 3's inferred `x_t`) to predict Case 1's movement labels, *without* fine-tuning the forecasting model itself. This directly tests whether a representation learned purely from unsupervised forecasting captures task-relevant structure — a meaningfully different and arguably more interesting claim than Case 1's supervised decoding accuracy, and a natural bridge between all three cases.
+### 2.3 Evaluation — two capabilities the contrastive setup gives for free
 
-## 6. Connection to the RAG/concept-vector loop
+1. **Zero-shot classification**: classify a brain window by finding its nearest condition-embedding by cosine similarity (no classifier head at all) — directly comparable, as a representation-quality metric, against Case 1's supervised decoding accuracy (92.5%). A meaningfully lower zero-shot number wouldn't be a failure — it would quantify the gap between "aligned representation" and "task-optimized representation," which is itself an interesting reportable finding.
+2. **Cross-modal retrieval**: given a text query ("left foot movement"), retrieve the most characteristic brain windows, and vice versa. **This reuses `retrieval.py`'s cosine-similarity retrieval mechanism verbatim** — the same code that retrieves paper chunks for RAG can retrieve brain windows once both live in embedding space, just pointed at a different embedding matrix. Worth building as literal code reuse, not just a conceptual parallel — a concrete "shared retrieval infrastructure across modalities" systems-design point.
 
-Directly extends [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses): that loop proposed using RAG-retrieved literature to generate candidate *concept* phrases, then testing them as CAVs against Case 1's hidden representation. Case 3 gives a second, independent test bed for the same candidate concepts — **if a literature-derived concept (e.g., "bilateral motor coordination") is real, it should show up two independent ways**: as a CAV direction Case 1's decoder is sensitive to, *and* as something correlated with Case 3's unsupervised discrete regimes or continuous latent state. Convergence between the two would be meaningfully stronger evidence than either alone — genuinely worth designing for once both exist, not just a nice-to-have.
+### 2.4 Generation (v2/stretch) — where "predict the next timepoint" reappears
 
-## 7. Resume/portfolio framing
+Once `z_brain`/`z_text` exist, they can condition a small generative decoder to predict future ROI activity (`X[t+1:t+h]`) — the original forecasting idea, now motivated as *conditional* generation from a learned multimodal representation rather than an unconditional sequence model. Not v1 — build the contrastive alignment and its two evaluations first; conditional generation is a natural extension once the representation is validated.
 
-Case 3 in particular is the concrete, buildable evidence for the research direction described in conversation (PGM + dynamical systems in a Bayesian setting) — rather than a claim on a resume, it becomes a real project with real comparative results against a deep-learning baseline (Case 2) on identical data. That comparison — "does structured Bayesian dynamics modeling capture something a black-box sequence model doesn't, on the same forecasting task" — is a substantive, well-posed research question suitable for a portfolio project *and* answerable in a bounded amount of work, unlike an open-ended "build something transformer-level" framing.
+## 3. Case 3 — Bayesian dynamical systems (rSLDS), deferred until after Case 2
 
-## 8. Compute feasibility (M3, 16GB)
+Unchanged from the previous plan, confirmed to come after Case 2: fit a recurrent switching linear dynamical system via **`lindermanlab/ssm`** on the raw ROI time series, and test whether its unsupervised discrete regimes correspond to the known movement conditions — a PGM-native, structurally interpretable alternative to Case 2's learned embedding space. Once both Case 2 and Case 3 exist, their representations can be compared directly (does contrastive alignment and unsupervised dynamical regime-switching converge on similar task structure, discovered two independent ways?).
 
-Genuinely favorable — more so than Case 1 in some ways. `ssm`'s inference (variational EM / Gibbs sampling for rSLDS) is CPU-bound and doesn't need MPS/GPU acceleration at all; state dimensions in the tens (not hundreds) keep it lightweight. Case 2's GRU/Transformer forecasting models are architecturally near-identical in size to Case 1's (~165K-305K params), so training cost is comparable to what's already been run repeatedly this project. No new hardware or memory concerns expected.
+## 4. Concept Activation Vector (CAV/TCAV) testing for Case 1 — building now
 
-## 9. Proposed build sequencing
+Confirmed as an immediate build, not deferred. See the companion notebook/module (`src/neurolens/concepts.py`, `09_concept_vectors.ipynb`) for the actual implementation. Scope for this first pass: **label-derived concepts** (not literature-derived yet — that remains the harder open problem from [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses), since it needs a way to turn a retrieved concept *phrase* into a labeled example set, which label-derived concepts sidestep by construction). Concepts worth testing on Case 1's Transformer, probed at the same pooled 128-dim representation used for both heads:
 
-1. **Case 2 first** — cheapest path to a real baseline number, since it's a small, well-understood modification of existing `model_builder.py`/`engine.py` code (new windowing function, new head, new loss). Gets a forecasting result on the board fast.
-2. **Case 3 second** — install `ssm`, fit a plain SLDS (no recurrence) as a sanity-check baseline before the fuller rSLDS, sweep state dimensionality, then compare against Case 2 on the metrics in §5.
-3. **Downstream decoding probe (§5)** and **regime/label correspondence (§4)** as the payoff analyses once both models exist — these produce the actually-interesting comparative findings, not the raw forecasting MSE numbers themselves.
-4. RAG/concept-vector convergence test (§6) — later, once Case 1's concept-vector loop (§4.1 of interpretability-methods-notes.md) is itself built, which it currently isn't.
+- **Effector concepts**: "hand" (left_hand ∪ right_hand) vs. everything else; "foot" (left_foot ∪ right_foot) vs. everything else; "tongue" vs. everything else.
+- **Laterality concept**: "right-side" (right_hand ∪ right_foot) vs. "left-side" (left_hand ∪ left_foot).
 
-## Open questions
+For each: gather positive/negative example windows from the training set by true label, extract pooled representations from the trained model, fit a linear probe (the CAV direction), then compute TCAV sensitivity scores against each class's logit for held-out test windows. This is real, verifiable science on this dataset (we know the true labels), and validates the CAV *mechanism* before ever attempting the much harder literature-derived version.
 
-- Confirm the Case 2/Case 3 definition stated at the top — if wrong, this entire plan needs re-scoping before implementation starts.
-- Forecast horizon for v1: single-step only, or commit to multi-step from the start?
-- Loss choice for Case 2 (§3): plain MSE now vs. Gaussian NLL from the start, given it's needed for a fair Case 2 vs. Case 3 comparison later anyway.
-- Whether to also forecast `y_hrf`-style structure, or keep Case 2/3 purely about raw ROI dynamics (the latter seems cleaner and more aligned with "understand brain dynamics" rather than re-importing Case 1's task-specific targets).
+## 5. Data / paper corpus correction
+
+The current 6-paper corpus over-indexes on infrastructure papers (Yeo 2011 parcellation, Van Essen 2013 HCP overview) that ground the *pipeline's methods* but aren't directly comparable *results*. What's actually useful for the RAG "compare our result to the literature" framing is **papers that decoded/classified the HCP MOTOR task themselves** — their reported accuracies and findings are the ones worth setting our 92.5% macro-F1 against. See a candidate list gathered separately.
+
+## 6. Resume/portfolio framing (corrected)
+
+Case 1, described accurately, is a **multi-task representation learning** result, not merely "a decoding model" — that's the vocabulary a PhD-level ML/AI resume should use, and it wasn't used the first time. Case 2, once built, becomes a genuinely strong complementary bullet: contrastive multimodal representation learning is squarely "modern AI lingo" (the same family as CLIP) and is a different, more advanced claim than a discriminative classifier. Case 3 supports the Bayesian-PGM-plus-dynamical-systems research narrative directly.
+
+## 7. Compute feasibility (M3, 16GB)
+
+Unchanged from before — Case 2's two small encoders plus a contrastive loss are comparable in size/cost to Case 1's existing models; `ssm` (Case 3) is CPU-bound and lightweight. No new hardware concerns.
+
+## 8. Proposed build sequencing
+
+1. **CAV/TCAV for Case 1** (§4) — smallest, most immediately valuable, no new architecture needed, uses the already-trained checkpoint.
+2. **Paper corpus correction** (§5) — find and add real HCP MOTOR-decoding comparison papers.
+3. **Case 2 v1**: contrastive brain-encoder + learned class-prototype label encoder, evaluated via zero-shot classification.
+4. **Case 2 v2**: swap the label encoder for MiniLM-encoded text descriptions (optionally RSN-enriched), add cross-modal retrieval evaluation reusing `retrieval.py`.
+5. **Case 2 v3 (stretch)**: conditional generation of future ROI activity from the learned joint representation.
+6. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
 
 ## References
 
 - [case1-summary-report.md](case1-summary-report.md)
 - [ml-design-report.md](ml-design-report.md)
 - [interpretability-methods-notes.md](interpretability-methods-notes.md) §4.1
-- [literature-notes-tokenization.md](literature-notes-tokenization.md) — POSSM background
-- [lindermanlab/ssm](https://github.com/lindermanlab/ssm) — rSLDS implementation
-- [Recurrent SLDS tutorial notebook](https://github.com/lindermanlab/ssm/blob/master/notebooks/4-Recurrent-SLDS.py)
-- Linderman et al. 2017, "Bayesian Learning and Inference in Recurrent Switching Linear Dynamical Systems" — original rSLDS: [github.com/slinderman/recurrent-slds](https://github.com/slinderman/recurrent-slds)
+- [literature-notes-tokenization.md](literature-notes-tokenization.md) — POYO/POSSM background, the Eva Dyer throughline this design follows
+- Radford et al. 2021, "Learning Transferable Visual Models From Natural Language Supervision" (CLIP) — the contrastive objective Case 2 follows
+- [lindermanlab/ssm](https://github.com/lindermanlab/ssm) — rSLDS implementation for Case 3
