@@ -16,18 +16,41 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, Dataset
 
-# Subject-level split over the 20 subjects with completed MOTOR bundles on
-# disk (5 original + 15 added for the v2 scale-up). Splits must never mix
-# windows from the same subject across train/val/test (see
-# docs/project-handoff-summary.md §14). 14/3/3 split, fixed seed-42 shuffle
-# over the sorted subject list for reproducibility (see data_setup_v2 notes
-# in docs/ml-design-report.md).
-MOTOR_TRAIN_SUBJECTS = [
-    "103414", "101107", "102715", "101006", "102008", "102614", "102816",
-    "103212", "101309", "102513", "103111", "102109", "100307", "102311",
+# Subject-level split over the 100 subjects with completed MOTOR bundles on
+# disk (v3 scale-up: 20 -> 100). Splits must never mix windows from the
+# same subject across train/val/test/hyperparam (see
+# docs/project-handoff-summary.md §14). Fixed seed-42 shuffle over the
+# sorted 100-subject list, then sliced 10/65/13/12 (hyperparam/train/val/
+# test) - see docs/population-level-evaluation-plan.md §3.1 for why the
+# hyperparam subset exists and must never be used for headline results.
+MOTOR_HYPERPARAM_SUBJECTS = [
+    "108323", "108222", "118225", "102008", "113619",
+    "110613", "100307", "114318", "102816", "115724",
 ]
-MOTOR_VAL_SUBJECTS = ["100408", "103010", "101410"]
-MOTOR_TEST_SUBJECTS = ["101915", "100206", "100610"]
+MOTOR_TRAIN_SUBJECTS = [
+    "114823", "102109", "111514", "111716", "114621", "109123", "110007",
+    "118528", "115219", "107422", "106016", "103818", "106521", "119025",
+    "116221", "110411", "116726", "105115", "117728", "106824", "101915",
+    "109830", "112516", "113316", "114924", "108828", "119732", "111211",
+    "117122", "102513", "107321", "104416", "108020", "108121", "103212",
+    "113821", "112920", "112819", "101410", "107018", "119833", "109325",
+    "100408", "111009", "103010", "107725", "112314", "114116", "104012",
+    "113215", "104820", "101107", "101309", "113922", "116524", "103414",
+    "115825", "108525", "118124", "103515", "100206", "118932", "112112",
+    "118730", "111312",
+]
+MOTOR_VAL_SUBJECTS = [
+    "118023", "105014", "114419", "117021", "115320", "113417", "105923",
+    "105216", "117930", "119126", "101006", "111413", "115017",
+]
+MOTOR_TEST_SUBJECTS = [
+    "102311", "114217", "117324", "102614", "103111", "105620", "106319",
+    "107220", "118831", "100610", "102715", "116423",
+]
+
+# Superseded splits, kept for reference/reproducibility of earlier results:
+# v2 (20 subjects, 14/3/3): see docs/ml-design-report.md and git history
+# prior to the v3 (100-subject) scale-up commit.
 MOTOR_RUNS = ["LR", "RL"]
 
 DEFAULT_WINDOW_LENGTH = 32
