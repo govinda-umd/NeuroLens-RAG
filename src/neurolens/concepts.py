@@ -5,13 +5,23 @@ positive/negative examples, fit a linear probe in the model's internal
 representation to get a Concept Activation Vector, then measure how
 sensitive each class's logit is to moving along that direction.
 
-v1 scope: label-derived concepts (built from the true movement labels
-already on disk), not literature-derived ones — see
-docs/interpretability-methods-notes.md §4.1 for why literature-derived
-concepts are a harder, still-open problem (turning a retrieved concept
-*phrase* into a labeled example set). Label-derived concepts let us
-validate the TCAV mechanism itself against ground truth before attempting
-that harder version.
+Two tiers:
+- Label-derived concepts (`CONCEPT_DEFINITIONS`): built from the true
+  movement labels already on disk. Used to validate the TCAV mechanism
+  itself against ground truth (see docs/interpretability-methods-notes.md
+  §4 and §2.1).
+- Literature-derived concepts (`map_phrase_to_known_concept`): closes the
+  loop described in docs/interpretability-methods-notes.md §4.1 — an LLM
+  extracts a candidate concept phrase from a retrieved, SUPPORTS-labeled
+  paper excerpt (see `pipeline.py`), and this module maps that phrase onto
+  one of the *already-defined* label-derived concepts via keyword
+  matching. This is the pragmatic answer to the previously-open question
+  ("how to turn a concept phrase into a labeled example set without heavy
+  manual curation"): rather than solving that problem in full generality,
+  literature concepts are constrained to the ones we can already build
+  labeled examples for from existing task labels. A real limitation
+  (not every literature claim maps onto our 5 concepts), but a real,
+  working v1 rather than an unsolved todo.
 """
 
 from __future__ import annotations
@@ -129,3 +139,73 @@ def run_concept_analysis(
             "scores": scores,
         }
     return results
+
+
+# --- Literature-derived concepts: map an LLM-extracted phrase onto a testable concept ---
+
+# Deliberately simple keyword substring matching, not a learned classifier -
+# transparent and auditable, which matters since this is the step that
+# decides what literature is allowed to claim we can test.
+LITERATURE_CONCEPT_KEYWORDS: dict[str, list[str]] = {
+    "hand": ["hand", "finger", "digit", "manual"],
+    "foot": ["foot", "feet", "toe"],
+    "tongue": ["tongue", "orofacial", "lingual"],
+    "right_side": ["contralateral", "lateral", "lateraliz", "unilateral", "asymmetr"],
+    "left_side": ["contralateral", "lateral", "lateraliz", "unilateral", "asymmetr"],
+}
+
+
+def map_phrase_to_known_concept(phrase: str) -> str | None:
+    """Maps a free-text concept phrase (extracted by an LLM from a
+    retrieved excerpt) onto one of CONCEPT_DEFINITIONS's keys via keyword
+    matching. Returns None if no known concept matches - an honest "we
+    can't test this claim yet" rather than a forced, meaningless mapping.
+
+    Laterality phrases match both `right_side` and `left_side` (the
+    keywords don't distinguish direction) - `explain_literature_concept`
+    tests both and reports both, since the CAV machinery can't yet tell
+    "the paper means left" from "the paper means right" without a more
+    careful extraction step.
+    """
+    phrase_lower = phrase.lower()
+    matched = [
+        concept for concept, keywords in LITERATURE_CONCEPT_KEYWORDS.items()
+        if any(kw in phrase_lower for kw in keywords)
+    ]
+    return matched[0] if len(matched) == 1 else (matched if matched else None)
+
+
+def explain_literature_concept(
+    model: nn.Module,
+    train_loader: DataLoader,
+    test_loader: DataLoader,
+    device: torch.device,
+    class_names: list[str],
+    phrase: str,
+    target_class: int,
+) -> dict:
+    """The RAG->CAV loop's core step: given a literature-extracted phrase
+    and the class the pipeline decoded, map the phrase to known concept(s),
+    fit each one's CAV, and report TCAV sensitivity for the decoded class
+    specifically - "does the model's decision for this class actually
+    depend on the concept the retrieved literature invokes?"
+    """
+    matched = map_phrase_to_known_concept(phrase)
+    if matched is None:
+        return {"phrase": phrase, "matched_concepts": None, "results": None}
+
+    matched_concepts = matched if isinstance(matched, list) else [matched]
+    train_features, train_labels = extract_pooled_features(model, train_loader, device)
+    test_features, test_labels = extract_pooled_features(model, test_loader, device)
+
+    results = {}
+    for concept_name in matched_concepts:
+        positive, negative = CONCEPT_DEFINITIONS[concept_name]
+        cav = train_cav(train_features, train_labels, positive, negative)
+        tcav = tcav_score(model, test_features, test_labels, target_class, cav["direction"], device)
+        results[concept_name] = {
+            "probe_accuracy": cav["probe_accuracy"],
+            "tcav_score_for_decoded_class": tcav["tcav_score"],
+            "n_test_examples_of_decoded_class": tcav["n_examples"],
+        }
+    return {"phrase": phrase, "matched_concepts": matched_concepts, "results": results}

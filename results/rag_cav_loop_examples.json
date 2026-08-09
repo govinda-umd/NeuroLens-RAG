@@ -1,0 +1,199 @@
+[
+  {
+    "subject_id": "106319",
+    "run": "LR",
+    "decoded_condition": "baseline",
+    "confidence": 0.9993858337402344,
+    "query_text": "Decoded condition: baseline (confidence 100%). Primary contributing resting-state network: SomMot (gradient-based methods instead point to SomMot). MOTOR task, subject 106319, run LR.",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "phrase": "Imagery of finger movements activates central sulcus."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "phrase": "Imagery of finger movements activates central sulcus.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 576
+          }
+        }
+      }
+    ],
+    "final_synthesis": "Our analysis of the decoded brain-activity result reveals that the primary contributing resting-state network is the SomMot network, which is involved in motor control and other cognitive processes. This finding is supported by the literature excerpt on graph-based network analysis of resting-state functional MRI, which is relevant to the SomMot network. However, a literature excerpt on the Human Connectome Project's approach to resting-state fMRI is unrelated to the decoded result. Furthermore, our concept-sensitivity test using Concept Activation Vectors (CAVs) confirms that the concept phrase 'Imagery of finger movements activates central sulcus' is not relevant to the decoded class, as the TCAV sensitivity for the decoded class is 0.00. This suggests that the model's decision is not sensitive to the concepts invoked by the literature, highlighting the need for further validation and exploration of the model's performance."
+  },
+  {
+    "subject_id": "106319",
+    "run": "RL",
+    "decoded_condition": "left_hand",
+    "confidence": 0.9994988441467285,
+    "query_text": "Decoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 106319, run RL.",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\""
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\"",
+        "matched_concepts": [
+          "hand",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral.",
+        "matched_concepts": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "tongue": {
+            "probe_accuracy": 0.999030890369473,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      }
+    ],
+    "final_synthesis": "**Decoded Result Analysis**\n\n1. **Excerpt 1**: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the primary contributing resting-state network (SomMot) mentioned in the decoded result.\n\n2. **Excerpt 2**: SUPPORTS\nThis excerpt supports the decoded result by highlighting the activation of the primary motor cortex (M1) during motor imagery, which is consistent with the decoded result's mention of the primary contributing resting-state network (SomMot).\n\n3. **Excerpt 3**: SUPPORTS\nThis excerpt supports the decoded result by detailing the activation of various brain areas during motor imagery, including the motor cortices, which aligns with the decoded result's mention of the primary contributing resting-state network (SomMot).\n\n4. **Excerpt 4**: UNRELATED\nThis excerpt does not directly relate to the decoded result, as it discusses the functional anatomy of motor imagery in healthy subjects and the involvement of various brain areas, but it does not specifically address the activation of the primary motor cortex (M1) during motor imagery.\n\n5. **Excerpt 5**: SUPPORTS\nThis excerpt supports the decoded result by highlighting the activation of various brain areas associated with sensorimotor control during motor imagery, including the supplementary motor area (SMA), the cingulate motor areas (CMAs), and the primary motor cortex (M1), which aligns with the decoded result's mention of the primary contributing resting-state network (SomMot).\n\n**Synthesis**\n\nThe decoded result, which indicates that the subject's brain activity is consistent with the primary contributing resting-state network (SomMot) during a motor task, agrees with prior findings in the literature. Excerpts 1, 2, and 5 support the decoded result by describing the activation of brain areas associated with motor imagery, including the primary"
+  },
+  {
+    "subject_id": "102311",
+    "run": "RL",
+    "decoded_condition": "left_foot",
+    "confidence": 0.997900128364563,
+    "query_text": "Decoded condition: left_foot (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 102311, run RL.",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\""
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 1,
+        "phrase": "The motor cortex representation of the arm and hand is complex and non-traditional."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\"",
+        "matched_concepts": [
+          "hand",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 504
+          }
+        }
+      }
+    ],
+    "final_synthesis": "**Excerpt-by-Excerpt Stance Analysis**\n\n1. Excerpt 1: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the primary contributing resting-state network as the SomMot, which is consistent with the decoded result indicating the activation of the SomMot network during the motor task.\n\n2. Excerpt 2: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex (M1) during motor imagery, which is consistent with the decoded result indicating the activation of the left precentral gyrus (M1) during the motor task.\n\n3. Excerpt 3: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the motor cortices during motor imagery, which is consistent with the decoded result indicating the activation of the left precentral gyrus (M1) during the motor task.\n\n4. Excerpt 4: UNRELATED\nThis excerpt discusses the complex organization of the human primary motor cortex during motor imagery, but it does not specifically discuss the activation of the left precentral gyrus (M1) during motor tasks.\n\n5. Excerpt 5: UNRELATED\nThis excerpt discusses the somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution, but it does not specifically discuss the activation of the left precentral gyrus (M1) during motor tasks.\n\n**Synthesis**\n\nThe decoded result agrees with prior findings in the literature, which describe the activation of the motor cortices during motor imagery and motor execution. The excerpts support the idea that the SomMot network is activated during motor tasks, and the activation of the primary motor cortex is consistent with the literature's claims. However, the concept-sensitivity test reveals a discrepancy between the literature's claim and the decoded result. Specifically, the literature claims that left hand movement is contralateral to left motor area, but the concept test shows that the model's decision is not sensitive to this concept"
+  }
+]
