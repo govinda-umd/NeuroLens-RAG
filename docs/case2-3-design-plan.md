@@ -25,17 +25,19 @@ Two encoders, trained jointly with a contrastive objective — structurally iden
 
 ```
 brain encoder:  X[t-31:t]  (32 x 300 ROI window)  -> z_brain   (d-dim)
-label encoder:  condition description               -> z_text    (d-dim)
+label encoder:  condition description               -> z_text    (d-dim, 6 fixed prototypes)
 
-contrastive loss (InfoNCE / CLIP-style, symmetric, temperature-scaled):
-  for a batch of (X_i, condition_i) pairs, pull z_brain_i toward z_text_i
-  and push it away from every non-matching z_text_j in the batch (and vice versa)
+loss: temperature-scaled cosine-similarity cross-entropy against all 6 prototypes
+  logits = (z_brain @ z_text.T) / temperature      # [batch, 6]
+  loss = cross_entropy(logits, true_class)
 ```
+
+**Precision worth stating rather than glossing over**: this is *not* literal CLIP-style InfoNCE with in-batch random negatives — CLIP has a unique caption per image and an effectively unbounded implicit vocabulary, so it must sample negatives from the batch. Here the text side is a small, fixed, *closed* vocabulary (6 conditions), so the strictly stronger and more standard thing to do is compare against **all 6** known prototypes every step, not just whichever ones happen to land in the current batch. The result is a hybrid, honestly named: **supervised contrastive learning against semantically-initialized class prototypes** — the same mechanics as CLIP's similarity-based classification head, but without CLIP's large-open-vocabulary motivation for batch-sampled negatives.
 
 - **Brain encoder**: reuse `model_builder.py`'s `GRUDecoder`/`TransformerDecoder` architecture, with the classification/HRF heads removed and replaced by a projection head to the shared embedding dimension `d` (small MLP, standard CLIP-style projection).
 - **Label encoder**: two options, worth building the cheap one first —
-  1. **v1 (cheap)**: a learned embedding table, one vector per class (6 learnable prototypes) — the label side degenerates to a small lookup, but the brain-side representation is still learned contrastively rather than via a plain softmax classifier, which is already a meaningfully different (and more modern) objective than Case 1's cross-entropy head.
-  2. **v2 (the actually interesting version)**: encode the condition's **natural-language description** ("right hand movement") with the same MiniLM sentence-transformer already used in `retrieval.py` for paper retrieval — reusing an existing model, not adding a new dependency. This makes the setup genuinely CLIP-like (text side, not just class-index side) and opens the door to richer descriptions than a bare class name — e.g. incorporating Case 1's RSN attribution output ("right hand movement, primarily somatomotor") as the paired text, connecting Case 2 directly to the interpretability work in Case 1 rather than being a disconnected new project.
+  1. **v1 (cheap, not built)**: a learned embedding table, one vector per class (6 learnable prototypes) — the label side degenerates to a small lookup. Considered and skipped: **decided to go straight to v2**.
+  2. **v2 (chosen, built)**: encode the condition's **natural-language description** ("right hand movement") with the same MiniLM sentence-transformer already used in `retrieval.py` for paper retrieval — reusing an existing model, not adding a new dependency. This makes the setup genuinely CLIP-like (text side, not just class-index side) and opens the door to richer descriptions than a bare class name — e.g. incorporating Case 1's RSN attribution output ("right hand movement, primarily somatomotor") as the paired text, connecting Case 2 directly to the interpretability work in Case 1 rather than being a disconnected new project. Since there are only 6 fixed condition descriptions, MiniLM only ever needs to encode those 6 strings once — the "text encoder" reduces to a small trainable projection on top of a frozen, precomputed [6, 384] matrix, which is also the sample-efficient right call given there's no room to learn anything meaningful in the text encoder itself from just 6 examples.
 
 ### 2.2 Why this is a meaningfully different (and more modern) objective than Case 1
 
@@ -43,7 +45,7 @@ Case 1 asks "does a linear/softmax layer on top of this representation predict t
 
 ### 2.3 Evaluation — two capabilities the contrastive setup gives for free
 
-1. **Zero-shot classification**: classify a brain window by finding its nearest condition-embedding by cosine similarity (no classifier head at all) — directly comparable, as a representation-quality metric, against Case 1's supervised decoding accuracy (92.5%). A meaningfully lower zero-shot number wouldn't be a failure — it would quantify the gap between "aligned representation" and "task-optimized representation," which is itself an interesting reportable finding.
+1. **Prototype-based classification via the joint embedding** (*not* zero-shot — all 6 classes are seen during contrastive training, since the true label picks the positive text prototype each step; true zero-shot would mean classifying a condition whose text-brain pairing was never trained on, which this setup doesn't attempt): classify a brain window by finding its nearest condition-embedding by cosine similarity, with no separate classifier head. Directly comparable, as a representation-quality metric, against Case 1's supervised decoding accuracy (92.5%) — a meaningfully lower number wouldn't be a failure, it would quantify the gap between "aligned representation" and "task-optimized representation," itself an interesting reportable finding.
 2. **Cross-modal retrieval**: given a text query ("left foot movement"), retrieve the most characteristic brain windows, and vice versa. **This reuses `retrieval.py`'s cosine-similarity retrieval mechanism verbatim** — the same code that retrieves paper chunks for RAG can retrieve brain windows once both live in embedding space, just pointed at a different embedding matrix. Worth building as literal code reuse, not just a conceptual parallel — a concrete "shared retrieval infrastructure across modalities" systems-design point.
 
 ### 2.4 Generation (v2/stretch) — where "predict the next timepoint" reappears
@@ -78,8 +80,8 @@ Unchanged from before — Case 2's two small encoders plus a contrastive loss ar
 
 1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.
 2. **Paper corpus correction** (§5) — find and add real HCP MOTOR-decoding comparison papers.
-3. **Case 2 v1**: contrastive brain-encoder + learned class-prototype label encoder, evaluated via zero-shot classification.
-4. **Case 2 v2**: swap the label encoder for MiniLM-encoded text descriptions (optionally RSN-enriched), add cross-modal retrieval evaluation reusing `retrieval.py`.
+3. ~~**Case 2 v1**~~: skipped directly to v2 — user confirmed the MiniLM text-encoder version is the one worth building first, not the cheaper learned-embedding-table intermediate.
+4. **Case 2 v2** (now the actual starting point): MiniLM-encoded condition-description prototypes (frozen MiniLM, small trainable projection) contrastively aligned with the brain encoder, evaluated via prototype-based classification and text-to-brain retrieval (reusing `retrieval.py`'s cosine-similarity mechanism). Includes a hyperparameter sweep: window size (16/24/32/48/64) × brain-encoder architecture (GRU/Transformer), then a separate text-embedding-model comparison at the best config.
 5. **Case 2 v3 (stretch)**: conditional generation of future ROI activity from the learned joint representation.
 6. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
 
