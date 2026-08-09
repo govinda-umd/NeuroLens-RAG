@@ -96,6 +96,19 @@ Built in [`11_case2_forecasting.ipynb`](../notebooks/11_case2_forecasting.ipynb)
 
 **Answering the original question directly**: with this frozen representation and a linear probe, usable forecast horizon is about 3-4 seconds — short relative to a 12-second condition block. Not yet properly deconfounded from sample size (worth subsampling horizon=1's larger training set down to match smaller horizons' counts before treating the decay curve as a clean scientific claim), and not yet compared against a non-frozen or Case-3 (dynamical-systems) alternative, which is architecturally built for exactly this kind of forward prediction.
 
+## 8.6. GRU vs. Transformer, paired significance test at 100-subject population scale — **done**
+
+Built in [`13_architecture_comparison_bootstrap.ipynb`](../notebooks/13_architecture_comparison_bootstrap.ipynb): both architectures trained on the *same* random 65/13/12 split each repeat (30 repeats, same repeated-splits methodology as [`12_population_level_evaluation.ipynb`](../notebooks/12_population_level_evaluation.ipynb)), enabling a paired Wilcoxon signed-rank test on the per-repeat differences rather than comparing two independent confidence intervals by eye.
+
+| | GRU | Transformer | Paired Wilcoxon p |
+|---|---|---|---|
+| **Case 1** (direct decoding) | 0.901 [0.872, 0.924] | **0.922 [0.902, 0.945]** | **3.7×10⁻⁹** |
+| **Case 2** (contrastive) | 0.877 [0.835, 0.905] | **0.918 [0.881, 0.940]** | **1.9×10⁻⁹** |
+
+**Transformer is the statistically significantly better architecture for both cases**, not just numerically higher on average — both p-values are far beyond any conventional significance threshold. The gap is real and specifically **larger for Case 2 than Case 1** (+4.1 points vs. +2.0 points, roughly double), confirming at full population scale what the 20-subject window/architecture sweep in §8 suggested: the contrastive objective rewards the Transformer's self-attention architecture more than plain supervised classification does. Transformer is the architecture used throughout the completed RAG-CAV loop (`14_rag_cav_loop.ipynb`) and the natural default for any future Case 2 v3/Case 3 work.
+
+One methodological note worth being explicit about: an early version of this notebook crashed mid-run on a `matplotlib` API change (`boxplot(labels=...)` renamed to `tick_labels=` in matplotlib 3.9+) *after* the expensive Case 1 training had already completed but *before* results were saved to disk — losing that work and requiring a full rerun. Fixed by moving result-saving to happen immediately after each part's statistics are computed, before any plotting — a general lesson applied here: never let optional visualization code sit between expensive computation and persisting its results.
+
 ## 9. Proposed build sequencing (updated)
 
 1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.

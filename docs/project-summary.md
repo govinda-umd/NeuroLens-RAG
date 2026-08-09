@@ -67,14 +67,16 @@ This is the concrete instance of that argument, not a hypothetical: a `left_hand
 |---|---|
 | Case 1 (Transformer, multi-task), single 100-subject split | 91.3% test macro-F1 |
 | Case 1, population-level (20 repeated splits, empirical stopping rule) | **92.0% ± 1.3 pts** (95% CI [90.9%, 93.4%]) |
+| **Case 1, GRU vs. Transformer, paired significance test (30 repeats)** | GRU 0.901 [0.872, 0.924] vs. **Transformer 0.922 [0.902, 0.945]** — paired Wilcoxon **p = 3.7e-9** |
 | Case 1, GRU vs. Transformer, CAV comparison | Both show clean, near-perfect effector-concept separation (probe accuracy 98.5–99.9%); Transformer consistently ~0.5–1 pt higher |
 | Case 2 (contrastive, Transformer backbone, 20-subject) | 90.7% test macro-F1 (vs. 92.5% for Case 1's direct classifier — the real, modest cost of a semantically-constrained decision boundary) |
+| **Case 2, GRU vs. Transformer, paired significance test (30 repeats)** | GRU 0.877 [0.835, 0.905] vs. **Transformer 0.918 [0.881, 0.940]** — paired Wilcoxon **p = 1.9e-9**, gap ~2x Case 1's |
 | Case 2, text-to-brain retrieval precision | 1.00 at every k tested (5–50) |
 | Case 2, forecasting horizon (frozen representation, linear probe) | Real signal for ~3–4 seconds (4–6 TRs), decaying to noise beyond that |
 | RAG retrieval (8-paper corpus, reranked) | Precision@5 = 1.00; recall improved 80%→100% with reranking |
 | RAG-CAV loop | Fully closed, 3 real examples, 1 documented v1 limitation |
 
-**Case 1 vs. Case 2, and GRU vs. Transformer at 100-subject population scale**: paired repeated-splits comparison in progress — see [case2-3-design-plan.md](case2-3-design-plan.md) for the finalized numbers once available; this doc will be updated in place.
+**The statistically better architecture, confirmed at 100-subject population scale with paired significance testing (not just numerically higher averages)**: Transformer beats GRU for both Case 1 (+2.0 points, p=3.7e-9) and Case 2 (+4.1 points, p=1.9e-9) — and the contrastive objective (Case 2) rewards the Transformer's architecture roughly **twice** as much as plain supervised decoding (Case 1) does. Transformer is the architecture used throughout the completed RAG-CAV loop (§2) and the natural choice for any future Case 2/3 work. Full numbers: [`13_architecture_comparison_bootstrap.ipynb`](../notebooks/13_architecture_comparison_bootstrap.ipynb).
 
 ## 5. Statistical rigor — not an afterthought
 
