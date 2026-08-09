@@ -68,8 +68,14 @@ Modeled on Misra & Pessoa (2025, *eLife*)'s methodology: subject-level (not data
 |---|---|
 | Official-split, Transformer | 90.8% test macro-F1 |
 | Post-hoc bootstrap (test-subject resampling, fixed model) | 90.8%, 95% CI [88.0%, 93.3%] |
-| Text-to-brain retrieval precision | 1.00 at every k tested (5–50) |
+| Text-to-brain retrieval, R-precision (= recall = F1 at k = class size) | **0.83–0.89** across the 6 classes |
 | Forecasting horizon (frozen representation, linear probe) | Real signal ~3–4 seconds (4–6 TRs), decaying to noise beyond |
+| Modality-gap check (cross-modal / within-brain distance ratio) | **1.01** — brain and text embeddings are exactly as close to each other as brain embeddings are to each other |
+| Brain-only silhouette score (class labels, text ignored) | 0.43 — real class structure independent of the text anchors |
+
+**Retrieval quality, corrected**: an earlier version of this report cited "precision = 1.00 at every k from 5–50" as the text-to-brain retrieval result. That number is real but misleading on its own — with ~470–580 true-class windows per class in the test set, retrieving only the top 5–50 necessarily caps *recall* at 1–10%, however good the ranking is; precision alone cannot reveal that. `text_to_brain_retrieval_metrics()` (`src/neurolens/contrastive.py`) now reports precision, recall, and F1 together at each k, and R-precision (precision evaluated at k = the true class size, the point where precision, recall, and F1 necessarily coincide) gives the single honest summary number: **0.83–0.89 across the 6 classes** — strong, consistent with the ~90% classification macro-F1, but not the artificially perfect 1.00 the precision-only view implied.
+
+Retrieval precision alone also can't distinguish genuine cross-modal mixing from a "modality gap" (Liang et al., 2022) — two well-aligned-for-ranking but geometrically separate clouds. Three diagnostics were run to check directly: a cross-modal/within-modality distance ratio (1.01, i.e. no systematic offset), a brain-only silhouette score (0.43, i.e. real intrinsic class structure, not borrowed from the text prototypes), and a PCA visualization (`results/case2_embedding_space_pca.png`) showing each text prototype sitting inside its matching-class brain cluster rather than in a separate region. All three agree: the space is genuinely mixed, not just well-ranked. (One secondary check — a linear probe classifying brain-vs-text from the embedding alone — hit 100% accuracy, but this is a statistical artifact of comparing 6 text points against thousands of brain points with no possible held-out split, not evidence of a real gap; reported for completeness, not trusted on its own.)
 
 ### 3.3 Architecture comparison — GRU vs. Transformer, paired significance test
 
@@ -106,6 +112,7 @@ Accuracy and CAV testing both answer questions a human already thought to ask (i
 - The phrase-to-concept mapping in the RAG-CAV loop is keyword-based, not embedding-based — a known simplification, discussed further in `interpretability-methods-notes.md`.
 - The CAV-RAG loop currently targets Case 1 only; Case 2's shared brain-text embedding space plausibly permits a more direct, text-native way to derive concept directions, not yet built.
 - Case 2's forecasting used a frozen linear probe only; a fine-tuned or Case-3-style dynamical model might extend the usable horizon.
+- The RAG-CAV loop's automated faithfulness check (§3.5) has its own scoring ambiguity when multiple concepts are tested per decode (which is common) — reported as a strict/lenient range rather than one number, since it's genuinely unclear which tested concept a one-sentence LLM verdict is "about."
 - Case 3 (Bayesian SLDS/rSLDS) is designed, not implemented.
 
 ### 4.3 Future directions

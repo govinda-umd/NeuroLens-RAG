@@ -1,0 +1,14 @@
+{
+  "n_examples": 12,
+  "n_with_testable_concept": 12,
+  "faithfulness_strict_rate": 0.25,
+  "faithfulness_lenient_rate": 0.5833333333333334,
+  "n_faithful_strict": 3,
+  "n_faithful_lenient": 7,
+  "verdict_distribution": {
+    "AGREE": 10,
+    "DISAGREE": 1,
+    "no_tag_parsed": 1
+  },
+  "note": "strict = must match the first-extracted concept only (likely underestimate); lenient = must match ANY tested concept (likely overestimate); true faithfulness lies between. verdict_distribution shows the more robust finding: the LLM defaults to AGREE regardless of scoring convention."
+}

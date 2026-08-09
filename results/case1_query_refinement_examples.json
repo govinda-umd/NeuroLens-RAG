@@ -1,0 +1,1109 @@
+[
+  {
+    "subject_id": "117324",
+    "task": "MOTOR",
+    "run": "LR",
+    "decoded": {
+      "pred_class": 1,
+      "confidence": 0.9996920824050903,
+      "probs": [
+        8.018873631954193e-05,
+        0.9996920824050903,
+        8.401928789680824e-05,
+        1.566242463013623e-05,
+        7.817221921868622e-05,
+        4.987481588614173e-05
+      ],
+      "hrf_pred": [
+        1.0064287185668945,
+        0.08454039692878723,
+        0.014108255505561829,
+        -0.06292590498924255,
+        -0.017315296456217766
+      ]
+    },
+    "condition": "left_hand",
+    "rsn_attribution": {
+      "per_method": {
+        "saliency": [
+          0.16292473673820496,
+          0.2708408236503601,
+          0.09924095869064331,
+          0.10609912127256393,
+          0.05716094747185707,
+          0.11201906204223633,
+          0.1917143017053604
+        ],
+        "integrated_gradients": [
+          0.2023121565580368,
+          0.2678847908973694,
+          0.09446345269680023,
+          0.11058174073696136,
+          0.04720287397503853,
+          0.11328057944774628,
+          0.1642744243144989
+        ],
+        "shapley": [
+          0.17245935943835816,
+          0.6722876188579898,
+          0.014831573091535441,
+          0.07219360938375746,
+          0.03807274733388885,
+          1.8116460613355065e-05,
+          0.03013697543385685
+        ],
+        "lime": [
+          0.13945010563091118,
+          0.6239281547574985,
+          0.008731163935077429,
+          0.10271671796347179,
+          0.059703895633397924,
+          0.002448300474511704,
+          0.06302166160513152
+        ]
+      },
+      "top_network_by_method": {
+        "saliency": "SomMot",
+        "integrated_gradients": "SomMot",
+        "shapley": "SomMot",
+        "lime": "SomMot"
+      },
+      "families_agree": true,
+      "consensus_network": "SomMot"
+    },
+    "query_text": "Decoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 117324, run LR.",
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": -5.628303527832031,
+        "rerank_score": -5.628303527832031,
+        "dense_score": 0.5582914352416992,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      {
+        "rank": 2,
+        "score": -8.820796966552734,
+        "rerank_score": -8.820796966552734,
+        "dense_score": 0.5369934439659119,
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-010-chunk-003",
+        "text": "of _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org"
+      },
+      {
+        "rank": 3,
+        "score": -8.900764465332031,
+        "rerank_score": -8.900764465332031,
+        "dense_score": 0.535103440284729,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-006-chunk-000",
+        "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3309 TABLE 2. _Activation in individual subjects_ ||Group|-Analysis P|eak|Subjects<br>With<br>Activation|Nearest Pea|k Activation (_P_ \ufffd0.05|Uncorrected)| |---|---|---|---|---|---|---|---| |Motor Area|x|y|z|Number of<br>Subjects|Mean<br>_t_-Value (\ufffdSD)|Mean Location<br>(x, y, z)|Mean Distance*<br>(mm \ufffdSD)| |IMAGINE FINGERS\u2013(IMAGINE TOES \ufffd<br>IMAGINE TONGUE)|||||||| |Left superior frontal gyrus<br>(SMA/CMAc)|0|\ufffd24|48|7/7|5.47 (2.2)|\ufffd2,\ufffd22, 50|6.1 (3.1)| |Left precentral gyrus (PMD)|\ufffd32|\ufffd24|68|7/7|4.68 (2.49)|\ufffd32,\ufffd26, 66|6.8 (5.4)| |Left precentral gyrus (M1)|\ufffd40|\ufffd28|64|7/7|5.21 (2.4)|\ufffd41,\ufffd28, 65|6.8 (3.1)| |IMAGINE TOES\u2013(IMAGINE FINGERS \ufffd<br>IMAGINE TONGUE)|||||||| |Left paracentral lobule (M1)|\ufffd8|\ufffd28|64|7/7|6.36 (3.7)|\ufffd9,\ufffd34, 68|7.8 (4.0)| |Left superior frontal gyrus<br>(SMA)|\ufffd8|\ufffd20|72|7/7|5.81 (3.7)|\ufffd9,\ufffd19, 71|7.9 (4.0)| |IMAGINE TONGUE\u2013(IMAGINE FINGERS<br>\ufffdIMAGINE TOES)|||||||| |Left central sulcus (M1)|\ufffd56|\ufffd12|32|7/7|7.19 (3.0)|\ufffd54,\ufffd11, 34|6.9 (2.3)| |Left central gyrus (M1/PM)|\ufffd64|0|24|7/7|7.45 (2.4)|\ufffd60,\ufffd4, 25|9.9 (2.5)| |Right central sulcus (M1/PM)|56|\ufffd4|32|7/7|7.69 (3.8)|57,\ufffd2, 29|5.3 (3.5)| Number of subjects showing activation ( _P_ \ufffd 0.05 uncorrected) in a region of interest (ROI<sup>#</sup> ; a sphere of radius 12 mm) around the peak voxels detected in the motor cortices during the group analysis. The mean _t_ -value, mean Talaraich coordinate, and the mean distance of the activation peaks from the group peak are reported. _t_ -value \ufffd 1.65 ( _P_ \ufffd 0.05 uncorrected), 3.09 ( _P_ \ufffd 0.001 uncorrected), 4.59 ( _P_ \ufffd 0.05 corrected). For abbreviations see Table 1. \u201cno-man\u2019s-land\u201d in the brain. In contrast, thresholds of 30\u201340% give areas with reasonable volume without gaps between them. brain area in at least 3 of the 10 postmortem brains (Naito et al. 2002b). In cases when a voxel was"
+      },
+      {
+        "rank": 4,
+        "score": -9.278029441833496,
+        "rerank_score": -9.278029441833496,
+        "dense_score": 0.5437551140785217,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 13,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-013-chunk-005",
+        "text": "**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of"
+      },
+      {
+        "rank": 5,
+        "score": -9.408706665039062,
+        "rerank_score": -9.408706665039062,
+        "dense_score": 0.5537631511688232,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-001-chunk-004",
+        "text": "\u201cmotor rules\u201d (e.g., speed-accuracy trade-off) and biomechanical constraints as real movements (Danckert et al. 2002; Decety and Jeannerod 1996; Decety and Michel 1989; Decety et al. 1989; Frak et al. 2001; Jeannerod 1994; Johnson 2000a,b; Papaxanthis et al. 2002; Parsons 1987, 1994; Parsons and Fox 1998; Sirigu et al. 1996). Likewise, functional imaging studies have shown that motor imagery of various types of hand actions rather consistently activates most areas associated with sensorimotor control: typically activation is reported in the supplementary motor area (SMA), the cingulate motor areas (CMAs), the premotor cortex, Broca\u2019s area and its right homolog (areas 44 and 45), and the posterior parietal cortex (Binkofski et al. 2000; Decety et al. 1994; Deiber et al. 1998; Gerardin et al. 2000; Hanakawa et al. 2003; Ingvar and Philipson 1977; Lotze et al. 1999; Naito et al. 2002a; Rao et al. 1993; Roland et al. 1977, 1980; Ruby and Decety 2001; Stephan et al. 1995; Thobois et al. 2000). The involvement of the tentative hand section of the primary motor cortex (M1) is less consistent across studies: some investigators report increases in activity in the precentral gyrus and central sulcus (tentative M1) during motor imagery (Leonardo et al. 1995; Lotze et al. 1999; Porro et al. 1996; Roth et al. The costs of publication of this article were defrayed"
+      }
+    ],
+    "prompt": "You are helping a neuroscience researcher interpret a decoded brain-activity result using retrieved literature excerpts.\n\nDECODED RESULT:\nDecoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 117324, run LR.\n\nRETRIEVED EXCERPTS:\n[Excerpt 1] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 7, similarity=-5.63)\nthe supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation).\n\n[Excerpt 2] (source: meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf, page 10, similarity=-8.82)\nof _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org\n\n[Excerpt 3] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 6, similarity=-8.90)\nSOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3309 TABLE 2. _Activation in individual subjects_ ||Group|-Analysis P|eak|Subjects<br>With<br>Activation|Nearest Pea|k Activation (_P_ \ufffd0.05|Uncorrected)| |---|---|---|---|---|---|---|---| |Motor Area|x|y|z|Number of<br>Subjects|Mean<br>_t_-Value (\ufffdSD)|Mean Location<br>(x, y, z)|Mean Distance*<br>(mm \ufffdSD)| |IMAGINE FINGERS\u2013(IMAGINE TOES \ufffd<br>IMAGINE TONGUE)|||||||| |Left superior frontal gyrus<br>(SMA/CMAc)|0|\ufffd24|48|7/7|5.47 (2.2)|\ufffd2,\ufffd22, 50|6.1 (3.1)| |Left precentral gyrus (PMD)|\ufffd32|\ufffd24|68|7/7|4.68 (2.49)|\ufffd32,\ufffd26, 66|6.8 (5.4)| |Left precentral gyrus (M1)|\ufffd40|\ufffd28|64|7/7|5.21 (2.4)|\ufffd41,\ufffd28, 65|6.8 (3.1)| |IMAGINE TOES\u2013(IMAGINE FINGERS \ufffd<br>IMAGINE TONGUE)|||||||| |Left paracentral lobule (M1)|\ufffd8|\ufffd28|64|7/7|6.36 (3.7)|\ufffd9,\ufffd34, 68|7.8 (4.0)| |Left superior frontal gyrus<br>(SMA)|\ufffd8|\ufffd20|72|7/7|5.81 (3.7)|\ufffd9,\ufffd19, 71|7.9 (4.0)| |IMAGINE TONGUE\u2013(IMAGINE FINGERS<br>\ufffdIMAGINE TOES)|||||||| |Left central sulcus (M1)|\ufffd56|\ufffd12|32|7/7|7.19 (3.0)|\ufffd54,\ufffd11, 34|6.9 (2.3)| |Left central gyrus (M1/PM)|\ufffd64|0|24|7/7|7.45 (2.4)|\ufffd60,\ufffd4, 25|9.9 (2.5)| |Right central sulcus (M1/PM)|56|\ufffd4|32|7/7|7.69 (3.8)|57,\ufffd2, 29|5.3 (3.5)| Number of subjects showing activation ( _P_ \ufffd 0.05 uncorrected) in a region of interest (ROI<sup>#</sup> ; a sphere of radius 12 mm) around the peak voxels detected in the motor cortices during the group analysis. The mean _t_ -value, mean Talaraich coordinate, and the mean distance of the activation peaks from the group peak are reported. _t_ -value \ufffd 1.65 ( _P_ \ufffd 0.05 uncorrected), 3.09 ( _P_ \ufffd 0.001 uncorrected), 4.59 ( _P_ \ufffd 0.05 corrected). For abbreviations see Table 1. \u201cno-man\u2019s-land\u201d in the brain. In contrast, thresholds of 30\u201340% give areas with reasonable volume without gaps between them. brain area in at least 3 of the 10 postmortem brains (Naito et al. 2002b). In cases when a voxel was\n\n[Excerpt 4] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 13, similarity=-9.28)\n**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of\n\n[Excerpt 5] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 1, similarity=-9.41)\n\u201cmotor rules\u201d (e.g., speed-accuracy trade-off) and biomechanical constraints as real movements (Danckert et al. 2002; Decety and Jeannerod 1996; Decety and Michel 1989; Decety et al. 1989; Frak et al. 2001; Jeannerod 1994; Johnson 2000a,b; Papaxanthis et al. 2002; Parsons 1987, 1994; Parsons and Fox 1998; Sirigu et al. 1996). Likewise, functional imaging studies have shown that motor imagery of various types of hand actions rather consistently activates most areas associated with sensorimotor control: typically activation is reported in the supplementary motor area (SMA), the cingulate motor areas (CMAs), the premotor cortex, Broca\u2019s area and its right homolog (areas 44 and 45), and the posterior parietal cortex (Binkofski et al. 2000; Decety et al. 1994; Deiber et al. 1998; Gerardin et al. 2000; Hanakawa et al. 2003; Ingvar and Philipson 1977; Lotze et al. 1999; Naito et al. 2002a; Rao et al. 1993; Roland et al. 1977, 1980; Ruby and Decety 2001; Stephan et al. 1995; Thobois et al. 2000). The involvement of the tentative hand section of the primary motor cortex (M1) is less consistent across studies: some investigators report increases in activity in the precentral gyrus and central sulcus (tentative M1) during motor imagery (Leonardo et al. 1995; Lotze et al. 1999; Porro et al. 1996; Roth et al. The costs of publication of this article were defrayed\n\nINSTRUCTIONS:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts?\n3. Do not cite anything not present in the excerpts above. If no excerpt is closely related, say so explicitly rather than inventing a connection.\n",
+    "generated_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the primary contributing resting-state network mentioned in the decoded result.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by showing that the overall pattern of results remained the same even when the signal in the primary somatosensory cortex was removed before analysis, suggesting that the findings in the primary motor cortex (M1) were not due to signal contamination.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by detailing the activation of various brain areas during motor imagery, including the left M1, which is consistent with the decoded result's mention of the primary contributing resting-state network.\n\n**Excerpt 4**\nUNRELATED\n\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects, but it does not directly relate to the decoded result's focus on motor task, subject 117324, run LR.\n\n**Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by highlighting the consistent activation of areas associated with sensorimotor control during motor imagery, including the SMA, CMAs, premotor cortex, Broca's area, and the posterior parietal cortex, which aligns with the decoded result's mention of the primary contributing resting-state network.\n\n**Synthesis**\n\nThe decoded result aligns with prior findings in the literature, which consistently show activation of areas associated",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\""
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\"",
+        "matched_concepts": [
+          "hand",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral.",
+        "matched_concepts": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "tongue": {
+            "probe_accuracy": 0.999030890369473,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      }
+    ],
+    "final_synthesis_prompt": "You previously analyzed retrieved literature excerpts for this decoded brain-activity result:\n\nDecoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 117324, run LR.\n\nYour excerpt-by-excerpt stance analysis:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the primary contributing resting-state network mentioned in the decoded result.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by showing that the overall pattern of results remained the same even when the signal in the primary somatosensory cortex was removed before analysis, suggesting that the findings in the primary motor cortex (M1) were not due to signal contamination.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by detailing the activation of various brain areas during motor imagery, including the left M1, which is consistent with the decoded result's mention of the primary contributing resting-state network.\n\n**Excerpt 4**\nUNRELATED\n\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects, but it does not directly relate to the decoded result's focus on motor task, subject 117324, run LR.\n\n**Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by highlighting the consistent activation of areas associated with sensorimotor control during motor imagery, including the SMA, CMAs, premotor cortex, Broca's area, and the posterior parietal cortex, which aligns with the decoded result's mention of the primary contributing resting-state network.\n\n**Synthesis**\n\nThe decoded result aligns with prior findings in the literature, which consistently show activation of areas associated\n\nYou then independently tested whether the model's decision is actually sensitive to the concepts the literature invokes, using Concept Activation Vectors (a linear-probe technique applied directly to the model's internal representation, not just reading the literature):\n- Concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.' (from meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf) maps to: hand (TCAV sensitivity for the decoded class = 1.00)\n- Concept phrase '\"Left hand movement is contralateral to left motor area.\"' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: hand (TCAV sensitivity for the decoded class = 1.00), right_side (TCAV sensitivity for the decoded class = 0.00), left_side (TCAV sensitivity for the decoded class = 1.00)\n- Concept phrase 'Tongue representation is bilateral.' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: tongue (TCAV sensitivity for the decoded class = 0.00), right_side (TCAV sensitivity for the decoded class = 0.00), left_side (TCAV sensitivity for the decoded class = 1.00)\n\nWrite a short (3-4 sentence) researcher-facing synthesis integrating all three lines of evidence: the decoded result itself, what the retrieved literature claims, and whether your own concept-sensitivity test agrees with the literature's claim. Be explicit about agreement or disagreement between the literature and the concept test \u2014 that comparison is the most scientifically interesting part, not a restatement of either alone.",
+    "final_synthesis": "**Excerpt-by-Excerpt Stance Analysis**\n\n1. Excerpt 1: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the primary contributing resting-state network mentioned in the decoded result.\n\n2. Excerpt 2: SUPPORTS\nThis excerpt supports the decoded result by showing that the overall pattern of results remained the same even when the signal in the primary somatosensory cortex was removed before analysis, suggesting that the findings in the primary motor cortex (M1) were not due to signal contamination.\n\n3. Excerpt 3: SUPPORTS\nThis excerpt supports the decoded result by detailing the activation of various brain areas during motor imagery, including the left M1, which is consistent with the decoded result's mention of the primary contributing resting-state network.\n\n4. Excerpt 4: UNRELATED\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects, but it does not directly relate to the decoded result's focus on motor task, subject 117324, run LR.\n\n5. Excerpt 5: SUPPORTS\nThis excerpt supports the decoded result by highlighting the consistent activation of areas associated with sensorimotor control during motor imagery, including the SMA, CMAs, premotor cortex, Broca's area, and the posterior parietal cortex, which aligns with the decoded result's mention of the primary contributing resting-state network.\n\n**Synthesis**\n\nThe decoded result aligns with prior findings in the literature, which consistently show activation of areas associated with sensorimotor control during motor imagery. Our concept-sensitivity test further supports the literature's claims, with the concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally' mapping to the decoded class 'hand' with high sensitivity (TCA",
+    "refinement": {
+      "refined_query": "Decoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 117324, run LR. Specifically: neural representation and lateralization of hand movement.",
+      "steered_by_concept": "hand",
+      "tcav_score": 1.0,
+      "refined_retrieved": [
+        {
+          "rank": 1,
+          "score": -4.83571720123291,
+          "rerank_score": -4.83571720123291,
+          "dense_score": 0.6149753928184509,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+          "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+        },
+        {
+          "rank": 2,
+          "score": -6.754583358764648,
+          "rerank_score": -6.754583358764648,
+          "dense_score": 0.5604997873306274,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-001",
+          "text": "a somatotopical activation pattern (described in the next paragraphs) we wanted to make sure that our results were consistent with the results of earlier functional imaging studies. For this purpose, we contrasted the finger motor imagery condition with the resting baseline condition to depict the general pattern of activity (Fig. 1). When the subjects imagined that they were moving their fingers (IMAGINE FINGERS\u2013REST), toes (IMAGINE TOES\u2013REST), and tongue (IMAGINE TONGUE\u2013REST) a bilateral set of frontoparietal areas was active: the precentral gyrus (mainly area 4a), sections of the bilateral SMA, the dorsal premotor cortex (PMD, area 6), the ventral premotor cortex (PMV, area 6), putamen, thalamus, dorsolateral prefrontal cortex, inferior frontal gyrus (pars opercularis and triangularis), intraparietal cortex, supramarginal cortex, and cuneus ( _P_ \ufffd 0.05 corrected; note not all areas and subcortical structures are displayed). This activation pattern is generally consistent with the results presented in earlier functional imaging studies (see the INTRODUCTION and Gerardin et al. 2000). As seen in Fig. 1, several of these areas were active in common when the subjects imagined movement of the 3 body parts. Importantly, however, the spatial distribution of activity in the motor areas was different in the 3 imagery conditions. As evident from Fig. 1, _d\u2013l_ , imagery of finger, toe, and tongue movement activated different sections of the M1. In"
+        },
+        {
+          "rank": 3,
+          "score": -6.927743911743164,
+          "rerank_score": -6.927743911743164,
+          "dense_score": 0.5830551385879517,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 4,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-004-chunk-000",
+          "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image"
+        },
+        {
+          "rank": 4,
+          "score": -8.436776161193848,
+          "rerank_score": -8.436776161193848,
+          "dense_score": 0.6000151634216309,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 13,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-013-chunk-005",
+          "text": "**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of"
+        },
+        {
+          "rank": 5,
+          "score": -8.587449073791504,
+          "rerank_score": -8.587449073791504,
+          "dense_score": 0.5806227326393127,
+          "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+          "page": 1,
+          "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-001-chunk-000",
+          "text": "_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically"
+        }
+      ],
+      "refined_stance_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt discusses the activation of the supplementary motor area (SMA) and primary somatosensory cortex (S1) during voluntary movement of fingers, toes, and tongue. The activation pattern is consistent with the results presented in earlier functional imaging studies, which supports the decoded result of primary contributing resting-state network: SomMot.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt describes the somatotopical activation pattern during finger, toe, and tongue motor imagery, showing a bilateral set of frontoparietal areas active. The activation pattern is consistent with the results presented in earlier functional imaging studies, which supports the decoded result of primary contributing resting-state network: SomMot.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt discusses the somatotopic activation during motor imagery, showing a complex organization of motor areas for different body parts. The activation pattern is consistent with the results presented in earlier studies, which supports the decoded result of primary contributing resting-state network: SomMot.\n\n**Excerpt 4**\nUNRELATED\n\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects, but it does not directly relate to the decoded result of neural representation and lateralization of hand movement.\n\n**Excerpt 5**\nUNRELATED\n\nThis excerpt discusses the complex organization of the human primary motor cortex, which is not directly related to the decoded result of primary contributing resting-state network: SomMot.\n\n**Synthesis**\n\nThe decoded result of primary contributing resting-state network: SomMot is supported by the literature excerpts, which",
+      "refined_final_synthesis": "**Excerpt-by-Excerpt Stance Analysis**\n\n1. Excerpt 1: SUPPORTS\n2. Excerpt 2: SUPPORTS\n3. Excerpt 3: SUPPORTS\n4. Excerpt 4: UNRELATED\n5. Excerpt 5: UNRELATED\n\n**Synthesis**\n\nThe decoded result of primary contributing resting-state network: SomMot is supported by the literature excerpts, which demonstrate a consistent activation pattern in motor areas during voluntary movement and motor imagery. The literature excerpts also highlight the somatotopic organization of motor areas, which aligns with the decoded result. However, our concept-sensitivity test reveals that the model's decision is sensitive to the concepts of hand movement and lateralization, with high sensitivity to hand-related concepts (e.g., \"The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.\") and low sensitivity to tongue-related concepts. This suggests that the model's decision is not only supported by the literature but also reflects the underlying neural mechanisms of hand movement and lateralization.",
+      "top_excerpt_before": {
+        "rank": 1,
+        "score": -5.628303527832031,
+        "rerank_score": -5.628303527832031,
+        "dense_score": 0.5582914352416992,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      "top_excerpt_after": {
+        "rank": 1,
+        "score": -4.83571720123291,
+        "rerank_score": -4.83571720123291,
+        "dense_score": 0.6149753928184509,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      }
+    }
+  },
+  {
+    "subject_id": "100610",
+    "task": "MOTOR",
+    "run": "LR",
+    "decoded": {
+      "pred_class": 1,
+      "confidence": 0.9992039799690247,
+      "probs": [
+        0.00010326242772862315,
+        0.9992039799690247,
+        2.9098353479639627e-05,
+        2.9889337383792736e-05,
+        0.00040336698293685913,
+        0.00023031351156532764
+      ],
+      "hrf_pred": [
+        0.9501301050186157,
+        -0.011401299387216568,
+        0.10590950399637222,
+        0.07808554917573929,
+        0.023726770654320717
+      ]
+    },
+    "condition": "left_hand",
+    "rsn_attribution": {
+      "per_method": {
+        "saliency": [
+          0.18004854023456573,
+          0.2693338096141815,
+          0.09068740904331207,
+          0.11034518480300903,
+          0.05903762951493263,
+          0.11204176396131516,
+          0.17850561439990997
+        ],
+        "integrated_gradients": [
+          0.21882052719593048,
+          0.24689830839633942,
+          0.09335951507091522,
+          0.09855599701404572,
+          0.04923123121261597,
+          0.12185648083686829,
+          0.1712779849767685
+        ],
+        "shapley": [
+          0.12674636522513935,
+          0.7137590867258642,
+          0.009818623250696816,
+          0.005411398658881207,
+          0.02842300000386911,
+          0.07021497238889289,
+          0.04562655374665642
+        ],
+        "lime": [
+          0.08957724733285703,
+          0.7618850419309192,
+          0.016749199745395675,
+          0.015071701862636112,
+          0.02945024384764705,
+          0.019875817416792448,
+          0.06739074786375251
+        ]
+      },
+      "top_network_by_method": {
+        "saliency": "SomMot",
+        "integrated_gradients": "SomMot",
+        "shapley": "SomMot",
+        "lime": "SomMot"
+      },
+      "families_agree": true,
+      "consensus_network": "SomMot"
+    },
+    "query_text": "Decoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 100610, run LR.",
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": -5.515425682067871,
+        "rerank_score": -5.515425682067871,
+        "dense_score": 0.5519359111785889,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      {
+        "rank": 2,
+        "score": -8.743432998657227,
+        "rerank_score": -8.743432998657227,
+        "dense_score": 0.5256995558738708,
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-010-chunk-003",
+        "text": "of _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org"
+      },
+      {
+        "rank": 3,
+        "score": -9.046110153198242,
+        "rerank_score": -9.046110153198242,
+        "dense_score": 0.5384672284126282,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-006-chunk-000",
+        "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3309 TABLE 2. _Activation in individual subjects_ ||Group|-Analysis P|eak|Subjects<br>With<br>Activation|Nearest Pea|k Activation (_P_ \ufffd0.05|Uncorrected)| |---|---|---|---|---|---|---|---| |Motor Area|x|y|z|Number of<br>Subjects|Mean<br>_t_-Value (\ufffdSD)|Mean Location<br>(x, y, z)|Mean Distance*<br>(mm \ufffdSD)| |IMAGINE FINGERS\u2013(IMAGINE TOES \ufffd<br>IMAGINE TONGUE)|||||||| |Left superior frontal gyrus<br>(SMA/CMAc)|0|\ufffd24|48|7/7|5.47 (2.2)|\ufffd2,\ufffd22, 50|6.1 (3.1)| |Left precentral gyrus (PMD)|\ufffd32|\ufffd24|68|7/7|4.68 (2.49)|\ufffd32,\ufffd26, 66|6.8 (5.4)| |Left precentral gyrus (M1)|\ufffd40|\ufffd28|64|7/7|5.21 (2.4)|\ufffd41,\ufffd28, 65|6.8 (3.1)| |IMAGINE TOES\u2013(IMAGINE FINGERS \ufffd<br>IMAGINE TONGUE)|||||||| |Left paracentral lobule (M1)|\ufffd8|\ufffd28|64|7/7|6.36 (3.7)|\ufffd9,\ufffd34, 68|7.8 (4.0)| |Left superior frontal gyrus<br>(SMA)|\ufffd8|\ufffd20|72|7/7|5.81 (3.7)|\ufffd9,\ufffd19, 71|7.9 (4.0)| |IMAGINE TONGUE\u2013(IMAGINE FINGERS<br>\ufffdIMAGINE TOES)|||||||| |Left central sulcus (M1)|\ufffd56|\ufffd12|32|7/7|7.19 (3.0)|\ufffd54,\ufffd11, 34|6.9 (2.3)| |Left central gyrus (M1/PM)|\ufffd64|0|24|7/7|7.45 (2.4)|\ufffd60,\ufffd4, 25|9.9 (2.5)| |Right central sulcus (M1/PM)|56|\ufffd4|32|7/7|7.69 (3.8)|57,\ufffd2, 29|5.3 (3.5)| Number of subjects showing activation ( _P_ \ufffd 0.05 uncorrected) in a region of interest (ROI<sup>#</sup> ; a sphere of radius 12 mm) around the peak voxels detected in the motor cortices during the group analysis. The mean _t_ -value, mean Talaraich coordinate, and the mean distance of the activation peaks from the group peak are reported. _t_ -value \ufffd 1.65 ( _P_ \ufffd 0.05 uncorrected), 3.09 ( _P_ \ufffd 0.001 uncorrected), 4.59 ( _P_ \ufffd 0.05 corrected). For abbreviations see Table 1. \u201cno-man\u2019s-land\u201d in the brain. In contrast, thresholds of 30\u201340% give areas with reasonable volume without gaps between them. brain area in at least 3 of the 10 postmortem brains (Naito et al. 2002b). In cases when a voxel was"
+      },
+      {
+        "rank": 4,
+        "score": -9.302851676940918,
+        "rerank_score": -9.302851676940918,
+        "dense_score": 0.5367041826248169,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 13,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-013-chunk-005",
+        "text": "**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of"
+      },
+      {
+        "rank": 5,
+        "score": -9.463144302368164,
+        "rerank_score": -9.463144302368164,
+        "dense_score": 0.5158811807632446,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 12,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-012-chunk-008",
+        "text": "feel my hand moving: a new role of the primary motor cortex in somatic perception of limb movement. _Neuron_ 36: 979\u2013988, 2002b. _J Neurophysiol_ \u2022 VOL 90 \u2022 NOVEMBER 2003 \u2022 www.jn.org"
+      }
+    ],
+    "prompt": "You are helping a neuroscience researcher interpret a decoded brain-activity result using retrieved literature excerpts.\n\nDECODED RESULT:\nDecoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 100610, run LR.\n\nRETRIEVED EXCERPTS:\n[Excerpt 1] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 7, similarity=-5.52)\nthe supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation).\n\n[Excerpt 2] (source: meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf, page 10, similarity=-8.74)\nof _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org\n\n[Excerpt 3] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 6, similarity=-9.05)\nSOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3309 TABLE 2. _Activation in individual subjects_ ||Group|-Analysis P|eak|Subjects<br>With<br>Activation|Nearest Pea|k Activation (_P_ \ufffd0.05|Uncorrected)| |---|---|---|---|---|---|---|---| |Motor Area|x|y|z|Number of<br>Subjects|Mean<br>_t_-Value (\ufffdSD)|Mean Location<br>(x, y, z)|Mean Distance*<br>(mm \ufffdSD)| |IMAGINE FINGERS\u2013(IMAGINE TOES \ufffd<br>IMAGINE TONGUE)|||||||| |Left superior frontal gyrus<br>(SMA/CMAc)|0|\ufffd24|48|7/7|5.47 (2.2)|\ufffd2,\ufffd22, 50|6.1 (3.1)| |Left precentral gyrus (PMD)|\ufffd32|\ufffd24|68|7/7|4.68 (2.49)|\ufffd32,\ufffd26, 66|6.8 (5.4)| |Left precentral gyrus (M1)|\ufffd40|\ufffd28|64|7/7|5.21 (2.4)|\ufffd41,\ufffd28, 65|6.8 (3.1)| |IMAGINE TOES\u2013(IMAGINE FINGERS \ufffd<br>IMAGINE TONGUE)|||||||| |Left paracentral lobule (M1)|\ufffd8|\ufffd28|64|7/7|6.36 (3.7)|\ufffd9,\ufffd34, 68|7.8 (4.0)| |Left superior frontal gyrus<br>(SMA)|\ufffd8|\ufffd20|72|7/7|5.81 (3.7)|\ufffd9,\ufffd19, 71|7.9 (4.0)| |IMAGINE TONGUE\u2013(IMAGINE FINGERS<br>\ufffdIMAGINE TOES)|||||||| |Left central sulcus (M1)|\ufffd56|\ufffd12|32|7/7|7.19 (3.0)|\ufffd54,\ufffd11, 34|6.9 (2.3)| |Left central gyrus (M1/PM)|\ufffd64|0|24|7/7|7.45 (2.4)|\ufffd60,\ufffd4, 25|9.9 (2.5)| |Right central sulcus (M1/PM)|56|\ufffd4|32|7/7|7.69 (3.8)|57,\ufffd2, 29|5.3 (3.5)| Number of subjects showing activation ( _P_ \ufffd 0.05 uncorrected) in a region of interest (ROI<sup>#</sup> ; a sphere of radius 12 mm) around the peak voxels detected in the motor cortices during the group analysis. The mean _t_ -value, mean Talaraich coordinate, and the mean distance of the activation peaks from the group peak are reported. _t_ -value \ufffd 1.65 ( _P_ \ufffd 0.05 uncorrected), 3.09 ( _P_ \ufffd 0.001 uncorrected), 4.59 ( _P_ \ufffd 0.05 corrected). For abbreviations see Table 1. \u201cno-man\u2019s-land\u201d in the brain. In contrast, thresholds of 30\u201340% give areas with reasonable volume without gaps between them. brain area in at least 3 of the 10 postmortem brains (Naito et al. 2002b). In cases when a voxel was\n\n[Excerpt 4] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 13, similarity=-9.30)\n**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of\n\n[Excerpt 5] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 12, similarity=-9.46)\nfeel my hand moving: a new role of the primary motor cortex in somatic perception of limb movement. _Neuron_ 36: 979\u2013988, 2002b. _J Neurophysiol_ \u2022 VOL 90 \u2022 NOVEMBER 2003 \u2022 www.jn.org\n\nINSTRUCTIONS:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts?\n3. Do not cite anything not present in the excerpts above. If no excerpt is closely related, say so explicitly rather than inventing a connection.\n",
+    "generated_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary contributing resting-state network as the SomMot, which is consistent with the decoded condition of left_hand.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex during motor imagery, which is consistent with the decoded condition of left_hand.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of specific brain areas during motor imagery, including the left precentral gyrus (PMD) and the left precentral gyrus (M1), which is consistent with the decoded condition of left_hand.\n\n**Excerpt 4**\nUNRELATED\n\nThis excerpt does not clearly discuss the decoded result, as it discusses the mental representation of upper extremity movements in healthy subjects, which is not directly related to the decoded condition of left_hand.\n\n**Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex in somatic perception of limb movement, which is consistent with the decoded condition of left_hand.\n\nSynthesis:\nThe decoded result agrees with prior findings in the literature, which describe the activation of specific brain areas during motor imagery and motor execution. The SomMot network is consistently activated during motor tasks, and the primary motor cortex is activated during motor imagery and motor execution. However, the literature does not provide a clear discussion of the specific brain areas activated during left_hand motor tasks, which is a limitation of the retrieved excerpts.",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\""
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 6,
+        "phrase": "\"Left hand movement is contralateral to left motor area.\"",
+        "matched_concepts": [
+          "hand",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      }
+    ],
+    "final_synthesis_prompt": "You previously analyzed retrieved literature excerpts for this decoded brain-activity result:\n\nDecoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 100610, run LR.\n\nYour excerpt-by-excerpt stance analysis:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary contributing resting-state network as the SomMot, which is consistent with the decoded condition of left_hand.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex during motor imagery, which is consistent with the decoded condition of left_hand.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of specific brain areas during motor imagery, including the left precentral gyrus (PMD) and the left precentral gyrus (M1), which is consistent with the decoded condition of left_hand.\n\n**Excerpt 4**\nUNRELATED\n\nThis excerpt does not clearly discuss the decoded result, as it discusses the mental representation of upper extremity movements in healthy subjects, which is not directly related to the decoded condition of left_hand.\n\n**Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex in somatic perception of limb movement, which is consistent with the decoded condition of left_hand.\n\nSynthesis:\nThe decoded result agrees with prior findings in the literature, which describe the activation of specific brain areas during motor imagery and motor execution. The SomMot network is consistently activated during motor tasks, and the primary motor cortex is activated during motor imagery and motor execution. However, the literature does not provide a clear discussion of the specific brain areas activated during left_hand motor tasks, which is a limitation of the retrieved excerpts.\n\nYou then independently tested whether the model's decision is actually sensitive to the concepts the literature invokes, using Concept Activation Vectors (a linear-probe technique applied directly to the model's internal representation, not just reading the literature):\n- Concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.' (from meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf) maps to: hand (TCAV sensitivity for the decoded class = 1.00)\n- Concept phrase '\"Left hand movement is contralateral to left motor area.\"' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: hand (TCAV sensitivity for the decoded class = 1.00), right_side (TCAV sensitivity for the decoded class = 0.00), left_side (TCAV sensitivity for the decoded class = 1.00)\n\nWrite a short (3-4 sentence) researcher-facing synthesis integrating all three lines of evidence: the decoded result itself, what the retrieved literature claims, and whether your own concept-sensitivity test agrees with the literature's claim. Be explicit about agreement or disagreement between the literature and the concept test \u2014 that comparison is the most scientifically interesting part, not a restatement of either alone.",
+    "final_synthesis": "**Decoded Result Analysis**\n\n1. **Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary contributing resting-state network as the SomMot, which is consistent with the decoded condition of left_hand.\n\n2. **Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex during motor imagery, which is consistent with the decoded condition of left_hand.\n\n3. **Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of specific brain areas during motor imagery, including the left precentral gyrus (PMD) and the left precentral gyrus (M1), which is consistent with the decoded condition of left_hand.\n\n4. **Excerpt 4**\nUNRELATED\n\nThis excerpt does not clearly discuss the decoded result, as it discusses the mental representation of upper extremity movements in healthy subjects, which is not directly related to the decoded condition of left_hand.\n\n5. **Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary motor cortex in somatic perception of limb movement, which is consistent with the decoded condition of left_hand.\n\n**Synthesis**\n\nThe decoded result agrees with prior findings in the literature, which describe the activation of specific brain areas during motor imagery and motor execution. The SomMot network is consistently activated during motor tasks, and the primary motor cortex is activated during motor imagery and motor execution. However, the literature does not provide a clear discussion of the specific brain areas activated during left_hand motor tasks, which is a limitation of the retrieved excerpts.\n\n**Concept Activation Vectors (CAV) Test**\n\nThe CAV test revealed that the concept phrase \"The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally\" maps to: hand (TCAV sensitivity for the decoded class = 1.00).",
+    "refinement": {
+      "refined_query": "Decoded condition: left_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 100610, run LR. Specifically: neural representation and lateralization of hand movement.",
+      "steered_by_concept": "hand",
+      "tcav_score": 1.0,
+      "refined_retrieved": [
+        {
+          "rank": 1,
+          "score": -4.791991233825684,
+          "rerank_score": -4.791991233825684,
+          "dense_score": 0.6102523803710938,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+          "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+        },
+        {
+          "rank": 2,
+          "score": -6.8974151611328125,
+          "rerank_score": -6.8974151611328125,
+          "dense_score": 0.5808652639389038,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 4,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-004-chunk-000",
+          "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image"
+        },
+        {
+          "rank": 3,
+          "score": -8.483663558959961,
+          "rerank_score": -8.483663558959961,
+          "dense_score": 0.5955561399459839,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 13,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-013-chunk-005",
+          "text": "**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of"
+        },
+        {
+          "rank": 4,
+          "score": -8.544336318969727,
+          "rerank_score": -8.544336318969727,
+          "dense_score": 0.5665581822395325,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 12,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-012-chunk-008",
+          "text": "feel my hand moving: a new role of the primary motor cortex in somatic perception of limb movement. _Neuron_ 36: 979\u2013988, 2002b. _J Neurophysiol_ \u2022 VOL 90 \u2022 NOVEMBER 2003 \u2022 www.jn.org"
+        },
+        {
+          "rank": 5,
+          "score": -8.55265998840332,
+          "rerank_score": -8.55265998840332,
+          "dense_score": 0.5800698399543762,
+          "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+          "page": 1,
+          "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-001-chunk-000",
+          "text": "_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically"
+        }
+      ],
+      "refined_stance_text": "1. Excerpt 1: SUPPORTS the decoded result, as it describes the activation of the primary contributing resting-state network (SomMot) and the involvement of motor areas such as M1, SMA, and CMAc in hand movement.\n2. Excerpt 2: SUPPORTS the decoded result, as it describes the somatotopic activation of motor imagery, including the activation of M1, SMA, and CMAc for finger, toe, and tongue movements, which aligns with the decoded result's focus on neural representation and lateralization of hand movement.\n3. Excerpt 3: UNRELATED to the decoded result, as it discusses the functional anatomy of mental representation of upper extremity movements in healthy subjects, but does not specifically address the neural representation and lateralization of hand movement.\n4. Excerpt 4: SUPPORTS the decoded result, as it discusses the somatic perception of limb movement and the role of the primary motor cortex in this process, which aligns with the decoded result's focus on neural representation and lateralization of hand movement.\n5. Excerpt 5: SUPPORTS the decoded result, as it describes the complex organization of the human primary motor cortex, including the activation of M1 for hand and finger movements, which aligns with the decoded result's focus on neural representation and lateralization of hand movement.\n\nSynthesis:\nThe decoded result aligns with prior findings on the neural representation and lateralization of hand movement. The retrieved excerpts support the idea that the primary motor cortex, particularly M1, is involved in the neural representation and lateralization of hand movement. The complex organization of the motor cortex, as described in Excerpt 5, also supports the decoded result's focus on neural representation and lateralization of hand movement.",
+      "refined_final_synthesis": "Our analysis of the decoded brain-activity result, supported by the retrieved literature excerpts, reveals that the primary contributing resting-state network is the SomMot network, and motor areas such as M1, SMA, and CMAc are involved in hand movement. The literature excerpts, including Meier et al. (2008) and Ehrsson et al. (2003), provide further evidence for this finding, highlighting the somatotopic activation of motor imagery and the lateralization of hand movement. Notably, our concept-sensitivity test using Concept Activation Vectors (CAVs) confirms the literature's claim that the primary motor cortex, particularly M1, is involved in the neural representation and lateralization of hand movement, with a high sensitivity for the hand concept (TCAV sensitivity = 1.00). This convergence of evidence supports the decoded result and provides strong support for the literature's claims, highlighting the robustness of the neural representation and lateralization of hand movement.",
+      "top_excerpt_before": {
+        "rank": 1,
+        "score": -5.515425682067871,
+        "rerank_score": -5.515425682067871,
+        "dense_score": 0.5519359111785889,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      "top_excerpt_after": {
+        "rank": 1,
+        "score": -4.791991233825684,
+        "rerank_score": -4.791991233825684,
+        "dense_score": 0.6102523803710938,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      }
+    }
+  },
+  {
+    "subject_id": "114217",
+    "task": "MOTOR",
+    "run": "LR",
+    "decoded": {
+      "pred_class": 2,
+      "confidence": 0.9990776777267456,
+      "probs": [
+        9.740027599036694e-05,
+        3.7631671148119494e-05,
+        0.9990776777267456,
+        0.0007451863493770361,
+        3.6859528336208314e-05,
+        5.2433160817599855e-06
+      ],
+      "hrf_pred": [
+        -0.053544461727142334,
+        0.774980366230011,
+        0.05274548381567001,
+        -0.013410709798336029,
+        -0.09515752643346786
+      ]
+    },
+    "condition": "right_hand",
+    "rsn_attribution": {
+      "per_method": {
+        "saliency": [
+          0.18824400007724762,
+          0.2607421576976776,
+          0.09405822306871414,
+          0.10131187736988068,
+          0.06933042407035828,
+          0.10677074640989304,
+          0.179542675614357
+        ],
+        "integrated_gradients": [
+          0.18179062008857727,
+          0.3488297164440155,
+          0.09161988645792007,
+          0.09596782177686691,
+          0.04641151800751686,
+          0.09059971570968628,
+          0.1447807401418686
+        ],
+        "shapley": [
+          0.06277075355409019,
+          0.8965175071163236,
+          0.012402885153051914,
+          0.015581594720139948,
+          0.0013357992809333492,
+          0.002973434355815107,
+          0.008418025819645857
+        ],
+        "lime": [
+          0.058078096763497476,
+          0.874548386175654,
+          0.017709627569472957,
+          0.020061102305719475,
+          0.0011009149549518682,
+          0.008341079629281474,
+          0.020160792601422887
+        ]
+      },
+      "top_network_by_method": {
+        "saliency": "SomMot",
+        "integrated_gradients": "SomMot",
+        "shapley": "SomMot",
+        "lime": "SomMot"
+      },
+      "families_agree": true,
+      "consensus_network": "SomMot"
+    },
+    "query_text": "Decoded condition: right_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 114217, run LR.",
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": -5.613617420196533,
+        "rerank_score": -5.613617420196533,
+        "dense_score": 0.5516706705093384,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      {
+        "rank": 2,
+        "score": -8.522446632385254,
+        "rerank_score": -8.522446632385254,
+        "dense_score": 0.5574445724487305,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-001-chunk-004",
+        "text": "\u201cmotor rules\u201d (e.g., speed-accuracy trade-off) and biomechanical constraints as real movements (Danckert et al. 2002; Decety and Jeannerod 1996; Decety and Michel 1989; Decety et al. 1989; Frak et al. 2001; Jeannerod 1994; Johnson 2000a,b; Papaxanthis et al. 2002; Parsons 1987, 1994; Parsons and Fox 1998; Sirigu et al. 1996). Likewise, functional imaging studies have shown that motor imagery of various types of hand actions rather consistently activates most areas associated with sensorimotor control: typically activation is reported in the supplementary motor area (SMA), the cingulate motor areas (CMAs), the premotor cortex, Broca\u2019s area and its right homolog (areas 44 and 45), and the posterior parietal cortex (Binkofski et al. 2000; Decety et al. 1994; Deiber et al. 1998; Gerardin et al. 2000; Hanakawa et al. 2003; Ingvar and Philipson 1977; Lotze et al. 1999; Naito et al. 2002a; Rao et al. 1993; Roland et al. 1977, 1980; Ruby and Decety 2001; Stephan et al. 1995; Thobois et al. 2000). The involvement of the tentative hand section of the primary motor cortex (M1) is less consistent across studies: some investigators report increases in activity in the precentral gyrus and central sulcus (tentative M1) during motor imagery (Leonardo et al. 1995; Lotze et al. 1999; Porro et al. 1996; Roth et al. The costs of publication of this article were defrayed"
+      },
+      {
+        "rank": 3,
+        "score": -8.681577682495117,
+        "rerank_score": -8.681577682495117,
+        "dense_score": 0.5364706516265869,
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-010-chunk-003",
+        "text": "of _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org"
+      },
+      {
+        "rank": 4,
+        "score": -9.172895431518555,
+        "rerank_score": -9.172895431518555,
+        "dense_score": 0.5288446545600891,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-004",
+        "text": "engage different somatotopical zones of the motor areas. This was done in 3 steps. First, to directly test for body-part\u2013specific activation during imagery we compared imagined movements of one body part with the imagined movements of the other 2 body parts [e.g., (IMAGINE FINGERS\u2013IMAGINE TOES) and (IMAGINE FINGERS\u2013IMAGINE TONGUE), respectively (see Fig. 2)]. Brain activity robustly associated with imagining the movement of a particular body part should be revealed in both these comparisons (we report only activations that fulfill this criterion). Second, by contrasting the movement execution conditions, we could define somatotopical sections of the motor cortices (Fig. 2) [e.g., the finger zones were FIG. 1. Brain activation observed while subjects imagined they were making movements with their fingers ( _left column_ ; _a_ , _d_ , _g_ , _j_ ), toes ( _middle column_ ; _b_ , _e_ , _h_ , _k_ ), and tongue ( _right column_ ; _c_ , _f_ , _i_ , _l_ ) compared with resting baseline condition. General activation pattern was similar for 3 conditions with recruitment of a set of prefrontal, posterior parietal, and sensorimotor-related areas ( _a\u2013c_ ). However, differences in spatial distribution of activity in motor areas were observed ( _d\u2013l_ ). Imagery of finger movements activated a section of central sulcus ( _d_ ) that was not active in other"
+      },
+      {
+        "rank": 5,
+        "score": -9.185985565185547,
+        "rerank_score": -9.185985565185547,
+        "dense_score": 0.5425214171409607,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 13,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-013-chunk-005",
+        "text": "**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of"
+      }
+    ],
+    "prompt": "You are helping a neuroscience researcher interpret a decoded brain-activity result using retrieved literature excerpts.\n\nDECODED RESULT:\nDecoded condition: right_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 114217, run LR.\n\nRETRIEVED EXCERPTS:\n[Excerpt 1] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 7, similarity=-5.61)\nthe supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation).\n\n[Excerpt 2] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 1, similarity=-8.52)\n\u201cmotor rules\u201d (e.g., speed-accuracy trade-off) and biomechanical constraints as real movements (Danckert et al. 2002; Decety and Jeannerod 1996; Decety and Michel 1989; Decety et al. 1989; Frak et al. 2001; Jeannerod 1994; Johnson 2000a,b; Papaxanthis et al. 2002; Parsons 1987, 1994; Parsons and Fox 1998; Sirigu et al. 1996). Likewise, functional imaging studies have shown that motor imagery of various types of hand actions rather consistently activates most areas associated with sensorimotor control: typically activation is reported in the supplementary motor area (SMA), the cingulate motor areas (CMAs), the premotor cortex, Broca\u2019s area and its right homolog (areas 44 and 45), and the posterior parietal cortex (Binkofski et al. 2000; Decety et al. 1994; Deiber et al. 1998; Gerardin et al. 2000; Hanakawa et al. 2003; Ingvar and Philipson 1977; Lotze et al. 1999; Naito et al. 2002a; Rao et al. 1993; Roland et al. 1977, 1980; Ruby and Decety 2001; Stephan et al. 1995; Thobois et al. 2000). The involvement of the tentative hand section of the primary motor cortex (M1) is less consistent across studies: some investigators report increases in activity in the precentral gyrus and central sulcus (tentative M1) during motor imagery (Leonardo et al. 1995; Lotze et al. 1999; Porro et al. 1996; Roth et al. The costs of publication of this article were defrayed\n\n[Excerpt 3] (source: meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf, page 10, similarity=-8.68)\nof _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org\n\n[Excerpt 4] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 3, similarity=-9.17)\nengage different somatotopical zones of the motor areas. This was done in 3 steps. First, to directly test for body-part\u2013specific activation during imagery we compared imagined movements of one body part with the imagined movements of the other 2 body parts [e.g., (IMAGINE FINGERS\u2013IMAGINE TOES) and (IMAGINE FINGERS\u2013IMAGINE TONGUE), respectively (see Fig. 2)]. Brain activity robustly associated with imagining the movement of a particular body part should be revealed in both these comparisons (we report only activations that fulfill this criterion). Second, by contrasting the movement execution conditions, we could define somatotopical sections of the motor cortices (Fig. 2) [e.g., the finger zones were FIG. 1. Brain activation observed while subjects imagined they were making movements with their fingers ( _left column_ ; _a_ , _d_ , _g_ , _j_ ), toes ( _middle column_ ; _b_ , _e_ , _h_ , _k_ ), and tongue ( _right column_ ; _c_ , _f_ , _i_ , _l_ ) compared with resting baseline condition. General activation pattern was similar for 3 conditions with recruitment of a set of prefrontal, posterior parietal, and sensorimotor-related areas ( _a\u2013c_ ). However, differences in spatial distribution of activity in motor areas were observed ( _d\u2013l_ ). Imagery of finger movements activated a section of central sulcus ( _d_ ) that was not active in other\n\n[Excerpt 5] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 13, similarity=-9.19)\n**Stephan KM, Fink GR, Passingham RE, Silbersweig D, Ceballos-Baumann AO, Frith CD, and Frackowiak RS.** Functional anatomy of the mental representation of upper extremity movements in healthy subjects. _J Neurophysiol_ 73: 373\u2013386, 1995. - **Stippich C, Ochmann H, and Sartor K.** Somatotopic mapping of the human primary sensorimotor cortex during motor imagery and motor execution by functional magnetic resonance imaging. _Neurosci Lett_ 331: 50\u201354, 2002. - **Strick PL and Preston JB.** Two representations of the hand in area 4 of a primate. II. Somatosensory input organization. _J Neurophysiol_ 48: 150\u2013159, 1982. - **Talaraich J and Bancaud J.** The supplementary motor area in man. _Int J Neurol_ 5: 330\u2013347, 1966. - **Talaraich J and Tournoux P.** Co-planar stereotaxic atlas of the human brain. Stuttgart, Germany: Thieme, 1988. - **Thobois S, Dominey PF, Decety J, Pollak P, Gregoire MC, Le Bars D, and Broussolle E.** Motor imagery in normal subjects and in asymmetrical Parkinson\u2019s disease. _Neurology_ 55: 996\u20131002, 2000. - **Tyszka JM, Grafton ST, Chew W, Woods RP, and Colletti PM.** Parceling of mesial frontal motor areas during ideation and movement using functional magnetic resonance imaging at 1.5 tesla. _Ann Neurol_ 35: 746\u2013749, 1994. - **Woolsey CN, Settlage PH, Meyer DR, Spencer W, and Hamuy TP.** Patterns of localization in precentral and \u201csupplementary\u201d motor areas and their relation to the concept of\n\nINSTRUCTIONS:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts?\n3. Do not cite anything not present in the excerpts above. If no excerpt is closely related, say so explicitly rather than inventing a connection.\n",
+    "generated_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by highlighting the activation of motor areas such as the SMA, CMA, and posterior parietal cortex during motor imagery, which is consistent with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 3**\nUNRELATED\n\nThis excerpt discusses the somatotopic map in the primary motor cortex and the finger area being bracketed dorsally and ventrally by separate wrist and forearm areas. While it provides information about the motor cortex, it does not directly relate to the decoded result of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 4**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of specific somatotopical zones of the motor areas during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 5**\nUNRELATED\n\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects and provides examples of studies that investigated the activation of motor areas during motor imagery. While it provides information about motor imagery, it does",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral."
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "phrase": "Imagery of finger movements activates central sulcus."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 1,
+        "phrase": "Tongue representation is bilateral.",
+        "matched_concepts": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "tongue": {
+            "probe_accuracy": 0.999030890369473,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 468
+          }
+        }
+      }
+    ],
+    "final_synthesis_prompt": "You previously analyzed retrieved literature excerpts for this decoded brain-activity result:\n\nDecoded condition: right_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 114217, run LR.\n\nYour excerpt-by-excerpt stance analysis:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by highlighting the activation of motor areas such as the SMA, CMA, and posterior parietal cortex during motor imagery, which is consistent with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 3**\nUNRELATED\n\nThis excerpt discusses the somatotopic map in the primary motor cortex and the finger area being bracketed dorsally and ventrally by separate wrist and forearm areas. While it provides information about the motor cortex, it does not directly relate to the decoded result of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 4**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of specific somatotopical zones of the motor areas during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Excerpt 5**\nUNRELATED\n\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects and provides examples of studies that investigated the activation of motor areas during motor imagery. While it provides information about motor imagery, it does\n\nYou then independently tested whether the model's decision is actually sensitive to the concepts the literature invokes, using Concept Activation Vectors (a linear-probe technique applied directly to the model's internal representation, not just reading the literature):\n- Concept phrase 'Tongue representation is bilateral.' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: tongue (TCAV sensitivity for the decoded class = 0.00), right_side (TCAV sensitivity for the decoded class = 1.00), left_side (TCAV sensitivity for the decoded class = 0.00)\n- Concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.' (from meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf) maps to: hand (TCAV sensitivity for the decoded class = 1.00)\n\nWrite a short (3-4 sentence) researcher-facing synthesis integrating all three lines of evidence: the decoded result itself, what the retrieved literature claims, and whether your own concept-sensitivity test agrees with the literature's claim. Be explicit about agreement or disagreement between the literature and the concept test \u2014 that comparison is the most scientifically interesting part, not a restatement of either alone.",
+    "final_synthesis": "**Decoded Result Analysis**\n\n1. **Excerpt 1**: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the supplementary motor area (SMA) and the primary somatosensory cortex (S1) during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n2. **Excerpt 2**: SUPPORTS\nThis excerpt supports the decoded result by highlighting the activation of motor areas such as the SMA, CMA, and posterior parietal cortex during motor imagery, which is consistent with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n3. **Excerpt 3**: UNRELATED\nThis excerpt discusses the somatotopic map in the primary motor cortex and the finger area being bracketed dorsally and ventrally by separate wrist and forearm areas. While it provides information about the motor cortex, it does not directly relate to the decoded result of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n4. **Excerpt 4**: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of specific somatotopical zones of the motor areas during motor imagery, which aligns with the decoded condition of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n5. **Excerpt 5**: UNRELATED\nThis excerpt discusses the functional anatomy of the mental representation of upper extremity movements in healthy subjects and provides examples of studies that investigated the activation of motor areas during motor imagery. While it provides information about motor imagery, it does not directly relate to the decoded result of \"right_hand\" and the primary contributing resting-state network of \"SomMot\".\n\n**Concept Activation Vectors (CAV) Test**\n\nThe CAV test revealed that the concept phrase \"The primary motor cortex has a somatotopic map with finger area bracketed dors",
+    "refinement": {
+      "refined_query": "Decoded condition: right_hand (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 114217, run LR. Specifically: neural representation and lateralization of right side movement.",
+      "steered_by_concept": "right_side",
+      "tcav_score": 1.0,
+      "refined_retrieved": [
+        {
+          "rank": 1,
+          "score": -4.985748291015625,
+          "rerank_score": -4.985748291015625,
+          "dense_score": 0.6202185750007629,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+          "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+        },
+        {
+          "rank": 2,
+          "score": -7.120363235473633,
+          "rerank_score": -7.120363235473633,
+          "dense_score": 0.5788736343383789,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 4,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-004-chunk-000",
+          "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image"
+        },
+        {
+          "rank": 3,
+          "score": -8.05267333984375,
+          "rerank_score": -8.05267333984375,
+          "dense_score": 0.5914562940597534,
+          "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+          "page": 1,
+          "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-001-chunk-000",
+          "text": "_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically"
+        },
+        {
+          "rank": 4,
+          "score": -8.119195938110352,
+          "rerank_score": -8.119195938110352,
+          "dense_score": 0.6106276512145996,
+          "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+          "page": 2,
+          "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-002-chunk-000",
+          "text": "HUMAN MOTOR CORTEX 1801 finger representation as in the monkey brain? The purpose of this study was to use high-resolution functional MRI (fMRI) to map the human motor cortex and ask whether it has a coreand-surround organization, such as in the monkey motor cortex, or any other violation of the standard somatotopic order. ### M E T H O D S ## _Subjects and task_ Five healthy right-handed subjects (3 males; 22\u201339 yr of age) participated in the study, which was approved by the Institutional Review Panel of Princeton University. All subjects were in good health with no history of psychiatric or neurological disorders and gave their informed written consent. Subjects laid supine on the horizontal scanner bed with their heads surrounded by foam to reduce head movements and performed an instructed movement task. Analyses were carried out in individual subjects, thereby justifying the small number of subjects typically used in cortical mapping literature (Schneider et al. 2004; Sereno et al. 1995). Single subject approaches are advantageous over methods that average among many subjects, because averaging blurs or removes fine features of the map that are not fully aligned among subjects given intersubject variability. The task cues were words projected from a PowerLite 7250 liquid crystal display projector (Epson, Long Beach, CA) outside the scanner room onto a translucent screen"
+        },
+        {
+          "rank": 5,
+          "score": -8.177095413208008,
+          "rerank_score": -8.177095413208008,
+          "dense_score": 0.5570545792579651,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 12,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-012-chunk-008",
+          "text": "feel my hand moving: a new role of the primary motor cortex in somatic perception of limb movement. _Neuron_ 36: 979\u2013988, 2002b. _J Neurophysiol_ \u2022 VOL 90 \u2022 NOVEMBER 2003 \u2022 www.jn.org"
+        }
+      ],
+      "refined_stance_text": "1. Excerpt 1: SUPPORTS the decoded result, as it discusses the activation of the primary contributing resting-state network, SomMot, and the neural representation and lateralization of right side movement.\n2. Excerpt 2: SUPPORTS the decoded result, as it describes the somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc.\n3. Excerpt 3: UNRELATED to the decoded result, as it discusses the complex organization of the human primary motor cortex in a high-resolution fMRI study, which is not directly related to the decoded result.\n4. Excerpt 4: SUPPORTS the decoded result, as it describes the somatotopic map in the lateral motor cortex of humans, which is consistent with the decoded result's mention of the primary contributing resting-state network, SomMot, and the neural representation and lateralization of right side movement.\n\nSynthesis: The retrieved excerpts generally support the decoded result, which states that the primary contributing resting-state network is SomMot and that there is a neural representation and lateralization of right side movement. The excerpts discuss the activation of the primary somatosensory cortex (S1) and the complex organization of the human primary motor cortex, which is consistent with the decoded result's mention of the SomMot network. However, Excerpt 3 is not directly related to the decoded result, and its discussion of the motor cortex's complex organization is not clearly discussed in the retrieved excerpts.",
+      "refined_final_synthesis": "Our analysis of the retrieved literature excerpts and the concept activation vectors (CAVs) provides a comprehensive understanding of the neural representation and lateralization of right side movement. The decoded result, supported by excerpts 1, 4, and consistent with the literature's discussion of the SomMot network and somatotopic representations, suggests that the primary contributing resting-state network is indeed SomMot. However, our CAV test reveals a discrepancy with the literature's claim regarding the somatotopic map in the primary motor cortex. Specifically, the literature suggests a bilateral tongue representation, which contradicts our CAV test results, where the tongue representation is not sensitive to the decoded class, but the right side and left side representations are.",
+      "top_excerpt_before": {
+        "rank": 1,
+        "score": -5.613617420196533,
+        "rerank_score": -5.613617420196533,
+        "dense_score": 0.5516706705093384,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      "top_excerpt_after": {
+        "rank": 1,
+        "score": -4.985748291015625,
+        "rerank_score": -4.985748291015625,
+        "dense_score": 0.6202185750007629,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      }
+    }
+  },
+  {
+    "subject_id": "103111",
+    "task": "MOTOR",
+    "run": "LR",
+    "decoded": {
+      "pred_class": 4,
+      "confidence": 0.9992750287055969,
+      "probs": [
+        0.0001484494423493743,
+        0.00014234698028303683,
+        0.00011979983537457883,
+        3.821903737843968e-05,
+        0.9992750287055969,
+        0.0002761200303211808
+      ],
+      "hrf_pred": [
+        -0.04661618173122406,
+        -0.0682084709405899,
+        -0.03352517634630203,
+        0.8698365688323975,
+        0.02449657954275608
+      ]
+    },
+    "condition": "right_foot",
+    "rsn_attribution": {
+      "per_method": {
+        "saliency": [
+          0.1957036554813385,
+          0.22694675624370575,
+          0.09251897037029266,
+          0.1082676351070404,
+          0.06773868203163147,
+          0.11442463099956512,
+          0.1943996697664261
+        ],
+        "integrated_gradients": [
+          0.18935275077819824,
+          0.2764663100242615,
+          0.08778620511293411,
+          0.09555269032716751,
+          0.06161518394947052,
+          0.10942023992538452,
+          0.1798066794872284
+        ],
+        "shapley": [
+          0.10386212932413665,
+          0.7741054927193767,
+          0.040243175530777574,
+          0.013181812382062154,
+          0.0036221397653798688,
+          0.04981208115500962,
+          0.015173169123257429
+        ],
+        "lime": [
+          0.10578965839430528,
+          0.7474764662580523,
+          0.04050885668552345,
+          0.014082955300239756,
+          0.0028965602484025458,
+          0.06866769244560064,
+          0.02057781066787603
+        ]
+      },
+      "top_network_by_method": {
+        "saliency": "SomMot",
+        "integrated_gradients": "SomMot",
+        "shapley": "SomMot",
+        "lime": "SomMot"
+      },
+      "families_agree": true,
+      "consensus_network": "SomMot"
+    },
+    "query_text": "Decoded condition: right_foot (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 103111, run LR.",
+    "retrieved": [
+      {
+        "rank": 1,
+        "score": -5.426455497741699,
+        "rerank_score": -5.426455497741699,
+        "dense_score": 0.518385648727417,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      {
+        "rank": 2,
+        "score": -7.536619186401367,
+        "rerank_score": -7.536619186401367,
+        "dense_score": 0.4912022352218628,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 4,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-004-chunk-000",
+        "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image"
+      },
+      {
+        "rank": 3,
+        "score": -8.046863555908203,
+        "rerank_score": -8.046863555908203,
+        "dense_score": 0.4963992238044739,
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-010-chunk-003",
+        "text": "of _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org"
+      },
+      {
+        "rank": 4,
+        "score": -9.321762084960938,
+        "rerank_score": -9.321762084960938,
+        "dense_score": 0.49101144075393677,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-004",
+        "text": "engage different somatotopical zones of the motor areas. This was done in 3 steps. First, to directly test for body-part\u2013specific activation during imagery we compared imagined movements of one body part with the imagined movements of the other 2 body parts [e.g., (IMAGINE FINGERS\u2013IMAGINE TOES) and (IMAGINE FINGERS\u2013IMAGINE TONGUE), respectively (see Fig. 2)]. Brain activity robustly associated with imagining the movement of a particular body part should be revealed in both these comparisons (we report only activations that fulfill this criterion). Second, by contrasting the movement execution conditions, we could define somatotopical sections of the motor cortices (Fig. 2) [e.g., the finger zones were FIG. 1. Brain activation observed while subjects imagined they were making movements with their fingers ( _left column_ ; _a_ , _d_ , _g_ , _j_ ), toes ( _middle column_ ; _b_ , _e_ , _h_ , _k_ ), and tongue ( _right column_ ; _c_ , _f_ , _i_ , _l_ ) compared with resting baseline condition. General activation pattern was similar for 3 conditions with recruitment of a set of prefrontal, posterior parietal, and sensorimotor-related areas ( _a\u2013c_ ). However, differences in spatial distribution of activity in motor areas were observed ( _d\u2013l_ ). Imagery of finger movements activated a section of central sulcus ( _d_ ) that was not active in other"
+      },
+      {
+        "rank": 5,
+        "score": -9.52631950378418,
+        "rerank_score": -9.52631950378418,
+        "dense_score": 0.49778586626052856,
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 1,
+        "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-001-chunk-000",
+        "text": "_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically"
+      }
+    ],
+    "prompt": "You are helping a neuroscience researcher interpret a decoded brain-activity result using retrieved literature excerpts.\n\nDECODED RESULT:\nDecoded condition: right_foot (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 103111, run LR.\n\nRETRIEVED EXCERPTS:\n[Excerpt 1] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 7, similarity=-5.43)\nthe supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation).\n\n[Excerpt 2] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 4, similarity=-7.54)\nSOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image\n\n[Excerpt 3] (source: meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf, page 10, similarity=-8.05)\nof _P_ \ufffd 0.0001). The important point of this analysis is that the overall pattern of results remained the same. A somatotopic map is apparent in the primary motor cortex, and the finger area is bracketed dorsally and ventrally by separate wrist and forearm areas. The essential findings, therefore, seem to be independent of signal contamination across the sulcus from S1. <!-- Start of picture text --> Tongue<br>Lips<br>Squint<br>Fingers<br>Wrist (A)<br>Wrist (B)<br>Forearm<br>Elbow<br>Foot<br>Saccade<br><!-- End of picture text --> FIG. 8. Result for _subject 1_ when signal in primary somatosensory cortex was removed before analysis. For all voxels in S1 or within 2 mm of S1, the measured hemodynamic signal was replaced with noise that had the same SD and mean but no temporal structure. After smoothing and regression analysis, a similar result was obtained in M1, although the amount of signal in M1 was reduced (cf. Fig. 3 _A_ ). The result suggests that the findings in M1 were not the result of signal contamination across the sulcus from S1. _J Neurophysiol_ \u2022 VOL 100 \u2022 OCTOBER 2008 \u2022 www.jn.org\n\n[Excerpt 4] (source: ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf, page 3, similarity=-9.32)\nengage different somatotopical zones of the motor areas. This was done in 3 steps. First, to directly test for body-part\u2013specific activation during imagery we compared imagined movements of one body part with the imagined movements of the other 2 body parts [e.g., (IMAGINE FINGERS\u2013IMAGINE TOES) and (IMAGINE FINGERS\u2013IMAGINE TONGUE), respectively (see Fig. 2)]. Brain activity robustly associated with imagining the movement of a particular body part should be revealed in both these comparisons (we report only activations that fulfill this criterion). Second, by contrasting the movement execution conditions, we could define somatotopical sections of the motor cortices (Fig. 2) [e.g., the finger zones were FIG. 1. Brain activation observed while subjects imagined they were making movements with their fingers ( _left column_ ; _a_ , _d_ , _g_ , _j_ ), toes ( _middle column_ ; _b_ , _e_ , _h_ , _k_ ), and tongue ( _right column_ ; _c_ , _f_ , _i_ , _l_ ) compared with resting baseline condition. General activation pattern was similar for 3 conditions with recruitment of a set of prefrontal, posterior parietal, and sensorimotor-related areas ( _a\u2013c_ ). However, differences in spatial distribution of activity in motor areas were observed ( _d\u2013l_ ). Imagery of finger movements activated a section of central sulcus ( _d_ ) that was not active in other\n\n[Excerpt 5] (source: meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf, page 1, similarity=-9.53)\n_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically\n\nINSTRUCTIONS:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts?\n3. Do not cite anything not present in the excerpts above. If no excerpt is closely related, say so explicitly rather than inventing a connection.\n",
+    "generated_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the SomMot network, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of the SomMot network is also consistent with the motor task, subject 103111, run LR.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic map in the primary motor cortex, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger and toe regions, is also consistent with the decoded result.\n\n**Excerpt 4**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n**Excerpt 5**\nUNRELATED\n\nThis excerpt does not clearly discuss the decoded result of right_foot (confidence 100%). It discusses the somatotopic map in the primary motor cortex, but it does not specifically address the activation of the right_foot condition.\n\n**Synthesis**\n\n",
+    "extracted_concept_phrases": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 4,
+        "phrase": "Tongue representation is bilateral."
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally."
+      },
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 3,
+        "phrase": "Imagery of finger movements activates central sulcus."
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 1,
+        "phrase": "The motor cortex representation of the arm and hand is complex and non-traditional."
+      }
+    ],
+    "cav_loop_results": [
+      {
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 4,
+        "phrase": "Tongue representation is bilateral.",
+        "matched_concepts": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ],
+        "results": {
+          "tongue": {
+            "probe_accuracy": 0.999030890369473,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          },
+          "right_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 1.0,
+            "n_test_examples_of_decoded_class": 504
+          },
+          "left_side": {
+            "probe_accuracy": 0.9979107312440646,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          }
+        }
+      },
+      {
+        "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+        "page": 10,
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.",
+        "matched_concepts": [
+          "hand"
+        ],
+        "results": {
+          "hand": {
+            "probe_accuracy": 0.9959418534221683,
+            "tcav_score_for_decoded_class": 0.0,
+            "n_test_examples_of_decoded_class": 504
+          }
+        }
+      }
+    ],
+    "final_synthesis_prompt": "You previously analyzed retrieved literature excerpts for this decoded brain-activity result:\n\nDecoded condition: right_foot (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 103111, run LR.\n\nYour excerpt-by-excerpt stance analysis:\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the SomMot network, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of the SomMot network is also consistent with the motor task, subject 103111, run LR.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n**Excerpt 3**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic map in the primary motor cortex, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger and toe regions, is also consistent with the decoded result.\n\n**Excerpt 4**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n**Excerpt 5**\nUNRELATED\n\nThis excerpt does not clearly discuss the decoded result of right_foot (confidence 100%). It discusses the somatotopic map in the primary motor cortex, but it does not specifically address the activation of the right_foot condition.\n\n**Synthesis**\n\n\n\nYou then independently tested whether the model's decision is actually sensitive to the concepts the literature invokes, using Concept Activation Vectors (a linear-probe technique applied directly to the model's internal representation, not just reading the literature):\n- Concept phrase 'Tongue representation is bilateral.' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: tongue (TCAV sensitivity for the decoded class = 0.00), right_side (TCAV sensitivity for the decoded class = 1.00), left_side (TCAV sensitivity for the decoded class = 0.00)\n- Concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.' (from meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf) maps to: hand (TCAV sensitivity for the decoded class = 0.00)\n\nWrite a short (3-4 sentence) researcher-facing synthesis integrating all three lines of evidence: the decoded result itself, what the retrieved literature claims, and whether your own concept-sensitivity test agrees with the literature's claim. Be explicit about agreement or disagreement between the literature and the concept test \u2014 that comparison is the most scientifically interesting part, not a restatement of either alone.",
+    "final_synthesis": "**Excerpt-by-Excerpt Stance Analysis**\n\n1. Excerpt 1: SUPPORTS\nThis excerpt supports the decoded result by describing the activation of the SomMot network, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of the SomMot network is also consistent with the motor task, subject 103111, run LR.\n\n2. Excerpt 2: SUPPORTS\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n3. Excerpt 3: SUPPORTS\nThis excerpt supports the decoded result by describing the somatotopic map in the primary motor cortex, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger and toe regions, is also consistent with the decoded result.\n\n4. Excerpt 4: SUPPORTS\nThis excerpt supports the decoded result by describing the somatotopic activation during motor imagery, which is consistent with the decoded condition of right_foot (confidence 100%). The activation of specific body parts, such as finger, toe, and tongue regions, is also consistent with the decoded result.\n\n5. Excerpt 5: UNRELATED\nThis excerpt does not clearly discuss the decoded result of right_foot (confidence 100%). It discusses the somatotopic map in the primary motor cortex, but it does not specifically address the activation of the right_foot condition.\n\n**Synthesis**\n\nThe decoded result of right_foot (confidence 100%) is supported by the literature, which consistently describes the activation of the SomMot network, somatotopic activation during motor imagery, and the somatotopic map in the primary motor cortex. Our concept-sensitivity test agrees with the literature's claim that the",
+    "refinement": {
+      "refined_query": "Decoded condition: right_foot (confidence 100%). Primary contributing resting-state network: SomMot. MOTOR task, subject 103111, run LR. Specifically: neural representation and lateralization of right side movement.",
+      "steered_by_concept": "right_side",
+      "tcav_score": 1.0,
+      "refined_retrieved": [
+        {
+          "rank": 1,
+          "score": -4.74887752532959,
+          "rerank_score": -4.74887752532959,
+          "dense_score": 0.6045589447021484,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+          "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+        },
+        {
+          "rank": 2,
+          "score": -7.304327964782715,
+          "rerank_score": -7.304327964782715,
+          "dense_score": 0.588520884513855,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 4,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-004-chunk-000",
+          "text": "SOMATOTOPIC ACTIVATION DURING MOTOR IMAGERY 3307 FIG. 2. Somatotopy of motor imagery. _Left column_ : activation of different somatotopical sections of frontal motor areas when subjects were imagining they were performing voluntary movements of different body parts. _Right column_ : finger, toe, and tongue regions defined by contrasting movement execution conditions. Arrows point to relevant imagery-related activations: imagery of finger movements activated left dorsal premotor cortex (PMD) ( _a_ , _b_ ), left primary motor cortex (M1) ( _c_ , _d_ ), and caudate cingulated motor area/supplementary motor area (CMAc/SMA) region ( _e_ , _f_ ); imagery of toe movements activated toe section of left M1 and left posterior part of SMA (corresponding to foot zone) ( _g_ , _h_ ); and imagery of tongue movements was associated with increases in activity in bilateral M1 and premotor cortex corresponding to tongue representation ( _i_ , _j_ ). Note especially good correspondence between somatotopic maps obtained by analyzing motor imagery conditions ( _left column_ ) and movement execution conditions ( _right column_ ). Activation maps obtained by other relevant contrasts (e.g., IMAGINE FINGERS\u2013IMAGINE TONGUE) were virtually identical to those shown here (also see Table 1). Activations, obtained in group analysis, are displayed on axial ( _a\u2013d_ , _i_ , _j_ ) or sagittal ( _e\u2013h_ ) slices of a mean image"
+        },
+        {
+          "rank": 3,
+          "score": -8.304097175598145,
+          "rerank_score": -8.304097175598145,
+          "dense_score": 0.5899339914321899,
+          "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+          "page": 1,
+          "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-001-chunk-000",
+          "text": "_J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. # Complex Organization of Human Primary Motor Cortex: A High-Resolution fMRI Study ## **Jeffrey D. Meier, Tyson N. Aflalo, Sabine Kastner, and Michael S. A. Graziano** _Department of Psychology, Princeton University, Princeton, New Jersey_ Submitted 5 May 2008; accepted in final form 29 July 2008 **Meier JD, Aflalo TN, Kastner S, Graziano MS.** Complex organization of human primary motor cortex: a high resolution fMRI study. _J Neurophysiol_ 100: 1800\u20131812, 2008. First published August 6, 2008; doi:10.1152/jn.90531.2008. A traditional view of the human motor cortex is that it contains an overlapping sequence of body part representations from the tongue in a ventral location to the foot in a dorsal location. In this study, high-resolution functional MRI (1.5 \ufffd 1.5 \ufffd 2 mm) was used to examine the somatotopic map in the lateral motor cortex of humans, to determine whether it followed the traditional somatotopic order or whether it contained any violations of that somatotopic order. The arm and hand representation had a complex organization in which the arm was relatively emphasized in two areas: one dorsal and the other ventral to a region that emphasized the fingers. This violation of a traditional somatotopic order suggests that the motor cortex is not merely a map of the body but is topographically"
+        },
+        {
+          "rank": 4,
+          "score": -8.4854736328125,
+          "rerank_score": -8.4854736328125,
+          "dense_score": 0.5596390962600708,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 7,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-003",
+          "text": "whether there are any statistically significant differences in the activation maps between the imagery conditions. ## _Movement execution and somatotopic mapping of the motor areas_ We used the data from the conditions where the subjects actually executed the movements to define body-part\u2013specific regions and somatotopic maps in the motor areas. This was done by contrasting the movement execution conditions (we used the contrasts MOVE FINGERS\u2013MOVE TOES, MOVE TOES\u2013MOVE FINGERS, and MOVE TONGUE\u2013MOVE FINGERS). As seen in Fig. 2 ( _right column_ ), we found a clear somatotopical organization in M1 where movement of fingers, toes, and tongue was associated with distinct clusters of active voxels (engaging both areas 4a and 4p). Likewise, in area 6, different representations for fingers, toes, and tongue were detected. These representations were located just rostral to the corresponding M1 representations. Thus a finger section of the lateral premotor cortex was observed rostral to the M1 finger zone, a tongue section of the premotor cortex located rostral to the tongue M1, and a toe representation of the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained"
+        },
+        {
+          "rank": 5,
+          "score": -8.586498260498047,
+          "rerank_score": -8.586498260498047,
+          "dense_score": 0.5887033939361572,
+          "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+          "page": 3,
+          "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-004",
+          "text": "engage different somatotopical zones of the motor areas. This was done in 3 steps. First, to directly test for body-part\u2013specific activation during imagery we compared imagined movements of one body part with the imagined movements of the other 2 body parts [e.g., (IMAGINE FINGERS\u2013IMAGINE TOES) and (IMAGINE FINGERS\u2013IMAGINE TONGUE), respectively (see Fig. 2)]. Brain activity robustly associated with imagining the movement of a particular body part should be revealed in both these comparisons (we report only activations that fulfill this criterion). Second, by contrasting the movement execution conditions, we could define somatotopical sections of the motor cortices (Fig. 2) [e.g., the finger zones were FIG. 1. Brain activation observed while subjects imagined they were making movements with their fingers ( _left column_ ; _a_ , _d_ , _g_ , _j_ ), toes ( _middle column_ ; _b_ , _e_ , _h_ , _k_ ), and tongue ( _right column_ ; _c_ , _f_ , _i_ , _l_ ) compared with resting baseline condition. General activation pattern was similar for 3 conditions with recruitment of a set of prefrontal, posterior parietal, and sensorimotor-related areas ( _a\u2013c_ ). However, differences in spatial distribution of activity in motor areas were observed ( _d\u2013l_ ). Imagery of finger movements activated a section of central sulcus ( _d_ ) that was not active in other"
+        }
+      ],
+      "refined_stance_text": "1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n**Excerpt 1**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the activation of the primary contributing resting-state network as the SomMot, which is consistent with the decoded result.\n\n**Excerpt 2**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc, which is consistent with the decoded result.\n\n**Excerpt 3**\nUNRELATED\n\nThis excerpt discusses the complex organization of the human primary motor cortex, which is not directly related to the decoded result. It does not provide information about the activation of the SomMot or the somatotopic representations in the motor areas.\n\n**Excerpt 4**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic organization in M1 where movement of fingers, toes, and tongue is associated with distinct clusters of active voxels, which is consistent with the decoded result.\n\n**Excerpt 5**\nSUPPORTS\n\nThis excerpt supports the decoded result by describing the somatotopic representations in the motor areas, including the activation of different somatotopical zones of the motor areas during imagery, which is consistent with the decoded result.\n\n**Synthesis**\n\nThe decoded result agrees with prior findings in the literature, which describe the activation of the SomMot and the somatotopic representations in the motor areas. The excerpts support the idea that the motor cortex is organized in a somatotopic manner, with different body",
+      "refined_final_synthesis": "**Excerpt-by-Excerpt Stance Analysis**\n\n1. For each excerpt, state in one line whether it SUPPORTS, CONTRADICTS, or is UNRELATED to the decoded result, citing the excerpt number.\n\n   - Excerpt 1: SUPPORTS\n   - Excerpt 2: SUPPORTS\n   - Excerpt 3: UNRELATED\n   - Excerpt 4: SUPPORTS\n   - Excerpt 5: SUPPORTS\n\n2. Then write a 2-3 sentence synthesis comparing the decoded result to the literature: does it agree with prior findings, conflict with them, or is it not clearly discussed in the retrieved excerpts.\n\n   The decoded result agrees with prior findings in the literature, which describe the activation of the SomMot and the somatotopic representations in the motor areas. The excerpts support the idea that the motor cortex is organized in a somatotopic manner, with different body parts associated with distinct clusters of active voxels. However, the literature does not provide clear information about the lateralization of right side movement, which is a key aspect of the decoded result.\n\n**Concept Activation Vectors (CAV) Test**\n\n- Concept phrase 'Tongue representation is bilateral.' (from ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf) maps to: tongue (TCAV sensitivity for the decoded class = 0.00), right_side (TCAV sensitivity for the decoded class = 1.00), left_side (TCAV sensitivity for the decoded class = 0.00)\n- Concept phrase 'The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally.' (from meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf) maps",
+      "top_excerpt_before": {
+        "rank": 1,
+        "score": -5.426455497741699,
+        "rerank_score": -5.426455497741699,
+        "dense_score": 0.518385648727417,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      },
+      "top_excerpt_after": {
+        "rank": 1,
+        "score": -4.74887752532959,
+        "rerank_score": -4.74887752532959,
+        "dense_score": 0.6045589447021484,
+        "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+        "page": 7,
+        "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-007-chunk-004",
+        "text": "the supplementary motor area was detected rostral to the toe section of M1. We also observed somatotopic representations in the primary somatosensory cortex (S1) for all 3 body parts and a region specific to finger movement in the CMAc. It can also be mentioned that we inspected the results obtained by contrasting the movement execution conditions and the rest condition (not shown). In these contrasts, the expected set of motor, somatosensory, and posterior parietal areas was activated (e.g., see Ehrsson 2002): the left M1, left S1, SMA, CMA, parietal operculum, anterior part of the intraparietal cortex and cortex of the postcentral sulcus, and the bilateral PMD, PMV, putamen, and thalamus (not shown). Parenthetically, it can also be noted that several areas showed activation both when subjects imagined the action and when they executed the same action: the left M1 (area 4a), bilateral SMA (area 6), CMA, PMD (area 6), PMV (area 6), intraparietal cortex, supramarginal cortex, putamen, thalamus, the right area 44, and the right insula ( _P_ \ufffd 0.05 using the SPM99 conjunction analysis; results not shown). This extensive overlap of areas active during movement execution and imagination is generally consistent with earlier fMRI studies (Gerardin et al. 2000; Hanakawa et al. 2003) and are not be discussed further in this communication (these authors did not find M1 activation)."
+      }
+    }
+  }
+]

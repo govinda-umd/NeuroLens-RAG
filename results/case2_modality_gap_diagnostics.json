@@ -1,0 +1,22 @@
+{
+  "diagnostic_1_centroid_gap": {
+    "centroid_gap_l2": 0.5926550626754761,
+    "centroid_gap_cosine_similarity": 0.38617607951164246,
+    "mean_within_brain_pairwise_l2": 1.3266782760620117,
+    "mean_cross_modal_l2": 1.342659592628479,
+    "gap_ratio_cross_over_within": 1.012046113104305,
+    "modality_linear_probe_train_accuracy": 1.0,
+    "note": "modality_linear_probe uses only 6 text points (all of them, no held-out split possible) -- train accuracy only, heavily caveated. gap_ratio and centroid stats are the primary evidence."
+  },
+  "diagnostic_2_brain_only_clustering": {
+    "brain_only_silhouette_score_cosine": 0.4290439486503601,
+    "n_samples": 2000
+  },
+  "diagnostic_3_visualization": {
+    "pca_explained_variance_ratio": [
+      0.3091154992580414,
+      0.24939505755901337
+    ],
+    "figure_path": "results/case2_embedding_space_pca.png"
+  }
+}

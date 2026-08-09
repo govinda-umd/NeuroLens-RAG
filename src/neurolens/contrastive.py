@@ -192,29 +192,51 @@ def extract_brain_embeddings(
     return np.concatenate(all_z), np.concatenate(all_labels)
 
 
+def text_to_brain_retrieval_metrics(
+    brain_embeddings: np.ndarray,
+    brain_labels: np.ndarray,
+    text_prototypes: np.ndarray,
+    top_k_values: list[int] = (5, 10, 20, 50),
+) -> dict[int, dict[int, dict[str, float]]]:
+    """For each condition's text prototype, retrieve the top-k most similar
+    brain windows and compute precision@k, recall@k, and F1@k at each k in
+    `top_k_values`.
+
+    Precision-only is misleading here: classes have very different window
+    counts (baseline alone is a large fraction of the test set), so
+    precision@k can sit at 1.00 while recall@k is tiny simply because k is
+    small relative to the true class size — precision never reveals that on
+    its own. Recall@k = (# correct-class windows in top k) / (total
+    correct-class windows in the test set); F1@k is their harmonic mean.
+
+    Returns {class_idx: {k: {"precision": ..., "recall": ..., "f1": ...}}}."""
+    metrics: dict[int, dict[int, dict[str, float]]] = {}
+    for class_idx in range(text_prototypes.shape[0]):
+        scores = brain_embeddings @ text_prototypes[class_idx]
+        ranked = np.argsort(scores)[::-1]
+        n_relevant = int((brain_labels == class_idx).sum())
+        metrics[class_idx] = {}
+        for k in top_k_values:
+            top_indices = ranked[:k]
+            n_correct = int((brain_labels[top_indices] == class_idx).sum())
+            precision = n_correct / k
+            recall = (n_correct / n_relevant) if n_relevant > 0 else 0.0
+            f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+            metrics[class_idx][k] = {"precision": precision, "recall": recall, "f1": f1, "n_relevant": n_relevant}
+    return metrics
+
+
 def text_to_brain_retrieval_precision(
     brain_embeddings: np.ndarray,
     brain_labels: np.ndarray,
     text_prototypes: np.ndarray,
     top_k_values: list[int] = (5, 10, 20, 50),
 ) -> dict[int, dict[int, float]]:
-    """For each condition's text prototype, retrieve the top-k most similar
-    brain windows and compute precision@k (fraction whose true label
-    matches) at each k in `top_k_values` — a single k hides where precision
-    actually starts to degrade, so report the curve, not one point. The
-    non-degenerate retrieval direction, since brain->text is just the
-    classification argmax with only 6 possible targets.
-
-    Returns {class_idx: {k: precision}}."""
-    precisions: dict[int, dict[int, float]] = {}
-    for class_idx in range(text_prototypes.shape[0]):
-        scores = brain_embeddings @ text_prototypes[class_idx]
-        ranked = np.argsort(scores)[::-1]
-        precisions[class_idx] = {}
-        for k in top_k_values:
-            top_indices = ranked[:k]
-            precisions[class_idx][k] = float((brain_labels[top_indices] == class_idx).mean())
-    return precisions
+    """Precision-only view, kept for backward compatibility with existing
+    notebooks/results — prefer `text_to_brain_retrieval_metrics` for new
+    code, since precision alone can't reveal a recall problem."""
+    full = text_to_brain_retrieval_metrics(brain_embeddings, brain_labels, text_prototypes, top_k_values)
+    return {class_idx: {k: v["precision"] for k, v in per_k.items()} for class_idx, per_k in full.items()}
 
 
 # --- Case 2 v3: forecasting block on top of the frozen contrastive backbone ---
