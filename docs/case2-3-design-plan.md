@@ -76,14 +76,25 @@ Case 1, described accurately, is a **multi-task representation learning** result
 
 Unchanged from before — Case 2's two small encoders plus a contrastive loss are comparable in size/cost to Case 1's existing models; `ssm` (Case 3) is CPU-bound and lightweight. No new hardware concerns.
 
-## 8. Proposed build sequencing
+## 8. Case 2 v2 results — **done**
+
+Trained and evaluated in [`10_contrastive_representation.ipynb`](../notebooks/10_contrastive_representation.ipynb). Full numbers: [`results/case2_contrastive_results.json`](../results/case2_contrastive_results.json).
+
+**Primary result** (window=32, Transformer, matching Case 1's config for direct comparison): test macro-F1 = **0.907**, vs. Case 1's direct-classifier **0.925** — the contrastively-aligned representation trails the freely-learned classifier by a real but modest ~1.8 points. This is exactly the "aligned vs. task-optimized representation" gap predicted in §2.3: constraining the decision boundary to be a semantically-initialized text-embedding direction, rather than a fully free linear layer, costs a small amount of raw accuracy. Text-to-brain retrieval precision@20 was a perfect 1.00 for all 6 classes.
+
+**Window size (16/24/32/48/64) × architecture (GRU/Transformer) sweep** — the standout finding: **the architecture gap is much larger and more consistent here than in Case 1.** Transformer beat GRU at every single window size (0.888–0.907 vs. 0.815–0.851, a ~5–9 point gap) — versus only a ~1–2 point Transformer-over-GRU gap on Case 1's direct classification task. So re-running the GRU-vs-Transformer comparison for a different objective *was* worth doing — the contrastive objective rewards the Transformer's architecture more than plain supervised classification did, plausibly because aligning to a fixed, semantically structured target space benefits more from self-attention's flexibility than from a single recurrent summary vector. Window size itself showed no strong monotonic trend for either architecture (peaks around 24–32 for Transformer, 48 for GRU); GRU degraded most at the longest window (64), consistent with recurrent architectures generally handling longer sequences less gracefully than self-attention.
+
+**Text-embedding-model comparison** (at the best window/architecture config) — a genuine, worth-remembering negative result: the default `sentence-transformers/all-MiniLM-L6-v2` (384-dim) was the *best* of three (0.907), beating both a smaller model (`paraphrase-MiniLM-L3-v2`, 0.891) and a larger, generally higher-quality-on-benchmarks model (`all-mpnet-base-v2`, 768-dim, 0.888). Don't over-read this as "bigger text models are worse" — with only 6 fixed, simple condition descriptions repeated across the whole dataset, there's very little for a "better" general-purpose sentence embedding model to actually improve; general text-similarity benchmark quality isn't obviously the thing that matters when the text side is this small and this simple.
+
+## 9. Proposed build sequencing (updated)
 
 1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.
-2. **Paper corpus correction** (§5) — find and add real HCP MOTOR-decoding comparison papers.
-3. ~~**Case 2 v1**~~: skipped directly to v2 — user confirmed the MiniLM text-encoder version is the one worth building first, not the cheaper learned-embedding-table intermediate.
-4. **Case 2 v2** (now the actual starting point): MiniLM-encoded condition-description prototypes (frozen MiniLM, small trainable projection) contrastively aligned with the brain encoder, evaluated via prototype-based classification and text-to-brain retrieval (reusing `retrieval.py`'s cosine-similarity mechanism). Includes a hyperparameter sweep: window size (16/24/32/48/64) × brain-encoder architecture (GRU/Transformer), then a separate text-embedding-model comparison at the best config.
-5. **Case 2 v3 (stretch)**: conditional generation of future ROI activity from the learned joint representation.
-6. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
+2. **Paper corpus correction** (§5) — real HCP MOTOR-decoding comparison papers *and* real motor-cognition/neuroscience hypothesis papers identified (Ehrsson et al. 2003, Meier et al. 2008, Wang et al. 2020, a GNN decoding paper); pending manual download (automated fetch blocked by PMC/publisher access gates for all four).
+3. ~~**Case 2 v1**~~: skipped directly to v2.
+4. ~~**Case 2 v2**~~ — **done** (§8).
+5. **Case 2 v3 (stretch)**: conditional generation of future ROI activity from the learned joint representation. Not started.
+6. **RAG↔CAV loop** (§4.1 of interpretability-methods-notes.md): buildable once the motor-cognition papers are indexed — retrieve a real neuroscience claim, extract its concept phrase, fit a CAV, test the model's sensitivity to it, closing the loop between retrieval and interpretability for real (not just label-derived) concepts.
+7. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
 
 ## References
 

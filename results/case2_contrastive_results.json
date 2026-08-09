@@ -1,0 +1,122 @@
+{
+  "primary_result": {
+    "config": {
+      "window_length": 32,
+      "architecture": "Transformer",
+      "embed_dim": 64,
+      "num_epochs": 5
+    },
+    "test_macro_f1": 0.9072881064559647,
+    "test_accuracy": 0.9068241469816273,
+    "retrieval_precision_at_20": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0
+    }
+  },
+  "window_architecture_sweep": [
+    {
+      "window_length": 16,
+      "architecture": "GRU",
+      "test_macro_f1": 0.8492891030511566,
+      "test_accuracy": 0.8481481481481481,
+      "best_val_macro_f1": 0.7883807005595456,
+      "n_train_windows": 3780
+    },
+    {
+      "window_length": 16,
+      "architecture": "Transformer",
+      "test_macro_f1": 0.8942739888096006,
+      "test_accuracy": 0.8938271604938272,
+      "best_val_macro_f1": 0.8111669395406661,
+      "n_train_windows": 3780
+    },
+    {
+      "window_length": 24,
+      "architecture": "GRU",
+      "test_macro_f1": 0.8491841154563059,
+      "test_accuracy": 0.8486005089058524,
+      "best_val_macro_f1": 0.8010861993632227,
+      "n_train_windows": 3668
+    },
+    {
+      "window_length": 24,
+      "architecture": "Transformer",
+      "test_macro_f1": 0.8999021357778668,
+      "test_accuracy": 0.9007633587786259,
+      "best_val_macro_f1": 0.8107053546463575,
+      "n_train_windows": 3668
+    },
+    {
+      "window_length": 32,
+      "architecture": "GRU",
+      "test_macro_f1": 0.8441589594639901,
+      "test_accuracy": 0.8438320209973753,
+      "best_val_macro_f1": 0.7900842262497302,
+      "n_train_windows": 3556
+    },
+    {
+      "window_length": 32,
+      "architecture": "Transformer",
+      "test_macro_f1": 0.9072881064559647,
+      "test_accuracy": 0.9068241469816273,
+      "best_val_macro_f1": 0.8585664715442348,
+      "n_train_windows": 3556
+    },
+    {
+      "window_length": 48,
+      "architecture": "GRU",
+      "test_macro_f1": 0.8512660284662504,
+      "test_accuracy": 0.8515406162464986,
+      "best_val_macro_f1": 0.7856825178574786,
+      "n_train_windows": 3332
+    },
+    {
+      "window_length": 48,
+      "architecture": "Transformer",
+      "test_macro_f1": 0.8876177670186731,
+      "test_accuracy": 0.8879551820728291,
+      "best_val_macro_f1": 0.833054533503019,
+      "n_train_windows": 3332
+    },
+    {
+      "window_length": 64,
+      "architecture": "GRU",
+      "test_macro_f1": 0.8155522523975797,
+      "test_accuracy": 0.8153153153153153,
+      "best_val_macro_f1": 0.7744260369083822,
+      "n_train_windows": 3108
+    },
+    {
+      "window_length": 64,
+      "architecture": "Transformer",
+      "test_macro_f1": 0.8913253538864319,
+      "test_accuracy": 0.8903903903903904,
+      "best_val_macro_f1": 0.8174122672157008,
+      "n_train_windows": 3108
+    }
+  ],
+  "text_model_comparison": [
+    {
+      "text_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "embedding_dim": 384,
+      "load_time_s": 0.7182917594909668,
+      "test_macro_f1": 0.9072881064559647
+    },
+    {
+      "text_model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
+      "embedding_dim": 384,
+      "load_time_s": 4.608860969543457,
+      "test_macro_f1": 0.8906080302853271
+    },
+    {
+      "text_model": "sentence-transformers/all-mpnet-base-v2",
+      "embedding_dim": 768,
+      "load_time_s": 17.56268286705017,
+      "test_macro_f1": 0.8880172553103741
+    }
+  ]
+}
