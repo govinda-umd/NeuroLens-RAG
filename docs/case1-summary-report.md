@@ -78,16 +78,18 @@ Per-window predictions and per-window attribution (all 4 methods × 7 networks, 
 
 ## 8. RAG evaluation and cross-encoder reranking
 
-[`08_rag_evaluation.ipynb`](../notebooks/08_rag_evaluation.ipynb) builds a small, honestly-labeled evaluation set — reading all 6 corpus papers to make real relevance judgments (not guessing) about which 3 of the 6 directly ground a MOTOR-condition decoded-state query (Barch 2013, Yeo 2011, Schaefer 2018) versus which 3 don't (Van Essen 2013, van den Heuvel & Sporns 2013, Misra & Surampudi 2021) — then measures retrieval and generation against it. **Caveat**: 5 near-identical queries against 6 papers is a small, first-pass evaluation, good for catching an obviously broken component, not for certifying quality at scale.
+[`08_rag_evaluation.ipynb`](../notebooks/08_rag_evaluation.ipynb) builds a small, honestly-labeled evaluation set — reading all corpus papers to make real relevance judgments (not guessing) about which directly ground a MOTOR-condition decoded-state query versus which don't — then measures retrieval and generation against it. **Caveat**: 5 near-identical queries against a small corpus is a first-pass evaluation, good for catching an obviously broken component, not for certifying quality at scale.
 
-**Retrieval — dense-only vs. dense + cross-encoder rerank** (`cross-encoder/ms-marco-MiniLM-L-6-v2`, no training data needed, added to `src/neurolens/retrieval.py::retrieve_and_rerank`):
+**Correction (found and fixed later in the project)**: the gold relevance set below was originally written when the corpus had 6 papers (3 relevant). The corpus later grew to 8 (adding Ehrsson 2003 and Meier 2008 — both *more* topically relevant to hand/foot/tongue queries than the original atlas-definition papers), but the gold set was never updated, so this eval spent a long stretch silently measuring retrieval against a stale, too-narrow notion of "relevant." Re-running with the corrected 5-relevant-paper gold set changed the numbers substantially — precision stayed high, but the previously "perfect" recall dropped once there were more true papers to find, and the reranking benefit reported below **reversed**. Both are now measured against the current, correct gold set.
 
-| Method | Precision@5 | Recall (relevant papers)@5 |
-|---|---|---|
-| Dense-only | 1.00 | 0.80 |
-| Dense + rerank | 1.00 | **1.00** |
+**Retrieval — dense-only vs. dense + cross-encoder rerank** (`cross-encoder/ms-marco-MiniLM-L-6-v2`, no training data needed, added to `src/neurolens/retrieval.py::retrieve_and_rerank`), corrected gold set (5 relevant papers of 8), mean over 5 queries:
 
-Precision was already perfect at this corpus size — every top-5 chunk came from a relevant paper either way. Reranking's real, measured benefit was **recall**: dense-only retrieval sometimes let one relevant paper get crowded out of the top-5 by chunks from the other two (2.4/3 papers represented on average); reranking recovered full 3-of-3 coverage on every query. A genuine, if modest, improvement for zero training cost — now the default recommended retrieval path in `pipeline.py` (pass a `reranker` from `retrieval.load_reranker()`).
+| Method | Precision@5 | Recall (relevant papers)@5 | F1@5 |
+|---|---|---|---|
+| Dense-only | 1.00 | **0.48** | **0.63** |
+| Dense + rerank | 1.00 | 0.44 | 0.61 |
+
+Precision is still perfect at this corpus size — every top-5 chunk comes from *a* relevant paper either way. But recall is genuinely harder now (5 relevant papers to find, not 3), and reranking no longer shows the benefit originally reported — under the corrected gold set it's marginally *behind* dense-only on both recall and F1, well within noise at n=5 queries. The original "reranking recovers full recall" conclusion was an artifact of the stale gold set, not a real property of the reranker; there is currently no measured evidence reranking helps at this corpus size, though it remains a reasonable default (near-zero cost, and its value should reappear once the corpus is large enough that dense retrieval's precision stops being trivially perfect).
 
 **LLM stance-label spot-check** (2 examples, real `generate_fn` calls) — mixed, worth internalizing before trusting generated text at face value:
 - One example was clean and accurate: correctly labeled the two genuinely relevant excerpts SUPPORTS (citing the actual "motor mapping task" / "right hand" content) and three background excerpts UNRELATED.
@@ -105,7 +107,7 @@ Precision was already perfect at this corpus size — every top-5 chunk came fro
 Roughly in order of expected value for effort, given the hardware ceiling already established (small models train in seconds; the actual bottleneck throughout has been *data volume*, not compute):
 
 1. **More subjects.** The epoch sweep's own evidence (val/test divergence) points here directly — 3 test subjects is a small generalization estimate. This is the highest-value next step and is mechanically already solved (same idempotent pipeline, just more S3 downloads/AWS cost).
-2. ~~**Cross-encoder reranking for retrieval**~~ — **done** (§8): improved paper-level recall from 0.80 to 1.00 at zero training cost.
+2. ~~**Cross-encoder reranking for retrieval**~~ — **done** (§8), but the originally-reported recall improvement (0.80→1.00) turned out to be measured against a stale gold-relevance set; corrected, it shows no measured benefit at this corpus size (see §8's correction note). Kept as the default retrieval path anyway — near-zero cost, expected to matter more as the corpus grows.
 3. ~~**A real (small) RAG/LLM evaluation set**~~ — **done** (§8), though still small (5 retrieval queries, 2 generation spot-checks). Scaling this to 10-20+ generation-quality checks specifically (retrieval already looks solid) is the natural next step — the one real quality issue found so far (a factually wrong network-function claim) came from generation, not retrieval.
 4. **Per-architecture `lambda_hrf`** — the sweep shows GRU and Transformer want different values (GRU benefits from higher `lambda_hrf` for free; Transformer has a real tradeoff at 0.1). Worth using per-architecture values rather than one shared default.
 5. **Concept-based interpretability (Been Kim line)** — TCAV/ACE-style concept vectors, potentially seeded by literature excerpts retrieved via RAG itself (see [interpretability-methods-notes.md §4.1](interpretability-methods-notes.md#41-a-neurolens-rag-specific-variant-literature-derived-concept-hypotheses)) — more semantically meaningful than raw network attribution, and the RAG plumbing to seed it already exists.

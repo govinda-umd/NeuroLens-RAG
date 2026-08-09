@@ -40,6 +40,8 @@ dependencies:
       - captum
       - lime
       - mlx-lm
+      - datasets
+      - accelerate
 
 
 # prefix: /Users/srinivasgovindasurampudi/miniconda3/envs/neurolens
