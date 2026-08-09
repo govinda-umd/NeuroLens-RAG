@@ -1,0 +1,12 @@
+{
+  "official_split_test_macro_f1": 0.9079632439786839,
+  "posthoc_bootstrap": {
+    "n_bootstrap": 2000,
+    "mean": 0.9079420455227706,
+    "ci_95": [
+      0.8798620115628493,
+      0.9333093692088644
+    ],
+    "n_test_subjects": 12
+  }
+}
