@@ -104,6 +104,116 @@ def build_window_index(
     return windows
 
 
+@dataclass(frozen=True)
+class ForecastWindowRef:
+    subject_id: str
+    run: str
+    start: int
+    end: int  # input window is X[start:end]; "current" volume is end - 1
+    target_idx: int  # forecast target volume: (end - 1) + horizon
+    horizon: int
+
+
+def build_forecast_window_index(
+    runs: dict[tuple[str, str], RunArrays],
+    window_length: int = DEFAULT_WINDOW_LENGTH,
+    stride: int = DEFAULT_STRIDE,
+    horizon: int = 1,
+) -> list[ForecastWindowRef]:
+    """Causal forecasting windows: X[start:end] -> X[target_idx], where
+    target_idx = (end - 1) + horizon.
+
+    Leak-safety (Case 2 v3, see docs/case2-3-design-plan.md): the MOTOR
+    task is block-designed (~12s condition blocks). A window is only kept
+    if the forecast target's condition label matches the window's own
+    "current" label — otherwise a large horizon could silently forecast
+    into an *adjacent* movement condition's block rather than a genuine
+    continuation of the same condition, which would make the forecasting
+    task secretly leak label-boundary information rather than testing
+    pure signal continuation.
+    """
+    windows: list[ForecastWindowRef] = []
+    for (subject_id, run), arr in runs.items():
+        n_timepoints = arr.X.shape[0]
+        for end in range(window_length, n_timepoints + 1, stride):
+            start = end - window_length
+            current_idx = end - 1
+            target_idx = current_idx + horizon
+            if target_idx >= n_timepoints:
+                continue
+            if not bool(arr.valid_mask[start : target_idx + 1].all()):
+                continue
+            if arr.y[target_idx] != arr.y[current_idx]:
+                continue  # would leak into an adjacent condition block
+            windows.append(ForecastWindowRef(subject_id, run, start, end, target_idx, horizon))
+    return windows
+
+
+class ForecastWindowDataset(Dataset):
+    def __init__(self, runs: dict[tuple[str, str], RunArrays], windows: list[ForecastWindowRef]):
+        self.runs = runs
+        self.windows = windows
+
+    def __len__(self) -> int:
+        return len(self.windows)
+
+    def __getitem__(self, idx: int) -> dict:
+        w = self.windows[idx]
+        arr = self.runs[(w.subject_id, w.run)]
+        x = arr.X[w.start : w.end].astype(np.float32)
+        target = arr.X[w.target_idx].astype(np.float32)
+        return {
+            "x": torch.from_numpy(x),
+            "target": torch.from_numpy(target),
+            "y": torch.tensor(int(arr.y[w.end - 1]), dtype=torch.long),  # "current" label, for analysis only
+            "subject_id": w.subject_id,
+            "run": w.run,
+            "horizon": w.horizon,
+        }
+
+
+def make_forecast_dataloaders(
+    processed_root: Path,
+    task: str = "MOTOR",
+    window_length: int = DEFAULT_WINDOW_LENGTH,
+    stride: int = DEFAULT_STRIDE,
+    horizon: int = 1,
+    batch_size: int = DEFAULT_BATCH_SIZE,
+    train_subjects: Sequence[str] = MOTOR_TRAIN_SUBJECTS,
+    val_subjects: Sequence[str] = MOTOR_VAL_SUBJECTS,
+    test_subjects: Sequence[str] = MOTOR_TEST_SUBJECTS,
+    runs: Sequence[str] = MOTOR_RUNS,
+    num_workers: int = 0,
+) -> tuple[DataLoader, DataLoader, DataLoader, dict]:
+    all_subjects = [*train_subjects, *val_subjects, *test_subjects]
+    run_arrays = load_all_runs(processed_root, all_subjects, task=task, runs=runs)
+    all_windows = build_forecast_window_index(
+        run_arrays, window_length=window_length, stride=stride, horizon=horizon
+    )
+
+    train_windows = [w for w in all_windows if w.subject_id in set(train_subjects)]
+    val_windows = [w for w in all_windows if w.subject_id in set(val_subjects)]
+    test_windows = [w for w in all_windows if w.subject_id in set(test_subjects)]
+
+    train_loader = DataLoader(
+        ForecastWindowDataset(run_arrays, train_windows), batch_size=batch_size, shuffle=True, num_workers=num_workers
+    )
+    val_loader = DataLoader(
+        ForecastWindowDataset(run_arrays, val_windows), batch_size=batch_size, shuffle=False, num_workers=num_workers
+    )
+    test_loader = DataLoader(
+        ForecastWindowDataset(run_arrays, test_windows), batch_size=batch_size, shuffle=False, num_workers=num_workers
+    )
+
+    info = {
+        "horizon": horizon,
+        "n_train_windows": len(train_windows),
+        "n_val_windows": len(val_windows),
+        "n_test_windows": len(test_windows),
+    }
+    return train_loader, val_loader, test_loader, info
+
+
 def filter_windows_by_subjects(
     windows: list[WindowRef], subjects: Sequence[str]
 ) -> list[WindowRef]:

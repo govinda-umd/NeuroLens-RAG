@@ -134,6 +134,7 @@ def train_contrastive(
     lr: float = 1e-3,
     weight_decay: float = 1e-4,
     experiment_name: str = "contrastive",
+    checkpoint_dir=None,
 ) -> dict:
     model.to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
@@ -162,6 +163,10 @@ def train_contrastive(
         model.load_state_dict(best_state)
     test_metrics = run_epoch(model, test_loader, device, optimizer=None)
 
+    if checkpoint_dir is not None:
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        torch.save(model.state_dict(), checkpoint_dir / "best.pt")
+
     return {
         "experiment_name": experiment_name,
         "history": history,
@@ -186,15 +191,25 @@ def extract_brain_embeddings(
 
 
 def text_to_brain_retrieval_precision(
-    brain_embeddings: np.ndarray, brain_labels: np.ndarray, text_prototypes: np.ndarray, top_k: int = 20
-) -> dict[int, float]:
-    """For each condition's text prototype, retrieve the top_k most similar
+    brain_embeddings: np.ndarray,
+    brain_labels: np.ndarray,
+    text_prototypes: np.ndarray,
+    top_k_values: list[int] = (5, 10, 20, 50),
+) -> dict[int, dict[int, float]]:
+    """For each condition's text prototype, retrieve the top-k most similar
     brain windows and compute precision@k (fraction whose true label
-    matches). The non-degenerate retrieval direction, since brain->text is
-    just the classification argmax with only 6 possible targets."""
-    precisions = {}
+    matches) at each k in `top_k_values` — a single k hides where precision
+    actually starts to degrade, so report the curve, not one point. The
+    non-degenerate retrieval direction, since brain->text is just the
+    classification argmax with only 6 possible targets.
+
+    Returns {class_idx: {k: precision}}."""
+    precisions: dict[int, dict[int, float]] = {}
     for class_idx in range(text_prototypes.shape[0]):
         scores = brain_embeddings @ text_prototypes[class_idx]
-        top_indices = np.argsort(scores)[::-1][:top_k]
-        precisions[class_idx] = float((brain_labels[top_indices] == class_idx).mean())
+        ranked = np.argsort(scores)[::-1]
+        precisions[class_idx] = {}
+        for k in top_k_values:
+            top_indices = ranked[:k]
+            precisions[class_idx][k] = float((brain_labels[top_indices] == class_idx).mean())
     return precisions

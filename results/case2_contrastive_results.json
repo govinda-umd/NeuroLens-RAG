@@ -8,13 +8,51 @@
     },
     "test_macro_f1": 0.9072881064559647,
     "test_accuracy": 0.9068241469816273,
-    "retrieval_precision_at_20": {
-      "0": 1.0,
-      "1": 1.0,
-      "2": 1.0,
-      "3": 1.0,
-      "4": 1.0,
-      "5": 1.0
+    "test_class_sizes": {
+      "baseline": 144,
+      "left_hand": 117,
+      "right_hand": 117,
+      "left_foot": 126,
+      "right_foot": 126,
+      "tongue": 132
+    },
+    "retrieval_precision_by_k": {
+      "baseline": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      },
+      "left_hand": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      },
+      "right_hand": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      },
+      "left_foot": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      },
+      "right_foot": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      },
+      "tongue": {
+        "5": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "50": 1.0
+      }
     }
   },
   "window_architecture_sweep": [
@@ -103,19 +141,19 @@
     {
       "text_model": "sentence-transformers/all-MiniLM-L6-v2",
       "embedding_dim": 384,
-      "load_time_s": 0.7182917594909668,
+      "load_time_s": 0.6676788330078125,
       "test_macro_f1": 0.9072881064559647
     },
     {
       "text_model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
       "embedding_dim": 384,
-      "load_time_s": 4.608860969543457,
+      "load_time_s": 0.6802871227264404,
       "test_macro_f1": 0.8906080302853271
     },
     {
       "text_model": "sentence-transformers/all-mpnet-base-v2",
       "embedding_dim": 768,
-      "load_time_s": 17.56268286705017,
+      "load_time_s": 1.3485281467437744,
       "test_macro_f1": 0.8880172553103741
     }
   ]
