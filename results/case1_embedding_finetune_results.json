@@ -1,14 +1,14 @@
 {
   "baseline": {
     "label": "baseline_off_the_shelf",
-    "n_eval": 55,
-    "top1_accuracy": 0.45454545454545453,
-    "top3_accuracy": 0.6909090909090909
+    "n_eval": 41,
+    "top1_accuracy": 0.43902439024390244,
+    "top3_accuracy": 0.7560975609756098
   },
   "finetuned": {
     "label": "domain_finetuned",
-    "n_eval": 55,
-    "top1_accuracy": 0.5636363636363636,
-    "top3_accuracy": 0.7454545454545455
+    "n_eval": 41,
+    "top1_accuracy": 0.6097560975609756,
+    "top3_accuracy": 0.8536585365853658
   }
 }

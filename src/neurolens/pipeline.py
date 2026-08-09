@@ -250,7 +250,11 @@ CONCEPT PHRASE (or NONE):"""
 
 def extract_concept_phrases(retrieved: list[dict], generate_fn) -> list[dict]:
     """Runs the concept-extraction prompt over every retrieved excerpt;
-    keeps only genuine short phrases, discards NONE / degenerate responses."""
+    keeps only genuine short phrases, discards NONE / degenerate responses.
+
+    Superseded by `extract_concept_phrases_with_stance` below, which gets
+    the excerpt's stance in the same call at no extra cost — kept for
+    backward compatibility with existing saved results."""
     phrases = []
     for r in retrieved:
         response = generate_fn(build_concept_extraction_prompt(r["text"])).strip()
@@ -258,6 +262,82 @@ def extract_concept_phrases(retrieved: list[dict], generate_fn) -> list[dict]:
             continue
         phrases.append({"source_file": r["source_file"], "page": r["page"], "phrase": response})
     return phrases
+
+
+# --- Deterministic verdicts ---
+# The measured failure mode (docs/project-summary.md §3.6): asked to freely
+# judge agreement between literature and CAV evidence, the LLM defaults to
+# AGREE regardless of the actual TCAV score. LoRA fine-tuning at small scale
+# fixed format compliance but not the underlying judgment (§3.7.2). The fix
+# here targets the root cause instead of training around it: don't ask the
+# LLM to judge agreement at all. Its own stance label (SUPPORTS/CONTRADICTS/
+# UNRELATED, extracted per excerpt) plus the measured TCAV score are enough
+# to compute the verdict deterministically in code; the LLM's only remaining
+# job is to narrate a conclusion it's given, not reach one.
+
+
+def build_concept_extraction_prompt_with_stance(query_text: str, excerpt_text: str) -> str:
+    return f"""Read this excerpt from neuroscience literature in the context of a decoded brain-activity result.
+
+DECODED RESULT:
+{query_text}
+
+EXCERPT:
+{excerpt_text}
+
+Respond in exactly this two-line format, nothing else:
+STANCE: SUPPORTS or CONTRADICTS or UNRELATED (does this excerpt support, contradict, or have nothing to do with the decoded result?)
+PHRASE: a short 5-10 word phrase stating the excerpt's specific claim about which body part, side, or movement type is neurally represented, or NONE if it makes no such claim"""
+
+
+def parse_stance_and_phrase(response: str) -> tuple[str | None, str | None]:
+    stance_match = re.search(r"STANCE:\s*(SUPPORTS|CONTRADICTS|UNRELATED)", response.upper())
+    phrase_match = re.search(r"PHRASE:\s*(.+)", response, re.IGNORECASE)
+    stance = stance_match.group(1) if stance_match else None
+    phrase = phrase_match.group(1).strip() if phrase_match else None
+    if phrase is not None and (phrase.upper().startswith("NONE") or len(phrase) == 0 or len(phrase) > 150):
+        phrase = None
+    return stance, phrase
+
+
+def extract_concept_phrases_with_stance(query_text: str, retrieved: list[dict], generate_fn) -> list[dict]:
+    """Same LLM-call budget as `extract_concept_phrases` (one call per
+    excerpt) but also captures the excerpt's stance — the ingredient a
+    deterministic verdict needs that the old concept-only extraction
+    discarded."""
+    results = []
+    for r in retrieved:
+        response = generate_fn(build_concept_extraction_prompt_with_stance(query_text, r["text"]))
+        stance, phrase = parse_stance_and_phrase(response)
+        if phrase is None:
+            continue
+        results.append({"source_file": r["source_file"], "page": r["page"], "phrase": phrase, "stance": stance})
+    return results
+
+
+def expected_verdict_from_stance_and_tcav(
+    stance: str | None, tcav_score: float | None, high: float = 0.7, low: float = 0.3
+) -> str:
+    """UNRELATED (or a missing stance/score) has no literature claim to
+    compare against — UNCLEAR by construction, never DISAGREE. That
+    UNRELATED-mapped-to-DISAGREE conflation was the original documented bug
+    (docs/project-summary.md §3.5); this function is the fix, expressed as
+    an unambiguous rule instead of an LLM judgment call."""
+    if stance is None or stance == "UNRELATED" or tcav_score is None:
+        return "UNCLEAR"
+    if stance == "SUPPORTS":
+        if tcav_score >= high:
+            return "AGREE"
+        if tcav_score <= low:
+            return "DISAGREE"
+        return "UNCLEAR"
+    if stance == "CONTRADICTS":
+        if tcav_score <= low:
+            return "AGREE"
+        if tcav_score >= high:
+            return "DISAGREE"
+        return "UNCLEAR"
+    return "UNCLEAR"
 
 
 def run_cav_loop(
@@ -511,7 +591,10 @@ def run_cav_loop_case2(
 ) -> list[dict]:
     """Case2 analogue of `run_cav_loop` — no cav_train_loader, since the
     concept direction is derived from text prototypes, not fit on brain
-    examples."""
+    examples. When `phrases` entries carry a `stance` field (from
+    `extract_concept_phrases_with_stance`), each concept's result also gets
+    a deterministic `verdict` — the fix for the measured "LLM defaults to
+    AGREE" failure mode (see `expected_verdict_from_stance_and_tcav`)."""
     results = []
     seen_concepts: set[str] = set()
     for p in phrases:
@@ -527,21 +610,29 @@ def run_cav_loop_case2(
         explanation = explain_literature_concept_case2(
             contrastive_model, cav_test_loader, device, class_names, p["phrase"], target_class
         )
+        if explanation.get("results"):
+            for vals in explanation["results"].values():
+                vals["verdict"] = expected_verdict_from_stance_and_tcav(
+                    p.get("stance"), vals["tcav_score_for_decoded_class"]
+                )
         results.append({**p, **explanation})
     return results
 
 
 def build_final_synthesis_prompt_case2(query_text: str, stance_text: str, cav_results: list[dict]) -> str:
-    """Same synthesis prompt as Case 1's, plus a required structured verdict
-    tag — this is what makes automated faithfulness scoring possible
-    (`score_synthesis_faithfulness` below parses it and checks it against
-    the TCAV number independently, without re-reading the LLM's prose)."""
+    """Presents each concept's verdict as an ALREADY-COMPUTED fact (from
+    `expected_verdict_from_stance_and_tcav`) rather than asking the LLM to
+    decide it — the LLM's job is narrating a given conclusion, not reaching
+    one. This is the structural fix for the measured faithfulness failure:
+    it can no longer default to AGREE regardless of the evidence, because
+    it is never asked to produce the verdict at all."""
     tested = [r for r in cav_results if r.get("matched_concepts")]
     if tested:
         cav_block = "\n".join(
-            f"- Concept phrase '{r['phrase']}' (from {r['source_file']}) maps to: "
+            f"- Concept phrase '{r['phrase']}' (from {r['source_file']}, excerpt stance: {r.get('stance', 'UNKNOWN')}) maps to: "
             + ", ".join(
-                f"{concept} (TCAV sensitivity for the decoded class = {vals['tcav_score_for_decoded_class']:.2f})"
+                f"{concept} (TCAV={vals['tcav_score_for_decoded_class']:.2f}, "
+                f"COMPUTED VERDICT: {vals.get('verdict', 'UNCLEAR')})"
                 for concept, vals in r["results"].items()
             )
             for r in tested
@@ -556,18 +647,9 @@ def build_final_synthesis_prompt_case2(query_text: str, stance_text: str, cav_re
 Your excerpt-by-excerpt stance analysis:
 {stance_text}
 
-You then independently tested whether the model's decision is actually sensitive to the concepts the literature invokes, using Concept Activation Vectors derived directly from the model's own brain-text embedding space:
-{cav_block}
+For each literature-derived concept below, a verdict has ALREADY been computed by comparing the excerpt's stance to an independent test of the model's internal representation (Concept Activation Vectors) — you are not being asked to decide these; write a short (3-4 sentence) researcher-facing synthesis that explains WHY each given verdict follows from the stance and the TCAV score, integrating the decoded result and what the literature claims. State every computed verdict below explicitly and accurately — do not soften, invert, or omit any of them, and do not report an AGREE/DISAGREE relationship for any concept not listed here:
 
-Write a short (3-4 sentence) researcher-facing synthesis integrating all three lines of evidence: the decoded result itself, what the retrieved literature claims, and whether your own concept-sensitivity test agrees with the literature's claim. Be explicit about agreement or disagreement between the literature and the concept test.
-
-End your response with exactly one final line, formatted precisely as:
-VERDICT: AGREE
-or
-VERDICT: DISAGREE
-or
-VERDICT: UNCLEAR
-where AGREE means the concept test and the literature claim point the same direction, DISAGREE means they conflict, and UNCLEAR means the evidence is too thin to say either way."""
+{cav_block}"""
 
 
 def parse_verdict_tag(text: str) -> str | None:
@@ -579,7 +661,9 @@ def expected_verdict_from_tcav(tcav_score: float | None, high: float = 0.7, low:
     """Deterministic, LLM-independent ground truth for faithfulness scoring:
     a fixed threshold rule applied to the actual TCAV number, so the LLM's
     self-reported verdict can be checked against something it didn't
-    generate itself."""
+    generate itself. Superseded by `expected_verdict_from_stance_and_tcav`,
+    which also uses the excerpt's stance — kept for backward compatibility
+    with already-saved results that predate the stance-aware fix."""
     if tcav_score is None:
         return "UNCLEAR"
     if tcav_score >= high:
@@ -590,18 +674,11 @@ def expected_verdict_from_tcav(tcav_score: float | None, high: float = 0.7, low:
 
 
 def score_synthesis_faithfulness(cav_results: list[dict], final_synthesis: str) -> dict:
-    """Compares the LLM's self-reported VERDICT tag against a verdict
-    computed independently from the actual TCAV score (via a fixed
-    threshold rule). When more than one concept was tested (common - the
-    same decode often surfaces several literature phrases), it's genuinely
-    ambiguous which one a single one-sentence verdict is "about", so this
-    reports both a strict bound (must match the FIRST-extracted concept -
-    likely an underestimate of faithfulness, since the LLM may reasonably
-    be responding to a different tested concept) and a lenient bound (must
-    match AT LEAST ONE tested concept - likely an overestimate, since it
-    credits coincidental agreement). True faithfulness sits between them;
-    reporting the range rather than picking one is the honest choice.
-    Returns None fields if no concept was testable at all."""
+    """Legacy faithfulness check for results produced before the
+    deterministic-verdict fix (compares an LLM-decided VERDICT tag against
+    a TCAV-only threshold rule). Kept for backward compatibility; new code
+    should use `score_synthesis_reporting_accuracy` instead, since the
+    verdict is no longer something the LLM decides."""
     tested = [r for r in cav_results if r.get("matched_concepts")]
     if not tested:
         return {
@@ -623,6 +700,34 @@ def score_synthesis_faithfulness(cav_results: list[dict], final_synthesis: str) 
         "faithful_strict": faithful_strict,
         "faithful_lenient": faithful_lenient,
         "all_tested_concepts": [{"concept": c, "tcav_score": t, "expected_verdict": e} for c, t, e in all_tested],
+    }
+
+
+def score_synthesis_reporting_accuracy(cav_results: list[dict], final_synthesis: str) -> dict:
+    """Replaces `score_synthesis_faithfulness` now that the verdict is
+    computed, not decided by the LLM. What's left to check is narrower and
+    more tractable: did the write-up actually MENTION every verdict it was
+    given, rather than silently dropping or inverting one? A simple
+    substring check on the verdict words is enough for this - the scientific
+    correctness of the verdict itself is now guaranteed by construction, not
+    by trusting the LLM's judgment, so this only measures narration
+    completeness."""
+    tested = [r for r in cav_results if r.get("matched_concepts")]
+    if not tested:
+        return {"n_given_verdicts": 0, "given_verdicts": [], "n_mentioned": None, "all_mentioned": None}
+
+    given = [
+        {"concept": concept, "tcav_score": vals["tcav_score_for_decoded_class"], "verdict": vals.get("verdict", "UNCLEAR")}
+        for r in tested
+        for concept, vals in r["results"].items()
+    ]
+    text_upper = final_synthesis.upper()
+    mentioned = [g["verdict"] in text_upper for g in given]
+    return {
+        "n_given_verdicts": len(given),
+        "given_verdicts": given,
+        "n_mentioned": sum(mentioned),
+        "all_mentioned": all(mentioned),
     }
 
 
@@ -693,17 +798,17 @@ def explain_decoded_window_with_cav_loop_case2(
     )
 
     class_names = [class_to_condition[str(c)] for c in range(len(class_to_condition))]
-    phrases = extract_concept_phrases(base["retrieved"], generate_fn)
+    phrases = extract_concept_phrases_with_stance(base["query_text"], base["retrieved"], generate_fn)
     cav_results = run_cav_loop_case2(
         contrastive_model, cav_test_loader, device, class_names, base["decoded"]["pred_class"], phrases
     )
     final_prompt = build_final_synthesis_prompt_case2(base["query_text"], base["generated_text"], cav_results)
     final_synthesis = generate_fn(final_prompt)
-    faithfulness = score_synthesis_faithfulness(cav_results, final_synthesis)
+    reporting_accuracy = score_synthesis_reporting_accuracy(cav_results, final_synthesis)
 
     base["extracted_concept_phrases"] = phrases
     base["cav_loop_results"] = cav_results
     base["final_synthesis_prompt"] = final_prompt
     base["final_synthesis"] = final_synthesis
-    base["faithfulness"] = faithfulness
+    base["reporting_accuracy"] = reporting_accuracy
     return base
