@@ -45,6 +45,18 @@ For comparisons that need a p-value (e.g. "is Transformer significantly better t
 - Whether to bootstrap Case 2 and Case 3 the same way once they exist at 100-subject scale, or treat this as Case-1-first.
 - Compute/wall-clock budget for the stopping-rule-driven bootstrap loop — needs an actual pilot run once the 100-subject data exists, not a guess now.
 
+## 5. Results — **done** (100-subject scale)
+
+Implemented in [`12_population_level_evaluation.ipynb`](../notebooks/12_population_level_evaluation.ipynb). One deviation from §3.3's plan, made explicit rather than silently substituted: **repeated random splits, not literal with-replacement bootstrap over subjects**. `data_setup.py`'s window index is keyed by unique `(subject, run)` pairs, so a subject drawn twice in a with-replacement sample wouldn't actually contribute its windows twice — the infrastructure de-duplicates by construction. Repeated re-partitioning (Monte Carlo cross-validation) is a legitimate, simpler alternative that works with the existing infrastructure as-is; proper weighted resampling would need real code changes, not attempted here.
+
+**The empirical stopping rule worked as intended**: only 20 repeats were needed before the 95% CI half-width stabilized, well under the 100-repeat cap (~8 minutes total wall-clock, given each retrain takes ~24s at this data scale) — a genuinely useful outcome of using a stability criterion instead of guessing a count upfront.
+
+**Headline population-level result**: mean test macro-F1 = **0.920**, 95% CI = **[0.909, 0.934]** across 20 repeated random 65/13/12 splits (std = 0.007, range 0.908–0.936). This properly generalizes the earlier single-split 20-subject result (0.925) — **Case 1's decoding accuracy is ~92% ± ~1.3 points at the population level, not a lucky single split.**
+
+**Complementary post-hoc bootstrap** (2000 resamples of test-subject composition, one fixed model, no retraining): mean = 0.926, 95% CI = **[0.909, 0.942]** — a *wider* interval than the repeated-splits analysis, despite using one fixed model rather than 20 independently retrained ones. **Worth explaining, not just reporting**: this doesn't mean the model is less reliable than the repeated-splits result suggests. With only 12 test subjects, with-replacement resampling from such a small discrete pool has inherently high sampling variance (a single resample can easily lose 2–3 of the 12 subjects entirely, or triple-count one) — this inflates the bootstrap CI independent of model quality. Misra & Pessoa's paper bootstrapped 92 participants, not 12; a much larger pool damps exactly this effect. The repeated-splits analysis, which draws from the full 90-subject pool each time, is the more trustworthy of the two population-level estimates at this subject count — the post-hoc bootstrap is more a statement about the granularity limit of a 12-subject test set than about the model.
+
+**Still not done, flagged in §4 as future work**: bootstrapping Case 2/3 the same way; proper weighted (true bootstrap) resampling if the closer match to the reference paper's exact mechanics is ever wanted; the held-out hyperparameter-selection subset (`MOTOR_HYPERPARAM_SUBJECTS`) was correctly *reserved* but not yet actually used for any real hyperparameter decision, since the sweep in `07_hyperparameter_sweep.ipynb` predates the 100-subject split.
+
 ## References
 
 - Misra, J. & Pessoa, L. (2025). Human brain dynamics and spatiotemporal trajectories during threat processing. *eLife*, 14:RP102539. — the direct methodological reference for this entire document.
