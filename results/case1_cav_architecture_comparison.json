@@ -1,0 +1,126 @@
+{
+  "GRU": {
+    "hand": {
+      "probe_accuracy": 0.9863718958207147,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 1.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 0.0
+      }
+    },
+    "foot": {
+      "probe_accuracy": 0.9846759539672926,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "tongue": {
+      "probe_accuracy": 0.9967292549969715,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 0.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    },
+    "right_side": {
+      "probe_accuracy": 0.9905982905982906,
+      "n_train_examples": 10530,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "left_side": {
+      "probe_accuracy": 0.9905982905982906,
+      "n_train_examples": 10530,
+      "scores": {
+        "baseline": 1.0,
+        "left_hand": 1.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    }
+  },
+  "Transformer": {
+    "hand": {
+      "probe_accuracy": 0.9959418534221683,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 1.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 0.0
+      }
+    },
+    "foot": {
+      "probe_accuracy": 0.9955178679588128,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "tongue": {
+      "probe_accuracy": 0.999030890369473,
+      "n_train_examples": 16510,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 0.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    },
+    "right_side": {
+      "probe_accuracy": 0.9979107312440646,
+      "n_train_examples": 10530,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "left_side": {
+      "probe_accuracy": 0.9979107312440646,
+      "n_train_examples": 10530,
+      "scores": {
+        "baseline": 1.0,
+        "left_hand": 1.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    }
+  }
+}
