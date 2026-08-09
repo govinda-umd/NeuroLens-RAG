@@ -86,13 +86,23 @@ Trained and evaluated in [`10_contrastive_representation.ipynb`](../notebooks/10
 
 **Text-embedding-model comparison** (at the best window/architecture config) — a genuine, worth-remembering negative result: the default `sentence-transformers/all-MiniLM-L6-v2` (384-dim) was the *best* of three (0.907), beating both a smaller model (`paraphrase-MiniLM-L3-v2`, 0.891) and a larger, generally higher-quality-on-benchmarks model (`all-mpnet-base-v2`, 768-dim, 0.888). Don't over-read this as "bigger text models are worse" — with only 6 fixed, simple condition descriptions repeated across the whole dataset, there's very little for a "better" general-purpose sentence embedding model to actually improve; general text-similarity benchmark quality isn't obviously the thing that matters when the text side is this small and this simple.
 
+**Retrieval precision, revisited at multiple k**: precision@k was initially reported only at k=20 (1.00 for all 6 classes) — expanded to k ∈ {5, 10, 20, 50} and it's a perfect 1.00 at every k tested, against class sizes as small as 117. The choice of k didn't matter here, but this also means the true precision-degradation point is still unknown (beyond k=50).
+
+## 8.5. Case 2 v3 results — forecasting horizon sweep — **done**
+
+Built in [`11_case2_forecasting.ipynb`](../notebooks/11_case2_forecasting.ipynb): a ridge-regression linear probe on the *frozen* Case 2 backbone's pooled features, predicting future ROI activity at increasing horizons, using the leak-safe windowing from `data_setup.build_forecast_window_index()` (§2.4/§4 of this doc — a candidate window is dropped unless the forecast target's label matches the window's own current label, so a horizon can never silently cross into an adjacent condition block).
+
+**Result: the representation carries real forward-predictive signal for roughly 3-4 seconds (4-6 TRs), then decays to noise.** Test R² = 0.296 at horizon=1 TR (0.7s), falling smoothly through 0.19 (h=2), 0.11 (h=3), 0.03 (h=4), crossing zero between horizon 4 and 6, then staying mildly negative through h=16 (11.5s). One point to discount rather than trust: horizon=20 (14.4s) shows a sharper drop (R²=-1.13), but only 196 training windows survive the leak-safety filter there (vs. 3,332 at horizon=1) — an order-of-magnitude sample-size confound, not a real acceleration of decay. Horizon=24 (17.3s) correctly returns **zero** leak-free windows, confirming the leak-safety filter works exactly as intended at the boundary — MOTOR condition blocks are only ~12s long.
+
+**Answering the original question directly**: with this frozen representation and a linear probe, usable forecast horizon is about 3-4 seconds — short relative to a 12-second condition block. Not yet properly deconfounded from sample size (worth subsampling horizon=1's larger training set down to match smaller horizons' counts before treating the decay curve as a clean scientific claim), and not yet compared against a non-frozen or Case-3 (dynamical-systems) alternative, which is architecturally built for exactly this kind of forward prediction.
+
 ## 9. Proposed build sequencing (updated)
 
 1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.
 2. **Paper corpus correction** (§5) — real HCP MOTOR-decoding comparison papers *and* real motor-cognition/neuroscience hypothesis papers identified (Ehrsson et al. 2003, Meier et al. 2008, Wang et al. 2020, a GNN decoding paper); pending manual download (automated fetch blocked by PMC/publisher access gates for all four).
 3. ~~**Case 2 v1**~~: skipped directly to v2.
 4. ~~**Case 2 v2**~~ — **done** (§8).
-5. **Case 2 v3 (stretch)**: conditional generation of future ROI activity from the learned joint representation. Not started.
+5. ~~**Case 2 v3 (stretch)**~~ — **done** (§8.5): linear-probe forecasting on the frozen representation, usable horizon ~3-4 seconds.
 6. **RAG↔CAV loop** (§4.1 of interpretability-methods-notes.md): buildable once the motor-cognition papers are indexed — retrieve a real neuroscience claim, extract its concept phrase, fit a CAV, test the model's sensitivity to it, closing the loop between retrieval and interpretability for real (not just label-derived) concepts.
 7. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
 

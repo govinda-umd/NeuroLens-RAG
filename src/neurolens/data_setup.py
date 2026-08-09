@@ -195,8 +195,14 @@ def make_forecast_dataloaders(
     val_windows = [w for w in all_windows if w.subject_id in set(val_subjects)]
     test_windows = [w for w in all_windows if w.subject_id in set(test_subjects)]
 
+    # shuffle=True on an empty dataset crashes RandomSampler - at large
+    # horizons the leak-safety filter can legitimately leave a split empty
+    # (see build_forecast_window_index), so guard rather than assume.
     train_loader = DataLoader(
-        ForecastWindowDataset(run_arrays, train_windows), batch_size=batch_size, shuffle=True, num_workers=num_workers
+        ForecastWindowDataset(run_arrays, train_windows),
+        batch_size=batch_size,
+        shuffle=len(train_windows) > 0,
+        num_workers=num_workers,
     )
     val_loader = DataLoader(
         ForecastWindowDataset(run_arrays, val_windows), batch_size=batch_size, shuffle=False, num_workers=num_workers

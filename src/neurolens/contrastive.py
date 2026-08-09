@@ -14,6 +14,8 @@ from __future__ import annotations
 import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
+from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from torch import nn
 from torch.utils.data import DataLoader
 
@@ -213,3 +215,69 @@ def text_to_brain_retrieval_precision(
             top_indices = ranked[:k]
             precisions[class_idx][k] = float((brain_labels[top_indices] == class_idx).mean())
     return precisions
+
+
+# --- Case 2 v3: forecasting block on top of the frozen contrastive backbone ---
+
+
+def extract_frozen_features_for_forecasting(
+    contrastive_model: ContrastiveModel, loader: DataLoader, device: torch.device
+) -> tuple[np.ndarray, np.ndarray]:
+    """Runs the already-trained brain_backbone.forward_features() (frozen,
+    no_grad) over every forecasting window. Returns (features [N, backbone_dim],
+    targets [N, n_rois])."""
+    contrastive_model.eval()
+    all_features, all_targets = [], []
+    with torch.no_grad():
+        for batch in loader:
+            x = batch["x"].to(device)
+            features = contrastive_model.brain_backbone.forward_features(x)
+            all_features.append(features.cpu().numpy())
+            all_targets.append(batch["target"].numpy())
+    return np.concatenate(all_features), np.concatenate(all_targets)
+
+
+def train_forecast_head(
+    contrastive_model: ContrastiveModel,
+    train_loader: DataLoader,
+    val_loader: DataLoader,
+    test_loader: DataLoader,
+    device: torch.device,
+    alpha: float = 1.0,
+) -> dict:
+    """A linear probe (ridge regression) on the frozen contrastive brain
+    encoder's pooled features, predicting future ROI activity — the
+    "forecasting lego-block on top of" the representation, per the design
+    plan. Framed explicitly as a linear probe (like the CAV work), not a
+    trained neural head, since the point is to test what the *already
+    learned* representation contains, not to fit a new deep model."""
+    train_features, train_targets = extract_frozen_features_for_forecasting(contrastive_model, train_loader, device)
+    val_features, val_targets = extract_frozen_features_for_forecasting(contrastive_model, val_loader, device)
+    test_features, test_targets = extract_frozen_features_for_forecasting(contrastive_model, test_loader, device)
+
+    if len(train_targets) == 0 or len(test_targets) == 0:
+        return {
+            "n_train": len(train_targets),
+            "n_val": len(val_targets),
+            "n_test": len(test_targets),
+            "val_mse": None,
+            "test_mse": None,
+            "test_mae": None,
+            "test_r2": None,
+        }
+
+    probe = Ridge(alpha=alpha)
+    probe.fit(train_features, train_targets)
+
+    val_pred = probe.predict(val_features)
+    test_pred = probe.predict(test_features)
+
+    return {
+        "n_train": len(train_targets),
+        "n_val": len(val_targets),
+        "n_test": len(test_targets),
+        "val_mse": float(mean_squared_error(val_targets, val_pred)),
+        "test_mse": float(mean_squared_error(test_targets, test_pred)),
+        "test_mae": float(mean_absolute_error(test_targets, test_pred)),
+        "test_r2": float(r2_score(test_targets, test_pred, multioutput="uniform_average")),
+    }

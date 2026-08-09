@@ -1,0 +1,85 @@
+{
+  "horizon_sweep": [
+    {
+      "horizon_trs": 1,
+      "horizon_seconds": 0.72,
+      "n_train": 3332,
+      "n_test": 714,
+      "test_mse": 0.6858497858047485,
+      "test_mae": 0.652921736240387,
+      "test_r2": 0.29622766375541687
+    },
+    {
+      "horizon_trs": 2,
+      "horizon_seconds": 1.44,
+      "n_train": 3192,
+      "n_test": 684,
+      "test_mse": 0.7810400128364563,
+      "test_mae": 0.6990468502044678,
+      "test_r2": 0.19326598942279816
+    },
+    {
+      "horizon_trs": 3,
+      "horizon_seconds": 2.16,
+      "n_train": 2968,
+      "n_test": 636,
+      "test_mse": 0.8727957010269165,
+      "test_mae": 0.7407843470573425,
+      "test_r2": 0.10655190050601959
+    },
+    {
+      "horizon_trs": 4,
+      "horizon_seconds": 2.88,
+      "n_train": 2828,
+      "n_test": 606,
+      "test_mse": 0.9307875633239746,
+      "test_mae": 0.7649229764938354,
+      "test_r2": 0.03491668775677681
+    },
+    {
+      "horizon_trs": 6,
+      "horizon_seconds": 4.32,
+      "n_train": 2464,
+      "n_test": 528,
+      "test_mse": 1.0047791004180908,
+      "test_mae": 0.7957545518875122,
+      "test_r2": -0.051532384008169174
+    },
+    {
+      "horizon_trs": 8,
+      "horizon_seconds": 5.76,
+      "n_train": 2100,
+      "n_test": 450,
+      "test_mse": 1.0322376489639282,
+      "test_mae": 0.8041719198226929,
+      "test_r2": -0.08786115050315857
+    },
+    {
+      "horizon_trs": 12,
+      "horizon_seconds": 8.64,
+      "n_train": 1400,
+      "n_test": 300,
+      "test_mse": 1.0382492542266846,
+      "test_mae": 0.8072715997695923,
+      "test_r2": -0.11920664459466934
+    },
+    {
+      "horizon_trs": 16,
+      "horizon_seconds": 11.52,
+      "n_train": 784,
+      "n_test": 168,
+      "test_mse": 1.0682085752487183,
+      "test_mae": 0.8196035027503967,
+      "test_r2": -0.16629929840564728
+    },
+    {
+      "horizon_trs": 20,
+      "horizon_seconds": 14.4,
+      "n_train": 196,
+      "n_test": 42,
+      "test_mse": 1.7759370803833008,
+      "test_mae": 1.0539511442184448,
+      "test_r2": -1.1309221982955933
+    }
+  ]
+}
