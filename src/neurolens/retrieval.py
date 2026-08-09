@@ -119,8 +119,8 @@ def ingest_pdf_directory(
     return all_chunks
 
 
-def load_embedding_model(device: str = "cpu") -> SentenceTransformer:
-    return SentenceTransformer(EMBEDDING_MODEL_NAME, device=device)
+def load_embedding_model(device: str = "cpu", model_name: str = EMBEDDING_MODEL_NAME) -> SentenceTransformer:
+    return SentenceTransformer(model_name, device=device)
 
 
 def embed_chunks(chunks: list[TextChunk], model: SentenceTransformer) -> np.ndarray:
