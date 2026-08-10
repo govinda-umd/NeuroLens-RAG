@@ -38,6 +38,10 @@ Every comparative claim in this report is accompanied by population-level statis
 
 **Figure 1.** Overview of the NeuroLens-RAG pipeline. Two representation-learning objectives (left) share the same fMRI input; each feeds a mechanistic-interpretability stage, which in turn seeds and is tested against literature retrieved by the grounding stage (right). The verification step combines a deterministic evidentiary judgment with a language-model narration of it (§2.6).
 
+![Figure 1b: Worked example](figures/fig1b_worked_example.png)
+
+**Figure 1b.** Figure 1, elaborated: the same nine-stage pipeline traced through one real decoded window (subject 102311, left-hand movement), with the method used at each stage on the left and the actual intermediate values produced at each stage on the right. Case 2 shares stages 3–9 conceptually but reaches step 7 by its own text-derived route rather than Case 1's labeled-example probe (§2.4).
+
 ---
 
 ## 2. Methods
