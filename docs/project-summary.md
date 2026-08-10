@@ -34,9 +34,17 @@ HCP Young Adult S1200, MOTOR task, LR+RL runs, 100 subjects (scaled from an init
 
 32-volume causal windows (stride 2), `X[t-31:t] → y[t], y_hrf[t]`. GRU (hidden=128) or Transformer (d_model=128, 4 heads, 2 layers) encoder, pooled representation feeding a classification head and an *architecturally optional* HRF regression head (removed entirely, not just untrained, for classification-only ablations). Loss: `cross_entropy(y) + λ_hrf · mse(y_hrf)`, `λ_hrf=0.1`.
 
+![Case 1 architecture](figures/fig_case1_architecture.png)
+
+**Figure.** Case 1's supervised multi-task decoder: a shared backbone (GRU or Transformer, compared in §3.3) pools a window into `h ∈ R^128`, feeding independent classification and HRF-regression heads.
+
 ### 2.3 Case 2 — contrastive brain-language representation learning
 
 A brain encoder (same GRU/Transformer backbones, heads removed) projects to a `d=64` embedding `z_brain`. A text encoder embeds each of the 6 condition descriptions once via a frozen pretrained sentence embedding model (MiniLM), with only a small trainable projection on top — appropriate given there are only 6 fixed text targets, not enough signal to learn a text encoder from scratch. Training: temperature-scaled cosine-similarity cross-entropy against all 6 known prototypes (a supervised-contrastive variant, not literal in-batch-negative InfoNCE, since the text side is a small closed vocabulary rather than CLIP's open per-example caption set — see §2.1 of `case2-3-design-plan.md` for the precise distinction). Evaluated via prototype-based classification (nearest text-prototype by cosine similarity), text-to-brain retrieval, and — via a frozen-backbone linear probe — forecasting of future ROI activity at increasing horizons, with a leak-safety constraint requiring the forecast target to share the source window's condition label (preventing a forecast from silently crossing into an adjacent condition block).
+
+![Case 2 architecture](figures/fig_case2_architecture.png)
+
+**Figure.** Case 2's contrastive brain-text architecture: the same backbone as Case 1 (heads removed) projects to `z_brain ∈ R^64`; a frozen sentence-embedding model plus a small trainable projection produces `z_text ∈ R^(6x64)`; training aligns the two via a temperature-scaled similarity cross-entropy.
 
 ### 2.4 Interpretability
 
@@ -44,9 +52,17 @@ A brain encoder (same GRU/Transformer backbones, heads removed) projects to a `d
 
 **Concept Activation Vectors (CAV/TCAV, Kim et al. 2018)**: given labeled positive/negative example inputs for a concept, fit a linear probe in the model's pooled representation to find the direction separating them (the CAV), then measure the directional derivative of a target class's logit along that direction for held-out examples — the fraction with a positive derivative is the TCAV score, i.e. "how often would nudging this representation toward the concept increase the model's confidence in this class." See §3 below for the worked example and diagram.
 
+![CAV/TCAV verification mechanism](figures/fig_cav_verification_mechanism.png)
+
+**Figure.** The two independent routes to a concept direction `v_C` — a labeled-example probe (Case 1) and text-prototype arithmetic (Case 2, no brain examples needed) — converge on the same directional-derivative test in the model's own hidden space.
+
 ### 2.5 Retrieval-augmented generation and the RAG-CAV loop
 
 A corpus of 8 papers — deliberately including genuine neuroscience hypothesis papers (Ehrsson et al. 2003 on body-part-specific motor imagery; Meier et al. 2008 on non-classical motor cortex organization), not only infrastructure papers — is chunked, embedded (MiniLM), and optionally reranked with a cross-encoder before being passed to a local, quantized LLM (Llama-3.2-3B via Apple's MLX framework, entirely on-device). The LLM performs three roles in sequence: (1) label each retrieved excerpt SUPPORTS/CONTRADICTS/UNRELATED to a decoded state, (2) extract a candidate concept phrase from a relevant excerpt, and (3) synthesize a final explanation integrating the decode, the literature, and an independent CAV test of whether the model's decision is actually sensitive to the extracted concept. Step 2→3 is the loop: a phrase is mapped (currently via keyword matching, §3.3 discusses the tradeoff) onto a concept the CAV machinery can test, closing the gap between "the literature says X" and "does the model's representation actually reflect X."
+
+![Verification loop architecture](figures/fig_verification_loop_architecture.png)
+
+**Figure.** The literature-grounded verification loop in its current (Case 2) form: stance labeling and concept extraction happen in one LLM call, the concept is tested via CAV/TCAV, and the agree/disagree/unclear verdict is computed deterministically from the stance and TCAV score rather than decided by the LLM (§3.6). The LLM's only free-form output is the final narration.
 
 ### 2.6 Statistical validation
 
