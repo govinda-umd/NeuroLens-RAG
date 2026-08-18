@@ -85,8 +85,10 @@ class TransformerDecoder(nn.Module):
         num_conditions: int = 5,
         include_hrf_head: bool = True,
         max_len: int = 512,
+        causal: bool = False,
     ):
         super().__init__()
+        self.causal = causal
         self.input_proj = nn.Linear(input_size, d_model)
         self.pos_encoding = SinusoidalPositionalEncoding(d_model, max_len=max_len)
         encoder_layer = nn.TransformerEncoderLayer(
@@ -103,10 +105,21 @@ class TransformerDecoder(nn.Module):
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
         """The pooled representation before either head — the actual
         multi-task-learned representation (see docs/case2-3-design-plan.md
-        §1), used directly by concept-activation-vector probing."""
+        §1), used directly by concept-activation-vector probing.
+
+        With `causal=True`, a lower-triangular attention mask restricts
+        every position to attending only to itself and earlier positions
+        at every layer, matching the GRU's causal-by-construction inductive
+        bias - isolating the recurrence-vs-attention comparison from the
+        separate causal-vs-bidirectional-receptive-field axis the default
+        (unmasked) Transformer otherwise bundles into it."""
         h = self.input_proj(x)
         h = self.pos_encoding(h)
-        h = self.encoder(h)  # [B, L, d_model]
+        mask = None
+        if self.causal:
+            L = h.size(1)
+            mask = nn.Transformer.generate_square_subsequent_mask(L, device=h.device)
+        h = self.encoder(h, mask=mask, is_causal=self.causal)  # [B, L, d_model]
         return h[:, -1, :]  # final temporal token (v1 pooling choice; see open questions)
 
     def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor | None]:
