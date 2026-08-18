@@ -1,0 +1,182 @@
+{
+  "n_subjects": 100,
+  "best_architecture": "Transformer",
+  "primary_results": {
+    "GRU": {
+      "best_val_contrastive_loss": 1.7212168413859148,
+      "test_macro_f1": 0.9155911149833317
+    },
+    "Transformer": {
+      "best_val_contrastive_loss": 1.4677754078920071,
+      "test_macro_f1": 0.9171112080818727
+    }
+  },
+  "concept_analysis": {
+    "hand": {
+      "probe_accuracy": 0.9900666262870987,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 1.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 0.0
+      }
+    },
+    "foot": {
+      "probe_accuracy": 0.9893397940642035,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "tongue": {
+      "probe_accuracy": 0.9924894003634162,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    },
+    "right_side": {
+      "probe_accuracy": 0.9930674264007597,
+      "scores": {
+        "baseline": 0.0,
+        "left_hand": 0.0,
+        "right_hand": 1.0,
+        "left_foot": 0.0,
+        "right_foot": 1.0,
+        "tongue": 0.0
+      }
+    },
+    "left_side": {
+      "probe_accuracy": 0.9930674264007597,
+      "scores": {
+        "baseline": 1.0,
+        "left_hand": 1.0,
+        "right_hand": 0.0,
+        "left_foot": 1.0,
+        "right_foot": 0.0,
+        "tongue": 1.0
+      }
+    }
+  },
+  "bootstrap_rank_test": {
+    "hand": {
+      "left_hand": {
+        "target_class": "left_hand",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.507,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      },
+      "right_hand": {
+        "target_class": "right_hand",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.493,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      }
+    },
+    "foot": {
+      "left_foot": {
+        "target_class": "left_foot",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.507,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      },
+      "right_foot": {
+        "target_class": "right_foot",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.493,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      }
+    },
+    "tongue": {
+      "tongue": {
+        "target_class": "tongue",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.493,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      }
+    },
+    "right_side": {
+      "right_hand": {
+        "target_class": "right_hand",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.507,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      },
+      "right_foot": {
+        "target_class": "right_foot",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.493,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      }
+    },
+    "left_side": {
+      "left_hand": {
+        "target_class": "left_hand",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.245,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      },
+      "left_foot": {
+        "target_class": "left_foot",
+        "mean_tcav": 1.0,
+        "ci_95": [
+          1.0,
+          1.0
+        ],
+        "p_rank1": 0.257,
+        "frac_ties_at_max": 1.0,
+        "n_resamples": 1000
+      }
+    }
+  }
+}

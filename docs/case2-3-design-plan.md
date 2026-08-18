@@ -72,6 +72,18 @@ Two design points worth stating precisely rather than assuming:
 
 **Explicitly out of scope for the current concept-based model comparison**: the generative direction (HRF→brain, e.g. activating a "rightness" concept and inspecting the synthetic brain signal that comes out) and the general question of how to evaluate a generative model's concept-sensitivity. Both noted as a separate, later idea.
 
+### 2.5.1 Case 3 build + 100-subject validation — **done**
+
+Built in `src/neurolens/case3.py` (`HRFEncoder`, `BrainHRFModel`, `symmetric_contrastive_loss`, `train_case3`) and validated end-to-end in [`17_case3_brain_hrf_coembedding.ipynb`](../notebooks/17_case3_brain_hrf_coembedding.ipynb). Full numbers: [`results/case3_validation_results.json`](../results/case3_validation_results.json).
+
+Because Case 3 never sees a class label during training, it has no classifier head by construction — `BrainWithPostHocClassifier` fits a linear probe on frozen Case-3 features post-hoc, giving both (a) a macro-F1 comparable to Case 1/2 and (b) a target-class logit for TCAV's directional derivative, letting Case 1's existing `concepts.py` machinery (`extract_pooled_features`, `train_cav`, `tcav_score`, `run_concept_analysis`) run on Case 3's self-supervised representation completely unchanged.
+
+**Primary result** (5 epochs, 100 subjects): post-hoc test macro-F1 = **GRU 0.916, Transformer 0.917** — both within a point of Case 1 (0.920, fully supervised) and Case 2 (0.918, supervised contrastive), despite Case 3 never using a single class label during representation training. This is the standard "linear probe" evaluation convention for self-supervised representations, and it's a genuinely strong result for the project's throughline: a representation learned purely from same-window brain-HRF co-occurrence recovers almost all of the label-supervised representations' linearly-decodable task structure.
+
+**Fixed 5-concept CAV/TCAV** (Transformer, the better architecture): probe accuracy 0.989–0.993 across all 5 concepts — even more separable than Case 1/2's originally-reported numbers. Every concept's own TCAV score against its target class saturates at exactly 1.0.
+
+**A real methodological finding, caught before it was written up wrong**: applying the §6-of-`population-level-evaluation-plan.md` cross-class rank-bootstrap test here initially returned near-zero P(rank1) for several concepts against their *own* intended class — which looked like a null result but was a tie-breaking artifact. When several classes' TCAV scores all saturate at the 1.0 ceiling simultaneously (as they do here, given how separable Case 3's representation turned out to be), `max()`'s implicit lowest-index-wins tie-breaking silently biased which class "won" the rank test, independent of which class the direction actually implicated. Fixed by breaking ties uniformly at random (`cross_class_rank_bootstrap_test` in `src/neurolens/concepts.py`, now also reports `frac_ties_at_max`); after the fix, tied concepts correctly return P(rank1) ≈ 1/(number of classes tied at the ceiling) — e.g. ~0.50 for `hand` (a 2-way tie between `left_hand`/`right_hand`, both scoring 1.0), ~0.25 for `left_side` (a 4-way tie). **This is an honest limitation of the rank-bootstrap significance test, not of Case 3's representation**: the test loses discriminating power exactly in the high-separability regime it's being asked to validate, because its underlying TCAV score is binarized (fraction-positive-gradient) rather than continuous. A magnitude-based variant (mean signed directional derivative, not just its sign) would very likely recover discriminating power here — noted as follow-up work, not yet built.
+
 ## 3. A separate, deprioritized future direction: Bayesian dynamical systems (SLDS/rSLDS)
 
 Not "Case 3" — see the disambiguation in §0. Unchanged in spirit from the original version of this plan, but no longer sequenced as "the next case": fit a recurrent switching linear dynamical system via **`lindermanlab/ssm`** on the raw ROI time series, and test whether its unsupervised discrete regimes correspond to the known movement conditions — a PGM-native, structurally interpretable alternative to Case 2's learned embedding space. If ever revisited, comparable to Case 2/Case 3(HRF) directly: does contrastive alignment and unsupervised dynamical regime-switching converge on similar task structure, discovered two independent ways?
@@ -90,7 +102,7 @@ The current 6-paper corpus over-indexes on infrastructure papers (Yeo 2011 parce
 
 ## 6. Resume/portfolio framing (corrected)
 
-Case 1, described accurately, is a **multi-task representation learning** result, not merely "a decoding model" — that's the vocabulary a PhD-level ML/AI resume should use, and it wasn't used the first time. Case 2, once built, becomes a genuinely strong complementary bullet: contrastive multimodal representation learning is squarely "modern AI lingo" (the same family as CLIP) and is a different, more advanced claim than a discriminative classifier. Case 3 supports the Bayesian-PGM-plus-dynamical-systems research narrative directly.
+Case 1, described accurately, is a **multi-task representation learning** result, not merely "a decoding model" — that's the vocabulary a PhD-level ML/AI resume should use, and it wasn't used the first time. Case 2, once built, becomes a genuinely strong complementary bullet: contrastive multimodal representation learning is squarely "modern AI lingo" (the same family as CLIP) and is a different, more advanced claim than a discriminative classifier. Case 3 (self-supervised brain-HRF co-embedding, §2.5) supports a third distinct claim: a representation learned with zero class-label supervision recovers nearly all of Case 1/2's linearly-decodable task structure — the standard self-supervised "linear probe" evaluation story, and evidence the throughline isn't an artifact of supervision.
 
 ## 7. Compute feasibility (M3, 16GB)
 
@@ -146,8 +158,8 @@ The RAG-CAV verification loop (§4.1 of `interpretability-methods-notes.md`) is 
 5. ~~**Case 2 v3 (stretch)**~~ — **done** (§8.5): linear-probe forecasting on the frozen representation, usable horizon ~3-4 seconds.
 6. ~~**RAG↔CAV loop**~~ — **done** for both Case 1 and Case 2, including Case 2's open-vocabulary extension (§8.7).
 7. **Dataset scale-up, 100 → 200 subjects** — in progress as of this writing (`data/subject_discovery_v4.json`, `02_data_complete.ipynb`); motivated directly by §4's laterality-concept weakness, to test whether it's a data-scarcity artifact rather than a fundamental representational limit.
-8. **Case 3 (HRF co-embedding, §2.5)** — scoped, not yet built. Natural next build once the 200-subject data and its re-validation are complete.
-9. **Model-capacity sweep** (deeper GRU, more Transformer layers/heads) — sequenced after the data scale-up, per explicit decision; both architectures already support this via existing constructor arguments, no new code needed.
+8. ~~**Case 3 (HRF co-embedding, §2.5)**~~ — **done** at 100-subject scale (§2.5.1): built, trained (GRU + Transformer), post-hoc-probed, and CAV/TCAV-wired. Queued for retraining on the 200-subject data once the scale-up completes, alongside Case 1/2, as part of the full 3-case sweep (item 9).
+9. **3-case × 2-architecture × capacity-variant sweep, on 200-subject data** — sequenced after the data scale-up, per explicit decision. Retrain Case 1, Case 2, and Case 3 across GRU/Transformer with varied depth (layers) and attention heads — no new architecture code needed, both `GRUDecoder`/`TransformerDecoder` already take these as constructor args — then re-run the fixed 5-concept CAV/TCAV analysis (with bootstrap significance testing, §2.5.1) across every resulting model.
 10. **Structural-connectivity (SC) graph input** — scoped as a separate future project (§4.3 of `project-summary.md`); subject-level DTI availability confirmed (97.7% of MOTOR-eligible candidates), but building an actual per-subject SC matrix and a graph-aware architecture is nontrivial additional work, not bundled into the above.
 11. **Bayesian dynamical systems (SLDS/rSLDS)** (§3) — a separate, deprioritized direction, no longer "next after Case 2."
 
@@ -157,5 +169,5 @@ The RAG-CAV verification loop (§4.1 of `interpretability-methods-notes.md`) is 
 - [ml-design-report.md](ml-design-report.md)
 - [interpretability-methods-notes.md](interpretability-methods-notes.md) §4.1
 - [literature-notes-tokenization.md](literature-notes-tokenization.md) — POYO/POSSM background, the Eva Dyer throughline this design follows
-- Radford et al. 2021, "Learning Transferable Visual Models From Natural Language Supervision" (CLIP) — the contrastive objective Case 2 follows
-- [lindermanlab/ssm](https://github.com/lindermanlab/ssm) — rSLDS implementation for Case 3
+- Radford et al. 2021, "Learning Transferable Visual Models From Natural Language Supervision" (CLIP) — the contrastive objective Case 2 (and, symmetrically, Case 3) follows
+- [lindermanlab/ssm](https://github.com/lindermanlab/ssm) — rSLDS implementation, for §3's separate deprioritized direction (not Case 3)

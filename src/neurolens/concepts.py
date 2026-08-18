@@ -209,3 +209,109 @@ def explain_literature_concept(
             "n_test_examples_of_decoded_class": tcav["n_examples"],
         }
     return {"phrase": phrase, "matched_concepts": matched_concepts, "results": results}
+
+
+# --- Statistical significance for TCAV scores ---
+#
+# See docs/population-level-evaluation-plan.md §6 for the full derivation
+# and the dead end that preceded this: a null of TCAV scores from directions
+# drawn uniformly at random in the representation's hidden space does NOT
+# work here (near-extreme scores for almost any fixed direction, since
+# within-class gradients are highly consistent - a property of the
+# representation's separability, not of the direction's meaning). What
+# works instead is asking a different question: does this *specific,
+# already-fitted* direction single out its intended class more than the
+# other 5, and does that hold up under resampling? This was validated ad
+# hoc for Case 2's open-vocabulary CAV (P=1.000 across 1000 resamples);
+# promoted here into a reusable function so Case 1 and Case 3 don't have
+# to reimplement it.
+
+
+def extract_pooled_features_with_subjects(
+    model: nn.Module, loader: DataLoader, device: torch.device
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Like `extract_pooled_features`, but also returns each window's
+    subject_id so callers can bootstrap resample at the subject level
+    (never window level - see docs/population-level-evaluation-plan.md
+    §3.3 for why window-level resampling would be invalid: windows from
+    the same subject/run are not independent draws)."""
+    model.eval()
+    all_features, all_labels, all_subjects = [], [], []
+    with torch.no_grad():
+        for batch in loader:
+            x = batch["x"].to(device)
+            features = model.forward_features(x)
+            all_features.append(features.cpu().numpy())
+            all_labels.append(batch["y"].numpy())
+            all_subjects.extend(batch["subject_id"])
+    return np.concatenate(all_features), np.concatenate(all_labels), np.array(all_subjects)
+
+
+def cross_class_rank_bootstrap_test(
+    model: nn.Module,
+    features: np.ndarray,
+    labels: np.ndarray,
+    subject_ids: np.ndarray,
+    cav_direction: np.ndarray,
+    target_class: int,
+    class_names: list[str],
+    device: torch.device,
+    n_resamples: int = 1000,
+    seed: int = 42,
+) -> dict:
+    """Holds `cav_direction` fixed. On each of `n_resamples` subject-level
+    bootstrap resamples of `features`/`labels`, computes the TCAV score
+    against every class's own held-out examples and checks whether
+    `target_class` ranks #1 of all classes. Returns the target class's
+    TCAV score distribution (mean + 95% CI) plus P(target ranks #1) - the
+    fraction of resamples where the direction most specifically implicates
+    its intended class, not just scores highly for it in isolation.
+
+    TCAV's underlying score is a binarized fraction-positive-gradient, so
+    when a representation is highly separable it commonly saturates at
+    exactly 1.0 for *several* classes at once under a given direction -
+    not just the intended target. Ties must be broken randomly (`rng.choice`
+    among all classes tied at the max), never by `max()`'s implicit
+    lowest-index-wins rule: that would silently bias P(rank1) toward
+    low-index classes regardless of which class the direction actually
+    implicates, an artifact rather than a real null finding. `frac_ties_at_max`
+    reports how often the target was tied with >=1 other class at the top
+    score, so a caller can tell a genuine null apart from a saturated-score
+    regime where this rank test has little power to discriminate."""
+    rng = np.random.RandomState(seed)
+    unique_subjects = np.unique(subject_ids)
+    num_classes = len(class_names)
+    subject_to_idx = {s: np.where(subject_ids == s)[0] for s in unique_subjects}
+
+    target_scores = []
+    rank1_count = 0
+    tie_count = 0
+    for _ in range(n_resamples):
+        resampled_subjects = rng.choice(unique_subjects, size=len(unique_subjects), replace=True)
+        idx = np.concatenate([subject_to_idx[s] for s in resampled_subjects])
+        feats_r, labels_r = features[idx], labels[idx]
+
+        class_scores = {}
+        for c in range(num_classes):
+            result = tcav_score(model, feats_r, labels_r, c, cav_direction, device)
+            class_scores[c] = result["tcav_score"] if result["tcav_score"] is not None else -1.0
+        target_scores.append(class_scores[target_class])
+
+        top_score = max(class_scores.values())
+        tied_classes = [c for c, s in class_scores.items() if s == top_score]
+        if len(tied_classes) > 1 and target_class in tied_classes:
+            tie_count += 1
+        winner = tied_classes[0] if len(tied_classes) == 1 else tied_classes[rng.randint(len(tied_classes))]
+        if winner == target_class:
+            rank1_count += 1
+
+    target_scores = np.array(target_scores)
+    lo, hi = np.percentile(target_scores, [2.5, 97.5])
+    return {
+        "target_class": class_names[target_class],
+        "mean_tcav": float(target_scores.mean()),
+        "ci_95": [float(lo), float(hi)],
+        "p_rank1": rank1_count / n_resamples,
+        "frac_ties_at_max": tie_count / n_resamples,
+        "n_resamples": n_resamples,
+    }
