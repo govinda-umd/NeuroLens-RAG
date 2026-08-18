@@ -1,0 +1,5996 @@
+{
+  "n_existing": 100,
+  "n_candidates_checked": 1013,
+  "n_eligible_motor": 981,
+  "n_eligible_with_dti": 958,
+  "eligible_subjects": [
+    {
+      "subject_id": "120010",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "120111",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "120212",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "120414",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "120515",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "120717",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "121315",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "121416",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "121618",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "121719",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "121820",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "121921",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "122317",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "122418",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "122620",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "122822",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123117",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123420",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123521",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123723",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123824",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "123925",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "124220",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "124422",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "124624",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "124826",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "125222",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "125424",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "125525",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "126325",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "126426",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "126628",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127226",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127327",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127630",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127731",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127832",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "127933",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "128026",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "128127",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "128632",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "128935",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "129028",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "129129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "129331",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "129634",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "129937",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130013",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130114",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130316",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130417",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130518",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130619",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130720",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130821",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "130922",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "131217",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "131419",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "131722",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "131823",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "131924",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "132017",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "132118",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "133019",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "133625",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "133827",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "133928",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134021",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134223",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134324",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134425",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134627",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134728",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "134829",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135124",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135225",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135528",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135629",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135730",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "135932",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "136126",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "136227",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "136631",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "136732",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "136833",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137027",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137128",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137229",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137431",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137532",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137633",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "137936",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "138130",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "138231",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "138332",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "138534",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "138837",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "139233",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "139435",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "139637",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "139839",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "140117",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "140319",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "140824",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "140925",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "141119",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "141422",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "141826",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "142424",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "142828",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "143224",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "143325",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "143426",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "143830",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144125",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144226",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144428",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144731",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144832",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "144933",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "145127",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "145531",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "145632",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "145834",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146331",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146432",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146533",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146735",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146836",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "146937",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "147030",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "147636",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "147737",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148032",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148133",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148335",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148436",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148840",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "148941",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "149236",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "149337",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "149539",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "149741",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "149842",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "150019",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "150423",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "150524",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "150625",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "150726",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "150928",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151021",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151223",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151324",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151425",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151526",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151627",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151728",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151829",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "151930",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "152225",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "152427",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "152831",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153025",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153126",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153227",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153429",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153631",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153732",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153833",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "153934",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154229",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154330",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154431",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154532",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154734",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154835",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "154936",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "155231",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "155635",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "155938",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156031",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156233",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156334",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156435",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156536",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "156637",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "157336",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "157437",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "157942",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "158035",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "158136",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "158338",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "158540",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "158843",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159138",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159340",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159441",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159744",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "159845",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "159946",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "160123",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "160729",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "160830",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "160931",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "161327",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "161630",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "161731",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "161832",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "162026",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "162228",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "162329",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "162733",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "162935",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "163129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "163331",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "163432",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "163836",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "164030",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "164131",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "164636",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "164939",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "165032",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "165234",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "165436",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "165638",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "165840",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "165941",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "166438",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "166640",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "167036",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "167238",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "167440",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "167743",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "168139",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "168240",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "168341",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "168745",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "168947",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169040",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169141",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "169343",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169444",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169545",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169747",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "169949",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "170631",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "170934",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "171128",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "171330",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "171431",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "171532",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "171633",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "171734",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "172029",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172130",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172332",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172433",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172534",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172635",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "172938",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173132",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173233",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173334",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173435",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173536",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173637",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173738",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173839",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "173940",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "174437",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "174841",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175035",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175136",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175237",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175338",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175439",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175540",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "175742",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "176037",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "176239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "176441",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "176542",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "176845",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "177140",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "177241",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "177342",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "177645",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "177746",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178142",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178243",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178647",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178748",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178849",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "178950",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "179245",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "179346",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "179548",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "179952",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180230",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180432",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180533",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180735",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180836",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "180937",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "181131",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "181232",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "181636",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "182032",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "182436",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "182739",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "182840",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "183034",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "183337",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "183741",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185038",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185139",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185341",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185442",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185846",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "185947",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186040",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186141",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186444",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186545",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186848",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "186949",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "187143",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "187345",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "187547",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "187850",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "188145",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "188347",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "188448",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "188549",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "188751",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "189349",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "189450",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "189652",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "190031",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191033",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191235",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191336",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191437",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191841",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "191942",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192035",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192136",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192237",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192439",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192540",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192641",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "192843",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "193239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "193441",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "193845",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "194140",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "194443",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "194645",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "194746",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "194847",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "195041",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "195445",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "195647",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "195849",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "195950",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "196144",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "196346",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "196750",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "196851",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "196952",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "197348",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "197550",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198047",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198249",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198350",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198451",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198653",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "198855",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199150",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199251",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199352",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199453",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199655",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "199958",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200008",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200109",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200210",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200311",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200513",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200614",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "200917",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "201111",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "201414",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "201515",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "201717",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "201818",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "202113",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "202719",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "202820",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "203418",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "203923",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204016",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204218",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204319",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204420",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204521",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "204622",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "205119",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "205220",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "205725",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "205826",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206222",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206323",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206525",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206727",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206828",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "206929",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "207123",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "207426",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "208024",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "208125",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "208226",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "208327",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "209127",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "209228",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "209329",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "209531",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "209834",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "209935",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "210011",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "210112",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "210415",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "210617",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211114",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211215",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211316",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211417",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211619",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211720",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211821",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "211922",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212015",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212116",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212217",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212318",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212419",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "212823",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "213017",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "213421",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "213522",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "214019",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "214221",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "214423",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "214524",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "214726",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "217126",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "217429",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "219231",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "220721",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "221218",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "221319",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "223929",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "224022",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "227432",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "227533",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "228434",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "231928",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "233326",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "236130",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "237334",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "238033",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "239136",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "239944",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "245333",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "246133",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "248238",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "248339",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "249947",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "250427",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "250932",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "251833",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "255639",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "255740",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "256540",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "257542",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "257845",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "257946",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "263436",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "268749",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "268850",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "270332",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "274542",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "275645",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "280739",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "281135",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "283543",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "284646",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "285345",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "285446",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "286347",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "286650",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "287248",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "289555",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "290136",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "293748",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "295146",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "297655",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "298051",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "298455",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "299154",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "299760",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "300618",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "300719",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "303119",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "303624",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "304020",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "304727",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "305830",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "307127",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "308129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "308331",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "309636",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "310621",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "311320",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "314225",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "316633",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "316835",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "317332",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "318637",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "320826",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "321323",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "322224",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "325129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "329440",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "329844",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "330324",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "333330",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "334635",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "336841",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "339847",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "341834",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "342129",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "346137",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "346945",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "348545",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "349244",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "350330",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "351938",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "352132",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "352738",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "353740",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "355239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "356948",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "358144",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "360030",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "361234",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "361941",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "362034",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "365343",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "366042",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "366446",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "368753",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "371843",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "376247",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "377451",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "378756",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "378857",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "379657",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "380036",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "381038",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "381543",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "382242",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "385046",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "385450",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "386250",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "387959",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "389357",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "390645",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "391748",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "392447",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "392750",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "393247",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "393550",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "394956",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "395251",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "395756",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "395958",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "397154",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "397760",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "397861",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "401422",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "406432",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "406836",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "412528",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "413934",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "414229",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "415837",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "419239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "421226",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "422632",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "424939",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "429040",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "432332",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "433839",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "436239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "436845",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "441939",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "445543",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "448347",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "449753",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "453441",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "453542",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "454140",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "456346",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "459453",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "461743",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "462139",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "463040",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "465852",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "467351",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "468050",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "469961",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "473952",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "475855",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "479762",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "480141",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "481042",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "481951",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "485757",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "486759",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "492754",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "495255",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "497865",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "499566",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "500222",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "506234",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "510225",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "510326",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "512835",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "513130",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "513736",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "516742",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "517239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "518746",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "519647",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "519950",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "520228",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "521331",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "522434",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "523032",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "524135",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "525541",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "529549",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "529953",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "530635",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "531536",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "536647",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "540436",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "541640",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "541943",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "545345",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "547046",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "548250",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "549757",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "550439",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "552241",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "552544",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "553344",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "555348",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "555651",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "555954",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "557857",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "558657",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "558960",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "559053",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "559457",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "561242",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "561444",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "561949",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "562345",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "562446",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "565452",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "566454",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "567052",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "567759",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "567961",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "568963",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "569965",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "570243",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "571144",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "572045",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "573249",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "573451",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "576255",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "578057",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "578158",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "579665",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "579867",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "580044",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "580650",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "580751",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "581349",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "581450",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "583858",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "585256",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "585862",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "586460",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "587664",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "588565",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "589567",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "590047",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "592455",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "594156",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "597869",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "598568",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "599065",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "599469",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "599671",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "601127",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "604537",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "609143",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "611938",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "613235",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "613538",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "614439",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "615441",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "615744",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "616645",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "617748",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "618952",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "620434",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "622236",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "623137",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "623844",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "626648",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "627549",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "627852",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "628248",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "633847",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "634748",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "635245",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "638049",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "644044",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "644246",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "645450",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "645551",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "647858",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "654350",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "654552",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "654754",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "656253",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "656657",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "657659",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "660951",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "662551",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "663755",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "664757",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "665254",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "667056",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "668361",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "671855",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "672756",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "673455",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "675661",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "677766",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "677968",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "679568",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "679770",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "680250",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "680452",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "680957",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "683256",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "685058",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "686969",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "687163",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "688569",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "689470",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "690152",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "692964",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "693461",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "693764",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "694362",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "695768",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "698168",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "700634",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "701535",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "702133",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "704238",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "705341",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "706040",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "707749",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "709551",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "713239",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "715041",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "715647",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "715950",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "720337",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "723141",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "724446",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "725751",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "727553",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "727654",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "728454",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "729254",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "729557",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "731140",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "732243",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "734045",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "734247",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "735148",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "737960",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "742549",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "744553",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "748258",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "748662",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "749058",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "749361",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "751348",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "751550",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "753150",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "753251",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "756055",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "757764",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "759869",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "760551",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "761957",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "763557",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "765056",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "765864",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "766563",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "767464",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "769064",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "770352",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "771354",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "773257",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "774663",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "779370",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "782561",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "783462",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "784565",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "786569",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "788674",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "788876",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "789373",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "792564",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "792766",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "792867",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "793465",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "800941",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "802844",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "803240",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "804646",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "809252",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "810439",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "810843",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "812746",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "814548",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "814649",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "815247",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "816653",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "818455",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "818859",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "820745",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "822244",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "825048",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "825553",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "825654",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "826353",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "826454",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "827052",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "828862",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "832651",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "833148",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "833249",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "835657",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "837560",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "837964",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "841349",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "843151",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "844961",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "845458",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "849264",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "849971",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "852455",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "856463",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "856766",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "856968",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "857263",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "859671",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "861456",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "865363",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "867468",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "869472",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "870861",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "871762",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "871964",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "872158",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "872562",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "872764",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "873968",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "877168",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "877269",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "878776",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "878877",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "880157",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "882161",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "884064",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "885975",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "886674",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "887373",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "888678",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "889579",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "891667",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "894067",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "894673",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "894774",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "896778",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "896879",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "898176",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "899885",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "901038",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "901139",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "901442",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "902242",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "904044",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "905147",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "907656",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "908860",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "910241",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "910443",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "911849",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "912447",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "917255",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "917558",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "919966",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "922854",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "923755",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "926862",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "927359",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "929464",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "930449",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "932554",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "933253",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "937160",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "942658",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "943862",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "947668",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "951457",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "952863",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "953764",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": false
+    },
+    {
+      "subject_id": "955465",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "957974",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "958976",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "959574",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "962058",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "965367",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "965771",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "966975",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "969476",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "970764",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "971160",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "972566",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "973770",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "978578",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "979984",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "983773",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "984472",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "987074",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "987983",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "989987",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "990366",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "991267",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "992673",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "992774",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "993675",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "994273",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "995174",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    },
+    {
+      "subject_id": "996782",
+      "motor_lr": true,
+      "motor_rl": true,
+      "has_diffusion": true
+    }
+  ],
+  "next_100_subject_ids": [
+    "120010",
+    "120111",
+    "120212",
+    "120414",
+    "120515",
+    "120717",
+    "121315",
+    "121416",
+    "121618",
+    "121719",
+    "121820",
+    "121921",
+    "122317",
+    "122418",
+    "122620",
+    "122822",
+    "123117",
+    "123420",
+    "123521",
+    "123723",
+    "123824",
+    "123925",
+    "124220",
+    "124422",
+    "124624",
+    "124826",
+    "125222",
+    "125424",
+    "125525",
+    "126325",
+    "126426",
+    "126628",
+    "127226",
+    "127327",
+    "127630",
+    "127731",
+    "127832",
+    "127933",
+    "128026",
+    "128127",
+    "128632",
+    "128935",
+    "129028",
+    "129129",
+    "129331",
+    "129634",
+    "129937",
+    "130013",
+    "130114",
+    "130316",
+    "130417",
+    "130518",
+    "130619",
+    "130720",
+    "130821",
+    "130922",
+    "131217",
+    "131419",
+    "131722",
+    "131823",
+    "131924",
+    "132017",
+    "132118",
+    "133019",
+    "133625",
+    "133827",
+    "133928",
+    "134021",
+    "134223",
+    "134324",
+    "134425",
+    "134627",
+    "134728",
+    "134829",
+    "135124",
+    "135225",
+    "135528",
+    "135629",
+    "135730",
+    "135932",
+    "136126",
+    "136227",
+    "136631",
+    "136732",
+    "136833",
+    "137027",
+    "137128",
+    "137229",
+    "137431",
+    "137532",
+    "137633",
+    "137936",
+    "138130",
+    "138231",
+    "138332",
+    "138534",
+    "138837",
+    "139233",
+    "139435",
+    "139637"
+  ]
+}
