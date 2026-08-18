@@ -93,9 +93,39 @@ A "BNN" as normally used is discriminative — Bayesian describes uncertainty ov
 
 ---
 
-## 6. Still to build out (placeholders — continue block by block)
+## 6. Evaluation / interpretability block
 
-- [ ] Evaluation / interpretability block (attribution methods, CAV/TCAV mechanics, the significance-test dead end and fix)
+Two layers, answering genuinely different questions — keep this distinction sharp:
+
+### 6.1 Attribution — "which input regions drove this decision?"
+
+Four methods against the 7 Yeo resting-state networks (Visual, Somatomotor, Dorsal Attention, Salience/Ventral Attention, Limbic, Control, Default), for one decoded window:
+- **Gradient-based** (Saliency, Integrated Gradients): on the continuous 300-ROI input, aggregated to 7 networks by summing. Saliency = `|∂output/∂input|` — fast, but noisy/gradient-saturation-prone. IG integrates the gradient along a path from a zero baseline to the real input, guaranteeing *completeness* (attributions sum exactly to the output difference between baseline and real input) — a real advantage Saliency lacks.
+- **Perturbation-based** (exact Shapley, LIME): on a coarser 7-"player" abstraction (whole networks ablated, not individual ROIs). Not a convenience shortcut — it's specifically what makes **exact** Shapley possible: $2^7=128$ coalitions is exhaustively enumerable; $2^{300}$ is not. This is the design reason for choosing the network-level abstraction over ROI-level for these two methods.
+- **Known, unresolved finding**: the two families disagree with each other more than within a family. Reported honestly as open, not smoothed over — matches a well-known reproducibility concern in the broader attribution literature (gradient- vs. perturbation-based methods often answer subtly different questions about "importance"), not evidence of a bug specific to this implementation.
+
+### 6.2 CAV/TCAV — "does the model's decision depend on a concept a human named?"
+
+Fundamentally different from attribution: attribution tells you *where*; CAV/TCAV tells you *whether a named idea* mattered — a question attribution can't even ask, since it never requires defining a concept.
+
+Mechanism:
+1. Define a concept via positive/negative examples (Case 1/3: labeled brain windows; Case 2: two text-prototype embeddings).
+2. Fit a **linear probe** (logistic regression) separating them in the pooled representation. Normalized weight vector = the Concept Activation Vector. Probe accuracy reported as a diagnostic — low accuracy means the concept isn't linearly present, don't trust the direction.
+3. TCAV score: gradient of the target class's logit w.r.t. the pooled representation, dotted with the CAV direction (directional derivative) — **fraction of held-out examples where that dot product is positive.**
+
+**Is this "causal"?** No — it's a local sensitivity measure (linearized: "if nudged infinitesimally along this direction, would the logit increase"), not a full interventional experiment on the real system. It's a genuine local "what-if" *within the model's own function*, stronger than correlation, but not the same epistemic strength as an actual intervention. Have this distinction ready if pushed on the word "causal."
+
+**Connects directly to the Case 3 ceiling finding (§5)**: TCAV's score is *binarized* (fraction positive, not mean magnitude) — that's exactly why it saturates once a representation gets separable enough that almost every example is on the positive side. Not a bug specific to this project; a property of the original Kim et al. definition, surfaced by testing it against a more separable representation than it was designed against.
+
+**Three CAV-derivation routes, one per case, and why:**
+- Case 1: labeled-example logistic regression on brain features directly — no shortcut, no shared embedding space to exploit.
+- Case 2: **no labeled brain examples** — subtract two text-prototype embeddings in the shared space, pull the direction back through the transpose of the trained linear projection (`brain_projection`). Works *specifically* because that projection is linear — pulling a direction back through a linear map's transpose is the adjoint of that map, a standard trick that wouldn't work for an arbitrary nonlinear projection.
+- Case 3: same labeled-example route as Case 1. It has an HRF encoder, not a text encoder — "hand" or "tongue" isn't naturally expressible as a difference between two HRF vectors the way it is between two text embeddings. The brain-example-free trick is a consequence of having a *language* modality specifically, not any second modality in general.
+
+---
+
+## 7. Still to build out (placeholders — continue block by block)
+
 - [ ] RAG + verification loop block (why the deterministic verdict, the sycophancy bug)
 - [ ] Statistical framework block (repeated splits, bootstrap CIs, paired Wilcoxon — why this design, not simpler alternatives)
 - [ ] The Case 3 "did we do justice to the TCAV comparison" self-critique, rehearsed out loud
