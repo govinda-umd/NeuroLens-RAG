@@ -8,7 +8,7 @@
 
 **Case 2** is not forecasting. It's **contrastive multimodal representation learning**: two encoders — one for ROI time series, one for the condition/label — trained to align in a shared embedding space via a contrastive objective, CLIP-style (Radford et al. 2021). "Predicting the next timepoint" reappears here, but properly motivated, as an optional generative capability *conditioned on* the learned joint representation (§2.4) — not as the primary objective the way the previous version of this doc had it.
 
-**Case 3** is unchanged in spirit from before: a Bayesian PGM + dynamical-systems model (SLDS/rSLDS) — deferred until after Case 2, per direction.
+**Case 3 — renamed, not just revised.** The Bayesian PGM/dynamical-systems idea (SLDS/rSLDS, §3 below) described in the original version of this doc is now treated as a *separate*, still-unscoped future direction, not "Case 3." As of this session, **Case 3 refers to a discriminative brain–HRF co-embedding** — the same window's hemodynamic-response signal aligned with the brain encoder in a shared space, exactly the way Case 2 aligns brain and text (§3.5). Confirmed discriminative rather than generative specifically because TCAV needs a differentiable scalar decision to test, which a discriminative alignment provides and a sequence-generation decoder does not.
 
 ## 1. Case 1, reframed (no new code, just correct the story)
 
@@ -52,9 +52,29 @@ Case 1 asks "does a linear/softmax layer on top of this representation predict t
 
 Once `z_brain`/`z_text` exist, they can condition a small generative decoder to predict future ROI activity (`X[t+1:t+h]`) — the original forecasting idea, now motivated as *conditional* generation from a learned multimodal representation rather than an unconditional sequence model. Not v1 — build the contrastive alignment and its two evaluations first; conditional generation is a natural extension once the representation is validated.
 
-## 3. Case 3 — Bayesian dynamical systems (rSLDS), deferred until after Case 2
+### 2.5 Case 3 (confirmed): discriminative brain–HRF co-embedding
 
-Unchanged from the previous plan, confirmed to come after Case 2: fit a recurrent switching linear dynamical system via **`lindermanlab/ssm`** on the raw ROI time series, and test whether its unsupervised discrete regimes correspond to the known movement conditions — a PGM-native, structurally interpretable alternative to Case 2's learned embedding space. Once both Case 2 and Case 3 exist, their representations can be compared directly (does contrastive alignment and unsupervised dynamical regime-switching converge on similar task structure, discovered two independent ways?).
+Structurally identical to Case 2 (§2.1), with the HRF signal in place of text:
+
+```
+brain encoder:  X[t-31:t]  (32 x 300 ROI window)         -> z_brain  (d-dim)
+HRF encoder:    y_hrf[t]   (the SAME window's HRF trace)  -> z_hrf    (d-dim)
+
+loss: contrastive alignment between z_brain and z_hrf
+```
+
+Two design points worth stating precisely rather than assuming:
+
+- **This is safe, and it's worth being precise about *why*, since HRF has a real leakage trap elsewhere in this project.** `y_hrf` is derived from full-run event convolution, and using it as a *forecast input* (predicting *future* activity from it) would leak event-timing information a causal system wouldn't have. Co-embedding the *same window's* HRF as an alignment target is a different use entirely — exactly what Case 1's existing auxiliary HRF head already does safely (§2.2 of `project-summary.md`). No new leakage risk.
+- **Unlike Case 2's 6 fixed text prototypes, HRF is continuous and per-window** — every window has its own HRF trace, not a value drawn from a small closed set. That means, for the first time in this project, both sides of the contrastive loss have genuine in-batch negatives, making a literal *symmetric* CLIP loss (brain→HRF and HRF→brain, averaged) possible — something Case 2's closed 6-item text vocabulary structurally couldn't support (§2.1's "not literal in-batch-negative InfoNCE" note).
+
+**Open design question, not yet resolved**: with three modalities (brain, text, HRF) potentially sharing structure, does a "concept" need to show up consistently across all three to count as validated, or does brain-vs-text validation (as CAV/TCAV already does for Case 2) remain sufficient on its own? Text enters Case 3 through the same frozen-MiniLM-plus-trained-projection path already built for Case 2 — that part isn't new work. Deliberately parked for a dedicated pass once Case 3 itself is built, not decided in passing here.
+
+**Explicitly out of scope for the current concept-based model comparison**: the generative direction (HRF→brain, e.g. activating a "rightness" concept and inspecting the synthetic brain signal that comes out) and the general question of how to evaluate a generative model's concept-sensitivity. Both noted as a separate, later idea.
+
+## 3. A separate, deprioritized future direction: Bayesian dynamical systems (SLDS/rSLDS)
+
+Not "Case 3" — see the disambiguation in §0. Unchanged in spirit from the original version of this plan, but no longer sequenced as "the next case": fit a recurrent switching linear dynamical system via **`lindermanlab/ssm`** on the raw ROI time series, and test whether its unsupervised discrete regimes correspond to the known movement conditions — a PGM-native, structurally interpretable alternative to Case 2's learned embedding space. If ever revisited, comparable to Case 2/Case 3(HRF) directly: does contrastive alignment and unsupervised dynamical regime-switching converge on similar task structure, discovered two independent ways?
 
 ## 4. Concept Activation Vector (CAV/TCAV) testing for Case 1 — **done**
 
@@ -109,15 +129,27 @@ Built in [`13_architecture_comparison_bootstrap.ipynb`](../notebooks/13_architec
 
 One methodological note worth being explicit about: an early version of this notebook crashed mid-run on a `matplotlib` API change (`boxplot(labels=...)` renamed to `tick_labels=` in matplotlib 3.9+) *after* the expensive Case 1 training had already completed but *before* results were saved to disk — losing that work and requiring a full rerun. Fixed by moving result-saving to happen immediately after each part's statistics are computed, before any plotting — a general lesson applied here: never let optional visualization code sit between expensive computation and persisting its results.
 
+## 8.7 Case 2 CAV/TCAV, the RAG-CAV loop, and open-vocabulary concept testing — **done**
+
+The Case 1-only limitation noted in §4 no longer holds. Case 2's shared embedding space enables a CAV direction derived entirely from *text* — the difference between two condition prototypes, pulled back through the brain projection's transpose (`src/neurolens/concepts_case2.py`) — with no labeled brain examples at all, unlike Case 1's logistic-regression probe. Run against the same 5 label-derived concepts as Case 1, it reproduces Case 1's finding independently: `hand`/`foot`/`tongue` separate almost perfectly (TCAV 0.98–1.0), laterality is markedly weaker (0.26–0.74) — the same asymmetry found by two unrelated derivation methods.
+
+The RAG-CAV verification loop (§4.1 of `interpretability-methods-notes.md`) is now built for Case 2 too, with a real fix for a measured failure: asked to freely judge agreement between literature and CAV evidence, the LLM defaulted to AGREE regardless of the actual TCAV score (10/12 real cases) — fixed by computing the verdict deterministically from (stance, TCAV) in code instead of asking the LLM to decide it (`notebooks/15_case2_cav_rag_loop.ipynb`, `docs/project-summary.md` §3.6).
+
+**Beyond the 5 predefined concepts**: `open_vocabulary_concept_direction()` tests *any* phrase directly — no keyword-matching against a fixed dictionary required — by embedding it through the same frozen-MiniLM-plus-trained-projection path used for text-conditioned attribution. Validated on a phrase engineered to avoid every closed-vocabulary keyword: correctly scored highest for its true target class (TCAV 0.69 for `tongue`, vs. 0.0–0.2 for every other class), ranking that class #1 of 6 in 1000/1000 subject-level bootstrap resamples (`docs/project-summary.md` §3.8, `docs/population-level-evaluation-plan.md` §6). Case 1 cannot follow — its CAV direction requires labeled brain examples that don't exist for a concept outside the 6 training labels, making open-vocabulary testing a capability specific to having a shared embedding space, not a generic add-on.
+
 ## 9. Proposed build sequencing (updated)
 
 1. ~~**CAV/TCAV for Case 1**~~ (§4) — **done**.
-2. **Paper corpus correction** (§5) — real HCP MOTOR-decoding comparison papers *and* real motor-cognition/neuroscience hypothesis papers identified (Ehrsson et al. 2003, Meier et al. 2008, Wang et al. 2020, a GNN decoding paper); pending manual download (automated fetch blocked by PMC/publisher access gates for all four).
+2. **Paper corpus correction** (§5) — real HCP MOTOR-decoding comparison papers *and* real motor-cognition/neuroscience hypothesis papers identified (Ehrsson et al. 2003, Meier et al. 2008, Wang et al. 2020, a GNN decoding paper); Ehrsson/Meier downloaded and indexed, Wang et al./GNN paper still pending (low priority, reprioritized away from).
 3. ~~**Case 2 v1**~~: skipped directly to v2.
 4. ~~**Case 2 v2**~~ — **done** (§8).
 5. ~~**Case 2 v3 (stretch)**~~ — **done** (§8.5): linear-probe forecasting on the frozen representation, usable horizon ~3-4 seconds.
-6. **RAG↔CAV loop** (§4.1 of interpretability-methods-notes.md): buildable once the motor-cognition papers are indexed — retrieve a real neuroscience claim, extract its concept phrase, fit a CAV, test the model's sensitivity to it, closing the loop between retrieval and interpretability for real (not just label-derived) concepts.
-7. **Case 3**: rSLDS via `lindermanlab/ssm`, after Case 2.
+6. ~~**RAG↔CAV loop**~~ — **done** for both Case 1 and Case 2, including Case 2's open-vocabulary extension (§8.7).
+7. **Dataset scale-up, 100 → 200 subjects** — in progress as of this writing (`data/subject_discovery_v4.json`, `02_data_complete.ipynb`); motivated directly by §4's laterality-concept weakness, to test whether it's a data-scarcity artifact rather than a fundamental representational limit.
+8. **Case 3 (HRF co-embedding, §2.5)** — scoped, not yet built. Natural next build once the 200-subject data and its re-validation are complete.
+9. **Model-capacity sweep** (deeper GRU, more Transformer layers/heads) — sequenced after the data scale-up, per explicit decision; both architectures already support this via existing constructor arguments, no new code needed.
+10. **Structural-connectivity (SC) graph input** — scoped as a separate future project (§4.3 of `project-summary.md`); subject-level DTI availability confirmed (97.7% of MOTOR-eligible candidates), but building an actual per-subject SC matrix and a graph-aware architecture is nontrivial additional work, not bundled into the above.
+11. **Bayesian dynamical systems (SLDS/rSLDS)** (§3) — a separate, deprioritized direction, no longer "next after Case 2."
 
 ## References
 
