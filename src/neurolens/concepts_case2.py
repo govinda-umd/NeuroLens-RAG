@@ -26,8 +26,11 @@ from __future__ import annotations
 
 import numpy as np
 import torch
+from sentence_transformers import SentenceTransformer
 from torch import nn
 from torch.utils.data import DataLoader
+
+from .interpretability_case2 import embed_text_query
 
 # Same 5 concepts as Case 1's CONCEPT_DEFINITIONS, defined identically by
 # class-index sets so results are directly comparable across cases.
@@ -170,3 +173,120 @@ def explain_literature_concept_case2(
             "n_test_examples_of_decoded_class": tcav["n_examples"],
         }
     return {"phrase": phrase, "matched_concepts": matched_concepts, "results": results}
+
+
+# --- Open-vocabulary CAV: test ANY phrase, not just the 5 predefined concepts ---
+#
+# `text_concept_direction` above requires the concept to be expressible as a
+# difference between subsets of the 6 known condition classes - which is why
+# `explain_literature_concept_case2` can only test phrases that keyword-match
+# one of CASE2_CONCEPT_DEFINITIONS's 5 entries, silently dropping everything
+# else. Nothing about the underlying mechanism actually requires that: any
+# free-text phrase can be embedded through the same frozen-MiniLM +
+# trained-projection path (`embed_text_query`, already built for
+# text-conditioned attribution) and used as a concept direction directly.
+# This is the generalization - genuinely open-vocabulary concept testing,
+# not just open-vocabulary extraction. Case 1 cannot follow: its CAV
+# direction requires labeled brain examples, which don't exist for a concept
+# that was never one of the 6 training labels. Open-vocabulary interpretability
+# is a capability the shared embedding space enables, not a generic add-on.
+
+
+def open_vocabulary_concept_direction(
+    contrastive_model: nn.Module,
+    embedding_model: SentenceTransformer,
+    phrase: str,
+    contrast_phrase: str | None = None,
+) -> np.ndarray:
+    """Concept direction for ANY phrase, no CASE2_CONCEPT_DEFINITIONS
+    membership required. If `contrast_phrase` is given, the direction is
+    phrase - contrast_phrase (most precise when a natural opposite exists,
+    e.g. "left hand" vs "right hand"). Otherwise the direction is phrase
+    minus the mean of the 6 known condition prototypes - an implicit
+    "generic condition" baseline, still well-defined for a single phrase
+    with no natural opposite (e.g. a claim like "bilateral representation"
+    extracted from literature that isn't naturally paired with anything).
+    Returns a unit vector in h-space, same role as `text_concept_direction`'s
+    output."""
+    z_phrase = embed_text_query(phrase, embedding_model, contrastive_model)
+    if contrast_phrase is not None:
+        z_other = embed_text_query(contrast_phrase, embedding_model, contrastive_model)
+    else:
+        with torch.no_grad():
+            z_other = contrastive_model.text_encoder().mean(dim=0).cpu()
+            z_other = z_other / z_other.norm()
+
+    v_z = z_phrase - z_other
+    v_z = v_z / v_z.norm()
+
+    with torch.no_grad():
+        weight = contrastive_model.brain_projection.weight.cpu()  # [embed_dim, backbone_dim]
+        v_h = weight.T @ v_z
+        v_h = v_h / v_h.norm()
+    return v_h.numpy()
+
+
+def explain_open_vocabulary_concept_case2(
+    contrastive_model: nn.Module,
+    embedding_model: SentenceTransformer,
+    test_loader: DataLoader,
+    device: torch.device,
+    phrase: str,
+    target_class: int,
+    contrast_phrase: str | None = None,
+) -> dict:
+    """Open-vocabulary analogue of `explain_literature_concept_case2` - always
+    testable, since it never checks phrase membership against a fixed
+    dictionary."""
+    direction = open_vocabulary_concept_direction(contrastive_model, embedding_model, phrase, contrast_phrase)
+    test_features, test_labels = extract_pooled_features_case2(contrastive_model, test_loader, device)
+    tcav = case2_tcav_score(contrastive_model, test_features, test_labels, target_class, direction, device)
+    return {
+        "phrase": phrase,
+        "contrast_phrase": contrast_phrase,
+        "tcav_score_for_decoded_class": tcav["tcav_score"],
+        "n_test_examples_of_decoded_class": tcav["n_examples"],
+    }
+
+
+# --- Random-direction null (Kim et al. 2018's own recommended significance
+# check): a TCAV score alone doesn't say whether the concept direction found
+# something real or whether ANY direction in h-space would score similarly
+# for this class. Compare the real concept's TCAV score against a null
+# distribution built from random unit directions on the SAME held-out
+# examples, and report where the real score falls relative to that null.
+
+
+def random_direction_null_tcav_scores(
+    contrastive_model: nn.Module,
+    features: np.ndarray,
+    labels: np.ndarray,
+    target_class: int,
+    device: torch.device,
+    n_random: int = 200,
+    seed: int = 0,
+) -> np.ndarray:
+    """TCAV scores for `n_random` random unit directions in h-space, on the
+    same held-out examples of `target_class` a real concept would be tested
+    against. A meaningless direction should score near 0.5 (a random
+    direction is as likely to align with the gradient as not); the spread of
+    this distribution is what turns a single real TCAV score into a
+    statement with a p-value instead of a bare number."""
+    rng = np.random.default_rng(seed)
+    backbone_dim = features.shape[1]
+    scores = []
+    for _ in range(n_random):
+        v = rng.normal(size=backbone_dim).astype(np.float32)
+        v = v / np.linalg.norm(v)
+        result = case2_tcav_score(contrastive_model, features, labels, target_class, v, device)
+        if result["tcav_score"] is not None:
+            scores.append(result["tcav_score"])
+    return np.array(scores)
+
+
+def empirical_p_value(real_score: float, null_scores: np.ndarray) -> float:
+    """Two-sided empirical p-value: fraction of the null distribution at
+    least as extreme (as far from 0.5) as the real score."""
+    real_extremity = abs(real_score - 0.5)
+    null_extremity = np.abs(null_scores - 0.5)
+    return float((null_extremity >= real_extremity).mean())

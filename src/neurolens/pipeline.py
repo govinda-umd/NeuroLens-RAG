@@ -25,7 +25,7 @@ from torch import nn
 import re
 
 from .concepts import explain_literature_concept, map_phrase_to_known_concept
-from .concepts_case2 import explain_literature_concept_case2
+from .concepts_case2 import explain_literature_concept_case2, explain_open_vocabulary_concept_case2
 from .interpretability import NETWORK_NAMES, compare_methods
 from .retrieval import TextChunk, retrieve_and_rerank, retrieve_chunks
 
@@ -588,19 +588,37 @@ def run_cav_loop_case2(
     class_names: list[str],
     target_class: int,
     phrases: list[dict],
+    embedding_model: SentenceTransformer | None = None,
 ) -> list[dict]:
     """Case2 analogue of `run_cav_loop` — no cav_train_loader, since the
     concept direction is derived from text prototypes, not fit on brain
     examples. When `phrases` entries carry a `stance` field (from
     `extract_concept_phrases_with_stance`), each concept's result also gets
     a deterministic `verdict` — the fix for the measured "LLM defaults to
-    AGREE" failure mode (see `expected_verdict_from_stance_and_tcav`)."""
+    AGREE" failure mode (see `expected_verdict_from_stance_and_tcav`).
+
+    Pass `embedding_model` to fall back to open-vocabulary CAV
+    (`explain_open_vocabulary_concept_case2`) for any phrase that doesn't
+    keyword-match one of the 5 predefined concepts, instead of silently
+    dropping it — the loop stops discarding genuinely novel literature
+    claims just because they weren't anticipated in advance."""
     results = []
     seen_concepts: set[str] = set()
     for p in phrases:
         matched = map_phrase_to_known_concept(p["phrase"])
         if matched is None:
-            results.append({**p, "matched_concepts": None, "results": None})
+            if embedding_model is None:
+                results.append({**p, "matched_concepts": None, "results": None})
+                continue
+            explanation = explain_open_vocabulary_concept_case2(
+                contrastive_model, embedding_model, cav_test_loader, device, p["phrase"], target_class
+            )
+            verdict = expected_verdict_from_stance_and_tcav(p.get("stance"), explanation["tcav_score_for_decoded_class"])
+            results.append({
+                **p,
+                "matched_concepts": ["open_vocabulary"],
+                "results": {"open_vocabulary": {**explanation, "verdict": verdict}},
+            })
             continue
         matched_list = matched if isinstance(matched, list) else [matched]
         new_concepts = [c for c in matched_list if c not in seen_concepts]
@@ -800,7 +818,8 @@ def explain_decoded_window_with_cav_loop_case2(
     class_names = [class_to_condition[str(c)] for c in range(len(class_to_condition))]
     phrases = extract_concept_phrases_with_stance(base["query_text"], base["retrieved"], generate_fn)
     cav_results = run_cav_loop_case2(
-        contrastive_model, cav_test_loader, device, class_names, base["decoded"]["pred_class"], phrases
+        contrastive_model, cav_test_loader, device, class_names, base["decoded"]["pred_class"], phrases,
+        embedding_model=embedding_model,
     )
     final_prompt = build_final_synthesis_prompt_case2(base["query_text"], base["generated_text"], cav_results)
     final_synthesis = generate_fn(final_prompt)
