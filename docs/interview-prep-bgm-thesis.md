@@ -154,3 +154,23 @@ Hierarchy, not competing labels:
 4. Extended a widely-used open-source network-inference library to support a capability it lacked, as measured by independently implementing marginal membership-matrix computation across every level of nested hierarchical block models (previously supported only for flat models), informed by direct correspondence with the library's original author, by decoding a terse technical specification into a working implementation that enabled the hierarchical multiplicity analysis at the core of the project.
 
 **Note on publication status for whichever bullet(s) reference the human work**: the human study (bullets 2-3 partly) is unpublished thesis work, not the 2023 J. Neuroscience citation (see Publication status section above) -- don't let resume phrasing imply it's published.
+
+## Resume points — v2, redrafted message-first (2026-08-18)
+
+**Real problem with v1, caught by the user, correctly diagnosed**: XYZ format was applied mechanically before deciding what each bullet's *one* message actually was -- bullets tried to carry 2-3 ideas at once (framework + finding + rigor, all in one sentence), which made the format feel forced even though the underlying content was right. Fix: separate the distinct messages first, then write each bullet around exactly one of them, in whatever phrasing serves that message best (not forcing identical XYZ mechanics everywhere).
+
+**Five distinct messages for BGM, agreed with the user, each gets exactly one bullet:**
+1. The methodological stance itself -- replaced the field's default single-partition assumption with formal Bayesian model comparison across competing organizational hypotheses.
+2. The core empirical finding, replicated -- hierarchical, degree-homogeneous organization beats the field-standard heuristic (modularity maximization), independently confirmed in two species.
+3. **The actual payoff / "so what"** -- brain networks aren't one map, they're a multi-modal repertoire, and in humans task demands shift which structure dominates in a way a standard analysis would get *wrong*, not just incomplete. Probably the single strongest, most distinctive message in the project.
+4. Scientific rigor -- ran targeted control experiments to rule out artifact explanations before trusting the interesting one.
+5. Independent engineering contribution -- extended `graph-tool` for hierarchical marginals after direct correspondence with the library's author.
+
+**General practice established, apply going forward**: for each bullet, draft an industry-direct version (active, on the resume) and, where a more academic-toned alternative exists, keep it as a LaTeX-commented alternative in the source rather than discarding it -- useful for provenance and for a future academic-CV variant.
+
+**Bullet 3 (the payoff) -- FINALIZED**:
+- Active (industry-direct): *Revealed that the human brain's functional network reorganizes under threat and reward not by redrawing community boundaries, but by reweighting which of a shared set of underlying organizational modes dominates -- a distinction a conventional single-partition analysis cannot see, and would have reported as "no reorganization" instead.*
+- Commented alternative (more academic-toned, keep in LaTeX source): *Showed that a standard single-partition network analysis would reach the wrong conclusion about how the human brain reorganizes under threat and reward: community boundaries appeared stable, but the full posterior revealed a shared repertoire of organizational modes whose relative dominance shifted significantly with task demands.*
+- Note: specific reweighting numbers (e.g. threat roughly doubling certain modes' prevalence) belong in bullet 2 (the empirical finding), not here -- keeps this bullet to one clean idea rather than claim-plus-footnote.
+
+**Remaining bullets 1, 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, then natural phrasing) in future turns.
