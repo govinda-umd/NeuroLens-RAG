@@ -175,9 +175,9 @@ Hierarchy, not competing labels:
 
 **Formatting rules, established with the user, apply to all remaining bullets and future writing generally**:
 - XYZ (result/metric/method) works when there's a real number to lead with. When the point is a methodological stance or judgment call rather than a measured outcome, use **Problem -> Solution -> Action** instead: state what's wrong with the standard approach, then the fix, then the concrete thing actually done. Don't force a metric that isn't really the point.
-- No em dashes. Plainer, more direct sentences -- closer to how the user actually writes, not default LLM phrasing.
+- Don't overuse em dashes -- not an absolute ban. Tested a fully dash-free two-sentence split against the original single-sentence version with one dash pair setting off the key contrast; the user preferred the original. Rule: plain sentences by default, one well-placed dash pair is fine when a clause genuinely deserves to stand out, don't stack multiple dash constructions or use them reflexively across many sentences.
 
-**Bullet 1 (methodological stance) -- redrafted, Problem->Solution->Action, awaiting confirmation**:
-> Standard community-detection methods always return a partition, even when the data doesn't actually support one. Replaced that assumption with formal Bayesian model comparison: fit and tested multiple stochastic block model variants (assortative, hierarchical, overlapping) via MCMC, then selected between them using a principled information-theoretic criterion.
+**Bullet 1 (methodological stance) -- FINALIZED**:
+> Reframed community detection in brain networks from a descriptive clustering exercise -- which returns an answer regardless of whether it's actually supported by the data -- into formal hypothesis testing, using Bayesian generative models to evaluate whether each proposed organizational principle is genuinely compatible with the data at all.
 
-**Remaining bullets 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, Problem->Solution->Action or XYZ depending on whether a real metric leads it, no em dashes) in future turns.
+**Remaining bullets 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, Problem->Solution->Action or XYZ depending on whether a real metric leads it, dashes used sparingly not reflexively) in future turns.
