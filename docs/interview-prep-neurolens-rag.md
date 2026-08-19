@@ -124,6 +124,52 @@ Mechanism:
 
 ---
 
+## 6.3 Follow-up: is the effector/laterality asymmetry really "low-level vs. high-level"?
+
+Sharper reframe: the 6 class labels are the *conjunction* of two orthogonal factors (effector: hand/foot/tongue × side: left/right) — "left hand" = effector:hand ∧ side:left. Effector and laterality are two marginal factors of the *same* underlying design, not a low/high hierarchy — both are equally present in every training label. The finding is that the representation cleanly encodes one marginal and not the other, despite the model needing both to predict the joint class.
+
+**Would more data fix laterality?** This is exactly why the 100→200 scale-up is sequenced first — cheapest hypothesis to rule out (statistical-power problem: signal exists but is hard to estimate reliably from few examples). Competing, more structural hypothesis it doesn't rule out: laterality may be genuinely more diffuse at Schaefer-300 ROI-level pooling than effector identity (strong somatotopic organization → large, spatially concentrated signal), in which case more data just gives a more confident estimate of the same weak effect. If the scale-up doesn't move the needle, structural connectivity (already on the roadmap) is the targeted next move — SC is inherently hemisphere-specific in a way pooled functional time series may not be, so it's a specific candidate fix for *this* finding, not just "add anatomy" in the abstract.
+
+**Would more capacity fix laterality?** Argument against: if the model were capacity-bound, both factors should degrade somewhat, drawing on the same limited representational budget. What's observed is one factor at the ceiling (~1.0) and the other weak, using the *same* model — selective degradation of one factor while the other maxes out is more consistent with "this factor's signal is genuinely weaker in the input" than "the model ran out of room." If capacity were the bottleneck, effector wouldn't be at ceiling either.
+
+**General low-level/high-level concept hierarchy (broader literature, not project-specific)**: real and foundational —
+- Zeiler & Fergus (2014), *Visualizing and Understanding Convolutional Networks* — canonical depth-indexed hierarchy (early layers = low-level edges/textures, later layers = high-level semantic concepts).
+- Bengio, Courville & Vincent (2013), *Representation Learning: A Review and New Perspectives* — the general theory claim that depth captures more abstract factors of variation.
+- Olah et al., Distill: *Feature Visualization* (2017), *Zoom In: An Introduction to Circuits* (2020) — the mechanistic-interpretability lineage TCAV sits in directly.
+- Tenney et al. (2019), *BERT Rediscovers the Classical NLP Pipeline* — same hierarchy in NLP (early layers = syntax, later = semantics/discourse).
+
+**Honest gap this reveals in NeuroLens-RAG**: that hierarchy is normally explored via multi-depth probing. This project probes concepts at exactly one fixed point (final pooled representation, pre-classifier-head) — never asks whether laterality is more cleanly represented at an earlier GRU timestep or Transformer layer. Real, cheap extension if asked "what next": layer-wise / timestep-wise CAV probing, not just final-representation probing.
+
+## 6.4 Follow-up: the N ≫ P concern (params vs. training examples)
+
+Real, verified numbers, not hand-waved: **16,510 training windows** at 100-subject scale (observed directly from notebook 17's dataloader build) against **166,539 (GRU) / 304,907 (Transformer)** parameters — parameters exceed training examples by **10–18×**, inverted from the classical heuristic. ~33K windows expected at 200 subjects (not yet verified — train/val/test subject-split lists haven't been re-run against the new pool). Overlapping windows (30/32 TR overlap) make even the raw window count an overstatement of true independent information — sharpens, doesn't resolve, the concern.
+
+**Why this doesn't necessarily mean the models are broken:**
+- Weight sharing (GRU: identical transition weights reused across all 32 timesteps and every window) collapses *effective* degrees of freedom well below raw parameter count — classical parameter-counting doesn't capture this.
+- Explicit regularization already in use: dropout (0.1, Transformer), weight decay (AdamW), early stopping via validation loss.
+- **The strongest answer**: don't reason from the heuristic a priori, measure whether it's happening. Repeated-split bootstrap CIs (20 resamples, subject-level) are the direct empirical check — harmful overparameterization would show up as unstable/wide CIs or a train/test gap. Not observed (Case 1: [90.9, 93.4], tight and stable).
+
+**References**:
+- Classical heuristic's origin: Vapnik, *Statistical Learning Theory* (1998); Hastie, Tibshirani & Friedman, *The Elements of Statistical Learning* (2009).
+- **The single most important paper to know**: Zhang, Bengio, Hardt, Recht & Vinyals, *Understanding Deep Learning Requires Rethinking Generalization* (ICLR 2017) — neural nets can perfectly memorize random labels yet generalize well on real data trained normally.
+- Double descent: Belkin, Hsu, Ma & Mandal, *Reconciling Modern Machine Learning Practice and the Bias-Variance Trade-off* (PNAS 2019); Nakkiran et al., *Deep Double Descent* (2019/2021).
+- Deeper/theoretical: Bartlett, Long, Lugosi & Tsigler, *Benign Overfitting in Linear Regression* (PNAS 2020).
+- Honest framing if pressed: this is a genuinely open area of theoretical ML research, not solved — "classical theory doesn't explain this, here's the empirical literature on why it doesn't catastrophically fail anyway," not "here's the theorem that says it's fine."
+
+**Weight decay**: L2 penalty on parameter magnitude (decoupled form in this project's optimizer, `AdamW`) — Loshchilov & Hutter, *Decoupled Weight Decay Regularization* (ICLR 2019): naive L2-in-the-loss isn't equivalent to true weight decay under Adam's adaptive per-parameter learning rates, hence the explicit fix. Concretely relevant, not just textbook trivia — it's the actual optimizer in the code.
+
+**Weight sharing**: same parameters reused across multiple applications within a model (CNN filter at every spatial location; GRU transition weights at every timestep) — the concrete mechanism behind the effective-degrees-of-freedom argument above.
+
+**Murphy's books (*Probabilistic Machine Learning*, Intro + Advanced)**: expect both weight decay (general regularization material) and weight sharing (CNN chapter, RNN chapter for the time-step version) to be covered — comprehensive enough texts that both are near-certain to be there, but no exact section numbers confirmed here; check the index rather than trust a specific page citation.
+
+## 6.5 Follow-up: foundation models for fMRI
+
+Active research direction: self-supervised pretraining (masked-timepoint/masked-patch reconstruction, MAE/BERT-style) on large aggregated resting-state fMRI corpora (UK Biobank scale, sometimes HCP), then fine-tuned for a downstream task. **BrainLM** is one concrete example recalled with reasonable confidence — flag this area as fast-moving enough to warrant a fresh literature check before treating any name as current best-in-class, rather than relying on recall.
+
+**Real practical constraint, not an afterthought**: most such models are pretrained on a specific parcellation or voxel/surface resolution. Before fine-tuning, need to check whether the foundation model's expected input format is compatible with — or adaptable to — this project's Schaefer-300, HCP-preprocessed ROI time series. Not plug-and-play; input-format matching is a real first engineering question.
+
+---
+
 ## 7. Still to build out (placeholders — continue block by block)
 
 - [ ] RAG + verification loop block (why the deterministic verdict, the sycophancy bug)
