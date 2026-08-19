@@ -184,9 +184,23 @@ Active research direction: self-supervised pretraining (masked-timepoint/masked-
 
 ---
 
-## 7. Still to build out (placeholders — continue block by block)
+## 7. RAG / verification loop block
 
-- [ ] RAG + verification loop block (why the deterministic verdict, the sycophancy bug)
+**Retrieval side**: 8-paper neuroscience corpus, chunked, embedded with the same MiniLM family used elsewhere, dense cosine-similarity retrieval, optional cross-encoder reranking. Two-stage design has a real cost/accuracy reason: a bi-encoder embeds query and passage independently, so passage embeddings precompute once and search the whole corpus cheaply; a cross-encoder scores a query-passage pair *jointly* (full attention between them) — more accurate, but a fresh forward pass per pair, too expensive over the whole corpus, so applied only to re-rank the bi-encoder's narrowed candidate set. Standard retrieve-then-rerank pattern, motivated by a real tradeoff, not aesthetics.
+
+Later measurably improved: domain-adaptive contrastive fine-tuning of the retrieval embedding model on in-domain query-passage pairs — top-1 chunk-retrieval accuracy 43.9%→61.0%, top-3 75.6%→85.4%, evaluated against an 880-chunk benchmark with real gold labels (not just "the pipeline runs").
+
+**LLM's three roles**, per decoded window: stance labeling of a retrieved excerpt (supports/contradicts/unrelated), claim extraction (a specific testable phrase, e.g. "hand movement is contralateral"), final narrative synthesis.
+
+**The verification loop — the actual novel contribution.** Literature-extracted phrase → mapped onto a testable concept (keyword match for closed vocabulary, or Case 2's open-vocabulary embedding route) → CAV direction fit/derived → TCAV score compared against the excerpt's stance. **Critical design decision: the AGREE/DISAGREE/UNCLEAR verdict is computed deterministically in code from (stance, TCAV score) — the LLM never decides it.** Unrelated excerpt → no comparison at all (genuine third outcome, not folded into disagreement); supporting + high TCAV → agreement; supporting + low TCAV → flagged disagreement. LLM's only job: narrate an already-determined verdict.
+
+**Why this design — strongest thing to say about it**: not built around a hypothetical failure, built around a *measured* one. Freely judging agreement, the LLM defaulted to AGREE in 10/12 real cases regardless of the actual TCAV score — sycophancy-shaped, measured not guessed. Structural reason the LLM can't do this job even in principle (good answer to "why not just have the LLM reason about it directly"): it only ever sees *text* — no access to the model's internal representation, can't compute a directional derivative through a different model's weights. It can only be *told* the TCAV number; letting it also freely decide whether to trust that number reintroduces the exact measured failure.
+
+**Honest gaps**: fix applied to Case 2's loop only — Case 1's loop still uses the older free-judgment design, not re-measured at the same scale. Corpus is small (8 papers). Phrase-to-concept mapping is keyword-based (not embedding-based) for the closed-vocabulary path.
+
+**Generalizable lesson (relevant framing for a transportation/logistics ML role, not domain-specific)**: compute a decision deterministically from structured, checkable signals; restrict the LLM to narrating an already-decided outcome rather than trusting its free-form judgment on evidence it can't independently verify.
+
+## 8. Still to build out (placeholders — continue block by block)
 - [ ] Statistical framework block (repeated splits, bootstrap CIs, paired Wilcoxon — why this design, not simpler alternatives)
 - [ ] The Case 3 "did we do justice to the TCAV comparison" self-critique, rehearsed out loud
 - [ ] Likely extension questions: SC-graph/GNN input, generative HRF→brain decoder — framed as design-level answers backed by real GNN/graph-spectral and Bayesian-generative-modeling background, not as things to build in the remaining days
