@@ -170,6 +170,20 @@ Active research direction: self-supervised pretraining (masked-timepoint/masked-
 
 ---
 
+## 6.6 Extension ideas surfaced during prep (not yet built — candidates for `case2-3-design-plan.md` once interview prep concludes)
+
+**Why mechanistic interpretability is harder for fMRI than for images/text.** For images/text, ground-truth concepts are close to free — a captioned "zebra" photo really contains a zebra, the generative process already organized itself along human categories. fMRI has no equivalent: there's no independently observable ground truth for what a voxel pattern "means," the signal-to-concept mapping is itself the open scientific question. Doshi-Velez & Kim, *Towards a Rigorous Science of Interpretable Machine Learning* (2017), motivate exactly this kind of fallback-to-proxy evaluation when ground truth isn't directly checkable. **This is the deeper justification for the RAG literature-grounding step** — task labels are the closest thing to ground truth fMRI research offers, and RAG supplies an independent, externally-sourced cross-check against domain literature precisely because there's no "just look at the image" option here.
+
+**Temporal-axis probing (reframing "layer-wise probing" for this project's actual architecture).** With 1–2 layers, depth-wise probing has almost no resolution — but there's a temporal axis instead. GRU's `nn.GRU` exposes a full per-timestep hidden-state sequence (`output`), not just the final `h_n` currently returned by `forward_features`; Transformer likewise has per-position representations before final pooling. Probing CAV/TCAV at every timestep (not just the window's end) would answer a genuinely new question: *when* does a concept become linearly decodable — right at the window's end, or does it build up earlier? Cheap to build (optional full-sequence return, not a structural rewrite).
+
+**Attention-head inspection, with the right caveat attached.** Feasible (`nn.MultiheadAttention` can return per-head weights). Real caveat: Jain & Wallace, *Attention is not Explanation* (2019) — attention weights often don't track gradient-based importance, and very different attention patterns can produce near-identical outputs; Wiegreffe & Pinter, *Attention is not not Explanation* (2019), complicates this further — an unsettled, live debate. Right use: attention inspection as **hypothesis-generating** ("this head attends heavily around t=15"), CAV/TCAV (already built, more rigorous) as the **validating** step at the identified timestep — not treating raw attention weights as the finding itself.
+
+**Case 3: per-timestep alignment instead of window-endpoint-only.** Currently sequence-to-*vector* (window pooled to one vector, aligned to one HRF vector at the window's end). Extending to align the full per-timestep brain sequence against the full per-timestep HRF sequence would make Case 3 genuine sequence-to-sequence alignment (resolves the earlier "not actually seq2seq" correction — it would become true seq2seq under this redesign). Real costs: `y_hrf` needs extracting per-timestep, not just at the endpoint (straightforward `data_setup.py` change); the contrastive matrix grows from batch² pairs to batch²×window² pairs — a real computational jump.
+
+**Case 2: pooling ablation (smaller scope than Case 3's redesign).** Mean-pooling or attention-pooling instead of last-token pooling, before alignment with the (still single, non-temporal) text prototype. Distinct in scope from Case 3's idea — a pooling swap, not a structural redesign of what's being aligned.
+
+---
+
 ## 7. Still to build out (placeholders — continue block by block)
 
 - [ ] RAG + verification loop block (why the deterministic verdict, the sycophancy bug)
