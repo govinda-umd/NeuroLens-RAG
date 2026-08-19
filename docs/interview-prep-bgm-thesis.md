@@ -180,4 +180,14 @@ Hierarchy, not competing labels:
 **Bullet 1 (methodological stance) -- FINALIZED**:
 > Reframed community detection in brain networks from a descriptive clustering exercise -- which returns an answer regardless of whether it's actually supported by the data -- into formal hypothesis testing, using Bayesian generative models to evaluate whether each proposed organizational principle is genuinely compatible with the data at all.
 
-**Remaining bullets 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, Problem->Solution->Action or XYZ depending on whether a real metric leads it, dashes used sparingly not reflexively) in future turns.
+**House style, refined after bullet 4 (correcting the earlier "Problem->Solution->Action" framing)**: none of the finalized bullets actually open with a standalone problem sentence. All lead with a strong result verb (Reframed, Established, Revealed, Confirmed) and fold the contrast/problem in as an embedded clause, not its own opening sentence. XYZ when there's a real number to lead with; when it's a methodological stance or judgment call, still lead with the result/action verb, just skip the metric rather than opening with an abstract "the risk was X" framing sentence.
+
+**Bullet 2 (core finding, replicated) -- FINALIZED**:
+> Established that hierarchical, degree-homogeneous organization is the best-supported architecture of brain functional networks, replicated independently across mice and humans, using Bayesian model selection to formally compare multiple stochastic block model variants (7 in mice, 5 in humans) against the field-standard heuristic, validated via 500-resample bootstrap in mice.
+(Number check: user considered "1000+" bootstrap resamples from the existing resume; checked the supplementary 10%-threshold robustness section directly -- it does not restate a separate resample count, and methodologically most likely reuses the same 500 resamples re-thresholded, not a fresh 500. Kept at 500, the only number confirmed from source text, pending the user checking their own records.)
+
+**Bullet 4 (rigor) -- FINALIZED**:
+> Confirmed that the multiple organizational modes reflect genuine structure, not a clustering artifact, by running three targeted controls: the identical pipeline applied to the standard heuristic method collapsed to a single mode, multiplicity survived a full leave-one-out analysis across all subjects, and any model fit failing a quantitative MCMC convergence check was excluded from downstream analysis entirely.
+
+**Bullet 5 (independent engineering contribution) -- drafted, awaiting confirmation**:
+> Extended `graph-tool`, the open-source network-inference library used throughout this work, to compute community-membership marginals across every level of a nested hierarchical block model, a capability it didn't support. Built the implementation independently after a single terse hint from the library's original author, Tiago Peixoto, decoding it into working code.
