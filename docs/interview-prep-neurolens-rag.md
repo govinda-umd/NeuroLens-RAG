@@ -227,7 +227,21 @@ Later measurably improved: domain-adaptive contrastive fine-tuning of the retrie
 
 **Reference anchor**: Misra & Pessoa (2025, *eLife*) — cited throughout as the direct methodological source (repeated subject-level resampling, paired non-parametric tests, bootstrap CIs), matching an established neuroimaging standard rather than an ad hoc evaluation scheme.
 
-## 9. Still to build out (placeholders — continue block by block)
+## 9. Resume points — draft v1 (2026-08-18, to revisit after the BGM thesis pass)
+
+Restructured from the existing 7 disconnected bullets into one throughline, per the "reads like ATS keyword stuffing" complaint. Uses current verified numbers (91.8%, not the resume's existing 90.8% — replace wholesale, don't merge).
+
+**Framing line** (subtitle under project title, or fold into bullet 1): *Testing which neural representation-learning paradigms produce human-interpretable brain decoders, grounded against independent scientific literature rather than assuming accuracy implies understanding.*
+
+1. **Scope — three paradigms as one deliberate comparison**: Designed and trained three representation-learning paradigms on a common 100-subject fMRI decoding task — supervised multi-task classification, supervised-contrastive brain-language alignment, self-supervised brain-physiology co-embedding — holding architecture (GRU/Transformer) fixed to isolate the training objective's effect; all three reached comparable accuracy (91.6-92.0% macro-F1), including the self-supervised variant (zero class labels used during representation training).
+2. **Interpretability — the actual test the paradigms exist to support**: Built a mechanistic-interpretability suite (4-method attribution; CAV/TCAV) testing causal sensitivity to human-named concepts, not just accuracy — CAV directions derived three independent ways (labeled-example probing, label-free text-embedding arithmetic, post-hoc probing of a never-labeled representation) — finding a reproducible effector-identity vs. body-laterality asymmetry across methods.
+3. **Statistical rigor as its own line**: Population-level validation (repeated subject-level resampling, paired non-parametric tests, bootstrap CIs) matching an established peer-reviewed neuroimaging methodology; Transformer significantly outperforms recurrent baseline under both supervised objectives (paired Wilcoxon p<10⁻⁸).
+4. **RAG grounding + the measured LLM fix, one story not two**: Retrieval-augmented literature-grounding pipeline (dense + cross-encoder rerank, fully local quantized-LLM inference via Apple MLX) converting literature claims into falsifiable CAV/TCAV tests; measured and eliminated an LLM sycophancy failure (10/12 free-form judgments defaulted to agreement regardless of evidence) by computing the verdict deterministically, restricting the LLM to grounded narration.
+5. **Supporting engineering, framed as reliability work**: contrastive retrieval fine-tuning (+17 pts top-1, 880-chunk benchmark) and LoRA generation fine-tuning, correctly diagnosing it fixed output-format compliance (0/8→8/8) without fixing underlying reasoning — directly informing the decision to keep the verdict deterministic rather than trust fine-tuned judgment.
+
+**Not in the bullets, but keep verbally ready**: Case 3's number is single-split, not yet repeated-split-CI-backed like the other two. Bullets are draft-length, not resume-line-length — trimming is a later pass once seen against actual page real estate.
+
+## 10. Still to build out (placeholders — continue block by block)
 - [ ] Statistical framework block (repeated splits, bootstrap CIs, paired Wilcoxon — why this design, not simpler alternatives)
 - [ ] The Case 3 "did we do justice to the TCAV comparison" self-critique, rehearsed out loud
 - [ ] Likely extension questions: SC-graph/GNN input, generative HRF→brain decoder — framed as design-level answers backed by real GNN/graph-spectral and Bayesian-generative-modeling background, not as things to build in the remaining days
