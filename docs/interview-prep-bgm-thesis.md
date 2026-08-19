@@ -173,4 +173,11 @@ Hierarchy, not competing labels:
 - Commented alternative (more academic-toned, keep in LaTeX source): *Showed that a standard single-partition network analysis would reach the wrong conclusion about how the human brain reorganizes under threat and reward: community boundaries appeared stable, but the full posterior revealed a shared repertoire of organizational modes whose relative dominance shifted significantly with task demands.*
 - Note: specific reweighting numbers (e.g. threat roughly doubling certain modes' prevalence) belong in bullet 2 (the empirical finding), not here -- keeps this bullet to one clean idea rather than claim-plus-footnote.
 
-**Remaining bullets 1, 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, then natural phrasing) in future turns.
+**Formatting rules, established with the user, apply to all remaining bullets and future writing generally**:
+- XYZ (result/metric/method) works when there's a real number to lead with. When the point is a methodological stance or judgment call rather than a measured outcome, use **Problem -> Solution -> Action** instead: state what's wrong with the standard approach, then the fix, then the concrete thing actually done. Don't force a metric that isn't really the point.
+- No em dashes. Plainer, more direct sentences -- closer to how the user actually writes, not default LLM phrasing.
+
+**Bullet 1 (methodological stance) -- redrafted, Problem->Solution->Action, awaiting confirmation**:
+> Standard community-detection methods always return a partition, even when the data doesn't actually support one. Replaced that assumption with formal Bayesian model comparison: fit and tested multiple stochastic block model variants (assortative, hierarchical, overlapping) via MCMC, then selected between them using a principled information-theoretic criterion.
+
+**Remaining bullets 2, 4, 5**: not yet redrafted message-first -- v1's XYZ drafts above are superseded/stale for these, to be redone the same way (message clarity first, Problem->Solution->Action or XYZ depending on whether a real metric leads it, no em dashes) in future turns.
