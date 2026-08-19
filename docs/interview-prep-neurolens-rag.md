@@ -182,6 +182,8 @@ Active research direction: self-supervised pretraining (masked-timepoint/masked-
 
 **Case 2: pooling ablation (smaller scope than Case 3's redesign).** Mean-pooling or attention-pooling instead of last-token pooling, before alignment with the (still single, non-temporal) text prototype. Distinct in scope from Case 3's idea — a pooling swap, not a structural redesign of what's being aligned.
 
+**Open-vocabulary-*like* CAV for Case 1 and Case 3, via soft class-decomposition (real gap-closer — Case 3 currently has NO open-vocabulary route at all, only the 5 fixed concepts).** Decouple "map an open claim onto something testable" from "test sensitivity in brain-representation space" — Case 2 only fuses these because it happens to have a shared brain-text embedding space; Case 1/3 don't need that space to do the first half. Reuse existing, already-built infrastructure (`contrastive.py`'s `CONDITION_DESCRIPTIONS` + `encode_condition_prototypes`, general-purpose MiniLM): embed an open claim, embed the 6 condition descriptions, cosine-similarity + softmax → a soft weighting over the 6 known classes (e.g. 0.5 right-hand, 0.3 left-hand) — no new training required. Then either (a) **combine scores**: compute each class's TCAV independently (already-built), weighted-average the scores, or (b) **combine directions**: weighted-sum the classes' CAV directions first, then run one TCAV pass against the combined direction. Not equivalent — TCAV's "fraction positive" is a nonlinear, binarized function of the dot product — log both as open design choices, don't pick one prematurely. Feeds naturally from the existing literature claim-extraction step (`pipeline.py`), which already produces open claims consumed today only by Case 1's keyword-matching and Case 2's open-vocabulary route.
+
 ---
 
 ## 7. RAG / verification loop block
@@ -200,7 +202,23 @@ Later measurably improved: domain-adaptive contrastive fine-tuning of the retrie
 
 **Generalizable lesson (relevant framing for a transportation/logistics ML role, not domain-specific)**: compute a decision deterministically from structured, checkable signals; restrict the LLM to narrating an already-decided outcome rather than trusting its free-form judgment on evidence it can't independently verify.
 
-## 8. Still to build out (placeholders — continue block by block)
+## 8. Statistical framework block
+
+**Foundational principle, underlies everything below**: subject-level resampling, never window-level, everywhere (repeated splits, bootstrap CIs, the TCAV significance test). Overlapping windows within a subject aren't independent draws — window-level resampling would silently violate the i.i.d. assumption most resampling math relies on.
+
+**Two genuinely different resampling procedures, worth keeping distinct:**
+1. **Repeated-split resampling** (Case 1/2 architecture comparison): re-partition the subject pool into train/val/test, 20-40 times, retraining fresh each time. Answers "how much does which subjects end up where matter" — a real training-time variability question.
+2. **Post-hoc bootstrap** (TCAV CIs): for one already-trained, fixed model, resample the test set's subject composition with replacement — no retraining. Cheaper, narrower — variability from test-set composition only, holding the trained model fixed. Does **not** capture training-time variability — explicitly flagged gap: Case 1's TCAV CI doesn't yet resample the direction-fitting/training data.
+
+**Paired comparisons + Wilcoxon, not a paired t-test**: same random split used for both architectures within a repeat (not independent draws), enabling a signed-rank test on per-repeat differences rather than eyeballing overlapping CIs. Wilcoxon over t-test because it's non-parametric — no normality assumption on the differences (only symmetry around the median), uses ranks not raw magnitudes — matters with only 20-40 repeats, too few to lean on asymptotic normality.
+
+**Adaptive stopping rule, not a fixed repeat count**: batches of 10, check whether running CI half-width has stabilized (below a threshold) before stopping, capped at 40. Avoids stopping before convergence or wasting compute past it. Also the concrete empirical answer to the N≫P worry (§6.4) — a harmfully overparameterized model would show an unstable, non-converging CI under this exact procedure; not observed.
+
+**Bootstrap vs. permutation testing — precise distinction, terminology matters if pressed.** Bootstrap resamples *data* (with replacement) to estimate a statistic's sampling distribution (both procedures above). Classical permutation testing shuffles *labels/group assignments* under a null to build an explicit null distribution. The failed random-direction TCAV null attempt was permutation-style in spirit; the method that worked (cross-class rank test) is a bootstrap-based rank-stability check, not a classical label-permutation test — don't call it "permutation testing."
+
+**Reference anchor**: Misra & Pessoa (2025, *eLife*) — cited throughout as the direct methodological source (repeated subject-level resampling, paired non-parametric tests, bootstrap CIs), matching an established neuroimaging standard rather than an ad hoc evaluation scheme.
+
+## 9. Still to build out (placeholders — continue block by block)
 - [ ] Statistical framework block (repeated splits, bootstrap CIs, paired Wilcoxon — why this design, not simpler alternatives)
 - [ ] The Case 3 "did we do justice to the TCAV comparison" self-critique, rehearsed out loud
 - [ ] Likely extension questions: SC-graph/GNN input, generative HRF→brain decoder — framed as design-level answers backed by real GNN/graph-spectral and Bayesian-generative-modeling background, not as things to build in the remaining days
