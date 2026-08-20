@@ -253,6 +253,22 @@ $$\mathcal{L}_{CE} = -\frac{1}{N}\sum_i w_{c_i} \log \hat y_{i,c_i}, \qquad \mat
 
 **Block diagram**: rendered via the visualize tool (title `case1_multitask_architecture`) -- input window -> swappable GRU/Transformer encoder (architecture held fixed across the comparison) -> pooled 128-dim representation h -> two heads (classifier, HRF regression) -> combined multi-task loss. Not reproduced here since it's a rendered artifact, not text.
 
+## 8.4.5 Case 2, full architecture pass
+
+**Brain path**: same encoder as Case 1 (shared code, `forward_features`), same 128-dim pooled representation, then diverges: `Linear(128->64)` projection + L2-normalize -> $z_{brain}$, a unit vector on the 64-dim hypersphere.
+
+**Text path**: 6 fixed condition descriptions, embedded once offline by a frozen pretrained MiniLM (384-dim, weights never update), then a small *trainable* `Linear(384->64)` projection + L2-normalize -> $z_{text} \in \mathbb{R}^{6\times64}$, six fixed unit-vector prototypes.
+
+**Combine**: $\text{logits} = \tau \cdot z_{brain} z_{text}^\top$ ($[batch,6]$ similarity matrix), $\tau = e^{\text{log\_temperature}}$ learned (init $1/0.07\approx14.3$, matching CLIP's init, clamped at 100 for numerical stability). Loss: $\mathcal{L} = \mathcal{L}_{CE}(\text{logits}, y)$ -- plain softmax CE, but over similarities to text prototypes rather than a freely-learned classifier's logits.
+
+**Why not literal CLIP -- precise distinction, common confusion point.** CLIP is symmetric (unique caption per image, so both image->text and text->image directions run, each batch element its own target). Case 2's text side has only 6 fixed prototypes shared dataset-wide -- one prototype maps to hundreds of different brain windows, so there's no sensible text->brain direction the way CLIP has text->image. Only brain->text runs. And the positive target is selected via the window's *true label*, not natural pairing (CLIP) or self-supervised augmentation (SimCLR) -- that's what makes this supervised contrastive (SupCon-style), not CLIP-style, despite the surface resemblance.
+
+**Why a learned temperature**: controls softmax sharpness over similarities -- too sharp, noisy/unstable early gradients; too smooth, the model never commits. Learning it (as CLIP does) self-calibrates over training instead of one more hand-tuned hyperparameter.
+
+**Real alternatives**: fixed hand-tuned temperature (simpler, back to manual tuning); older margin-based losses (triplet/contrastive-with-margin, predate InfoNCE-style softmax contrastive losses, generally underperform once there are several negatives to contrast against -- exactly the situation here, 5 negative prototypes per positive). A literal symmetric CLIP loss isn't structurally available here at all -- that had to wait for Case 3, where the alignment target (HRF) is continuous and unique per window, not a fixed 6-item vocabulary.
+
+**Block diagram**: rendered via the visualize tool (title `case2_contrastive_architecture`) -- two parallel branches (brain: encoder -> projection -> z_brain; text: frozen MiniLM -> trainable projection -> z_text) converging into a similarity computation, then the contrastive loss. Not reproduced here since it's a rendered artifact.
+
 ## 8.5 Message-point critique and refinement (2026-08-19/20, IN PROGRESS, not yet finalized)
 
 First attempt at a 5-message breakdown (mirroring BGM's process) was rejected by the user as disconnected — see full critique below, each point still worth having precise:
