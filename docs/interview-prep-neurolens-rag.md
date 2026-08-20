@@ -227,6 +227,27 @@ Later measurably improved: domain-adaptive contrastive fine-tuning of the retrie
 
 **Reference anchor**: Misra & Pessoa (2025, *eLife*) — cited throughout as the direct methodological source (repeated subject-level resampling, paired non-parametric tests, bootstrap CIs), matching an established neuroimaging standard rather than an ad hoc evaluation scheme.
 
+## 8.5 Message-point critique and refinement (2026-08-19/20, IN PROGRESS, not yet finalized)
+
+First attempt at a 5-message breakdown (mirroring BGM's process) was rejected by the user as disconnected — see full critique below, each point still worth having precise:
+1. "accuracy is insufficient" as a message is field-level context (the premise of interpretability as a field), not specific to this project — cut.
+2. The actual core finding is genuinely more modest than BGM's, and worth being honest about rather than oversold: with accuracy matched across all 3 paradigms, the whole distinguishing question is what CAV/TCAV found. The real finding is the effector/laterality asymmetry, replicated via 2 independent derivation methods (Case 1/2) -- not "everything is similar, nothing to report." Case 3 (self-supervised, tested as a third stress-test) did NOT cleanly replicate this -- it hit a ceiling-saturation problem (near-universal separability) that makes the significance test inconclusive for laterality specifically, a different failure mode than Case 1/2's clean "weak" result, not simply "didn't replicate."
+3. The LLM/verification-loop point was disconnected without first establishing the loop's purpose. RESOLVED via the user's own origin story: the motivation wasn't an abstract "literature-grounding is good science" principle -- it was "I'd have to manually search and read literature to check whether my model's representations line up with anything real, so let RAG + LLM do that legwork for me." Building it, the LLM was found to be hallucinating support / agreeing regardless of evidence (sycophancy). The deterministic-verdict fix IS the "evaluation loop" -- verifying that the automation built to replace manual literature-checking could actually be trusted.
+5. The engineering/local-pipeline point and the LLM point aren't two separate messages -- they're one arc: probe for concepts -> ground against literature -> verify that the verification step itself is reliable.
+4. (Rigor) -- deferred by the user ("i am totally off here, we need to sit and figure out tomorrow").
+
+Tentative summary line proposed, user response: "it makes some sense to me, maybe once we write down the bullet points everything falls into place" -- not yet fully validated:
+*Built a system that doesn't just decode brain activity, but checks whether the specific concepts a model appears to rely on are actually supported by real published findings, and made sure that check itself could be trusted rather than just sounding plausible.*
+
+**Second attempt, explicitly anchored to the GRU/PLOS 2021 precursor project** (see `docs/interview-prep-precursor-projects.md`) as "what NeuroLens-RAG does beyond that 2021 baseline" -- proposed, not yet reacted to by the user before the session pivoted to a full architecture deep-dive (see below):
+1. Scope -- extended a single decoding paradigm (2021 GRU classifier) into three deliberately different representation-learning paradigms on the same task.
+2. Core finding, replicated then honestly stress-tested -- the effector/laterality asymmetry via 2 methods, then a genuine limit found (not confirmed or refuted) when stress-tested against a third.
+3. Region-level to concept-level validation -- the direct upgrade from the 2021 paper's network-lesion check to testing a specific, human-named concept.
+4. The verification loop as one arc -- automate manual literature-checking, find the automation isn't reliable, fix it.
+5. Statistical rigor -- population-level validation for architecture comparisons specifically (distinct from message 2's finding-level rigor).
+
+**Session pivot (2026-08-20)**: user reported difficulty understanding Case 3 clearly and asked to step back from resume-bullet drafting entirely, in favor of a full from-scratch architecture walkthrough of all 3 cases (attention/ViT-paper style: precise architecture diagrams, loss functions with rationale and alternatives, then the CAV-RAG loop per case, then results) -- see next section. Message-point refinement above is paused, not abandoned; resume once the architecture pass rebuilds a clearer foundation.
+
 ## 9. Resume points — draft v1 (2026-08-18, to revisit after the BGM thesis pass)
 
 Restructured from the existing 7 disconnected bullets into one throughline, per the "reads like ATS keyword stuffing" complaint. Uses current verified numbers (91.8%, not the resume's existing 90.8% — replace wholesale, don't merge).
