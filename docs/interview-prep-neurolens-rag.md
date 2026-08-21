@@ -312,6 +312,10 @@ Case 3 gets the full symmetric CLIP loss for free, precisely because of what kin
 
 **Block diagram**: rendered via the visualize tool (title `case3_selfsupervised_architecture`) -- parallel to Case 2's diagram structurally (brain branch identical), but the text branch is replaced by an HRF branch (same-window continuous target, small from-scratch MLP instead of frozen pretrained + projection), and the loss box is explicitly symmetric (both directions) rather than one-directional. Not reproduced here since it's a rendered artifact.
 
+**Language correction, apply going forward**: don't say CLIP-style / SupCon-style training is "not possible" for Case 2 -- it's not built by default, but both are architecturally buildable (see 8.4.6's logged follow-ups) now that the mechanism is understood. "Not possible" overstates it.
+
+**Case 2 vs Case 3, sharpest version of the distinction (refined from an initial user intuition, checked precisely)**: not that Case 2's trainable projection is parameter-starved (a 384x64 matrix has plenty of capacity to place 6 points flexibly) -- the real constraint is that MiniLM's input set is **finite by construction**: exactly 6 condition descriptions exist, so $z_{text}$ can only ever take one of 6 possible values, full stop, regardless of training. Case 3's HRF target isn't drawn from a finite set at all -- $y_{hrf}$ varies continuously per window, so $z_{hrf}$ takes a genuinely continuous range of values, and because the HRF encoder is a smooth function (an MLP, not a lookup table), nearby HRF vectors land near each other in $z_{hrf}$-space too -- a continuous embedding manifold, not a handful of discrete anchors. Discreteness vs. continuity of the *target space* is the precise structural reason, not encoder capacity.
+
 ## 8.5 Message-point critique and refinement (2026-08-19/20, IN PROGRESS, not yet finalized)
 
 First attempt at a 5-message breakdown (mirroring BGM's process) was rejected by the user as disconnected — see full critique below, each point still worth having precise:
