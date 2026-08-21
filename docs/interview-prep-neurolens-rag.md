@@ -296,6 +296,22 @@ Dense two-round Q&A on contrastive learning mechanics. Key precision corrections
 4. **Literal zero-shot classification test**: embed a genuinely novel condition never in the 6 training classes (e.g. a hypothetical "elbow movement") and check whether the brain encoder's representation lands closest to that new embedding -- distinct from the already-validated concept-sensitivity use of open-vocabulary CAV.
 5. Keep both the current asymmetric version and any new symmetric version as separate, compared results (user's own instinct) -- don't just replace one with the other.
 
+## 8.4.7 Case 3, full architecture pass
+
+**The unlock**: Case 3's brain path is architecturally identical to Case 2's (same encoder, same `Linear(128->64)` + normalize). The entire difference is what's on the other side, and that one difference cascades into everything else.
+
+**HRF path**: target is $y_{hrf}^{(m)} \in \mathbb{R}^5$, the *same window's own* HRF vector (the exact quantity already used as Case 1's auxiliary regression target). Small MLP built from scratch, no pretrained starting point (unlike MiniLM, there's no existing "HRF language model" to freeze): `Linear(5->32) -> ReLU -> Linear(32->64)`, then normalize -> $z_{hrf}$, 64-dim unit vector.
+
+**Why Case 3 gets the symmetric loss and Case 2 structurally cannot -- the actual crux.** Case 2's text side: 6 fixed, repeated prototypes, many brain windows share one target, no sensible text->brain direction (no unique brain window per text). Case 3's HRF side: continuous, genuinely different per window even within the same class (depends on exact position within the movement block) -- for a batch of $B$ windows, $B$ distinct targets, literal CLIP-style batch-index InfoNCE applies naturally in both directions:
+$$\text{logits} = \tau Z_{brain}Z_{hrf}^\top \quad (B\times B, \text{ not } B\times 6), \qquad \mathcal{L}=\tfrac12[\text{CE}(\text{logits},\mathbf{i})+\text{CE}(\text{logits}^\top,\mathbf{i})]$$
+Case 3 gets the full symmetric CLIP loss for free, precisely because of what kind of target HRF is -- not a deliberate design choice to make it "more advanced."
+
+**Why this makes it self-supervised, not supervised-contrastive like Case 2**: pairing is defined purely by temporal co-occurrence (window $m$ pairs with window $m$'s own HRF because they co-occurred, nothing else). The class label $y$ never enters this loss anywhere.
+
+**Real architectural consequence**: no label used during training -> no classifier head at all -> nothing to evaluate accuracy against, no target-class logit for CAV/TCAV to differentiate against. This is exactly why `BrainWithPostHocClassifier` exists -- fit a linear probe on frozen features *after* training, purely for evaluation and to give CAV something to work with. Case 1 and Case 2 both have some label-derived readout baked into training; Case 3 structurally cannot.
+
+**Block diagram**: rendered via the visualize tool (title `case3_selfsupervised_architecture`) -- parallel to Case 2's diagram structurally (brain branch identical), but the text branch is replaced by an HRF branch (same-window continuous target, small from-scratch MLP instead of frozen pretrained + projection), and the loss box is explicitly symmetric (both directions) rather than one-directional. Not reproduced here since it's a rendered artifact.
+
 ## 8.5 Message-point critique and refinement (2026-08-19/20, IN PROGRESS, not yet finalized)
 
 First attempt at a 5-message breakdown (mirroring BGM's process) was rejected by the user as disconnected — see full critique below, each point still worth having precise:
