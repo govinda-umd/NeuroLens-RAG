@@ -269,6 +269,33 @@ $$\mathcal{L}_{CE} = -\frac{1}{N}\sum_i w_{c_i} \log \hat y_{i,c_i}, \qquad \mat
 
 **Block diagram**: rendered via the visualize tool (title `case2_contrastive_architecture`) -- two parallel branches (brain: encoder -> projection -> z_brain; text: frozen MiniLM -> trainable projection -> z_text) converging into a similarity computation, then the contrastive loss. Not reproduced here since it's a rendered artifact.
 
+## 8.4.6 Case 2 deep-dive: contrastive learning theory, CLIP/SimCLR precision checks, real follow-up ideas
+
+Dense two-round Q&A on contrastive learning mechanics. Key precision corrections and confirmed extension ideas, worth having exact for the interview.
+
+**Softmax-CE gradient mechanics for the prototype embeddings, derived precisely.** For a brain example with true class $c$: $\partial\mathcal{L}/\partial z_{text,c} = \tau z_{brain}(p_c-1)$ (pulls true prototype toward $z_{brain}$); $\partial\mathcal{L}/\partial z_{text,k} = \tau z_{brain}\,p_k$ for $k\neq c$ (pushes other prototypes away). No direct prototype-prototype term exists in the loss anywhere -- apparent prototype separation is an emergent, indirect consequence of shared mediation through $z_{brain}$ across the dataset, not direct repulsion. Precision worth having if asked the exact mechanism.
+
+**The actual CLIP loss** (for calibration against our asymmetric version): full $[N,N]$ similarity matrix over a batch, $\text{logits}[i,j]=\tau z_{img,i}\cdot z_{txt,j}$, symmetric CE along both axes using the identity as implicit labels, averaged: $\mathcal{L}=\frac12[\text{CE(rows)}+\text{CE(cols)}]$. Requires one unique $z_{text}$ per $z_{brain}$ -- structurally why our 6-shared-prototype design can't do this directly.
+
+**Temperature has a real physics origin**, not an arbitrary name -- literal reuse of the Boltzmann distribution's temperature parameter ($p\propto e^{-E/T}$), entered deep learning via Hinton, Vinyals & Dean (2015) distillation, inherited by contrastive learning from there.
+
+**Normalization to unit vectors is near-universal in this method family** for a real reason: makes the dot product = cosine similarity (bounded, scale-invariant), and removes a trivial shortcut (inflating similarity by growing vector norm rather than learning genuine directional alignment).
+
+**Terminology, confirmed against the actual code** (`concepts_case2.py` operates on `brain_backbone.forward_features(x)`): "representation"/"features" = the 128-dim pre-projection $h$ (what CAV/TCAV actually probes, shared across all 3 cases). "Embedding" = the 64-dim post-projection $z$ vectors specifically, a distinct object. Not interchangeable in this project's own vocabulary.
+
+**Real correction made mid-discussion**: an earlier claim that "there's no sensible text->brain direction" was too strong. A literal index-based CLIP loss doesn't apply (many brain windows share one prototype), but a **multi-positive symmetric loss** (Khosla et al. 2020, SupCon-style: for a given text prototype, every brain window with that true label is a positive, everything else negative) is architecturally buildable right now, frozen MiniLM and all -- no need to train a text encoder.
+
+**The zero-shot capability the user got excited about is already built and validated, not a new thing to build.** `open_vocabulary_concept_direction` already embeds arbitrary unseen phrases via frozen MiniLM + trained projection and generalizes correctly (tongue phrase example, TCAV=0.686, P=1.000 across 1000 resamples) -- exactly because MiniLM is a general-purpose pretrained encoder. This is CLIP's zero-shot mechanism (shared embedding space + frozen general-purpose encoder handling novel categories) applied to concept-sensitivity testing rather than direct classification.
+
+**Adjoint (transpose) pullback vs. inverse -- real, important correction.** `brain_projection.weight.T` used in the open-vocab CAV mechanism is the map's *adjoint* ($\langle Wh,z\rangle=\langle h,W^\top z\rangle$), not an inverse -- $W\in\mathbb{R}^{64\times128}$ isn't square and isn't invertible; going 64-dim back to 128-dim is fundamentally underdetermined (infinitely many $h$ map to the same $z$). The adjoint correctly pulls back a *direction* (what TCAV needs for a directional derivative) but does NOT reconstruct a specific point $h_{brain}$ "the text came from." A literal point reconstruction would need a Moore-Penrose pseudoinverse, giving one particular minimum-norm answer among infinitely many valid ones -- architecturally closer to the parked, out-of-scope generative HRF-to-brain direction than to anything currently built.
+
+**Concrete follow-up experiments logged, not yet built:**
+1. **Symmetric multi-positive loss** (Khosla et al. 2020 SupCon-style), MiniLM frozen -- safer, likely to work, direct extension of the existing architecture.
+2. **Literal full-CLIP-style with a trained text encoder** (not frozen MiniLM) -- riskier, may just memorize the 6 texts and produce an informative negative result; worth trying and reporting honestly either way.
+3. **Nonlinear (MLP + ReLU) projection head** instead of the current linear projections, per SimCLR (Chen, Kornblith, Norouzi & Hinton, 2020) -- their most-reused finding, that a nonlinear projection before the contrastive loss improves the quality of the pre-projection representation used downstream. Note: SimCLR's "benefits from larger batch size" finding does NOT straightforwardly apply to the *current* fixed-6-prototype design (negatives per example = 5, always, independent of batch size) but becomes directly relevant once experiment 1 or 2 is built, where negatives genuinely scale with batch size.
+4. **Literal zero-shot classification test**: embed a genuinely novel condition never in the 6 training classes (e.g. a hypothetical "elbow movement") and check whether the brain encoder's representation lands closest to that new embedding -- distinct from the already-validated concept-sensitivity use of open-vocabulary CAV.
+5. Keep both the current asymmetric version and any new symmetric version as separate, compared results (user's own instinct) -- don't just replace one with the other.
+
 ## 8.5 Message-point critique and refinement (2026-08-19/20, IN PROGRESS, not yet finalized)
 
 First attempt at a 5-message breakdown (mirroring BGM's process) was rejected by the user as disconnected — see full critique below, each point still worth having precise:
