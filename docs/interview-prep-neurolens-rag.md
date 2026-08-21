@@ -337,6 +337,26 @@ Tentative summary line proposed, user response: "it makes some sense to me, mayb
 
 **Session pivot (2026-08-20)**: user reported difficulty understanding Case 3 clearly and asked to step back from resume-bullet drafting entirely, in favor of a full from-scratch architecture walkthrough of all 3 cases (attention/ViT-paper style: precise architecture diagrams, loss functions with rationale and alternatives, then the CAV-RAG loop per case, then results) -- see next section. Message-point refinement above is paused, not abandoned; resume once the architecture pass rebuilds a clearer foundation.
 
+## 8.6 Interpretability block, rebuilt from scratch (2026-08-20)
+
+CAV/TCAV was covered at a high level earlier (section 6/7 above) but didn't fully land once Case 2's derivation variant came up. Rebuilt here as the core mechanism, using Case 1 (direct labeled-example probe, no extra derivation tricks) as the clean running example, before revisiting how Case 2/3 get their *direction* differently while reusing this exact testing machinery.
+
+**The question CAV/TCAV answers**: not "does the model classify tongue windows correctly" (accuracy) -- "does the model's decision depend on the concept of tongue-movement the way a human defines it, or does it just correlate with something else."
+
+**The six steps**:
+1. Define the concept via labeled examples: positive (true tongue windows) vs. negative (everything else). For each, run the *already-trained* model forward and take its pooled representation $h \in \mathbb{R}^{128}$ -- the model's internal state, not the raw input.
+2. Fit a linear probe: ordinary logistic regression on $\{(h_i, \text{concept present?})\}$. Accuracy is a diagnostic, not the point -- low accuracy means the concept isn't linearly present at all, don't trust anything downstream.
+3. The CAV is the probe's weight vector, normalized: $v_C = w/\|w\|$, a unit vector, geometrically perpendicular to the probe's decision boundary, pointing toward "more concept."
+4. Take held-out examples that are *truly* the target class. Compute the gradient of that class's logit w.r.t. the representation: $g = \partial(\text{logit}_{target})/\partial h$ -- "if h moved this way, how much would the logit move."
+5. Directional derivative: $g \cdot v_C$. Positive means nudging $h$ toward "more concept" would increase the target logit.
+6. TCAV score = fraction of held-out examples where step 5 is positive. Near 1.0 = strong, consistent dependence. Near 0.5 = no real relationship.
+
+**Concrete anchor with real project numbers**: tongue concept -- probe accuracy ~0.99 (cleanly linearly separable), TCAV ~1.0 (every held-out example's directional derivative positive). Laterality -- probe accuracy still decent (concept is *findable*), but TCAV only 0.44-0.74 (the model's actual decision is far less consistently sensitive to it). The gap between "concept is linearly findable" (probe accuracy, step 2) and "the decision actually depends on it" (TCAV, steps 4-6) is the entire reason this is two separate steps, not one -- a probe could succeed while TCAV reveals the model doesn't actually use that direction to decide.
+
+**Block diagram**: rendered via the visualize tool (title `cav_tcav_mechanism`) -- two parallel paths (labeled examples -> probe -> CAV direction; held-out target examples -> representation -> gradient) converging into a directional-derivative dot product, then aggregated into the TCAV score. Not reproduced here since it's a rendered artifact.
+
+**Still to cover**: how Case 1/2/3 get the CAV *direction* differently (direct probe / text-arithmetic pullback / post-hoc-classifier probe) while reusing this exact testing machinery unchanged -- next step once the core mechanism above is confirmed solid.
+
 ## 9. Resume points — draft v1 (2026-08-18, to revisit after the BGM thesis pass)
 
 Restructured from the existing 7 disconnected bullets into one throughline, per the "reads like ATS keyword stuffing" complaint. Uses current verified numbers (91.8%, not the resume's existing 90.8% — replace wholesale, don't merge).
