@@ -42,6 +42,10 @@ CASE2_CONCEPT_DEFINITIONS: dict[str, tuple[set[int], set[int]]] = {
     "left_side": ({1, 3}, {2, 4}),
 }
 
+# Imported (not re-hand-written) so the 3 additional 2026-08-22 concepts
+# can't silently drift out of sync between the two modules.
+from .concepts import EXTENDED_CONCEPT_DEFINITIONS as CASE2_EXTENDED_CONCEPT_DEFINITIONS  # noqa: E402
+
 
 def extract_pooled_features_case2(
     contrastive_model: nn.Module, loader: DataLoader, device: torch.device

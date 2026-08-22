@@ -42,6 +42,19 @@ CONCEPT_DEFINITIONS: dict[str, tuple[set[int], set[int]]] = {
     "left_side": ({1, 3}, {2, 4}),
 }
 
+# 3 additional concepts (2026-08-22), each grounded in a real motor-anatomy
+# distinction rather than an arbitrary relabeling -- see
+# docs/interview-prep-neurolens-rag.md 6.6 for the literature motivation.
+# Kept as a separate superset dict, not merged into CONCEPT_DEFINITIONS
+# above, so existing callers that rely on the original 5-concept default
+# keep behaving exactly as before.
+EXTENDED_CONCEPT_DEFINITIONS: dict[str, tuple[set[int], set[int]]] = {
+    **CONCEPT_DEFINITIONS,
+    "movement_vs_rest": ({1, 2, 3, 4, 5}, {0}),
+    "limb_vs_orofacial": ({1, 2, 3, 4}, {5}),
+    "upper_vs_lower_limb": ({1, 2}, {3, 4}),
+}
+
 
 def extract_pooled_features(
     model: nn.Module, loader: DataLoader, device: torch.device
