@@ -239,6 +239,142 @@ def text_to_brain_retrieval_precision(
     return {class_idx: {k: v["precision"] for k, v in per_k.items()} for class_idx, per_k in full.items()}
 
 
+# --- Case 2 v2: symmetric SupCon-style multi-positive loss (Khosla et al. 2020) ---
+#
+# The original ContrastiveModel/train_contrastive above run brain->text only,
+# since a fixed 6-item text vocabulary has no unique per-example target for
+# a text->brain direction the way CLIP's naturally-paired data does. But a
+# text->brain direction IS still well-posed if you don't insist on a unique
+# target per prototype: for text prototype c, every brain window in the
+# batch with true label c is a valid positive (Khosla et al.'s multi-positive
+# SupCon "L_out" formulation), everything else a negative. This function
+# adds that second direction on top of the *same*, still-frozen-MiniLM
+# ContrastiveModel — no architecture change, only a richer loss. Kept
+# alongside (not replacing) the original asymmetric loss so both can be
+# trained and compared directly.
+
+
+def supcon_text_to_brain_loss(logits_text_to_brain: torch.Tensor, y: torch.Tensor, num_classes: int) -> torch.Tensor:
+    """logits_text_to_brain: [num_classes, B] = z_text @ z_brain.T * tau.
+    For each text prototype row c, every brain example with true label c
+    is a positive. Log-softmax is taken over the full row (all B brain
+    examples as candidates), then averaged only over that row's positive
+    columns, and finally averaged across classes present in the batch."""
+    log_probs = nn.functional.log_softmax(logits_text_to_brain, dim=1)  # softmax over brain examples
+    per_class_losses = []
+    for c in range(num_classes):
+        mask = y == c
+        if mask.sum() == 0:
+            continue  # class absent from this batch - nothing to average
+        per_class_losses.append(-log_probs[c, mask].mean())
+    return torch.stack(per_class_losses).mean()
+
+
+def symmetric_supcon_loss(
+    z_brain: torch.Tensor, z_text: torch.Tensor, y: torch.Tensor, log_temperature: torch.Tensor, num_classes: int
+) -> torch.Tensor:
+    tau = log_temperature.exp().clamp(max=100)
+    logits_b2t = z_brain @ z_text.T * tau  # [B, num_classes]
+    loss_b2t = nn.functional.cross_entropy(logits_b2t, y)
+    loss_t2b = supcon_text_to_brain_loss(logits_b2t.T, y, num_classes)
+    return (loss_b2t + loss_t2b) / 2
+
+
+def run_epoch_supcon(
+    model: ContrastiveModel, loader: DataLoader, device: torch.device, num_classes: int, optimizer=None
+) -> dict:
+    """Same bookkeeping as run_epoch, but trains/evaluates with
+    symmetric_supcon_loss instead of the one-directional cross-entropy.
+    Classification metrics still come from the brain->text direction
+    (argmax over z_brain @ z_text.T), since that's the direction with an
+    actual per-example prediction to score."""
+    is_train = optimizer is not None
+    model.train(is_train)
+
+    total_loss, n_batches = 0.0, 0
+    all_y_true, all_y_pred = [], []
+
+    with torch.enable_grad() if is_train else torch.no_grad():
+        for batch in loader:
+            x = batch["x"].to(device)
+            y = batch["y"].to(device)
+
+            z_brain, z_text, logits = model(x)
+            loss = symmetric_supcon_loss(z_brain, z_text, y, model.log_temperature, num_classes)
+
+            if is_train:
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+            total_loss += loss.item()
+            n_batches += 1
+            all_y_true.append(y.detach().cpu().numpy())
+            all_y_pred.append(logits.detach().argmax(dim=1).cpu().numpy())
+
+    y_true = np.concatenate(all_y_true)
+    y_pred = np.concatenate(all_y_pred)
+    metrics = classification_metrics(y_true, y_pred, num_classes)
+    metrics["loss"] = total_loss / max(n_batches, 1)
+    return metrics
+
+
+def train_contrastive_supcon(
+    model: ContrastiveModel,
+    train_loader: DataLoader,
+    val_loader: DataLoader,
+    test_loader: DataLoader,
+    device: torch.device,
+    num_classes: int,
+    num_epochs: int = 5,
+    lr: float = 1e-3,
+    weight_decay: float = 1e-4,
+    experiment_name: str = "contrastive_supcon",
+    checkpoint_dir=None,
+) -> dict:
+    """Mirrors train_contrastive exactly, swapping in the symmetric
+    multi-positive SupCon loss. Kept as a fully separate function (not a
+    flag on train_contrastive) so both the original asymmetric model and
+    this symmetric one can be trained independently and compared."""
+    model.to(device)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epochs)
+
+    history = []
+    best_val_macro_f1 = -1.0
+    best_state = None
+
+    for epoch in range(1, num_epochs + 1):
+        train_metrics = run_epoch_supcon(model, train_loader, device, num_classes, optimizer=optimizer)
+        val_metrics = run_epoch_supcon(model, val_loader, device, num_classes, optimizer=None)
+        scheduler.step()
+
+        history.append({"epoch": epoch, "train": train_metrics, "val": val_metrics})
+        if val_metrics["macro_f1"] > best_val_macro_f1:
+            best_val_macro_f1 = val_metrics["macro_f1"]
+            best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+
+        print(
+            f"[{experiment_name}] epoch {epoch}/{num_epochs} "
+            f"train_loss={train_metrics['loss']:.4f} val_macro_f1={val_metrics['macro_f1']:.4f}"
+        )
+
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    test_metrics = run_epoch_supcon(model, test_loader, device, num_classes, optimizer=None)
+
+    if checkpoint_dir is not None:
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        torch.save(model.state_dict(), checkpoint_dir / "best.pt")
+
+    return {
+        "experiment_name": experiment_name,
+        "history": history,
+        "best_val_macro_f1": best_val_macro_f1,
+        "test_metrics": test_metrics,
+    }
+
+
 # --- Case 2 v3: forecasting block on top of the frozen contrastive backbone ---
 
 
