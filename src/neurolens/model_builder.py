@@ -39,7 +39,7 @@ class GRUDecoder(nn.Module):
         self,
         input_size: int = 300,
         hidden_size: int = 128,
-        num_layers: int = 1,
+        num_layers: int = 2,
         num_classes: int = 6,
         num_conditions: int = 5,
         include_hrf_head: bool = True,
