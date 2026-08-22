@@ -1,0 +1,3812 @@
+[
+  {
+    "resample": 0,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9996365838885524,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9988491823137492,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 1,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9943670502725621,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995336159903089,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9988491823137492,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.997340930674264,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.997340930674264,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9949727437916415,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9952755905511811,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 2,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9860084797092671,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9835251362810418,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9930345245305875,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9901234567901235,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9901234567901235,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9974560872198668,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 3,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9963658388855239,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9997577225923683,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.997274379164143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9963658388855239,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992731677771047,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 4,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9909751665657177,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9903089036947305,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.995346628679962,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.995346628679962,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 5,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9998182919442762,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987886129618413,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 6,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9957601453664445,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9983855650522317,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9983855650522317,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 7,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9962447001817081,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9960024227740764,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9994548758328285,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.995336159903089,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995396729254997,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9983040581465779,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9972459639126305,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9972459639126305,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 8,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9940036341611145,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9943670502725621,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989703210175651,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9950938824954573,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 9,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9850999394306481,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9831617201695941,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9927316777710479,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9907882241215574,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9907882241215574,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964869775893398,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 10,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.995336159903089,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9978157644824311,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9978157644824311,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9961841308298002,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 11,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9960024227740764,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9960024227740764,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993943064809206,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 12,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9838279830405815,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9823743185947911,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9920654149000606,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.99002849002849,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.99002849002849,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9963658388855239,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9961235614778922,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9996971532404604,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998005698005698,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 13,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9996365838885524,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964869775893398,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 14,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9956995760145366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9996365838885524,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9961235614778922,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9994548758328285,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 15,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9958812840702604,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973955178679588,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995760145366445,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9960629921259843,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995336159903089,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 16,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9958207147183525,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995760145366445,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9983855650522317,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9983855650522317,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 17,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9834645669291339,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9858873410054513,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.993519079345851,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9910731244064578,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9910731244064578,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9961841308298002,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989097516656572,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 18,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9961841308298002,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9959418534221683,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9991520290732889,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 19,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9943670502725621,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995396729254997,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9978157644824311,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9978157644824311,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9961841308298002,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 20,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9951544518473653,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995396729254997,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987886129618413,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9986674742580255,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 21,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.993519079345851,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9930950938824955,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9986069049061175,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9964862298195631,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9964862298195631,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9958812840702604,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992731677771047,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9982905982905983,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 22,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 23,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9949727437916415,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9952150211992732,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9986674742580255,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9960629921259843,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9954572986069049,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987886129618413,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 24,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9998182919442762,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9970926711084191,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989097516656572,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 25,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9956995760145366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964869775893398,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993943064809206,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 26,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9963658388855239,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9958207147183525,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992731677771047,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9979107312440646,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9994548758328285,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 27,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9958812840702604,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9995154451847366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9985754985754985,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 28,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9962447001817081,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9997577225923683,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9974560872198668,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993943064809206,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 29,
+    "gru": {
+      "hand": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9997577225923683,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer": {
+      "hand": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9994548758328285,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  }
+]
