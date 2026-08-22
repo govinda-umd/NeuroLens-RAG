@@ -375,6 +375,125 @@ def train_contrastive_supcon(
     }
 
 
+# --- Case 2 v2b: literal CLIP-style loss (Radford et al. 2021), naive in-batch negatives ---
+#
+# Unlike symmetric_supcon_loss above (which treats every same-class brain
+# window as a valid positive for a text prototype), a literal CLIP loss
+# treats only the (brain_i, text_i) pair on the diagonal as positive and
+# every other pairing in the batch as a negative -- including other windows
+# that share the same class label. That's a known false-negative problem
+# whenever a batch contains multiple same-class examples, which happens
+# often here (a fixed 6-class vocabulary, batch size 64) unlike CLIP's
+# original one-of-a-kind (image, caption) pairs. Text tower (MiniLM) stays
+# frozen, same as the other variants -- only the projection is trained.
+# Implemented as the literal baseline the multi-positive SupCon fix above
+# is a response to.
+
+
+def clip_loss(z_brain: torch.Tensor, z_text_per_sample: torch.Tensor, log_temperature: torch.Tensor) -> torch.Tensor:
+    """z_text_per_sample: [B, embed_dim], the text prototype gathered per
+    example by its class label -- NOT the [num_classes, embed_dim] table
+    used elsewhere. Positive pair is the diagonal; every other row/column
+    in the batch is a negative, symmetrically in both directions."""
+    tau = log_temperature.exp().clamp(max=100)
+    logits = z_brain @ z_text_per_sample.T * tau  # [B, B]
+    targets = torch.arange(logits.shape[0], device=logits.device)
+    loss_b2t = nn.functional.cross_entropy(logits, targets)
+    loss_t2b = nn.functional.cross_entropy(logits.T, targets)
+    return (loss_b2t + loss_t2b) / 2
+
+
+def run_epoch_clip(model: ContrastiveModel, loader: DataLoader, device: torch.device, optimizer=None) -> dict:
+    """Same bookkeeping as run_epoch/run_epoch_supcon; trains with the
+    literal CLIP loss but still scores classification via the brain-vs-all-
+    6-prototypes logits from model.forward(), since clip_loss's own logits
+    are batch-relative and not a fixed class prediction."""
+    is_train = optimizer is not None
+    model.train(is_train)
+
+    total_loss, n_batches = 0.0, 0
+    all_y_true, all_y_pred = [], []
+
+    with torch.enable_grad() if is_train else torch.no_grad():
+        for batch in loader:
+            x = batch["x"].to(device)
+            y = batch["y"].to(device)
+
+            z_brain, z_text, logits = model(x)
+            z_text_per_sample = z_text[y]
+            loss = clip_loss(z_brain, z_text_per_sample, model.log_temperature)
+
+            if is_train:
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+
+            total_loss += loss.item()
+            n_batches += 1
+            all_y_true.append(y.detach().cpu().numpy())
+            all_y_pred.append(logits.detach().argmax(dim=1).cpu().numpy())
+
+    y_true = np.concatenate(all_y_true)
+    y_pred = np.concatenate(all_y_pred)
+    num_classes = int(max(y_true.max(), y_pred.max())) + 1
+    metrics = classification_metrics(y_true, y_pred, num_classes)
+    metrics["loss"] = total_loss / max(n_batches, 1)
+    return metrics
+
+
+def train_contrastive_clip(
+    model: ContrastiveModel,
+    train_loader: DataLoader,
+    val_loader: DataLoader,
+    test_loader: DataLoader,
+    device: torch.device,
+    num_epochs: int = 5,
+    lr: float = 1e-3,
+    weight_decay: float = 1e-4,
+    experiment_name: str = "contrastive_clip",
+    checkpoint_dir=None,
+) -> dict:
+    """Mirrors train_contrastive / train_contrastive_supcon, swapping in the
+    literal CLIP loss."""
+    model.to(device)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epochs)
+
+    history = []
+    best_val_macro_f1 = -1.0
+    best_state = None
+
+    for epoch in range(1, num_epochs + 1):
+        train_metrics = run_epoch_clip(model, train_loader, device, optimizer=optimizer)
+        val_metrics = run_epoch_clip(model, val_loader, device, optimizer=None)
+        scheduler.step()
+
+        history.append({"epoch": epoch, "train": train_metrics, "val": val_metrics})
+        if val_metrics["macro_f1"] > best_val_macro_f1:
+            best_val_macro_f1 = val_metrics["macro_f1"]
+            best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+
+        print(
+            f"[{experiment_name}] epoch {epoch}/{num_epochs} "
+            f"train_loss={train_metrics['loss']:.4f} val_macro_f1={val_metrics['macro_f1']:.4f}"
+        )
+
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    test_metrics = run_epoch_clip(model, test_loader, device, optimizer=None)
+
+    if checkpoint_dir is not None:
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        torch.save(model.state_dict(), checkpoint_dir / "best.pt")
+
+    return {
+        "experiment_name": experiment_name,
+        "history": history,
+        "best_val_macro_f1": best_val_macro_f1,
+        "test_metrics": test_metrics,
+    }
+
+
 # --- Case 2 v3: forecasting block on top of the frozen contrastive backbone ---
 
 
