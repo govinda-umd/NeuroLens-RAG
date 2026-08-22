@@ -369,6 +369,18 @@ CAV/TCAV was covered at a high level earlier (section 6/7 above) but didn't full
 
 **"Case 4" (generative HRF-from-brain) -- real pushback given, not yet a genuinely new case.** As described (predict $y_{hrf}$ from $X$), this is exactly what Case 1's existing HRF regression head already does -- deterministic point estimate, MSE-trained. For this to be a genuinely distinct generative case, it needs to model the *distribution* over $y_{hrf}$ given $X$ (samplable, uncertainty-aware -- e.g. a VAE/flow/diffusion-style decoder), not a point prediction. Same direction as the already-parked, explicitly out-of-scope HRF-to-brain generative decoder in `case2-3-design-plan.md`, just the reverse mapping. The post-hoc-classifier pattern (freeze representation, fit linear probe) would apply unchanged regardless of whether this gets built.
 
+## 8.7 Implementation sprint (2026-08-21), scoped given 3 days to the interview
+
+Full request was: layer-count sweep for GRU/Transformer, full bootstrap-resampling evaluation, both new contrastive paradigms (SupCon-style + literal CLIP-style), and CAV testing on the representations. Given the interview is 3 days out (today the 21st, interview ~24th), scoped explicitly rather than attempting everything -- communicated to the user, not silently decided:
+
+**Priority order:**
+1. Build the SupCon-style multi-positive symmetric loss for Case 2 (frozen MiniLM, no architecture change) -- DONE, `src/neurolens/contrastive.py` (`supcon_text_to_brain_loss`, `symmetric_supcon_loss`, `run_epoch_supcon`, `train_contrastive_supcon`). Kept fully separate from the original asymmetric `train_contrastive` so both can be trained and compared, not one replacing the other.
+2. Quick, honest single-split comparison (5 epochs, matching the standard Case 2 training regime) + fixed 5-concept CAV/TCAV test on the new SupCon model, compared against the same test on the original asymmetric model -- RUNNING (`case2_supcon_comparison.py`, background), results to `results/case2_supcon_vs_asymmetric_results.json`. Smoke-tested first (1 epoch, macro F1 0.875, no errors) before committing to the full run.
+3. Literal full-CLIP variant with a trained text encoder -- NOT STARTED, attempt only if 1-2 land cleanly; genuinely riskier (reopens the "only 6 unique texts" data-scarcity concern from earlier), and an honest negative result there would itself be a legitimate finding given this project's track record.
+4. Layer-count sweep (deeper GRU, more Transformer heads/layers) and the full bootstrap-resampling treatment across all variants -- DEFERRED, documented as future work, not attempted before the interview. Most expensive, least interview-narrative-critical: the interview needs "built X, found Y," not full production-grade statistical treatment on every variant.
+
+**SupCon loss, exact formulation (Khosla et al. 2020, "L_out" multi-positive variant)**: for text prototype row $c$ in the $[\text{num\_classes}, B]$ text-to-brain logits, every brain example in the batch with true label $c$ is a positive. Log-softmax taken over the full row (all $B$ brain examples as candidates), averaged only over that row's positive columns, then averaged across classes present in the batch. Combined with the existing brain-to-text cross-entropy, averaged: $\mathcal{L} = \tfrac12[\mathcal{L}_{b2t} + \mathcal{L}_{t2b}]$.
+
 ## 9. Resume points — draft v1 (2026-08-18, to revisit after the BGM thesis pass)
 
 Restructured from the existing 7 disconnected bullets into one throughline, per the "reads like ATS keyword stuffing" complaint. Uses current verified numbers (91.8%, not the resume's existing 90.8% — replace wholesale, don't merge).
