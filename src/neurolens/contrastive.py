@@ -239,22 +239,31 @@ def text_to_brain_retrieval_precision(
     return {class_idx: {k: v["precision"] for k, v in per_k.items()} for class_idx, per_k in full.items()}
 
 
-# --- Case 2 v2: symmetric SupCon-style multi-positive loss (Khosla et al. 2020) ---
+# --- Case 2 v2: multi-positive, text-prototype-anchored contrastive loss ---
 #
-# The original ContrastiveModel/train_contrastive above run brain->text only,
-# since a fixed 6-item text vocabulary has no unique per-example target for
-# a text->brain direction the way CLIP's naturally-paired data does. But a
-# text->brain direction IS still well-posed if you don't insist on a unique
-# target per prototype: for text prototype c, every brain window in the
-# batch with true label c is a valid positive (Khosla et al.'s multi-positive
-# SupCon "L_out" formulation), everything else a negative. This function
-# adds that second direction on top of the *same*, still-frozen-MiniLM
-# ContrastiveModel — no architecture change, only a richer loss. Kept
-# alongside (not replacing) the original asymmetric loss so both can be
-# trained and compared directly.
+# NOT literal SupCon (Khosla et al. 2020) — flagged explicitly because it's
+# easy to overclaim this. Literal SupCon is anchor-per-example: every
+# example in the batch takes a turn as the anchor, its positives/negatives
+# are *other examples in the same batch* (same modality on both sides), and
+# there is no external label or text embedding anywhere in the formula —
+# labels only decide who counts as a positive for whom.
+#
+# What's implemented here is different in kind: the anchors are the 6 fixed
+# TEXT prototypes, never a brain window. There is no brain-to-brain term at
+# all (z_brain never multiplies against z_brain below). The one idea
+# actually borrowed from SupCon is the multi-positive averaging trick: for
+# text prototype c, every brain window in the batch with true label c is a
+# valid positive (not just one, the way plain CLIP assumes), so the loss
+# averages log-probability over all of them rather than picking a single
+# target. Precise name for this object: a multi-positive class-prototype
+# contrastive loss. Added as a second direction on top of the *same*,
+# still-frozen-MiniLM ContrastiveModel used by the original asymmetric
+# brain->text loss above — no architecture change, only a richer loss,
+# kept alongside (not replacing) the original so both can be trained and
+# compared directly.
 
 
-def supcon_text_to_brain_loss(logits_text_to_brain: torch.Tensor, y: torch.Tensor, num_classes: int) -> torch.Tensor:
+def multi_positive_text_to_brain_loss(logits_text_to_brain: torch.Tensor, y: torch.Tensor, num_classes: int) -> torch.Tensor:
     """logits_text_to_brain: [num_classes, B] = z_text @ z_brain.T * tau.
     For each text prototype row c, every brain example with true label c
     is a positive. Log-softmax is taken over the full row (all B brain
@@ -270,24 +279,24 @@ def supcon_text_to_brain_loss(logits_text_to_brain: torch.Tensor, y: torch.Tenso
     return torch.stack(per_class_losses).mean()
 
 
-def symmetric_supcon_loss(
+def symmetric_multi_positive_prototype_loss(
     z_brain: torch.Tensor, z_text: torch.Tensor, y: torch.Tensor, log_temperature: torch.Tensor, num_classes: int
 ) -> torch.Tensor:
     tau = log_temperature.exp().clamp(max=100)
     logits_b2t = z_brain @ z_text.T * tau  # [B, num_classes]
     loss_b2t = nn.functional.cross_entropy(logits_b2t, y)
-    loss_t2b = supcon_text_to_brain_loss(logits_b2t.T, y, num_classes)
+    loss_t2b = multi_positive_text_to_brain_loss(logits_b2t.T, y, num_classes)
     return (loss_b2t + loss_t2b) / 2
 
 
-def run_epoch_supcon(
+def run_epoch_multi_positive(
     model: ContrastiveModel, loader: DataLoader, device: torch.device, num_classes: int, optimizer=None
 ) -> dict:
     """Same bookkeeping as run_epoch, but trains/evaluates with
-    symmetric_supcon_loss instead of the one-directional cross-entropy.
-    Classification metrics still come from the brain->text direction
-    (argmax over z_brain @ z_text.T), since that's the direction with an
-    actual per-example prediction to score."""
+    symmetric_multi_positive_prototype_loss instead of the one-directional
+    cross-entropy. Classification metrics still come from the brain->text
+    direction (argmax over z_brain @ z_text.T), since that's the direction
+    with an actual per-example prediction to score."""
     is_train = optimizer is not None
     model.train(is_train)
 
@@ -300,7 +309,7 @@ def run_epoch_supcon(
             y = batch["y"].to(device)
 
             z_brain, z_text, logits = model(x)
-            loss = symmetric_supcon_loss(z_brain, z_text, y, model.log_temperature, num_classes)
+            loss = symmetric_multi_positive_prototype_loss(z_brain, z_text, y, model.log_temperature, num_classes)
 
             if is_train:
                 optimizer.zero_grad()
@@ -319,7 +328,7 @@ def run_epoch_supcon(
     return metrics
 
 
-def train_contrastive_supcon(
+def train_contrastive_multi_positive(
     model: ContrastiveModel,
     train_loader: DataLoader,
     val_loader: DataLoader,
@@ -329,13 +338,13 @@ def train_contrastive_supcon(
     num_epochs: int = 5,
     lr: float = 1e-3,
     weight_decay: float = 1e-4,
-    experiment_name: str = "contrastive_supcon",
+    experiment_name: str = "contrastive_multi_positive",
     checkpoint_dir=None,
 ) -> dict:
     """Mirrors train_contrastive exactly, swapping in the symmetric
-    multi-positive SupCon loss. Kept as a fully separate function (not a
-    flag on train_contrastive) so both the original asymmetric model and
-    this symmetric one can be trained independently and compared."""
+    multi-positive class-prototype loss. Kept as a fully separate function
+    (not a flag on train_contrastive) so both the original asymmetric model
+    and this one can be trained independently and compared."""
     model.to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epochs)
@@ -345,8 +354,8 @@ def train_contrastive_supcon(
     best_state = None
 
     for epoch in range(1, num_epochs + 1):
-        train_metrics = run_epoch_supcon(model, train_loader, device, num_classes, optimizer=optimizer)
-        val_metrics = run_epoch_supcon(model, val_loader, device, num_classes, optimizer=None)
+        train_metrics = run_epoch_multi_positive(model, train_loader, device, num_classes, optimizer=optimizer)
+        val_metrics = run_epoch_multi_positive(model, val_loader, device, num_classes, optimizer=None)
         scheduler.step()
 
         history.append({"epoch": epoch, "train": train_metrics, "val": val_metrics})
@@ -361,7 +370,7 @@ def train_contrastive_supcon(
 
     if best_state is not None:
         model.load_state_dict(best_state)
-    test_metrics = run_epoch_supcon(model, test_loader, device, num_classes, optimizer=None)
+    test_metrics = run_epoch_multi_positive(model, test_loader, device, num_classes, optimizer=None)
 
     if checkpoint_dir is not None:
         checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -377,17 +386,17 @@ def train_contrastive_supcon(
 
 # --- Case 2 v2b: literal CLIP-style loss (Radford et al. 2021), naive in-batch negatives ---
 #
-# Unlike symmetric_supcon_loss above (which treats every same-class brain
-# window as a valid positive for a text prototype), a literal CLIP loss
-# treats only the (brain_i, text_i) pair on the diagonal as positive and
-# every other pairing in the batch as a negative -- including other windows
-# that share the same class label. That's a known false-negative problem
-# whenever a batch contains multiple same-class examples, which happens
-# often here (a fixed 6-class vocabulary, batch size 64) unlike CLIP's
-# original one-of-a-kind (image, caption) pairs. Text tower (MiniLM) stays
-# frozen, same as the other variants -- only the projection is trained.
-# Implemented as the literal baseline the multi-positive SupCon fix above
-# is a response to.
+# Unlike symmetric_multi_positive_prototype_loss above (which treats every
+# same-class brain window as a valid positive for a text prototype), a
+# literal CLIP loss treats only the (brain_i, text_i) pair on the diagonal
+# as positive and every other pairing in the batch as a negative -- including
+# other windows that share the same class label. That's a known
+# false-negative problem whenever a batch contains multiple same-class
+# examples, which happens often here (a fixed 6-class vocabulary, batch
+# size 64) unlike CLIP's original one-of-a-kind (image, caption) pairs.
+# Text tower (MiniLM) stays frozen, same as the other variants -- only the
+# projection is trained. Implemented as the literal baseline the
+# multi-positive fix above is a response to.
 
 
 def clip_loss(z_brain: torch.Tensor, z_text_per_sample: torch.Tensor, log_temperature: torch.Tensor) -> torch.Tensor:
@@ -404,7 +413,7 @@ def clip_loss(z_brain: torch.Tensor, z_text_per_sample: torch.Tensor, log_temper
 
 
 def run_epoch_clip(model: ContrastiveModel, loader: DataLoader, device: torch.device, optimizer=None) -> dict:
-    """Same bookkeeping as run_epoch/run_epoch_supcon; trains with the
+    """Same bookkeeping as run_epoch/run_epoch_multi_positive; trains with the
     literal CLIP loss but still scores classification via the brain-vs-all-
     6-prototypes logits from model.forward(), since clip_loss's own logits
     are batch-relative and not a fixed class prediction."""
@@ -453,8 +462,8 @@ def train_contrastive_clip(
     experiment_name: str = "contrastive_clip",
     checkpoint_dir=None,
 ) -> dict:
-    """Mirrors train_contrastive / train_contrastive_supcon, swapping in the
-    literal CLIP loss."""
+    """Mirrors train_contrastive / train_contrastive_multi_positive, swapping
+    in the literal CLIP loss."""
     model.to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=num_epochs)
