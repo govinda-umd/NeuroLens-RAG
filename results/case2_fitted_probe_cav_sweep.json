@@ -1,0 +1,6032 @@
+[
+  {
+    "resample": 0,
+    "gru_post_hoc_macro_f1": 0.878280853110548,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994025392083644,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.903637684710893,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9973861090365945,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 1,
+    "gru_post_hoc_macro_f1": 0.924983518798621,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9974560872198668,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9994548758328285,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9997012696041823,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9248982536802094,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9949727437916415,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9949727437916415,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9956995760145366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9981006647673314,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9958207147183525,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9970126960418223,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.997340930674264,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 2,
+    "gru_post_hoc_macro_f1": 0.9136394063479981,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9960629921259843,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9949121744397335,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9988491823137492,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9959418534221683,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9988797610156833,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9983855650522317,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9316636086131634,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9986674742580255,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9984857662023017,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9989544436146378,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 3,
+    "gru_post_hoc_macro_f1": 0.8946303944392363,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9927922471229558,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.99267110841914,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9964862298195631,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9964862298195631,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9923076923076923,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9963912630579297,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9137465764766645,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.998122350090854,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9980582524271845,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 4,
+    "gru_post_hoc_macro_f1": 0.8991067527435778,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973955178679588,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.998122350090854,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994025392083644,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.924934018487395,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9985810306198656,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 5,
+    "gru_post_hoc_macro_f1": 0.8911385501035459,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9983040581465779,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9983646274984858,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992731677771047,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9984857662023017,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.99932785660941,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.904225398285163,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9970926711084191,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982076176250934,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 6,
+    "gru_post_hoc_macro_f1": 0.8944038938269356,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978195033313143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989097516656572,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9997150997150998,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9997150997150998,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994025392083644,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9120724842348151,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9981829194427619,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 7,
+    "gru_post_hoc_macro_f1": 0.8607796558883102,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9991520290732889,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9992531740104555,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9027976757681179,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.996305269533616,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9976848394324123,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9981956315289648,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 8,
+    "gru_post_hoc_macro_f1": 0.9104037782317852,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997274379164143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987280436099334,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9995519044062733,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9220020181071122,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 9,
+    "gru_post_hoc_macro_f1": 0.9113241447986177,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9948516050878256,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.995336159903089,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991784914115012,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9071475120332391,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9986069049061175,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991784914115012,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 10,
+    "gru_post_hoc_macro_f1": 0.9024537491645309,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9958207147183525,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9964869775893398,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989097516656572,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9990291262135922,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9314469407900366,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9966081162931557,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991038088125467,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 11,
+    "gru_post_hoc_macro_f1": 0.89980536088059,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9985463355542096,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9970926711084191,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991038088125467,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9160062331902658,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9966686856450636,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 12,
+    "gru_post_hoc_macro_f1": 0.925951257411512,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9974560872198668,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999030890369473,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9989544436146378,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9412212857401765,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9929133858267717,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9922471229557843,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9958812840702604,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9962013295346629,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9962013295346629,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9952150211992732,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9963405526512322,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9956315289648623,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 13,
+    "gru_post_hoc_macro_f1": 0.8731917449857907,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987886129618413,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9992531740104555,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.904981067439495,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9970926711084191,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9974560872198668,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.998122350090854,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982076176250934,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 14,
+    "gru_post_hoc_macro_f1": 0.8783684300924008,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978195033313143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9992531740104555,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.8947699922819793,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9977595220313666,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 15,
+    "gru_post_hoc_macro_f1": 0.9139433883357251,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9965475469412477,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9956995760145366,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9990291262135922,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9188262466949287,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9984316654219567,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9987654320987654,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 16,
+    "gru_post_hoc_macro_f1": 0.9038316230753091,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989703210175651,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.998122350090854,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.99932785660941,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.8990665009600036,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9984857662023017,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.99865571321882,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 17,
+    "gru_post_hoc_macro_f1": 0.889307623001721,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9996265870052278,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9095165537854223,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9964264082374319,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9983569828230022,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 18,
+    "gru_post_hoc_macro_f1": 0.9015102290260751,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989703210175651,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9997012696041823,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9148172166277515,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9983646274984858,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9981829194427619,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9998100664767331,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9998100664767331,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9980582524271845,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9998100664767331,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 19,
+    "gru_post_hoc_macro_f1": 0.8864952412821318,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9983646274984858,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992125984251968,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994025392083644,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9103987360318547,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9960629921259843,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9956390066626287,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9977207977207977,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9967898243488794,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9975354742345034,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9984805318138652,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 20,
+    "gru_post_hoc_macro_f1": 0.9106812406700535,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9987886129618413,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9989544436146378,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9175526021264483,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.998122350090854,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 21,
+    "gru_post_hoc_macro_f1": 0.9146861369080873,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997274379164143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9988491823137492,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9981829194427619,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9992531740104555,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9264323741094174,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.997274379164143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9962447001817081,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9975354742345034,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.998670465337132,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 22,
+    "gru_post_hoc_macro_f1": 0.9345037573499672,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9976377952755906,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994772218073189,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.999335232668566,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9435042114417614,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978195033313143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982076176250934,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 23,
+    "gru_post_hoc_macro_f1": 0.8744957864942706,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.999091459721381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9992531740104555,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.8968971618202727,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9968503937007874,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9975772259236826,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9978342046303211,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 24,
+    "gru_post_hoc_macro_f1": 0.9266744022416925,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.997274379164143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9989097516656572,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991038088125467,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9157381380296172,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9970321017565112,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9976983646274985,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969715324046032,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9987303958177745,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 25,
+    "gru_post_hoc_macro_f1": 0.899424271290477,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9991520290732889,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9996201329534663,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994025392083644,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9170779694733441,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9967292549969715,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9972138098122351,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9988603988603989,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9964869775893398,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9978342046303211,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 26,
+    "gru_post_hoc_macro_f1": 0.883939064054208,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978195033313143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9981829194427619,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9992731677771047,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9996265870052278,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9991452991452991,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9113670375421948,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9983040581465779,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 27,
+    "gru_post_hoc_macro_f1": 0.9146728436995214,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9980012113870381,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9991520290732889,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9994772218073189,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9085578040152303,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9978800726832223,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9978195033313143,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9990503323836657,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9980617807389461,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9982823002240478,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9995251661918328,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 28,
+    "gru_post_hoc_macro_f1": 0.9110426879148593,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9963658388855239,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9986674742580255,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9969109630526953,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9991038088125467,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9989553656220322,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9287842755062026,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9977589339794064,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9984857662023017,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9982434887946698,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9999050332383665,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9999050332383665,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.997153240460327,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9988050784167289,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9997150997150998,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  },
+  {
+    "resample": 29,
+    "gru_post_hoc_macro_f1": 0.9200234465059505,
+    "gru_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9975166565717747,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9993337371290127,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9986674742580255,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.99932785660941,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9994301994301994,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      }
+    },
+    "transformer_post_hoc_macro_f1": 0.9463979080808285,
+    "transformer_concepts": {
+      "hand": {
+        "probe_accuracy": 0.9984251968503937,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "foot": {
+        "probe_accuracy": 0.9973349485160509,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "tongue": {
+        "probe_accuracy": 0.9979406420351302,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      },
+      "right_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 1.0,
+          "left_hand": 0.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "left_side": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 0.0,
+          "left_foot": 1.0,
+          "right_foot": 0.0,
+          "tongue": 0.0
+        }
+      },
+      "movement_vs_rest": {
+        "probe_accuracy": 0.9981829194427619,
+        "n_train_examples": 16510,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 1.0
+        }
+      },
+      "limb_vs_orofacial": {
+        "probe_accuracy": 0.9983569828230022,
+        "n_train_examples": 13390,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 1.0,
+          "right_foot": 1.0,
+          "tongue": 0.0
+        }
+      },
+      "upper_vs_lower_limb": {
+        "probe_accuracy": 0.9992402659069326,
+        "n_train_examples": 10530,
+        "scores": {
+          "baseline": 0.0,
+          "left_hand": 1.0,
+          "right_hand": 1.0,
+          "left_foot": 0.0,
+          "right_foot": 0.0,
+          "tongue": 1.0
+        }
+      }
+    }
+  }
+]
