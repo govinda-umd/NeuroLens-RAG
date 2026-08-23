@@ -389,6 +389,65 @@ Full request was: layer-count sweep for GRU/Transformer, full bootstrap-resampli
 
 **SupCon loss, exact formulation (Khosla et al. 2020, "L_out" multi-positive variant)**: for text prototype row $c$ in the $[\text{num\_classes}, B]$ text-to-brain logits, every brain example in the batch with true label $c$ is a positive. Log-softmax taken over the full row (all $B$ brain examples as candidates), averaged only over that row's positive columns, then averaged across classes present in the batch. Combined with the existing brain-to-text cross-entropy, averaged: $\mathcal{L} = \tfrac12[\mathcal{L}_{b2t} + \mathcal{L}_{t2b}]$.
 
+## 11. Full implementation results and fresh resume draft (2026-08-22)
+
+**Supersedes §9's draft v1 below** — that draft used single-split numbers and pre-dates all of this. Kept for history, not for use.
+
+### 11.1 Bootstrap infrastructure and architecture comparison
+
+GRU defaulted to 2 layers (was 1) in `model_builder.py`, closing the GRU/Transformer parameter mismatch from 1.83x to 1.15x. 30 repeated-split bootstraps trained with checkpoints saved (not discarded) for all three cases, all on the *same* 30 subject partitions (`results/case{1,2,3}_bootstrap_30resamples.json` — capped at 30 of an originally-planned 100 for time), enabling paired comparisons rather than eyeballing overlapping CIs.
+
+| Case | GRU mean F1 (95% CI) | Transformer mean F1 (95% CI) | Winner (paired Wilcoxon) |
+|---|---|---|---|
+| 1 (supervised) | 0.906 [0.876, 0.931] | 0.922 [0.902, 0.945] | Transformer, p<0.0001 |
+| 2 (supervised-contrastive) | 0.900 [0.866, 0.927] | 0.918 [0.898, 0.942] | Transformer, p<0.0001 |
+| 3 (self-supervised) | 0.928 [0.903, 0.946] | 0.922 [0.903, 0.944] | GRU, p=0.0004 |
+
+**Real finding**: architecture ranking flips by paradigm — Transformer wins when labels drive training directly (Cases 1, 2), GRU edges ahead in the one paradigm where the model never sees a label during representation learning (Case 3).
+
+### 11.2 Case 2 loss naming correction
+
+`contrastive.py`'s `supcon_*` functions renamed to `multi_positive_*` / `symmetric_multi_positive_prototype_loss` — **not** literal SupCon (Khosla et al. 2020): anchors are the 6 text prototypes, never a brain-to-brain pair (`z_brain` never multiplies `z_brain`). Only the multi-positive averaging trick is borrowed. Also added a literal CLIP-style variant (`clip_loss`/`train_contrastive_clip`, naive in-batch negatives) — surprisingly scored *higher* test macro-F1 (0.9165) than both the original asymmetric baseline (0.9080) and the multi-positive loss (0.9137) on the fixed 100-subject split, contradicting the a-priori false-negative-penalty hypothesis (plausibly because batch size 64 across only 6 classes still leaves the softmax dominated by genuinely-different-class negatives most of the time).
+
+### 11.3 Extended concept set and the systematic 8-concept x 3-case CAV/TCAV comparison
+
+3 new concepts added (`EXTENDED_CONCEPT_DEFINITIONS`), each grounded in real motor anatomy: `movement_vs_rest` (standard task-vs-rest GLM contrast), `limb_vs_orofacial` (corticospinal vs. corticobulbar pathway), `upper_vs_lower_limb` (hand vs. foot, isolated from tongue/baseline). Full sweep: 8 concepts x 3 cases x 2 architectures x 30 resamples = 1,440 model-concept evaluations, ~5 minutes wall-clock, CPU only (`results/all_cases_cav_sweep_8concepts.json`).
+
+| Concept | Case 1 | Case 2, text-derived | Case 3 |
+|---|---|---|---|
+| hand | 1.000 | 0.630±0.31 | 1.000 |
+| foot | 1.000 | 0.707±0.29 | 1.000 |
+| tongue | 1.000 | 0.653±0.35 | 1.000 |
+| right_side | 1.000 | 0.332±0.15 | 1.000 |
+| left_side | 1.000 | 0.325±0.17 | 1.000 |
+| movement_vs_rest | 0.987 | 0.598±0.21 | 0.903 |
+| limb_vs_orofacial | 1.000 | 0.631±0.26 | 0.900 |
+| upper_vs_lower_limb | 1.000 | 0.535±0.27 | 1.000 |
+
+**The headline finding: Case 2's weakness was a derivation-method artifact, not a representation-quality gap.** Confirmed by fitting a logistic-regression probe on Case 2's frozen features via the *exact same method* as Case 1/3 — `case3.py`'s `fit_post_hoc_classifier` reused completely unmodified, since `ContrastiveModel` shares the same `.brain_backbone`/`.brain_projection` attribute names as `BrainHRFModel` (`results/case2_fitted_probe_cav_sweep.json`). Result: probe accuracy 0.997-0.999, TCAV 0.92-1.00 across all 8 concepts — essentially identical to Case 1/3. The mechanism, understood not just observed: MiniLM's sentence embeddings organize primarily around the concrete noun (hand/foot/tongue is the dominant semantic axis), so averaging-and-subtracting to isolate "laterality" (a weak, secondary axis) fights the text space's actual geometry and can flip sign (`right_side`/`left_side` scored 0.33 overall, 0.17-0.21 for Transformer specifically — systematically below chance, not noise), while concepts aligned with the dominant axis (hand/foot/tongue) degrade only moderately.
+
+**Conclusion for the resume**: all three paradigms converge to near-perfectly interpretable representations when evaluated correctly. The interesting result is methodological — CAV-derivation method matters independently of representation quality, and this was caught and diagnosed via a targeted controlled experiment, not assumed — not a paradigm-superiority result.
+
+### 11.4 Corpus-wide literature extraction sweep
+
+879 total chunks in the 8-paper corpus. A broad keyword pre-filter (deliberately wider than the existing 5-concept keyword list, to preserve discovery) admits 432/879 chunks (49.1%) vs. 301/879 (34.2%) for the narrow list — 136 chunks caught only by the broader filter. 3x self-consistency extraction per surviving chunk using the local `mlx-community/Llama-3.2-3B-Instruct-4bit` model (`build_concept_extraction_prompt` — already existing, already query-independent, just never previously run over more than one query's top-k retrieved chunks) — 36 minutes wall-clock for 432x3=1,296 calls (`results/corpus_claim_extraction_sweep.json`).
+
+Result: 58/432 chunks (13.4%) produced a consistent (>=2/3 repeats) claim mapping to a known concept — real per-concept literature-support counts: `right_side`/`left_side`=49 chunk-hits each, `tongue`=30, `hand`=28, `foot`=9 (thinnest support in this corpus). 13 unique unmapped "discovery" phrases surfaced; most are irrelevant noise from the Yeo et al. 2011 resting-state paper, but several from Meier et al. 2008 and Ehrsson et al. 2003 make a real, citable point: motor cortex somatotopy is "blurred, overlapping," with a "core and surround organization," not a clean discrete map — a legitimate reason CAV directions might show partial rather than perfectly clean separation, if ever asked.
+
+### 11.5 Fresh resume draft (2026-08-22, IN PROGRESS)
+
+Purpose-first summary line, correcting an earlier draft that listed 4 system components without saying why they exist together (user feedback: "the purpose is not coming out clearly... it reads like there are four parts, but what are they doing together?").
+
+**Summary**: *Built a system to test whether a brain-decoding model is right for the right reasons — that its accuracy reflects concepts a human would actually recognize, like which body part moved or which side, rather than an unverifiable shortcut — training three different representation-learning approaches on the same task, validating every result across repeated resamples, and checking findings against independent neuroscience literature.*
+
+**Bullets, 1-5 all provisionally accepted this pass** (1-4 map to the summary's 4 clauses; 5 is a genuine additional contribution from this week's extraction-sweep work — open question, not yet resolved: does the summary need a small edit to gesture at it, or does it stand as a bonus beyond the 4-clause summary, matching how BGM ended up with 5 bullets under its own summary):
+
+1. Isolated the effect of training objective from architecture by parameter-matching two backbones (GRU and Transformer, tuned to within 1.15x parameter count) and training each on three deliberately different objectives — a supervised multi-task decoder, a supervised-contrastive aligner, and a self-supervised contrastive co-embedding — so that any difference in how interpretable the resulting representation turned out to be could be attributed to the training objective, not an incidental architecture advantage.
+2. Tested every paradigm's representation against 8 human-recognizable concepts — which body part, which side, movement versus rest — and confirmed all three pass equally well, a result that held up only after catching and correcting a flaw in one paradigm's own test that had initially made it look far weaker than it actually was.
+3. Validated every result across 30 independently retrained subject splits per paradigm rather than a single train/test division, using paired significance tests on those same splits to surface a genuine, non-obvious pattern: which architecture wins depends on the training paradigm, not a fixed ranking — Transformer ahead under both label-driven objectives, GRU ahead under the self-supervised one, every comparison significant (p<0.001).
+4. Checked whether the tested concepts were more than an internally-chosen list by building a literature-verification loop that retrieves relevant neuroscience papers and computes each verdict deterministically in code from the excerpt's stance and the model's own measured concept-sensitivity score — never letting the language model decide the verdict itself, a design forced by a measured failure rather than a hypothetical one: asked to judge agreement freely, the same model defaulted to agreeing regardless of the actual score in 10 of 12 real cases.
+5. Extended the verification loop from checking literature about one decode at a time to mining the entire corpus independently of any prediction, using a keyword pre-filter deliberately broader than the known concept list — preserving 136 chunks a narrower filter would have missed — and requiring each claim to recur across 3 independent extraction passes before trusting it, surfacing real per-concept literature-support counts and confirming the tested concepts were grounded in actual research, not just internally assumed.
+
 ## 9. Resume points — draft v1 (2026-08-18, to revisit after the BGM thesis pass)
 
 Restructured from the existing 7 disconnected bullets into one throughline, per the "reads like ATS keyword stuffing" complaint. Uses current verified numbers (91.8%, not the resume's existing 90.8% — replace wholesale, don't merge).
