@@ -1,0 +1,4067 @@
+[
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-002-part-000",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-003-part-013",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-003-part-014",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-003-part-015",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-003-part-016",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "Toe movements are contralateral to the right hand.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toe movements are contralateral to the right hand.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toe movements are contralateral to the right hand.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-000",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-001",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-009",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-010",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-019",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-023",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-024",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-025",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-026",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-028",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-035",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-036",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-037",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Bilateral activation in extrastriate body areas at occipital temporal borders.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Bilateral activation in extrastriate body areas at occipital temporal borders.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Bilateral activation in extrastriate body areas at occipital temporal borders.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-038",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-039",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-040",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, hand movement is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, hand movement is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, hand movement is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-041",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-042",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Bilateral anterior prefrontal cortex is activated for relational processing.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Bilateral anterior prefrontal cortex is activated for relational processing.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Bilateral anterior prefrontal cortex is activated for relational processing.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-043",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-044",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-059",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-060",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-061",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-062",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-063",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-065",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-069",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-070",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-077",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-078",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-079",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-080",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-082",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-section-004-part-085",
+    "source_file": "1-s2.0-S1053811913005272-main.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-010",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-011-part-002",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-016-part-000",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-016-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-018-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-022-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-022-part-002",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-022-part-003",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-022-part-004",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-002",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-003",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-004",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-006",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-024-part-008",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-025-part-002",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-025-part-003",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-025-part-004",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-027-part-000",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-027-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-030-part-003",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-031-part-000",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-031-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-031-part-002",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-031-part-003",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-section-033-part-001",
+    "source_file": "1-s2.0-S1053811913005351-main.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-009-part-000",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-009-part-001",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-009-part-002",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-009-part-003",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-010-part-003",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-010-part-004",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-010-part-005",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-011-part-000",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-011-part-001",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-012-part-000",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-012-part-002",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Focal brain lesions affect cortical regions overlapping functional connector hubs.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Focal brain lesions affect cortical regions overlapping functional connector hubs.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Focal brain lesions affect cortical regions overlapping functional connector hubs.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-002",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-004",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-005",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-006",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-007",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-008",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-013",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-017",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-section-018-part-018",
+    "source_file": "PIIS1364661313002167.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-003-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-003",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-004",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-006",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-004-part-007",
+    "source_file": "bhx179.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-008-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-008-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-008-part-003",
+    "source_file": "bhx179.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-009",
+    "source_file": "bhx179.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-010",
+    "source_file": "bhx179.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-011",
+    "source_file": "bhx179.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-014-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-014-part-003",
+    "source_file": "bhx179.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-021-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-021-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-028-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-028-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-028-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-031",
+    "source_file": "bhx179.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-032-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-032-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-032-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-035-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-037-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-037-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-038-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-038-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-038-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-038-part-003",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-038-part-004",
+    "source_file": "bhx179.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-039-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-039-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-039-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-039-part-003",
+    "source_file": "bhx179.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-040-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 14,
+    "repeats": [
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "bhx179-section-040-part-001",
+    "source_file": "bhx179.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-040-part-002",
+    "source_file": "bhx179.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-042-part-000",
+    "source_file": "bhx179.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "bhx179-section-043",
+    "source_file": "bhx179.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-002-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "Imagery of hand movements specifically activates the contralateral hand sections of the primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Imagery of hand movements specifically activates the contralateral hand sections of the primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Imagery of hand movements specifically activates the contralateral hand sections of the primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-002-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "Imagery of hand movements activates contralateral hand sections.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Imagery of hand movements activates contralateral hand sections.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Imagery of hand movements activates contralateral hand sections.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-003-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-003-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-003-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "The representation of hand movement is bilateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of hand movement is bilateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of hand movement is bilateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-003-part-003",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-003-part-004",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-005",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-006-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-006-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-007",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-008-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-008-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-003",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-004",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [
+      {
+        "phrase": "Toes representation is bilateral.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toes representation is bilateral.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toes representation is bilateral.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-005",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-006",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-009-part-007",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-010-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The left putamen is bilaterally activated during imagery of toes.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The left putamen is bilaterally activated during imagery of toes.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The left putamen is bilaterally activated during imagery of toes.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-003",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-005",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-011-part-006",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-012",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-013-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-013-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Imagery of finger movement activates caudal cingulate motor area (CMAc).",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Imagery of finger movement activates caudal cingulate motor area (CMAc).",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Imagery of finger movement activates caudal cingulate motor area (CMAc).",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-014-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Finger movement is contralateral to M1, with a rostral premotor cortex section.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement is contralateral to M1, with a rostral premotor cortex section.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement is contralateral to M1, with a rostral premotor cortex section.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-014-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-015",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-016-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 8,
+    "repeats": [
+      {
+        "phrase": "Left precentral gyrus is contralateral to toe movement.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Left precentral gyrus is contralateral to toe movement.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Left precentral gyrus is contralateral to toe movement.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-016-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 8,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but finger representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but finger representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but finger representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-016-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 8,
+    "repeats": [
+      {
+        "phrase": "Finger movement representation is bilateral and contralateral to M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement representation is bilateral and contralateral to M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement representation is bilateral and contralateral to M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-017-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 8,
+    "repeats": [
+      {
+        "phrase": "Toes representation is contralateral, specifically in the left paracentral lobule.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toes representation is contralateral, specifically in the left paracentral lobule.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toes representation is contralateral, specifically in the left paracentral lobule.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-017-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 8,
+    "repeats": [
+      {
+        "phrase": "Toe movement representation is bilateral and specifically active in left SMA and right inferior frontal gyrus.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toe movement representation is bilateral and specifically active in left SMA and right inferior frontal gyrus.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Toe movement representation is bilateral and specifically active in left SMA and right inferior frontal gyrus.",
+        "mapped_concept": [
+          "foot",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-018-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-018-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue movement is bilaterally represented.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue movement is bilaterally represented.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue movement is bilaterally represented.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-019-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but more prominent in left area 4a.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but more prominent in left area 4a.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but more prominent in left area 4a.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-019-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral in area 4a and area 6.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in area 4a and area 6.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in area 4a and area 6.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-019-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-020-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-020-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-021-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Toe movement is more active in the posterior part of the SMA.",
+        "mapped_concept": "foot"
+      },
+      {
+        "phrase": "Toe movement is more active in the posterior part of the SMA.",
+        "mapped_concept": "foot"
+      },
+      {
+        "phrase": "Toe movement is more active in the posterior part of the SMA.",
+        "mapped_concept": "foot"
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-021-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral in M1 and premotor cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in M1 and premotor cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in M1 and premotor cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-021-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Finger movements are specifically represented in the CMAc.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger movements are specifically represented in the CMAc.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger movements are specifically represented in the CMAc.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-021-part-003",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-022-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 10,
+    "repeats": [
+      {
+        "phrase": "Finger representation is contralateral and bilateral in CMAc/SMA.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representation is contralateral and bilateral in CMAc/SMA.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representation is contralateral and bilateral in CMAc/SMA.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-022-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 10,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but toe representation is contralateral.",
+        "mapped_concept": [
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but toe representation is contralateral.",
+        "mapped_concept": [
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but toe representation is contralateral.",
+        "mapped_concept": [
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-022-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 10,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral in the lateral frontal cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in the lateral frontal cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral in the lateral frontal cortex.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-022-part-003",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 10,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-023-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 11,
+    "repeats": [
+      {
+        "phrase": "Motor imagery involves rostral M1 more than caudal M1.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Motor imagery involves rostral M1 more than caudal M1.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Motor imagery involves rostral M1 more than caudal M1.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-023-part-002",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-024-part-000",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-024-part-001",
+    "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-001-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-009",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-016-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-023-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-023-part-003",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-026-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-026-part-001",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-026-part-002",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-029-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 19,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-029-part-001",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 19,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-030-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 20,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-030-part-001",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 20,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-034",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 21,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-035-part-000",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 21,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-035-part-004",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 21,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-035-part-005",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 21,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-section-035-part-010",
+    "source_file": "journal.pcbi.1008943.pdf",
+    "page": 21,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-003-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-003-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-003-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-003-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-003-part-004",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-005-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-005-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-005-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-005-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-005-part-004",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-006-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-007-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-009-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-009-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-010-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-010-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-011",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-012-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-012-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-014-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is ventral, foot representation is dorsal and medial.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is ventral, foot representation is dorsal and medial.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is ventral, foot representation is dorsal and medial.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-014-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-015-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The somatotopic progression is represented from ventral to dorsal, with tongue being the first and foot being the last.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      },
+      {
+        "phrase": "The somatotopic progression is represented from ventral to dorsal, with tongue being the first and foot being the last.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      },
+      {
+        "phrase": "The somatotopic progression is represented from ventral to dorsal, with tongue being the first and foot being the last.",
+        "mapped_concept": [
+          "foot",
+          "tongue"
+        ]
+      }
+    ],
+    "consistent_concept": "foot"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-015-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The hand and wrist have bilateral representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand and wrist have bilateral representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand and wrist have bilateral representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-015-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The representation of the hand is bilateral, with a core hand area bracketed by representations of the wrist and forearm.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of the hand is bilateral, with a core hand area bracketed by representations of the wrist and forearm.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of the hand is bilateral, with a core hand area bracketed by representations of the wrist and forearm.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-015-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "The cortical area emphasizes the movement of the elbow but represents other body parts as well.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The cortical area emphasizes the movement of the elbow but represents other body parts as well.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The cortical area emphasizes the movement of the elbow but represents other body parts as well.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "The representation of finger movement is not exclusive to the central sulcus.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of finger movement is not exclusive to the central sulcus.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of finger movement is not exclusive to the central sulcus.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-004",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "The representation of wrist movement is bilateral and overlapping.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of wrist movement is bilateral and overlapping.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of wrist movement is bilateral and overlapping.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-016-part-005",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "The representation of the fingers is graded into representations of the wrist and forearm.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of the fingers is graded into representations of the wrist and forearm.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of the fingers is graded into representations of the wrist and forearm.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-017-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 6,
+    "repeats": [
+      {
+        "phrase": "The fingers are more emphasized in a central region of the brain.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The fingers are more emphasized in a central region of the brain.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The fingers are more emphasized in a central region of the brain.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-017-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 6,
+    "repeats": [
+      {
+        "phrase": "Finger movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-017-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 6,
+    "repeats": [
+      {
+        "phrase": "Finger representation is not exclusively central, but rather overlapped with arm.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is not exclusively central, but rather overlapped with arm.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is not exclusively central, but rather overlapped with arm.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-018",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "The representation of the hand and arm is core-and-surround.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of the hand and arm is core-and-surround.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The representation of the hand and arm is core-and-surround.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-004",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-005",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-006",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally by wrist and forearm areas.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally by wrist and forearm areas.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally by wrist and forearm areas.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-019-part-007",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-020-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [
+      {
+        "phrase": "The motor cortex has a large-scale somatotopic map of the body, but with some exceptions.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The motor cortex has a large-scale somatotopic map of the body, but with some exceptions.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The motor cortex has a large-scale somatotopic map of the body, but with some exceptions.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-020-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-021-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [
+      {
+        "phrase": "The motor cortex map is highly overlapping, with some degree of overlap among body parts.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The motor cortex map is highly overlapping, with some degree of overlap among body parts.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The motor cortex map is highly overlapping, with some degree of overlap among body parts.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-021-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [
+      {
+        "phrase": "There is no clear somatotopic trend in the motor cortex, contradicting some researchers' claims.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "There is no clear somatotopic trend in the motor cortex, contradicting some researchers' claims.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "There is no clear somatotopic trend in the motor cortex, contradicting some researchers' claims.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-021-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-021-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [
+      {
+        "phrase": "Finger representation is bracketed by arm regions.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is bracketed by arm regions.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is bracketed by arm regions.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-022-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-022-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-023",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-024-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-024-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-024-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-024-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-000",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [
+      {
+        "phrase": "- Motor cortex somatotopy is bilateral (tongue representation).",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "- Motor cortex somatotopy is bilateral (tongue representation).",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "- Motor cortex somatotopy is bilateral (tongue representation).",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-001",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-002",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-003",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-004",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-005",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-006",
+    "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-001-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-001-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-002-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-002-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-002-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-002-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-002-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-003-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-005-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-005-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-007-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-009-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-009-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-009-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-009-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-010",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-012-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-012-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-013-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-014-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-014-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-014-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-015",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-022",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 10,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-024-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 10,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-025-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-025-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 11,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-027-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 12,
+    "repeats": [
+      {
+        "phrase": "Sensory and motor cortices are separated from association cortex.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Sensory and motor cortices are separated from association cortex.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Sensory and motor cortices are separated from association cortex.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-027-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-027-part-006",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-027-part-007",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-027-part-008",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 12,
+    "repeats": [
+      {
+        "phrase": "The hand representation is contralateral to the tongue representation.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral to the tongue representation.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral to the tongue representation.",
+        "mapped_concept": [
+          "hand",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, but weaker than hand and foot.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but weaker than hand and foot.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, but weaker than hand and foot.",
+        "mapped_concept": [
+          "hand",
+          "foot",
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [
+      {
+        "phrase": "The representation of the trunk is more interhemisically correlated than the hand or foot.",
+        "mapped_concept": [
+          "hand",
+          "foot"
+        ]
+      },
+      {
+        "phrase": "The representation of the trunk is more interhemisically correlated than the hand or foot.",
+        "mapped_concept": [
+          "hand",
+          "foot"
+        ]
+      },
+      {
+        "phrase": "The representation of the trunk is more interhemisically correlated than the hand or foot.",
+        "mapped_concept": [
+          "hand",
+          "foot"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-006",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-007",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-008",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-010",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-011",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-014",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-016",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-017",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-018",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-019",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-020",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The hand representation is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-023",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-028-part-025",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 15,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-029",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 22,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-030-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 22,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-030-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 22,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-030-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 22,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-030-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 22,
+    "repeats": [
+      {
+        "phrase": "IPS2: Anterior intraparietal (AIP) representation is contralateral.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "IPS2: Anterior intraparietal (AIP) representation is contralateral.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "IPS2: Anterior intraparietal (AIP) representation is contralateral.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-005",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-008",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-031-part-009",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-032-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 25,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-033-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-033-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-033-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-034-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-034-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-034-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-034-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 26,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-035-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-035-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-005",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-006",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-036-part-007",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-037-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-037-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-037-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-037-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-037-part-005",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-005",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-006",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-007",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-009",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-010",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-011",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-038-part-012",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-039-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 35,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-039-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 35,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-039-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 35,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-039-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 35,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-040-part-000",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 36,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-040-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 36,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-040-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 36,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-041",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-003",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-005",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-006",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-007",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-011",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-012",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-016",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-018",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-021",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-022",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-023",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-024",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-025",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-028",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-046-part-029",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 37,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-047-part-001",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 41,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-047-part-002",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 41,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-047-part-004",
+    "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
+    "page": 41,
+    "repeats": [],
+    "consistent_concept": null
+  }
+]

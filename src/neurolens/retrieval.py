@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from pathlib import Path
 
 import numpy as np
@@ -116,6 +116,128 @@ def ingest_pdf_directory(
     all_chunks: list[TextChunk] = []
     for pdf_path in sorted(pdf_dir.glob("*.pdf")):
         all_chunks.extend(ingest_pdf(pdf_path, chunk_size=chunk_size, overlap=overlap))
+    return all_chunks
+
+
+_HEADER_RE = re.compile(r"^#{1,4}\s+.*$", re.MULTILINE)
+_BACK_MATTER_RE = re.compile(
+    r"^#{1,4}\s*(references|disclosures?|acknowledg(e?ments?)?)\b",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def ingest_pdf_by_section(
+    pdf_path: Path,
+    *,
+    chunk_size: int = DEFAULT_CHUNK_SIZE,
+    overlap: int = DEFAULT_OVERLAP,
+) -> list[TextChunk]:
+    """PDF -> whole-document markdown -> split on section headers, not page
+    boundaries. A markdown header (`#`-`####`, from `pymupdf4llm`'s font-based
+    heading detection) starts a new section; each paper's own section
+    structure (Introduction/Methods/Results/Discussion/...) becomes the
+    chunk boundary instead of an arbitrary page break, so a chunk's
+    provenance is "this came from the Discussion" rather than "this came
+    from page 4."
+
+    Two corrections needed on top of the naive header split, both real and
+    checked against actual output, not assumed:
+    - Reference-list entries in bold render as false-positive headers
+      (`### **Author A, Author B**`) once the References section starts.
+      Everything from the first References/Disclosures/Acknowledgments
+      header onward is cut — it isn't scientific claims text, and letting
+      the naive split continue would fragment it into dozens of
+      one-citation "sections."
+    - A section can run to thousands of words (a full Methods section), far
+      past `all-MiniLM-L6-v2`'s 256-token limit — embedding it whole would
+      silently embed only its first ~256 tokens and drop the rest. Any
+      section longer than `chunk_size` words is re-split with the existing
+      `chunk_words` overlapping-window logic, so section identity is
+      preserved as the primary boundary while chunk size stays embeddable.
+    """
+    page_records = pymupdf4llm.to_markdown(str(pdf_path), page_chunks=True)
+
+    combined_parts: list[str] = []
+    page_boundaries: list[tuple[int, int]] = []
+    offset = 0
+    for record in page_records:
+        cleaned = clean_markdown(record["text"])
+        page_boundaries.append((offset, int(record["metadata"]["page_number"])))
+        combined_parts.append(cleaned)
+        offset += len(cleaned) + 1
+    full_text = "\n".join(combined_parts)
+
+    back_matter = _BACK_MATTER_RE.search(full_text)
+    if back_matter:
+        full_text = full_text[: back_matter.start()]
+
+    def page_for_offset(target: int) -> int:
+        page = page_boundaries[0][1] if page_boundaries else 1
+        for boundary_offset, page_number in page_boundaries:
+            if boundary_offset <= target:
+                page = page_number
+            else:
+                break
+        return page
+
+    headers = list(_HEADER_RE.finditer(full_text))
+    if not headers:
+        spans = [(0, len(full_text))]
+    else:
+        spans = []
+        if headers[0].start() > 0:
+            spans.append((0, headers[0].start()))
+        for i, match in enumerate(headers):
+            end = headers[i + 1].start() if i + 1 < len(headers) else len(full_text)
+            spans.append((match.start(), end))
+
+    source_stem = pdf_path.stem
+    chunks: list[TextChunk] = []
+    for section_index, (start, end) in enumerate(spans):
+        section_text = full_text[start:end].strip()
+        if len(section_text) < 80:
+            continue
+        section_page = page_for_offset(start)
+        words = section_text.split()
+        if len(words) <= chunk_size:
+            chunks.append(
+                TextChunk(
+                    chunk_id=f"{source_stem}-section-{section_index:03d}",
+                    page=section_page,
+                    text=section_text,
+                    start_word=0,
+                    end_word=len(words),
+                    source_file=pdf_path.name,
+                )
+            )
+        else:
+            sub_chunks = chunk_words(
+                section_text,
+                page=section_page,
+                source_file=pdf_path.name,
+                chunk_size=chunk_size,
+                overlap=overlap,
+            )
+            for sub_index, sub_chunk in enumerate(sub_chunks):
+                chunks.append(
+                    replace(
+                        sub_chunk,
+                        chunk_id=f"{source_stem}-section-{section_index:03d}-part-{sub_index:03d}",
+                    )
+                )
+    return chunks
+
+
+def ingest_pdf_directory_by_section(
+    pdf_dir: Path,
+    *,
+    chunk_size: int = DEFAULT_CHUNK_SIZE,
+    overlap: int = DEFAULT_OVERLAP,
+) -> list[TextChunk]:
+    """Section-based analog of `ingest_pdf_directory`."""
+    all_chunks: list[TextChunk] = []
+    for pdf_path in sorted(pdf_dir.glob("*.pdf")):
+        all_chunks.extend(ingest_pdf_by_section(pdf_path, chunk_size=chunk_size, overlap=overlap))
     return all_chunks
 
 
