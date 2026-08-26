@@ -89,7 +89,8 @@ def main() -> None:
     for i, (claim_text, extracted_concept) in enumerate(claims):
         t0 = time.time()
         concept_weights = v2.soft_concept_mapping(claim_text, embedding_model)
-        ranked = v2.combined_tcav_by_representation(concept_weights, lookup)
+        ranked = v2.representation_rank_bootstrap(concept_weights, lookup)
+        finding = v2.interpret_representation_ranking(ranked)
         winner_row = ranked.iloc[0]
         case, arch = winner_row["case"], winner_row["arch"]
         dominant_concept = max(concept_weights, key=concept_weights.get)
@@ -134,7 +135,10 @@ def main() -> None:
                 "concept_weight": concept_weights[dominant_concept],
                 "winning_case": case,
                 "winning_arch": arch,
-                "combined_tcav_30resamples": float(winner_row["combined_tcav"]),
+                "combined_tcav_30resamples": float(winner_row["mean_combined_tcav"]),
+                "p_rank1": float(winner_row["p_rank1"]),
+                "frac_ties_at_max": float(winner_row["frac_ties_at_max"]),
+                "representation_finding": finding,
                 "cav_probe_accuracy": cav["probe_accuracy"],
                 "tcav_this_resample": this_tcav,
                 "consensus_network": rsn["consensus_network"],
