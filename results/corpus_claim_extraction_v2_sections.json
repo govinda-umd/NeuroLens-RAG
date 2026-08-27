@@ -1045,6 +1045,1531 @@
     "consistent_concept": null
   },
   {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-004-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "Movement representations of four limbs are interlinked throughout PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Movement representations of four limbs are interlinked throughout PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Movement representations of four limbs are interlinked throughout PCG.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-004-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-005-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-005-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "Whole-body movement representation is bilateral and intermixed across PCG.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Whole-body movement representation is bilateral and intermixed across PCG.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Whole-body movement representation is bilateral and intermixed across PCG.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-005-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-006-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 3,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-006-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 3,
+    "repeats": [
+      {
+        "phrase": "Ventral PCG prefers orofacial movements, while dorsal PCG prefers arm movements.",
+        "mapped_concept": "tongue"
+      },
+      {
+        "phrase": "Ventral PCG prefers orofacial movements, while dorsal PCG prefers arm movements.",
+        "mapped_concept": "tongue"
+      },
+      {
+        "phrase": "Ventral PCG prefers orofacial movements, while dorsal PCG prefers arm movements.",
+        "mapped_concept": "tongue"
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-006-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 3,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral, with orofacial movements also activated.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, with orofacial movements also activated.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral, with orofacial movements also activated.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-007-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 5,
+    "repeats": [
+      {
+        "phrase": "The whole body is represented in a movement-specific way throughout PCG, with different emphases depending on location.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The whole body is represented in a movement-specific way throughout PCG, with different emphases depending on location.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "The whole body is represented in a movement-specific way throughout PCG, with different emphases depending on location.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-007-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 5,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-008-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-008-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-008-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-008-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 6,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-009-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Inter-limb neural correlations linking all four limbs are a general feature.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Inter-limb neural correlations linking all four limbs are a general feature.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Inter-limb neural correlations linking all four limbs are a general feature.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-009-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 7,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-009-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "The dorsal arrays show a clear \"laterality dimension\" for right arm representation.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The dorsal arrays show a clear \"laterality dimension\" for right arm representation.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The dorsal arrays show a clear \"laterality dimension\" for right arm representation.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-009-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 7,
+    "repeats": [
+      {
+        "phrase": "Left arm representation is contralateral to right arm.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Left arm representation is contralateral to right arm.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Left arm representation is contralateral to right arm.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-010-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-010-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 9,
+    "repeats": [
+      {
+        "phrase": "Limb-independent whole-body representations are present throughout PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Limb-independent whole-body representations are present throughout PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Limb-independent whole-body representations are present throughout PCG.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-010-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-010-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-010-part-004",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 9,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-004",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-005",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-006",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-007",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-008",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-009",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-017-part-010",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 13,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-018-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-018-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-018-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "Dorsal PCG has a clear \"laterality dimension\" for right and left arms.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Dorsal PCG has a clear \"laterality dimension\" for right and left arms.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Dorsal PCG has a clear \"laterality dimension\" for right and left arms.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-018-part-004",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "More segregated body representations in the central sulcus compared to the crest of PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "More segregated body representations in the central sulcus compared to the crest of PCG.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "More segregated body representations in the central sulcus compared to the crest of PCG.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-020",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 24,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [
+      {
+        "phrase": "T5 and T11 have bilateral hand representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "T5 and T11 have bilateral hand representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "T5 and T11 have bilateral hand representation.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [
+      {
+        "phrase": "T12 has bilateral representation of the tongue.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "T12 has bilateral representation of the tongue.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "T12 has bilateral representation of the tongue.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-004",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-005",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-006",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-024-part-007",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 25,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-025-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 27,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-030-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 30,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-032-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 31,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-032-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 31,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-032-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 31,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-032-part-003",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 31,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-033-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-033-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-033-part-002",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 32,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-037",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 34,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-038",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 34,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-039-part-000",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 34,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-section-039-part-001",
+    "source_file": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
+    "page": 34,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-001-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-001-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [
+      {
+        "phrase": "Individual fingers have mirrored, column-like representations in primary motor cortex.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Individual fingers have mirrored, column-like representations in primary motor cortex.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Individual fingers have mirrored, column-like representations in primary motor cortex.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-002-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-002-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-002-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-002-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 1,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "The representation of digits in S1 is bilateral, with a linear arrangement.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of digits in S1 is bilateral, with a linear arrangement.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of digits in S1 is bilateral, with a linear arrangement.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "The primary motor cortex has multiple finger representations, mirrored and smaller.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has multiple finger representations, mirrored and smaller.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has multiple finger representations, mirrored and smaller.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-005",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "Grasping and retraction preferences are bilateral in the primary sensory cortex.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Grasping and retraction preferences are bilateral in the primary sensory cortex.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Grasping and retraction preferences are bilateral in the primary sensory cortex.",
+        "mapped_concept": [
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "right_side"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-006",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-004-part-007",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 2,
+    "repeats": [
+      {
+        "phrase": "Digit representations in sensory cortex are stronger for grasping than retraction.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Digit representations in sensory cortex are stronger for grasping than retraction.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Digit representations in sensory cortex are stronger for grasping than retraction.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "Finger representations are bilateral and mirrored in M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral and mirrored in M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral and mirrored in M1.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "Finger representations are bilateral and similar across cortical depths.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral and similar across cortical depths.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral and similar across cortical depths.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-005",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The primary motor cortex has multiple representations of individual fingers.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has multiple representations of individual fingers.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The primary motor cortex has multiple representations of individual fingers.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-006",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-007",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-008",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-009",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-010",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-011",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "Finger representation is not completely separated from BA4a.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is not completely separated from BA4a.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "Finger representation is not completely separated from BA4a.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-012",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [
+      {
+        "phrase": "The representation of individual fingers is bilaterally mirrored along the lateral-medial axis of primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of individual fingers is bilaterally mirrored along the lateral-medial axis of primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The representation of individual fingers is bilaterally mirrored along the lateral-medial axis of primary motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-013",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-005-part-014",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 4,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-006",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-005",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-006",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-007",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-008",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-009",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-010",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-010-part-011",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 8,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-012",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-013",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-014-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-014-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-014-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-015-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-015-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-015-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 12,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-016-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-019",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-020-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-020-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-020-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-020-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [
+      {
+        "phrase": "Finger representations are bilateral in the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral in the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Finger representations are bilateral in the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-020-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 14,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-022-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-022-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-023",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-000",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-001",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "Tongue representation is bilateral.",
+        "mapped_concept": [
+          "tongue",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "tongue"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-002",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "The motor cortex representation of the hand is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The motor cortex representation of the hand is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "The motor cortex representation of the hand is contralateral.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-003",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-004",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "Deeper layers show less overlap of body parts than upper layers.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Deeper layers show less overlap of body parts than upper layers.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "Deeper layers show less overlap of body parts than upper layers.",
+        "mapped_concept": null
+      }
+    ],
+    "consistent_concept": null
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-005",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [
+      {
+        "phrase": "The left hand is represented in the right sensorimotor cortex.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The left hand is represented in the right sensorimotor cortex.",
+        "mapped_concept": "hand"
+      },
+      {
+        "phrase": "The left hand is represented in the right sensorimotor cortex.",
+        "mapped_concept": "hand"
+      }
+    ],
+    "consistent_concept": "hand"
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-section-024-part-006",
+    "source_file": "biorxiv-457002-digit-representations.pdf",
+    "page": 17,
+    "repeats": [],
+    "consistent_concept": null
+  },
+  {
     "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-001",
     "source_file": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "page": 1,
@@ -1230,7 +2755,7 @@
     "page": 3,
     "repeats": [
       {
-        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "phrase": "Tongue representation is bilateral, but specific areas are activated differently.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -1238,7 +2763,7 @@
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "phrase": "Tongue representation is bilateral, but specific areas are activated differently.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -1246,7 +2771,7 @@
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, but specific areas vary by movement type.",
+        "phrase": "Tongue representation is bilateral, but specific areas are activated differently.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -1817,37 +3342,31 @@
     "page": 9,
     "repeats": [
       {
-        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "phrase": "Tongue representation is bilateral, but not contralateral.",
         "mapped_concept": [
-          "hand",
-          "foot",
           "tongue",
           "right_side",
           "left_side"
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "phrase": "Tongue representation is bilateral, but not contralateral.",
         "mapped_concept": [
-          "hand",
-          "foot",
           "tongue",
           "right_side",
           "left_side"
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, but no claim about hand or toe sides.",
+        "phrase": "Tongue representation is bilateral, but not contralateral.",
         "mapped_concept": [
-          "hand",
-          "foot",
           "tongue",
           "right_side",
           "left_side"
         ]
       }
     ],
-    "consistent_concept": "hand"
+    "consistent_concept": "tongue"
   },
   {
     "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-section-020-part-001",
@@ -3009,8 +4528,33 @@
     "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-003",
     "source_file": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "page": 12,
-    "repeats": [],
-    "consistent_concept": null
+    "repeats": [
+      {
+        "phrase": "- Hand movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "- Hand movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      },
+      {
+        "phrase": "- Hand movement is contralateral to the motor cortex.",
+        "mapped_concept": [
+          "hand",
+          "right_side",
+          "left_side"
+        ]
+      }
+    ],
+    "consistent_concept": "hand"
   },
   {
     "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-section-027-part-004",
@@ -3473,7 +5017,7 @@
     "page": 15,
     "repeats": [
       {
-        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "phrase": "Tongue representation is bilateral, with strongest interhemispheric correlation.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -3481,7 +5025,7 @@
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "phrase": "Tongue representation is bilateral, with strongest interhemispheric correlation.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -3489,7 +5033,7 @@
         ]
       },
       {
-        "phrase": "Tongue representation is bilateral, strongest interhemispheric correlation.",
+        "phrase": "Tongue representation is bilateral, with strongest interhemispheric correlation.",
         "mapped_concept": [
           "tongue",
           "right_side",
@@ -4054,7 +5598,20 @@
     "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-section-047-part-002",
     "source_file": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
     "page": 41,
-    "repeats": [],
+    "repeats": [
+      {
+        "phrase": "- Parietal inputs are largely segregated between dorsal and ventral premotor areas.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "- Parietal inputs are largely segregated between dorsal and ventral premotor areas.",
+        "mapped_concept": null
+      },
+      {
+        "phrase": "- Parietal inputs are largely segregated between dorsal and ventral premotor areas.",
+        "mapped_concept": null
+      }
+    ],
     "consistent_concept": null
   },
   {
