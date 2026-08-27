@@ -35,7 +35,10 @@ htmlcov/
 *.pem
 
 # Raw and processed datasets
-data/raw/
+data/raw/*
+!data/raw/hcp_movie_watching/
+data/raw/hcp_movie_watching/*
+!data/raw/hcp_movie_watching/README.md
 data/interim/
 data/processed/
 data/external/
