@@ -464,6 +464,51 @@ def quote_is_grounded(quote: str | None, excerpt_text: str, min_word_overlap: fl
     return overlap >= min_word_overlap
 
 
+# Found by inspecting the 2026-08-27 expanded-corpus sweep: grounding
+# (quote_is_grounded) verifies a cited quote is REAL text from the
+# excerpt, but not that it's actually ON-TOPIC for the specific claim.
+# Concrete failure caught: for "The hand representation is contralateral"
+# (a laterality claim), the LLM cited a real, verbatim quote about hand
+# representation existing in area BA4p -- topically about hand/finger
+# subdivision, saying nothing about which hemisphere. Grounded, still
+# wrong. ~8-9 of 70 claims in that sweep showed this pattern. Fixed here
+# with a second, independent deterministic gate: if the claim asserts
+# something on one of these axes (contains an axis keyword), the quote
+# must contain a keyword from THE SAME axis, not just any real text.
+AXIS_KEYWORDS: dict[str, list[str]] = {
+    "laterality": [
+        "contralateral", "ipsilateral", "bilateral", "unilateral", "lateraliz",
+        "lateral", "hemispher", "interhemispher", "left side", "right side",
+        "left hemisphere", "right hemisphere",
+    ],
+    "effector": ["hand", "finger", "digit", "wrist", "arm", "foot", "feet", "toe", "tongue", "orofacial", "lingual"],
+    "organization": ["somatotop", "overlap", "core and surround", "gradient", "mosaic", "topograph", "homuncul"],
+}
+
+
+def claim_axes(text: str) -> set[str]:
+    text_lower = text.lower()
+    return {axis for axis, keywords in AXIS_KEYWORDS.items() if any(kw in text_lower for kw in keywords)}
+
+
+def quote_addresses_claim_axes(claim_or_query_text: str, quote: str | None) -> bool:
+    """True if there's nothing specific to check (claim hits no known
+    axis) or if the quote covers EVERY axis the claim asserts -- not just
+    one of several. Intersection alone is too lenient: a claim asserting
+    both an effector ("hand") and laterality ("contralateral") would
+    wrongly pass against a quote that only addresses the effector, which
+    is exactly the failure this was built to catch (the BA4p quote
+    mentions "hand"/"fingers" but nothing about laterality). Full
+    coverage is required; a claim hitting no known axis has nothing
+    specific to check and passes through unchanged."""
+    if not quote:
+        return False
+    required_axes = claim_axes(claim_or_query_text)
+    if not required_axes:
+        return True
+    return required_axes.issubset(claim_axes(quote))
+
+
 def compute_stance(
     query_text: str, excerpt_text: str, rerank_score: float, generate_fn
 ) -> dict:
@@ -489,6 +534,9 @@ def compute_stance(
 
     if stance in ("SUPPORTS", "CONTRADICTS") and not quote_is_grounded(quote, excerpt_text):
         return {"stance": "UNRELATED", "quote": quote, "phrase": phrase, "gate": "quote_not_grounded"}
+
+    if stance in ("SUPPORTS", "CONTRADICTS") and not quote_addresses_claim_axes(query_text, quote):
+        return {"stance": "UNRELATED", "quote": quote, "phrase": phrase, "gate": "quote_off_topic"}
 
     return {"stance": stance, "quote": quote, "phrase": phrase, "gate": "llm_grounded"}
 
