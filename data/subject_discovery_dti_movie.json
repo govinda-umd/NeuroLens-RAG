@@ -1,0 +1,452 @@
+[
+  {
+    "subject_id": "100206",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "100408",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "100610",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "101006",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "101107",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "101309",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "101410",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "101915",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "102109",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "102311",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "102513",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "102614",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "102715",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103010",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103111",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103212",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103414",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103515",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "103818",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "104012",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "104416",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "104820",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "105014",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "105115",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "105216",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "105620",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "105923",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "106016",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "106319",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "106521",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "106824",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "107018",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "107220",
+    "has_dti": false,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "107321",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "107422",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "107725",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "108020",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "108121",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "108525",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "108828",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "109123",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "109325",
+    "has_dti": false,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "109830",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "110007",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "110411",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "111009",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "111211",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "111312",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "111413",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "111514",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "111716",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "112112",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "112314",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "112516",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "112819",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "112920",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "113215",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "113316",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "113417",
+    "has_dti": false,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "113821",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "113922",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "114116",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "114217",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "114419",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "114621",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "114823",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "114924",
+    "has_dti": false,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "115017",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "115219",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "115320",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "115825",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "116221",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "116423",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "116524",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "116726",
+    "has_dti": true,
+    "has_movie_7t": true
+  },
+  {
+    "subject_id": "117021",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "117122",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "117324",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "117728",
+    "has_dti": false,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "117930",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118023",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118124",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118528",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118730",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118831",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "118932",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "119025",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "119126",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "119732",
+    "has_dti": true,
+    "has_movie_7t": false
+  },
+  {
+    "subject_id": "119833",
+    "has_dti": true,
+    "has_movie_7t": false
+  }
+]

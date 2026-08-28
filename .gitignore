@@ -34,18 +34,26 @@ htmlcov/
 .aws/
 *.pem
 
-# Raw and processed datasets
-data/raw/*
-!data/raw/hcp_movie_watching/
-data/raw/hcp_movie_watching/*
-!data/raw/hcp_movie_watching/README.md
-data/interim/
+# Raw and processed datasets. data/papers/ and data/processed/ are the
+# CURRENT motor-task locations, not yet migrated to data/motor/... (see
+# docs/repo-restructuring-plan.md Sec 3 -- deliberately deferred). data/movie/
+# and data/structural/ are the new, low-risk skeleton for the planned
+# extensions -- empty except for READMEs until real data lands.
 data/processed/
-data/external/
-
-# Local papers
 data/papers/*
 !data/papers/README.md
+
+data/movie/raw/*
+!data/movie/raw/README.md
+data/movie/processed/
+data/movie/papers/*
+!data/movie/papers/README.md
+
+data/structural/raw/
+data/structural/processed/
+
+data/interim/
+data/external/
 
 # Generated retrieval indexes
 artifacts/
