@@ -1,0 +1,154 @@
+[
+  {
+    "resample": 0,
+    "flatten_mlp_n_params": 1230347,
+    "flatten_mlp_test_macro_f1": 0.8850166241215635,
+    "meanpool_mlp_n_params": 39947,
+    "meanpool_mlp_test_macro_f1": 0.6481371713105832
+  },
+  {
+    "resample": 1,
+    "flatten_mlp_test_macro_f1": 0.9295665069362355,
+    "meanpool_mlp_test_macro_f1": 0.683956912451003
+  },
+  {
+    "resample": 2,
+    "flatten_mlp_test_macro_f1": 0.9060167734907493,
+    "meanpool_mlp_test_macro_f1": 0.6553880799501769
+  },
+  {
+    "resample": 3,
+    "flatten_mlp_test_macro_f1": 0.8979097696661175,
+    "meanpool_mlp_test_macro_f1": 0.6517123492432911
+  },
+  {
+    "resample": 4,
+    "flatten_mlp_test_macro_f1": 0.9119523465086896,
+    "meanpool_mlp_test_macro_f1": 0.6827086692365166
+  },
+  {
+    "resample": 5,
+    "flatten_mlp_test_macro_f1": 0.892086903229241,
+    "meanpool_mlp_test_macro_f1": 0.6427080244955808
+  },
+  {
+    "resample": 6,
+    "flatten_mlp_test_macro_f1": 0.9018570358710032,
+    "meanpool_mlp_test_macro_f1": 0.6579087192943183
+  },
+  {
+    "resample": 7,
+    "flatten_mlp_test_macro_f1": 0.8723983808419052,
+    "meanpool_mlp_test_macro_f1": 0.6115545629706022
+  },
+  {
+    "resample": 8,
+    "flatten_mlp_test_macro_f1": 0.9211583158313256,
+    "meanpool_mlp_test_macro_f1": 0.6813293326386427
+  },
+  {
+    "resample": 9,
+    "flatten_mlp_test_macro_f1": 0.9108344602039696,
+    "meanpool_mlp_test_macro_f1": 0.666909927238851
+  },
+  {
+    "resample": 10,
+    "flatten_mlp_test_macro_f1": 0.927648762844933,
+    "meanpool_mlp_test_macro_f1": 0.6626050999444698
+  },
+  {
+    "resample": 11,
+    "flatten_mlp_test_macro_f1": 0.8991305150931681,
+    "meanpool_mlp_test_macro_f1": 0.6200098086792845
+  },
+  {
+    "resample": 12,
+    "flatten_mlp_test_macro_f1": 0.9369690909171818,
+    "meanpool_mlp_test_macro_f1": 0.6955505906060392
+  },
+  {
+    "resample": 13,
+    "flatten_mlp_test_macro_f1": 0.8853060731555916,
+    "meanpool_mlp_test_macro_f1": 0.6305444081959634
+  },
+  {
+    "resample": 14,
+    "flatten_mlp_test_macro_f1": 0.8854233262288339,
+    "meanpool_mlp_test_macro_f1": 0.6315732761105304
+  },
+  {
+    "resample": 15,
+    "flatten_mlp_test_macro_f1": 0.9148999027091431,
+    "meanpool_mlp_test_macro_f1": 0.6491283242163379
+  },
+  {
+    "resample": 16,
+    "flatten_mlp_test_macro_f1": 0.8998905675470285,
+    "meanpool_mlp_test_macro_f1": 0.6178432633087804
+  },
+  {
+    "resample": 17,
+    "flatten_mlp_test_macro_f1": 0.9071509088268478,
+    "meanpool_mlp_test_macro_f1": 0.6510544886573288
+  },
+  {
+    "resample": 18,
+    "flatten_mlp_test_macro_f1": 0.9123167048747983,
+    "meanpool_mlp_test_macro_f1": 0.6647842720266096
+  },
+  {
+    "resample": 19,
+    "flatten_mlp_test_macro_f1": 0.9029761212427251,
+    "meanpool_mlp_test_macro_f1": 0.6345471954993983
+  },
+  {
+    "resample": 20,
+    "flatten_mlp_test_macro_f1": 0.9014807685821554,
+    "meanpool_mlp_test_macro_f1": 0.6634276553925321
+  },
+  {
+    "resample": 21,
+    "flatten_mlp_test_macro_f1": 0.9064954615897699,
+    "meanpool_mlp_test_macro_f1": 0.6528115491885557
+  },
+  {
+    "resample": 22,
+    "flatten_mlp_test_macro_f1": 0.9315445373584779,
+    "meanpool_mlp_test_macro_f1": 0.6825155837443188
+  },
+  {
+    "resample": 23,
+    "flatten_mlp_test_macro_f1": 0.9047153222284351,
+    "meanpool_mlp_test_macro_f1": 0.6265889304378561
+  },
+  {
+    "resample": 24,
+    "flatten_mlp_test_macro_f1": 0.9158795459683047,
+    "meanpool_mlp_test_macro_f1": 0.668633019482478
+  },
+  {
+    "resample": 25,
+    "flatten_mlp_test_macro_f1": 0.8986518324050641,
+    "meanpool_mlp_test_macro_f1": 0.6402299475873555
+  },
+  {
+    "resample": 26,
+    "flatten_mlp_test_macro_f1": 0.8993738273057076,
+    "meanpool_mlp_test_macro_f1": 0.6524817443113168
+  },
+  {
+    "resample": 27,
+    "flatten_mlp_test_macro_f1": 0.9030982167068372,
+    "meanpool_mlp_test_macro_f1": 0.6378673475449247
+  },
+  {
+    "resample": 28,
+    "flatten_mlp_test_macro_f1": 0.9234546598300487,
+    "meanpool_mlp_test_macro_f1": 0.6556027936643845
+  },
+  {
+    "resample": 29,
+    "flatten_mlp_test_macro_f1": 0.9269667332243263,
+    "meanpool_mlp_test_macro_f1": 0.693365684851266
+  }
+]

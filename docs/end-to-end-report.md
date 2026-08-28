@@ -35,6 +35,24 @@ Same two backbones (GRU, Transformer; parameter-matched to 1.15× after a fix �
 
 Transformer wins whenever a label drives training directly; GRU edges ahead in the one paradigm that never sees a label. This supersedes an earlier, smaller-scale claim that "Transformer always beats GRU" — that held at single-split scale but doesn't survive the population-level, paired comparison.
 
+### 3.2 Is a learned sequence representation even necessary? A baseline check (2026-08-27)
+
+Before extending this system to new datasets, a more basic question: is the classes' separability coming from *learned temporal structure* at all, or is it already sitting in the raw window, accessible to any generic function approximator? Two baselines (`baseline_mlp.py`), same forward-features interface as GRU/Transformer so they plug into the identical training harness and share Case 1's exact 30 resamples for a directly paired comparison:
+
+- **FlattenMLP**: the whole 32×300 window flattened to one 9,600-d vector → a single hidden layer → classifier. Keeps every raw value; "time" is just "which flat index."
+- **MeanPoolMLP**: the window averaged over time to one 300-d vector → a single hidden layer → classifier. Keeps only the spatial (per-ROI) pattern, discards temporal dynamics entirely.
+
+| Model | Mean F1 (95% CI) | Params | vs. GRU (paired Wilcoxon) | vs. Transformer (paired Wilcoxon) |
+|---|---|---|---|---|
+| GRU | 0.906 [0.876, 0.931] | 166,539 | — | — |
+| Transformer | 0.922 [0.902, 0.945] | 304,907 | — | — |
+| FlattenMLP | 0.907 [0.882, 0.933] | 1,230,347 | p=0.73 (not significant) | p<0.0001 (Transformer wins) |
+| MeanPoolMLP | 0.654 [0.616, 0.694] | 39,947 | p<0.0001 (GRU wins) | p<0.0001 (Transformer wins) |
+
+**The honest answer, and it's more nuanced than "yes" or "no":** a plain MLP with *zero* learned temporal structure is statistically indistinguishable from GRU (p=0.73) once it's given the full, un-destroyed window — GRU's recurrence isn't demonstrably buying anything over handing all the raw values to a generic function approximator, at least on this task. But the Transformer significantly outperforms that same flat MLP (p<0.0001) *despite having 4× fewer parameters than it* — real evidence that self-attention is doing something a naive aggregation structurally can't, not just adding capacity. And destroying temporal order entirely (mean-pooling) costs ~25 points and is significant in the other direction — so temporal information within the window clearly matters, GRU's specific way of encoding it just isn't the thing making the difference.
+
+**What this changes about how to read the whole project**: Case 1's GRU-vs-Transformer comparison (§3.1) isn't "does sequence modeling help" — a flat MLP already answers that partially (temporal information matters, mean-pooling proves it). It's closer to "does *attention specifically* find structure that recurrence and raw aggregation both miss" — a sharper, more specific claim than the one usually being made. Worth checking on Case 2/3 too before treating this as motor-classification-general; not yet done.
+
 ## 4. Interpretability: does the representation depend on the concept, not just correlate with it
 
 CAV/TCAV (Kim et al. 2018), the mechanism: (1) define a concept via labeled positive/negative examples; (2) fit a linear probe on the model's pooled representation — the probe's normalized weight vector is the Concept Activation Vector; (3) take held-out examples of the target class, compute the gradient of that class's logit w.r.t. the representation, and dot it with the CAV direction; (4) TCAV score = the fraction of held-out examples where that directional derivative is positive. This is a genuine local sensitivity measure within the model's own function — stronger than correlation, not the same epistemic strength as a real intervention.
@@ -116,4 +134,5 @@ Unanimous on every concept, similarity never below 0.994.
 - **The corpus is small** (8 papers). Every retrieval and stance-grounding result is bounded by this; a query-refinement experiment in v1 hit a ceiling specifically attributable to corpus size.
 - **§7's results are conditioned on the MOTOR task's clean block structure** — this is a stated hypothesis, not yet stress-tested. `data/raw/hcp_movie_watching/` is reserved for a planned second HCP dataset (continuous, naturalistic) specifically to test whether the convergence in §7 survives a messier task.
 - **The 100→200 subject scale-up is complete at the data level but never re-validated** under the current 30-resample protocol.
+- **The §3.2 baseline check is Case 1 only.** Whether Case 2/3's contrastive/self-supervised representations similarly fail to beat a flat-MLP baseline (or whether the objective itself is what makes GRU/Transformer's structure matter there) hasn't been tested.
 - **The Case 1 vs. Case 3 attribution comparison in §7.2 uses resample 0 for the four §6 pipeline steps that need a concrete model (not the population-level TCAV parts), while §7.2 itself is averaged over all 30** — the two analyses use different amounts of the available population by design (§6's per-claim pipeline needs one concrete representation to run retrieval/stance/verdict against; §7.2 is a standalone population-level check), not an oversight, but worth stating plainly rather than letting the two "30 resamples" claims blur together.
