@@ -16,11 +16,11 @@ Confirmed file listing for one subject (`100307`):
 | `grad_dev.nii.gz` | 40 MB | Gradient nonlinearity correction field |
 | `eddylogs/*` | ~1.3 MB | Eddy-correction QC logs |
 
-**~1.3 GB per subject just for the diffusion volume.** For the 85 of the current 90 subjects confirmed to have DTI data (`data/subject_discovery_dti_movie.json`), that's **~110 GB** to download in full before any tractography — the single largest cost in this plan, worth sizing explicitly before committing rather than discovering it mid-download.
+**~1.3 GB per subject just for the diffusion volume.** For the 179-subject triple-modality-eligible cohort (§2, `docs/movie/movie-watching-dataset-plan.md` §3) — the pool this pipeline should actually target, all of whom have DTI — that's **~233 GB** to download in full before any tractography — the single largest cost in this plan, worth sizing explicitly before committing rather than discovering it mid-download.
 
 ## 2. Subject availability, checked directly, not estimated
 
-85 of the current 90-subject MOTOR pool have complete diffusion data (94%) — confirmed 2026-08-27 alongside the movie-watching discovery scan (`data/subject_discovery_dti_movie.json`), consistent with the earlier, broader scan reported in project memory (958 of 1,013 candidates, 95%). DTI availability is high and not a limiting factor the way 7T movie-watching eligibility is (`docs/movie/movie-watching-dataset-plan.md` §3) — this pipeline can essentially reuse the entire existing MOTOR subject pool.
+85 of the current 90-subject MOTOR pool have complete diffusion data (94%). The full 1,113-subject HCP-YA discovery scan (`scripts/run_full_hcp_discovery_scan.py`, `data/hcp_full_discovery_scan.json`, 2026-08-27) confirms this generalizes: 1,065/1,113 (96%) have DTI HCP-YA-wide. DTI availability is high and not a limiting factor the way 7T movie-watching eligibility is (`docs/movie/movie-watching-dataset-plan.md` §3) — every one of the 179 subjects identified there as eligible for all three modalities (`data/hcp_triple_modality_eligible_subjects.json`) already has DTI, so this pipeline's subject pool is really set by that 179, not by DTI availability itself.
 
 ## 3. Proposed pipeline: diffusion volume → tractography → Schaefer-300 structural connectome
 

@@ -26,20 +26,19 @@ Confirmed by direct listing: subject `100307` (already in the current MOTOR pool
 
 ## 3. Subject overlap with the current pool — checked directly, and it's small
 
-The current 90-subject bootstrap pool (`results/case1_bootstrap_100resamples.json`) was selected for 3T MOTOR-task completeness, with no consideration of 7T eligibility. Real discovery scan against exactly these 90 subjects (`data/subject_discovery_dti_movie.json`, run 2026-08-27):
+**Resolved by searching from the other direction, per the recommendation this section originally made.** Checking the current 90-subject pool for rare 7T eligibility found only 11/90 (12%) — close to the worst-case search order, since 7T eligibility (184/1,113 subjects HCP-YA-wide) is rare in *any* arbitrary subset. Reversing the search — full HCP-YA discovery scan, all 1,113 subjects, 2 S3 calls each (`scripts/run_full_hcp_discovery_scan.py`, `data/hcp_full_discovery_scan.{json,csv}`, run 2026-08-27) — gives a completely different picture:
 
-| | Count | % of the 90 |
+| | Count | % of 1,113 |
 |---|---|---|
-| Have diffusion/DTI data | 85 | 94% |
-| Have 7T movie-watching data | **11** | **12%** |
-| Have both | 11 | 12% |
+| Have DTI | 1,065 | 96% |
+| Have MOTOR | 1,086 | 98% |
+| Have 7T movie-watching | 184 | 17% |
+| **DTI + MOTOR + 7T movie, all three** | **179** | **16%** |
+| DTI + movie + all 7 standard tasks (full battery) | 174 | 16% |
 
-**7T eligibility is genuinely rare in this pool, confirming the concern in §2 rather than an assumption.** 11 subjects is too few to bootstrap the way MOTOR's 30-resample studies do. Two paths forward, not yet decided between:
+**179 subjects qualify for a genuine within-subject three-modality comparison — 179/184 (97%) of every 7T-movie-eligible subject also has DTI and MOTOR.** 7T eligibility, not DTI or MOTOR, is the actual bottleneck; once a subject cleared the 7T protocol, the rest of the battery came essentially for free. Full ID list: `data/hcp_triple_modality_eligible_subjects.json`. Only 11 of these 179 are already in the current 90-subject pool — this is functionally a *different* subject cohort from the one MOTOR's existing results are built on, not an extension of it.
 
-1. **Search from the other direction.** HCP-YA's full 7T cohort is ~184 subjects total, out of 1,113 — rare in *any* random subset, so starting from "which of the current 90 have 7T" was close to the worst-case search order. Better: enumerate the ~184 subjects known to have 7T movie data first (a single, bounded scan, not 90 more guesses), then check *those* for MOTOR + DTI eligibility. Likely yields a larger, still-modest, joint-overlap set than 11 — not yet run.
-2. **Accept two mostly-different subject cohorts.** MOTOR/DTI on the current 90, movie-watching on its own ~184-subject (or eligible subset) cohort. Still a valid, real stress test of the §7 convergence hypothesis, just not a within-subject three-modality comparison. Cheaper, available immediately, no further discovery work needed.
-
-**Recommendation: try (1) first — it's one more bounded S3 scan, not a new data commitment — and fall back to (2) if the joint-overlap count still comes back small.** Not run yet; this document stops at the open question deliberately rather than guessing which path pays off.
+**Decision this sets up, not yet made**: build the movie-watching (and future SC) work on this new 179-subject cohort specifically (loses direct comparability with the exact subjects behind the existing Case 1/2/3 MOTOR numbers, gains a real within-subject three-modality design and a pool comparable in size to the current bootstrap's 90), or re-run MOTOR/DTI on this same 179-subject cohort too so every result going forward shares one subject pool. The second option is more work (a MOTOR re-run) but avoids ever having to caveat "these two results used different people."
 
 ## 4. Proposed preprocessing pipeline (mirrors `02_data_complete.ipynb`'s MOTOR pipeline, task-specific parts swapped)
 
