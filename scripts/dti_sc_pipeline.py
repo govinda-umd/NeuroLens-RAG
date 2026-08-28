@@ -22,7 +22,7 @@ import nibabel as nib
 import numpy as np
 
 
-def main(work_dir: Path, out_dir: Path) -> None:
+def main(work_dir: Path, out_dir: Path, save_streamlines: bool = True) -> None:
     from dipy.core.gradients import gradient_table
     from dipy.io.image import load_nifti
     from dipy.reconst.csdeconv import ConstrainedSphericalDeconvModel, auto_response_ssst
@@ -84,8 +84,9 @@ def main(work_dir: Path, out_dir: Path) -> None:
     streamlines = list(streamlines_gen)
     print(f"[{time.time()-t0:.0f}s] Tracking done. n_streamlines={len(streamlines)}", flush=True)
 
-    sft = StatefulTractogram(streamlines, atlas_img, Space.RASMM)
-    save_tractogram(sft, str(out_dir / "streamlines_100610.trk"))
+    if save_streamlines:
+        sft = StatefulTractogram(streamlines, atlas_img, Space.RASMM)
+        save_tractogram(sft, str(out_dir / "streamlines.trk"))
 
     print(f"[{time.time()-t0:.0f}s] Building streamline-count + mean-length connectomes...", flush=True)
     n_rois = int(atlas.max())
@@ -109,17 +110,41 @@ def main(work_dir: Path, out_dir: Path) -> None:
     )
 
     print(f"[{time.time()-t0:.0f}s] Computing LiFE weights (streamline evaluation)...", flush=True)
+    # LiFE can't fit single-node streamlines (immediate-termination artifacts
+    # from tracking near mask boundaries) -- filter them first.
+    #
+    # On subject 100610, fitting LiFE on the full ~1.2M-streamline tractogram
+    # was silently OOM-killed after 50+ min on this 16GB machine (LiFE's
+    # published use cases top out around 500K streamlines; this project's
+    # whole-brain seed density produces far more). A random subsample to
+    # LIFE_MAX_STREAMLINES fits comfortably (~2GB RSS, <2 min) and LiFE's
+    # own validation (Pestilli et al. 2014) already relies on random
+    # streamline subsets for cross-validation, so subsampling before fitting
+    # is consistent with how the method is normally used, not a shortcut
+    # invented here.
+    LIFE_MAX_STREAMLINES = 200_000
+    lengths = np.array([len(s) for s in streamlines])
+    keep_idx = np.where(lengths >= 2)[0]
+    if len(keep_idx) > LIFE_MAX_STREAMLINES:
+        rng = np.random.default_rng(0)
+        keep_idx = np.sort(rng.choice(keep_idx, size=LIFE_MAX_STREAMLINES, replace=False))
+    keep_set = set(keep_idx.tolist())
+    old_to_new = {old: new for new, old in enumerate(keep_idx)}
+    streamlines_life = [streamlines[i] for i in keep_idx]
+    print(f"  using {len(streamlines_life)}/{len(streamlines)} streamlines for LiFE (filtered + subsampled)", flush=True)
     try:
         from dipy.tracking.life import FiberModel
 
         fiber_model = FiberModel(gtab)
-        fiber_fit = fiber_model.fit(data, streamlines, affine=np.eye(4))
+        fiber_fit = fiber_model.fit(data, streamlines_life, affine=np.eye(4))
         life_weights = fiber_fit.beta
         life_matrix = np.zeros((n_rois, n_rois), dtype=np.float64)
         for (i, j), idxs in grouping.items():
             if i == 0 or j == 0 or not idxs:
                 continue
-            life_matrix[i - 1, j - 1] = float(np.sum(life_weights[idxs]))
+            remapped = [old_to_new[k] for k in idxs if k in keep_set]
+            if remapped:
+                life_matrix[i - 1, j - 1] = float(np.sum(life_weights[remapped]))
     except Exception as e:
         print(f"  LiFE fitting failed ({e}); saving zeros as placeholder", flush=True)
         life_matrix = np.zeros((n_rois, n_rois), dtype=np.float64)
