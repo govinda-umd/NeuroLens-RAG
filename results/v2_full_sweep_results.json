@@ -37,11 +37,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -2.223322868347168,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that the tongue representation is indeed bilateral, meaning it is equally represented on both sides of the brain. This bilateral representation is supported by the trained model, which attributes the concept of \"tongue\" to the SomMot network, indicating a strong connection between the tongue and motor functions. The high sensitivity of 1.000 to this concept further reinforces the bilateral nature of tongue representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"tongue\" is highly sensitive to the idea that tongue representation is bilateral, with a sensitivity score of 1.000. This suggests that the model strongly supports the notion that tongue representation is indeed bilateral. However, the overall verdict remains unclear due to conflicting literature claims and stances."
   },
   {
     "claim": "Bilateral activation in extrastriate body areas at occipital temporal borders.",
@@ -125,11 +125,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": -3.3458967208862305,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The hand representations in BA4p, as discussed in (Geyer 1996) refers to yet another representation of the fingers.\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that the hand representation is indeed contralateral, meaning it is located on the opposite side of the brain from the hand it represents. This finding is supported by the best-aligned trained representation, which is a transformer model that specifically focuses on the concept of \"hand\". The high sensitivity of this representation to the concept of hand (TCAV = 1.000) further reinforces the agreement with the original claim."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the hand representation is indeed contralateral, meaning that the left hand is represented in the right hemisphere of the brain and vice versa. This suggests a lateralization effect, where the brain processes the left hand in the right hemisphere and the right hand in the left hemisphere. The high sensitivity of the transformer representation to the concept of \"hand\" further supports this finding."
   },
   {
     "claim": "Whole-body movement representation is bilateral and intermixed across PCG.",
@@ -147,11 +147,11 @@
     "consensus_network": "Vis",
     "second_pass_source": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
     "second_pass_rerank_score": 1.8746464252471924,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"differentiable, whole-body representations exist at _all_ sampled points of PCG.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that whole-body movement representation is indeed bilateral and intermixed across the primary cortical gyrus (PCG), supporting the idea that movement and rest are represented in a unified and interconnected manner. This bilateral representation suggests that both sides of the brain contribute to the processing of movement and rest, and that these representations are not isolated to specific areas. The agreement between the literature claim and the best-aligned trained representation further reinforces this finding."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation, specifically the transformer model, has a high sensitivity to the concept \"movement_vs_rest\", suggesting that it can effectively distinguish between whole-body movements and rest states. This is further supported by the concept-attribution points pointing to the Vis network, which is responsible for visual perception. However, the overall verdict remains unclear, indicating that the model's understanding of whole-body movement representation is not yet definitive."
   },
   {
     "claim": "Ventral PCG prefers orofacial movements, while dorsal PCG prefers arm movements.",
@@ -169,11 +169,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
     "second_pass_rerank_score": 3.885111093521118,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"a differentiable whole-body representation exists at each point in human\"",
-    "verdict": "AGREE",
-    "narration": "Research suggests that the ventral Primary Motor Cortex (PCG) is more closely associated with orofacial movements, while the dorsal PCG is more linked to arm movements. This finding is supported by the results of a study, which indicates that the best-aligned trained representation for the concept of \"limb vs orofacial\" is the transformer model, and that this representation is highly sensitive to the concept, with a TCAV (top-down cognitive architecture verification) sensitivity of 1.000. As a result, the study concludes that the ventral and dorsal PCG have distinct preferences for different types of movements."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that the ventral Primary Motor Cortex (PCG) is more closely associated with orofacial movements, while the dorsal PCG is more linked to arm movements. This distinction is supported by a trained representation that highlights the difference between limb and orofacial movements, with a high sensitivity to the concept of \"limb_vs_orofacial\". However, the current understanding remains unclear due to the lack of direct evidence."
   },
   {
     "claim": "Tongue representation is bilateral, with orofacial movements also activated.",
@@ -191,11 +191,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 1.430174708366394,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that the tongue representation is indeed bilateral, involving both sides of the mouth, and that orofacial movements are also activated. This bilateral representation supports the idea that the tongue plays a role in both sides of the mouth, and that movements in one area can affect the other. The trained representation, specifically the transformer model, accurately attributes the concept of \"tongue\" to the SomMot network, further validating the bilateral tongue representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"tongue\" has a high sensitivity to orofacial movements, suggesting that the tongue's representation is indeed bilateral and related to both tongue movements and orofacial movements. This suggests that the tongue's representation is closely tied to the broader motor control system, rather than being isolated to a single aspect of tongue function. The verdict remains unclear due to the lack of clear evidence supporting the claim."
   },
   {
     "claim": "The dorsal arrays show a clear \"laterality dimension\" for right arm representation.",
@@ -235,11 +235,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-2024.09.14.613041-whole-body-motor-cortex.pdf",
     "second_pass_rerank_score": -2.2076449394226074,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"aligns with our previous reports which showed that directional movements were correlated across effectors in intrinsic space\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that the representation of the left arm is indeed contralateral to the representation of the right arm, meaning that the left arm is mirrored on the opposite side of the brain. This finding is supported by the trained representation, which attributes concept \"right_side\" to the transformer model. The high sensitivity of this representation to the concept \"right_side\" further reinforces the agreement with the literature claim."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"right_side\" is highly sensitive to the idea that left arm representation is contralateral to right arm, with a TCAV (Test-Computer-Aided Verification) score of 1.000. This suggests that the model strongly supports the notion that left arm representation is indeed contralateral to right arm, as indicated by the concept-attribution points to the SomMot network."
   },
   {
     "claim": "Dorsal PCG has a clear \"laterality dimension\" for right and left arms.",
@@ -279,11 +279,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": -2.8913722038269043,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that both T5 and T11 models exhibit bilateral hand representation, meaning they can process and understand information related to both hands. This bilateral representation is supported by the trained models, which attribute the concept of \"hand\" to the transformer model's sensitivity to this concept. As a result, the models agree on this finding."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the bilateral hand representation, as indicated by a TCAV (Transformers for Conceptual Attention Visualization) sensitivity of 1.000. This suggests that the model's understanding of the concept \"hand\" is closely tied to its representation of bilateral hand representation. The verdict remains unclear due to the lack of direct evidence supporting or refuting the claim."
   },
   {
     "claim": "T12 has bilateral representation of the tongue.",
@@ -301,11 +301,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -2.341587543487549,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that T12 has bilateral representation of the tongue is supported by the best-aligned trained representation, which attributes concept \"tongue\" to a transformer model with a high sensitivity to this concept (TCAV = 1.000). This suggests that the model confidently associates the tongue with T12, and its concept-attribution points to the SomMot network, indicating a strong agreement with the original claim."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the transformer model's representation of the tongue is unclear, as it has bilateral representation of the tongue, but this is not supported by the model's sensitivity to the concept \"tongue\", which is 1.000, suggesting a strong connection."
   },
   {
     "claim": "Individual fingers have mirrored, column-like representations in primary motor cortex.",
@@ -345,11 +345,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": -0.7994567155838013,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The mirrored pattern of multiple distant digit representations was highly consistent...\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that the representation of digits in S1 is bilateral, with a linear arrangement, is supported by the best-aligned trained representation, which attributes the concept \"right_side\" to the transformer model. This suggests that the model's sensitivity to the concept \"right_side\" is extremely high, at 1.000, indicating a strong agreement with the original claim."
+    "verdict": "UNCLEAR",
+    "narration": "The representation of digits in S1 is unclear due to conflicting literature claims, with one stating a bilateral linear arrangement and the other being unrelated. However, a trained representation using a transformer model suggests that the digits are represented on the right side, indicating a high sensitivity to this concept. Despite this, the overall verdict remains unclear."
   },
   {
     "claim": "The primary motor cortex has multiple finger representations, mirrored and smaller.",
@@ -367,11 +367,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 4.786750793457031,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The primary motor cortex indeed has multiple finger representations, which are mirrored and smaller, supporting the notion that the brain has a complex and nuanced representation of hand function. This finding is consistent with the idea that the brain has a dedicated network for hand control, as suggested by the concept-attribution points to the SomMot network. The high sensitivity of the best-aligned representation to the concept \"hand\" further confirms this agreement."
+    "verdict": "UNCLEAR",
+    "narration": "The primary motor cortex has multiple finger representations, which are mirrored and smaller, indicating that the brain's motor control system has a complex and nuanced organization of finger-specific areas. This suggests that the brain is capable of fine-grained control over individual fingers, with each finger having a unique representation in the motor cortex. The mirrored and smaller nature of these representations implies that the brain's motor control system is highly organized and efficient."
   },
   {
     "claim": "Grasping and retraction preferences are bilateral in the primary sensory cortex.",
@@ -389,11 +389,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 3.087284564971924,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"Representations of sensory proprioception in the primary sensory cortex might be similarly engaged for grasping and retraction movements...\"",
-    "verdict": "AGREE",
-    "narration": "The primary sensory cortex shows bilateral grasping and retraction preferences, meaning that both sides of the brain process and respond to these motor functions in a symmetrical manner. This bilateral preference is supported by the trained representation, which attributes these functions to the SomMot network. As a result, the verdict is that the claim is agreed upon."
+    "verdict": "UNCLEAR",
+    "narration": "The primary sensory cortex shows bilateral grasping and retraction preferences, indicating that both sides of the brain process and respond to these motor functions in a symmetrical manner. This suggests that the brain's motor control systems are highly coordinated and integrated. The lack of clarity in the verdict highlights the complexity of understanding the neural basis of motor functions."
   },
   {
     "claim": "Digit representations in sensory cortex are stronger for grasping than retraction.",
@@ -433,11 +433,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 2.9128308296203613,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that finger representations are symmetrical and mirrored in the motor cortex area M1, supporting the idea that the brain processes hand movements in a mirrored and bilateral manner. This finding is consistent with the concept of \"hand\" being the best-aligned trained representation, which is highly sensitive to changes in finger representations. The agreement between the literature claim and the second-pass literature stance is strong, indicating that the results are consistent with the existing understanding of hand movement processing in the brain."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that a trained transformer model, specifically designed to represent the concept of \"hand\", has a high sensitivity to the idea that finger representations are bilateral and mirrored in the motor cortex area (M1). This suggests that the model is confident in its understanding of this concept, as evidenced by its high TCAV (Test-Computer-Aided Verification) score of 1.000."
   },
   {
     "claim": "Finger representations are bilateral and similar across cortical depths.",
@@ -455,11 +455,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 0.7579132318496704,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"individual body parts are largely overlapping (probably to facilitate complex hand movement)\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that \"Finger representations are bilateral and similar across cortical depths\" is supported by the best-aligned trained representation, which attributes the concept of \"hand\" to the SomMot network. This suggests that finger representations are indeed bilateral and similar in structure, consistent with the claim. The high TCAV sensitivity of 1.000 further confirms this agreement."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that a trained representation, specifically a transformer model, has identified the concept of \"hand\" as highly relevant to the idea of finger representations being bilateral and similar across cortical depths. This suggests that the model has learned to associate the concept of hand with the specific neural property in question. However, the model's confidence in this association is currently unclear."
   },
   {
     "claim": "The primary motor cortex has multiple representations of individual fingers.",
@@ -521,11 +521,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 4.100044250488281,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The hand representations in BA4p, as discussed in (Geyer 1996) refers to yet another representation of the fingers.\"",
-    "verdict": "AGREE",
-    "narration": "Research confirms that the representation of individual fingers is mirrored along the lateral-medial axis of the primary motor cortex, a finding that is supported by multiple studies. This bilateral mirroring suggests that the brain processes finger movements in a symmetrical manner. The results also indicate that the concept of \"hand\" is strongly associated with the trained representation, and that this representation is highly sensitive to changes in finger movements."
+    "verdict": "UNCLEAR",
+    "narration": "The representation of individual fingers in the primary motor cortex is mirrored on both sides of the body, suggesting a bilateral symmetry in the way the brain processes finger movements. This mirroring is consistent with the idea that the brain treats the left and right hands as equivalent entities. The uncertainty surrounding this representation is due to conflicting literature claims and a lack of clear evidence supporting the concept of \"hand\" in this context."
   },
   {
     "claim": "Finger representations are bilateral in the motor cortex.",
@@ -543,11 +543,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 2.0629994869232178,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that \"Finger representations are bilateral in the motor cortex\" is supported by the best-aligned trained representation, which attributes the concept of \"hand\" to the SomMot network. This suggests that finger representations are indeed bilateral, meaning they are mirrored on both sides of the motor cortex, and are closely related to the concept of the hand."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the idea that finger representations are bilateral in the motor cortex, with a sensitivity score of 1.000. This suggests that the model strongly supports the notion that finger representations are indeed bilateral in the motor cortex, as indicated by the concept-attribution points pointing to the SomMot network. However, the overall verdict remains unclear due to the lack of conclusive evidence."
   },
   {
     "claim": "The motor cortex representation of the hand is contralateral.",
@@ -565,11 +565,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 0.8251835107803345,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"individual body parts are largely overlapping\"",
-    "verdict": "AGREE",
-    "narration": "The motor cortex representation of the hand is indeed contralateral, meaning that the part of the brain responsible for controlling the hand is located on the opposite side of the brain from where the hand is physically located. This contralateral representation is supported by a trained model that aligns with the concept of \"hand\", indicating a strong connection between the brain's motor control systems and the physical hand. The model's sensitivity to this concept is 1.000, further confirming the agreement between the trained representation and the literature claim."
+    "verdict": "UNCLEAR",
+    "narration": "The motor cortex representation of the hand is contralateral, meaning that the part of the brain responsible for controlling the hand is located on the opposite side of the brain from where the hand is physically located. This is a well-established concept in neuroscience, indicating that the brain's motor control systems are organized in a way that is opposite to the physical location of the body parts they control. This contralateral organization is a fundamental aspect of human brain function."
   },
   {
     "claim": "The left hand is represented in the right sensorimotor cortex.",
@@ -631,11 +631,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 0.19969096779823303,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"some body-part\u2013specific region in the nonprimary motor areas\"",
-    "verdict": "AGREE",
-    "narration": "Research suggests that the imagery of hand movements can activate specific sections of the brain that are responsible for controlling the opposite hand. This finding is supported by studies, which indicates that the brain's response to visual hand movements is closely tied to the motor functions of the opposite hand. As a result, the brain's neural networks are highly attuned to the relationship between visual and motor hand movements."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that visual imagery of hand movements can activate specific areas of the brain responsible for controlling the opposite hand. This phenomenon is supported by a trained representation of the concept \"hand\" in a transformer model, which shows high sensitivity to this concept. However, the neural network responsible for interpreting these hand movements is unclear, as the model's concept-attribution points to the SomMot network without providing a definitive answer."
   },
   {
     "claim": "The representation of hand movement is bilateral.",
@@ -653,11 +653,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": -1.0057207345962524,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The hand representations in BA4p, as discussed in (Geyer 1996) refers to yet another representation of the fingers.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that hand movement representation is bilateral, meaning it is equally represented in both hemispheres of the brain. This bilateral representation is supported by the best-aligned trained representation, which attributes concept \"hand\" to the transformer model. The high TCAV sensitivity of 1.000 further confirms the agreement between the literature claim and the trained representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to hand movement, as measured by its TCAV (Test-Computer-Aided Verification) sensitivity, which is at 1.000. This suggests that the model is very confident in its ability to represent hand movement, but the verdict on the representation's overall clarity remains unclear."
   },
   {
     "claim": "Tongue representation is bilateral, but specific areas are activated differently.",
@@ -675,11 +675,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -0.26544421911239624,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "Research suggests that the representation of the tongue in the brain is bilateral, meaning both sides of the brain are involved in processing this information. However, specific areas within the brain are activated differently, indicating a nuanced understanding of how the brain processes tongue-related information. This bilateral representation is supported by the findings of a trained representation, specifically a transformer model, which attributes the concept of \"tongue\" to the SomMot network."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that the representation of the tongue in the brain is bilateral, meaning both sides of the brain are involved in processing this information. However, specific areas within the brain are activated differently when representing the tongue, indicating a nuanced and complex processing mechanism. This bilateral representation, with varying activation patterns, contributes to the uncertainty surrounding the clear understanding of tongue representation in the brain."
   },
   {
     "claim": "Toes representation is bilateral.",
@@ -697,11 +697,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -3.644902229309082,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This area also showed stronger activity during the execution of finger movements than toe or tongue movements...\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that \"Toes representation is bilateral\" is supported by the best-aligned trained representation, which is a transformer model focused on the concept of \"foot\". This model's sensitivity to the concept of toes is extremely high at 1.000, indicating a strong association. As a result, the trained model agrees with the original claim, affirming that toes representation is indeed bilateral."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"foot\" is highly sensitive to the idea that toes are represented bilaterally, with a sensitivity score of 1.000. This suggests that the model strongly supports the notion that toes are mirrored on both sides of the body."
   },
   {
     "claim": "The left putamen is bilaterally activated during imagery of toes.",
@@ -719,11 +719,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 1.6223464012145996,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The most conspicuous activation observed specifically during the imagery of toe movements was located in the left putamen\"",
-    "verdict": "AGREE",
-    "narration": "Research suggests that the left putamen is activated when individuals imagine their toes, indicating a strong neural connection between the brain's motor control centers and the sensory experience of toe imagery. This finding supports the idea that the brain's motor networks are involved in processing sensory information, even when it comes to abstract concepts like toe imagery. The activation of the left putamen in this context reinforces the notion that the brain's motor control systems play a role in our perception of sensory information."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that the left putamen, a region in the brain, is activated when individuals imagine their toes. This activation is bilateral, meaning it occurs on both sides of the brain. The left putamen's involvement in toe imagery highlights its role in processing sensory information related to the feet."
   },
   {
     "claim": "Imagery of finger movement activates caudal cingulate motor area (CMAc).",
@@ -741,11 +741,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 3.4528613090515137,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"imaged movement of the 3 body parts activated different sections of the M1.\"",
-    "verdict": "AGREE",
-    "narration": "Research suggests that the imagery of finger movement activates the caudal cingulate motor area (CMAc), indicating a strong connection between motor imagery and motor control. This finding is supported by the literature, which agrees with the initial claim. The trained representation of the concept \"hand\" is highly sensitive to TCAV (top-down cognitive attentional value) and attributes its concept to the SomMot network, further confirming the activation of CMAc in response to finger movement imagery."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that the imagery of finger movement is associated with activation in the caudal cingulate motor area (CMAc), a region involved in motor control and planning. This finding indicates that the brain's motor systems are engaged when we mentally simulate finger movements. The unclear verdict in this case may be due to the lack of direct evidence linking finger movement imagery to CMAc activation."
   },
   {
     "claim": "Finger movement is contralateral to M1, with a rostral premotor cortex section.",
@@ -763,11 +763,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 3.1961326599121094,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"several areas showed activation both when subjects imagined the action and when they executed the same action\"",
-    "verdict": "AGREE",
-    "narration": "Research confirms that finger movement is controlled by the opposite side of the brain, specifically the motor cortex, and is also influenced by the rostral premotor cortex section. This finding is supported by multiple studies, including a second-pass review of the literature. The results suggest that the brain's representation of hand movements is closely tied to the SomMot network, indicating a strong agreement between the different analyses."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that finger movement is controlled by the opposite side of the brain, specifically the motor cortex, and is also influenced by the rostral premotor cortex section. However, the relationship between this information and the brain's control over hand movements is unclear. The data indicates that the trained representation associated with the concept of \"hand\" is highly sensitive to the finger movement claim, but it does not provide enough evidence to confirm or deny the claim."
   },
   {
     "claim": "Left precentral gyrus is contralateral to toe movement.",
@@ -785,11 +785,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": -3.2079780101776123,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This part of the primary motor cortex is not to be confused with the Brodmann area BA4p...\"",
-    "verdict": "AGREE",
-    "narration": "The left precentral gyrus is indeed contralateral to toe movement, as supported by the literature and aligned with the best-trained representation, which attributes this concept to the SomMot network. This means that the left precentral gyrus is responsible for controlling movements of the toes."
+    "verdict": "UNCLEAR",
+    "narration": "The left precentral gyrus is a brain region responsible for controlling toe movements, and its function is contralateral, meaning it is controlled by the opposite side of the brain. This means that the right side of the brain is involved in controlling toe movements, not the left. The uncertainty surrounding the left precentral gyrus's role in toe movement control is due to conflicting information and a lack of clear evidence."
   },
   {
     "claim": "Tongue representation is bilateral, but finger representation is contralateral.",
@@ -829,11 +829,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 1.1424297094345093,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that finger movement representation is indeed bilateral and contralateral to the motor cortex (M1), suggesting a symmetrical and opposite-sided control over hand movements. This bilateral representation is supported by a trained transformer model, which attributes concept \"hand\" to the SomMot network, indicating a strong connection between hand movement and motor control. The model's sensitivity to this concept is 1.000, indicating a high level of confidence in the representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the idea of finger movement representation being bilateral and contralateral to the motor cortex area M1. This suggests that the model's understanding of hand-related concepts is closely tied to the neural representation of motor control, specifically in terms of the brain's motor cortex. The model's concept-attribution points to the SomMot network, which is involved in motor control and sensory processing."
   },
   {
     "claim": "Toes representation is contralateral, specifically in the left paracentral lobule.",
@@ -873,11 +873,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 2.147298812866211,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"some body-part\u2013specific region in the nonprimary motor areas.\"",
-    "verdict": "AGREE",
-    "narration": "Research findings confirm that toe movement representation is represented bilaterally, with specific activity in the left Superior Medial Area (SMA) and right inferior frontal gyrus. This bilateral representation is supported by the results, which agree with the literature claim. The trained representation, specifically designed for the concept \"foot\", shows high sensitivity to this concept, further validating the agreement between the literature claim and the research findings."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the representation of toe movement is primarily associated with the left Superior Medial Area (SMA) and the right inferior frontal gyrus, suggesting a bilateral representation of toe movement in the brain. This bilateral representation is specific to the left SMA, which is known for its role in motor control and planning, and the right inferior frontal gyrus, which is involved in language processing and motor control. The fact that the representation's concept-attribution points to the SomMot network further supports this bilateral representation."
   },
   {
     "claim": "Tongue movement is bilaterally represented.",
@@ -895,11 +895,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -0.005762815475463867,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that tongue movement is indeed bilaterally represented, meaning that both sides of the brain are involved in controlling tongue movements. This is supported by the best-aligned trained representation, which attributes concept \"tongue\" to the SomMot network, indicating a strong connection between the brain's motor control systems and tongue movement. The high TCAV sensitivity of 1.000 further reinforces this conclusion."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the representation of the concept \"tongue\" in a transformer model is highly sensitive to the idea that tongue movement is bilaterally represented, with a TCAV (Test-Computer-Aided Verification) sensitivity of 1.000. This suggests that the model strongly attributes the concept of tongue movement to the SomMot network, but the overall verdict remains unclear."
   },
   {
     "claim": "Tongue representation is bilateral, but more prominent in left area 4a.",
@@ -983,11 +983,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 3.3617730140686035,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"some body-part\u2013specific region in the nonprimary motor areas.\"",
-    "verdict": "AGREE",
-    "narration": "Research confirms that toe movement is more active in the posterior part of the Superior Medial Abducens (SMA) nucleus, indicating a specific neural pathway involved in this motor function. This finding is supported by the literature, which suggests that the posterior SMA plays a crucial role in controlling toe movements. The results align with the trained representation of the \"foot\" concept, further validating the connection between the SMA and toe movement control."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that toe movement is more pronounced in the posterior region of the Superior Medial Abducens (SMA) nucleus, indicating a specific neural control over foot movements. This finding is supported by a trained representation that associates the concept \"foot\" with the SMA's posterior part, which is highly sensitive to changes in toe movement. The unclear verdict highlights the need for further investigation to fully understand the neural mechanisms underlying foot movement control."
   },
   {
     "claim": "Tongue representation is bilateral in M1 and premotor cortex.",
@@ -1005,11 +1005,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 1.0732131004333496,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that the representation of the tongue is bilateral in both the motor cortex (M1) and the premotor cortex. This bilateral representation is supported by the results of a second-pass analysis, which found that the best-aligned trained representation associated with the concept of \"tongue\" is highly sensitive to this concept, with a TCAV (top-down cognitive attention value) of 1.000. As a result, the study concludes that the representation of the tongue is indeed bilateral in these brain regions."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"tongue\" in the transformer model is highly sensitive to the idea of bilateral tongue representation in the M1 and premotor cortex, with a TCAV (top-down cognitive architecture validation) score of 1.000. This suggests that the model strongly supports the notion that tongue representation is bilateral in these brain areas. However, the overall verdict remains unclear due to conflicting literature claims."
   },
   {
     "claim": "Finger movements are specifically represented in the CMAc.",
@@ -1027,11 +1027,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 0.594799816608429,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"some body-part\u2013specific region in the nonprimary motor areas.\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that finger movements are specifically represented in the CMAc is supported by the best-aligned trained representation, which attributes concept \"hand\" to the transformer model. This suggests that the model is highly sensitive to the concept of finger movements, with a TCAV (Test-Chunk Activation Value) of 1.000, indicating a strong association. As a result, the verdict is that the model agrees with the literature claim."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to finger movements, as measured by its TCAV (Test-Conditioned Activation Value) of 1.000. This suggests that the model has learned to represent finger movements in a way that is closely tied to the concept of \"hand\"."
   },
   {
     "claim": "Finger representation is contralateral and bilateral in CMAc/SMA.",
@@ -1049,11 +1049,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": -0.04676227644085884,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"some body-part\u2013specific region in the nonprimary motor areas.\"",
-    "verdict": "AGREE",
-    "narration": "The result confirms that the finger representation is both contralateral and bilateral in the context of motor control and sensory-motor association (CMAc/SMA). This means that the brain processes finger information in a way that is symmetrical on both sides of the body, with each finger having a corresponding representation on the opposite side of the brain. This bilateral representation is supported by the trained model, which attributes the concept of \"hand\" to the transformer-based representation, and further confirms the agreement with the initial claim."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" in a transformer model is highly sensitive to the idea of finger representation being contralateral and bilateral in CMAc/SMA, with a TCAV (Test-Contrast Average Value) score of 1.000. This suggests that the model strongly attributes the concept \"hand\" to the SomMot network, which is responsible for processing sensory information related to the hand. As a result, the verdict remains unclear due to the strong evidence supporting the contralateral and bilateral nature of finger representation in CMAc/SMA."
   },
   {
     "claim": "Tongue representation is bilateral, but toe representation is contralateral.",
@@ -1093,11 +1093,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 0.7651404142379761,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The lateral frontal cortex exhibits bilateral tongue representation, meaning that both sides of the brain's left frontal region are involved in processing and understanding the concept of a tongue. This bilateral representation is supported by the results of the second-pass literature analysis, which confirms the initial claim. The trained representation, specifically the transformer model, attributes the concept of a tongue to the SomMot network, further validating the bilateral tongue representation in the lateral frontal cortex."
+    "verdict": "UNCLEAR",
+    "narration": "The lateral frontal cortex shows bilateral tongue representation, meaning that both sides of the brain's frontal lobe are involved in processing information related to the tongue. This bilateral representation suggests that the brain processes tongue-related information in a symmetrical and coordinated manner. The exact nature of this representation remains unclear, however."
   },
   {
     "claim": "Tongue representation is ventral, foot representation is dorsal and medial.",
@@ -1137,11 +1137,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
     "second_pass_rerank_score": 0.8399043083190918,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the somatomotor network likely includes MI (area 4) and caudal premotor area 6, SI (areas 3, 1, and 2), and most, if not all, of early somatosensory area 5L.\"",
-    "verdict": "AGREE",
-    "narration": "The somatotopic progression, which maps the body from ventral (tongue) to dorsal (foot), is supported by the trained representation, specifically the transformer model, which attributes concept \"tongue\" to the SomMot network with a high sensitivity of 1.000. This confirms the agreement between the literature claim and the best-aligned trained representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"tongue\" is highly sensitive to the somatotopic progression, suggesting that the tongue is indeed the first point in this progression. However, the overall verdict on the relationship between the tongue and the somatotopic progression remains unclear. This ambiguity may be due to the lack of information about the dorsal progression."
   },
   {
     "claim": "The hand and wrist have bilateral representation.",
@@ -1159,11 +1159,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": -0.9911383390426636,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The movements performed by the subjects may not be entirely separable.\"",
-    "verdict": "AGREE",
-    "narration": "The hand and wrist have bilateral representation in the brain, meaning that both sides of the body have similar neural connections and processing patterns. This bilateral representation is supported by the best-aligned trained representation, which is a transformer model that identifies the concept of \"upper_vs_lower_limb\" with high sensitivity. As a result, the verdict is that the hand and wrist representation agrees with the literature claim."
+    "verdict": "UNCLEAR",
+    "narration": "The hand and wrist have bilateral representation, meaning that both sides of the body have similar neural connections and control over these areas. This bilateral representation suggests that the brain processes information from both hands and wrists in a symmetrical manner. As a result, the neural networks trained on this concept are highly sensitive to the difference between upper and lower limbs, with the upper limb representation being particularly robust."
   },
   {
     "claim": "The representation of the hand is bilateral, with a core hand area bracketed by representations of the wrist and forearm.",
@@ -1181,11 +1181,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": 1.047808051109314,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"One possibility is that the two species genuinely differ in these detailed respects.\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that the representation of the hand is bilateral, with a core hand area bracketed by representations of the wrist and forearm, is supported by the best-aligned trained representation, which attributes concept \"upper_vs_lower_limb\" to the transformer model. This model's sensitivity to the concept is 1.000, indicating a strong agreement, and its concept-attribution points to the SomMot network, further confirming the bilateral representation of the hand."
+    "verdict": "UNCLEAR",
+    "narration": "The representation of the hand is bilateral, with a core hand area surrounded by representations of the wrist and forearm. This bilateral representation suggests that the brain processes hand functions in a symmetrical and coordinated manner. The core hand area is likely to be the central processing unit for hand movements, with the wrist and forearm representations providing additional context and control."
   },
   {
     "claim": "The representation of finger movement is not exclusive to the central sulcus.",
@@ -1203,11 +1203,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 1.451917290687561,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"This is the evolutionary younger part of M1 that is located deep in the central sulcus.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that the representation of finger movement is not limited to the central sulcus, a region of the brain traditionally associated with motor control. This finding is supported by the results of a trained representation, specifically a transformer-based model, which attributes the concept of \"hand\" to the SomMot network, indicating that finger movement is also represented in this network. The model's sensitivity to this concept is 1.000, suggesting a strong and consistent representation."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the representation of finger movement, with a TCAV (Test-Channel Activation Value) of 1.000. This suggests that the \"hand\" concept is closely related to finger movement, and the trained model attributes this relationship to the SomMot network. As a result, the verdict is that the representation of finger movement is not exclusive to the central sulcus, contradicting the initial literature claim."
   },
   {
     "claim": "The representation of wrist movement is bilateral and overlapping.",
@@ -1225,11 +1225,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": 2.254349708557129,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The movements performed by the subjects may not be entirely separable.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that the representation of wrist movement is bilateral and overlapping, meaning that both sides of the body contribute to the perception of wrist movement. This bilateral overlap suggests that the brain processes wrist movement in a way that considers both sides simultaneously. The trained representation, specifically the transformer model, accurately captures this bilateral overlap, supporting the literature claim."
+    "verdict": "UNCLEAR",
+    "narration": "The analysis suggests that the representation of wrist movement is bilateral and overlapping, indicating that the model's understanding of wrist movement is complex and involves both sides of the hand. This bilateral overlap may be due to the model's reliance on a \"hand\" concept, which is highly sensitive to wrist movement. However, the verdict remains unclear, as the model's confidence in its understanding is low."
   },
   {
     "claim": "The representation of the fingers is graded into representations of the wrist and forearm.",
@@ -1291,11 +1291,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 1.4695367813110352,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"individual body parts are largely overlapping (probably to facilitate complex hand movement)\"",
-    "verdict": "AGREE",
-    "narration": "Research confirms that finger movement is indeed contralateral to the motor cortex, meaning that the motor cortex on one side of the brain controls the movement of the opposite side of the body. This finding is supported by multiple studies, including a second-pass review of existing literature. The results suggest a strong correlation between motor cortex activity and finger movement, indicating a clear neural pathway for motor control."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the idea that finger movement is controlled by the opposite side of the brain, specifically the motor cortex. This suggests that the model has learned to attribute the concept of hand movement to the contralateral control of the motor cortex."
   },
   {
     "claim": "Finger representation is not exclusively central, but rather overlapped with arm.",
@@ -1313,11 +1313,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": 1.2076680660247803,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the map from _subject 2_ was warped until its finger area was optimally aligned with the finger area of _subject 1_ \"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that \"Finger representation is not exclusively central, but rather overlapped with arm\" is supported by the best-aligned trained representation, which is a transformer model focused on the concept \"hand\". This model's sensitivity to the concept \"hand\" is extremely high at 1.000, indicating a strong correlation between the representation and the concept. As a result, the verdict is that the literature claim is agreed upon."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"hand\" is highly sensitive to the idea that finger representation is overlapped with arm, as measured by its TCAV (Tested Concept Attribution Value) of 1.000. This suggests that the model strongly attributes the concept \"hand\" to the idea that fingers are connected to the arm."
   },
   {
     "claim": "The representation of the hand and arm is core-and-surround.",
@@ -1335,11 +1335,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": 2.6502795219421387,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the core and surround organization, however, is probably one of relative emphasis, not absolute representation.\"",
-    "verdict": "AGREE",
-    "narration": "The literature claim that the representation of the hand and arm is core-and-surround is supported by the best-aligned trained representation, which is a transformer model focused on the concept \"upper_vs_lower_limb\". This model's sensitivity to the concept is extremely high at 1.000, indicating a strong agreement with the original claim. As a result, the verdict is that the claim is indeed agreed upon."
+    "verdict": "UNCLEAR",
+    "narration": "The analysis has concluded that the representation of the hand and arm is not clearly related to the concept of \"upper_vs_lower_limb\", as indicated by a sensitivity score of 1.000, which suggests a strong connection. However, the trained representation's concept-attribution points to the SomMot network, indicating that the relationship may be more nuanced than initially thought. Ultimately, the verdict remains unclear due to the lack of a clear connection between the hand and arm representation and the \"upper_vs_lower_limb\" concept."
   },
   {
     "claim": "The primary motor cortex has a somatotopic map with finger area bracketed dorsally and ventrally by wrist and forearm areas.",
@@ -1357,11 +1357,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study.pdf",
     "second_pass_rerank_score": 2.2543091773986816,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"The wrist and forearm were relatively emphasized in two regions: one ventrally and one dorsally to the finger representation.\"",
-    "verdict": "AGREE",
-    "narration": "The primary motor cortex has a somatotopic map, where the area representing fingers is located dorsally, and the areas representing wrists and forearms are located ventrally. This arrangement suggests a specific organization of motor control in the brain, with finger movements being processed in a distinct region. The trained representation supports this claim, indicating a strong correlation between the \"hand\" concept and the SomMot network."
+    "verdict": "UNCLEAR",
+    "narration": "The primary motor cortex has a somatotopic map, indicating that the brain's motor control system is organized in a way that corresponds to the physical layout of the body. Specifically, the area representing fingers is located on the dorsal side, while the areas representing wrists and forearms are on the ventral side. This organization suggests that the brain's motor control system is structured to control the movement of the hand."
   },
   {
     "claim": "Finger representation is bracketed by arm regions.",
@@ -1401,11 +1401,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific.pdf",
     "second_pass_rerank_score": 0.5542896389961243,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the pattern of somatotopical activation during motor imagery is very similar to the pattern observed during movement execution\"",
-    "verdict": "AGREE",
-    "narration": "The motor cortex somatotopy, specifically the representation of the tongue, is bilateral, indicating that both sides of the brain have a similar mapping of tongue-related motor functions. This bilateral representation is supported by the trained model, which attributes the concept of \"tongue\" to the SomMot network, further confirming the agreement between the literature claim and the second-pass stance."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the motor cortex, which controls voluntary movements, has a bilateral representation of the tongue, meaning both sides of the brain are involved in processing and controlling tongue movements. This suggests that the brain's motor control system is organized in a way that allows for symmetrical control over the tongue."
   },
   {
     "claim": "- Hand movement is contralateral to the motor cortex.",
@@ -1423,11 +1423,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "biorxiv-457002-digit-representations.pdf",
     "second_pass_rerank_score": 0.9391350150108337,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"individual body parts are largely overlapping\"",
-    "verdict": "AGREE",
-    "narration": "Research confirms that hand movement is indeed contralateral to the motor cortex, meaning that the motor cortex on one side of the brain controls the movement of the opposite hand. This finding is supported by multiple studies, including a second-pass review of the literature. The results suggest a strong connection between the motor cortex and hand movement, with the SomMot network playing a key role in this process."
+    "verdict": "UNCLEAR",
+    "narration": "Research suggests that hand movement is controlled by the opposite side of the brain, specifically the motor cortex, indicating a contralateral control mechanism. However, the relationship between hand movement and brain function is complex and not fully understood, leading to uncertainty about the exact nature of this control. Further investigation is needed to clarify the underlying mechanisms."
   },
   {
     "claim": "The hand representation is contralateral to the tongue representation.",
@@ -1467,11 +1467,11 @@
     "consensus_network": "SomMot",
     "second_pass_source": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity.pdf",
     "second_pass_rerank_score": 1.3205089569091797,
-    "stance": "SUPPORTS",
-    "stance_gate": "llm_grounded",
+    "stance": "UNRELATED",
+    "stance_gate": "quote_off_topic",
     "stance_quote": "\"the higher correlation between homotopic tongue regions is an artifact of subjects moving their tongues during scanning.\"",
-    "verdict": "AGREE",
-    "narration": "The study confirms that the representation of the tongue is bilateral, but less robust than the representations of hands and feet. This finding is supported by the results of the second-pass analysis, which aligns with the trained representation of the tongue. The agreement between the literature claim and the trained representation suggests that the tongue's bilateral representation is indeed weaker than its unilaterally represented counterparts."
+    "verdict": "UNCLEAR",
+    "narration": "The result indicates that the trained representation associated with the concept \"tongue\" is bilateral, meaning it has a presence in both the left and right sides of the brain, but its bilateral representation is weaker compared to the hand and foot. This suggests that the brain's processing of tongue-related information is not equally distributed across both sides, with the hand and foot receiving more emphasis."
   },
   {
     "claim": "The representation of the trunk is more interhemisically correlated than the hand or foot.",

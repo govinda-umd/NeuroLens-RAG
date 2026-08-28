@@ -510,7 +510,7 @@ def quote_addresses_claim_axes(claim_or_query_text: str, quote: str | None) -> b
 
 
 def compute_stance(
-    query_text: str, excerpt_text: str, rerank_score: float, generate_fn
+    query_text: str, excerpt_text: str, rerank_score: float, generate_fn, claim_text: str | None = None
 ) -> dict:
     """Grounding-only gate around the one thing that genuinely needs
     judgment (support vs. contradict) -- a post-hoc check on the LLM's own
@@ -528,14 +528,27 @@ def compute_stance(
     Thresholding on that score would have traded one failure mode
     (everything SUPPORTS) for another (good evidence silently discarded).
     `rerank_score` is kept as an argument and logged for diagnosis, not
-    used as a gate."""
+    used as a gate.
+
+    `claim_text` (the bare original claim) is used for the axis check,
+    deliberately separate from `query_text` (the full second-pass query
+    sent to the LLM, `build_second_query`'s output). `query_text` always
+    injects the dominant concept's name as boilerplate ("...concept-
+    attribution for 'limb_vs_orofacial' points to..."), and concept names
+    themselves contain axis-triggering substrings (e.g. "orofacial") that
+    have nothing to do with what the original claim actually asserts --
+    checking axes against the full query over-triggered the effector axis
+    on nearly every case and wrongly rejected real matches (a claim never
+    mentioning any effector was still required to have one, because the
+    query's own boilerplate did). Falls back to `query_text` only if no
+    separate claim is given, for backward compatibility."""
     response = generate_fn(build_grounded_stance_prompt(query_text, excerpt_text))
     stance, quote, phrase = parse_grounded_stance(response)
 
     if stance in ("SUPPORTS", "CONTRADICTS") and not quote_is_grounded(quote, excerpt_text):
         return {"stance": "UNRELATED", "quote": quote, "phrase": phrase, "gate": "quote_not_grounded"}
 
-    if stance in ("SUPPORTS", "CONTRADICTS") and not quote_addresses_claim_axes(query_text, quote):
+    if stance in ("SUPPORTS", "CONTRADICTS") and not quote_addresses_claim_axes(claim_text or query_text, quote):
         return {"stance": "UNRELATED", "quote": quote, "phrase": phrase, "gate": "quote_off_topic"}
 
     return {"stance": stance, "quote": quote, "phrase": phrase, "gate": "llm_grounded"}
@@ -627,7 +640,9 @@ def run_claim_first_loop(
         reranker=reranker, candidate_k=20, top_k=1,
     )
     top_chunk_text = retrieved.iloc[0]["text"]
-    stance_result = compute_stance(second_query, top_chunk_text, float(retrieved.iloc[0]["rerank_score"]), generate_fn)
+    stance_result = compute_stance(
+        second_query, top_chunk_text, float(retrieved.iloc[0]["rerank_score"]), generate_fn, claim_text=claim_text
+    )
     stance = stance_result["stance"]
 
     # 6: deterministic verdict, one shared path regardless of case

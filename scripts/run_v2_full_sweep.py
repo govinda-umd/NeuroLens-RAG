@@ -119,7 +119,7 @@ def main() -> None:
         )
         top_chunk_text = retrieved.iloc[0]["text"]
         rerank_score = float(retrieved.iloc[0]["rerank_score"])
-        stance_result = v2.compute_stance(second_query, top_chunk_text, rerank_score, generate_fn)
+        stance_result = v2.compute_stance(second_query, top_chunk_text, rerank_score, generate_fn, claim_text=claim_text)
         stance = stance_result["stance"]
 
         verdict = v2.deterministic_verdict(stance, this_tcav)
