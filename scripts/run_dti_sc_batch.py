@@ -30,6 +30,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 import time
 import traceback
@@ -41,7 +42,10 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
 from warp_atlas_to_native import warp_atlas_to_native  # noqa: E402
-import dti_sc_pipeline  # noqa: E402
+
+PYTHON = sys.executable
+PIPELINE_SCRIPT = PROJECT_ROOT / "scripts" / "dti_sc_pipeline.py"
+SUBJECT_TIMEOUT_S = 3 * 3600  # 3h/subject ceiling -- measured cost is ~38min; this only guards against a hang
 
 BUCKET = "hcp-openaccess"
 PROFILE = "hcp"
@@ -78,8 +82,16 @@ def log(msg: str) -> None:
 
 
 def already_done(subject_id: str) -> bool:
+    import numpy as np
+
     out_dir = OUT_ROOT / subject_id
-    return all((out_dir / f).exists() for f in OUTPUT_ARRAYS)
+    if not all((out_dir / f).exists() for f in OUTPUT_ARRAYS):
+        return False
+    # A subject can have all 4 files present but a zeroed-out LiFE array from
+    # a prior silent-kill failure (docs/structural/dti-sc-pipeline-plan.md
+    # Sec 3) -- don't let file-existence alone mark that subject "done".
+    life = np.load(out_dir / "sc_streamline_count_life.npy")
+    return bool(np.any(life != 0))
 
 
 def download_subject(s3, subject_id: str, work_dir: Path) -> None:
@@ -103,9 +115,22 @@ def process_subject(s3, subject_id: str) -> None:
     log(f"{subject_id}: downloaded in {time.time()-t0:.0f}s, warping atlas...")
 
     warp_atlas_to_native(work_dir)
-    log(f"{subject_id}: atlas warped, running DIPY pipeline...")
+    log(f"{subject_id}: atlas warped, running DIPY pipeline in an isolated subprocess...")
 
-    dti_sc_pipeline.main(work_dir, out_dir, save_streamlines=False)
+    # Run as a subprocess, not an in-process call: the LiFE fitting step
+    # inside dti_sc_pipeline.py has twice been silently killed by the OS on
+    # this 16GB machine (no catchable Python exception either time -- see
+    # docs/structural/dti-sc-pipeline-plan.md Sec 3). If that happened
+    # in-process, it would kill this entire multi-day, 174-subject batch
+    # orchestrator along with it. A subprocess crash here only fails this
+    # one subject; the outer loop logs it and moves on.
+    out_dir.mkdir(parents=True, exist_ok=True)
+    result = subprocess.run(
+        [PYTHON, str(PIPELINE_SCRIPT), str(work_dir), str(out_dir), "--no-save-streamlines"],
+        timeout=SUBJECT_TIMEOUT_S,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"dti_sc_pipeline.py exited with code {result.returncode} (signal-killed if negative)")
 
     # disk discipline: never retain the raw diffusion volume or T1w after
     # the compact arrays are built (docs/structural/dti-sc-pipeline-plan.md Sec 1)

@@ -116,13 +116,18 @@ def main(work_dir: Path, out_dir: Path, save_streamlines: bool = True) -> None:
     # On subject 100610, fitting LiFE on the full ~1.2M-streamline tractogram
     # was silently OOM-killed after 50+ min on this 16GB machine (LiFE's
     # published use cases top out around 500K streamlines; this project's
-    # whole-brain seed density produces far more). A random subsample to
-    # LIFE_MAX_STREAMLINES fits comfortably (~2GB RSS, <2 min) and LiFE's
-    # own validation (Pestilli et al. 2014) already relies on random
-    # streamline subsets for cross-validation, so subsampling before fitting
-    # is consistent with how the method is normally used, not a shortcut
-    # invented here.
-    LIFE_MAX_STREAMLINES = 200_000
+    # whole-brain seed density produces far more). A follow-up attempt at
+    # 200K also died silently (no Python exception, no logged jetsam/OOM
+    # record found) -- the exact safe threshold on this hardware is not
+    # actually pinned down. Set conservatively low rather than re-guessing
+    # upward through more multi-minute trial runs; this step is isolated in
+    # its own subprocess by run_dti_sc_batch.py specifically so a failure
+    # here (silent kill or otherwise) only zeros out one subject's LiFE
+    # array instead of taking down the whole batch. LiFE's own validation
+    # (Pestilli et al. 2014) already relies on random streamline subsets for
+    # cross-validation, so subsampling before fitting is consistent with how
+    # the method is normally used, not a shortcut invented here.
+    LIFE_MAX_STREAMLINES = 50_000
     lengths = np.array([len(s) for s in streamlines])
     keep_idx = np.where(lengths >= 2)[0]
     if len(keep_idx) > LIFE_MAX_STREAMLINES:
@@ -162,4 +167,5 @@ def main(work_dir: Path, out_dir: Path, save_streamlines: bool = True) -> None:
 if __name__ == "__main__":
     work_dir = Path(sys.argv[1])
     out_dir = Path(sys.argv[2])
-    main(work_dir, out_dir)
+    save_streamlines = "--no-save-streamlines" not in sys.argv
+    main(work_dir, out_dir, save_streamlines=save_streamlines)
