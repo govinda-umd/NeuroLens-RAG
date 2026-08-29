@@ -1,6 +1,6 @@
 # NeuroLens-RAG: End-to-End Report
 
-> Consolidated, current-as-of-2026-08-27 account of the full system: data → three representation-learning paradigms → interpretability → literature verification (v1 and v2). Where a number here differs from an older doc, this report is correct — several of the headline claims in earlier write-ups were superseded by later, more rigorous experiments (flagged explicitly below, not silently).
+> Consolidated, current-as-of-2026-08-27 account of the full system: data → three representation-learning paradigms → interpretability → literature verification (v1 and v2). Where a number here differs from an older doc, this report is correct — several of the headline claims in earlier write-ups were superseded by later, more rigorous experiments (flagged explicitly below, not silently). §§1-8 describe that system as it stood on MOTOR alone; §9 (added 2026-08-28) picks up the trajectory from there — the extension work in progress and the ideas it's building toward, so the project's direction is legible to someone who wasn't in the room for it.
 
 ## 1. The question this project answers
 
@@ -142,4 +142,54 @@ Unanimous on every concept, similarity never below 0.994.
 - **§7's results are conditioned on the MOTOR task's clean block structure** — this is a stated hypothesis, not yet stress-tested. `data/raw/hcp_movie_watching/` is reserved for a planned second HCP dataset (continuous, naturalistic) specifically to test whether the convergence in §7 survives a messier task.
 - **The 100→200 subject scale-up is complete at the data level but never re-validated** under the current 30-resample protocol.
 - **The §3.2 baseline check is Case 1 only.** Whether Case 2/3's contrastive/self-supervised representations similarly fail to beat a flat-MLP baseline (or whether the objective itself is what makes GRU/Transformer's structure matter there) hasn't been tested.
+
+## 9. Beyond MOTOR: extending the research line (2026-08-28)
+
+Everything above was built and validated on one task (MOTOR) and one modality (functional time series). §7.2 and §8 both flag the obvious next question directly: does any of this survive a messier task, and is there a genuinely different modality worth bringing in? This section is that extension, in progress — what's been decided, what's been built and run, and what's still just an idea, kept separate so the two aren't confused.
+
+### 9.1 Why: extending the 2021 precursor paper's research line
+
+NeuroLens-RAG's Case 1/2/3 + CAV/TCAV + RAG verification framework has so far only ever touched MOTOR — a task built from long, clean, discrete condition blocks. The project owner's own prior work (Misra, Surampudi, Venkatesh, Limbachia, Jaja & Pessoa, 2021, *PLoS Comput Biol* 17(9):e1008943 — GRU-based decoding on HCP naturalistic movie-watching fMRI) is the natural line to extend this system into: a continuous, mixed signal instead of clean blocks, plus a genuinely new modality (structural connectivity via diffusion MRI) the 2021 paper never touched, plus two learning paradigms beyond classification — generative forecasting of future ROI activity, and edge-level attribution on an anatomical graph rather than just ROI-level attribution on a time series.
+
+### 9.2 Full HCP-YA discovery scan: mapping what's actually available before committing
+
+Rather than assume subject availability, `scripts/run_full_hcp_discovery_scan.py` scanned all 1,113 HCP-YA subjects directly against S3 (2 calls each, threaded, 2026-08-27; `data/hcp_full_discovery_scan.{json,csv}`):
+
+| | Count | % of 1,113 |
+|---|---|---|
+| Have DTI | 1,065 | 96% |
+| Have 7T movie-watching | 184 | 17% |
+| DTI + movie + all 7 standard tasks + rest | **174** | 16% |
+
+7T eligibility, not DTI, is the real bottleneck — once a subject cleared the 7T protocol, the rest of the battery came essentially for free. Only 11 of these 174 subjects overlap with the current 90-subject MOTOR pool, which means this is functionally a **different cohort**, not an extension of the existing one. Open decision, not yet made: build the movie/SC work on this new 174-subject cohort as its own pool (loses direct subject-level comparability with the existing MOTOR numbers, gains a real within-subject three-modality design), or re-run MOTOR on this same cohort too so every result eventually shares one subject pool.
+
+### 9.3 Movie-watching: bringing the system to a continuous, mixed signal
+
+`docs/movie/movie-watching-dataset-plan.md` lays out bringing Case 1/2/3 + CAV/TCAV + RAG verification to HCP 7T movie-watching data, the same data the 2021 precursor paper used. One finding from that paper is close to a pre-registered confirmation of this report's own §7.2 hypothesis: a parameter-matched feed-forward network there loses to the GRU by **~45 points** (44.86% vs. 89.46%) on movie-watching, versus this report's §3.2 finding that a flat MLP *ties* Case 1's GRU on MOTOR (p=0.73). Same kind of comparison, opposite result — real evidence that temporal structure matters far more for continuous, naturalistic stimuli than for MOTOR's clean blocks. Real open design questions, not yet resolved: Case 3's alignment target on data with no discrete conditions to regress against, whether to keep NeuroLens-RAG's fixed 32-TR windowing convention or the precursor paper's continuous per-timepoint decoding, and a movie-content concept taxonomy for CAV/TCAV (scene content, not motor effectors).
+
+### 9.4 Structural connectivity: a new modality, validated by actually running the pipeline
+
+`docs/structural/dti-sc-pipeline-plan.md` — turning HCP diffusion MRI into per-subject structural connectomes on the same Schaefer-300 parcellation the fMRI pipeline already uses, so a future graph-neural-network extension (parked in `case2-3-design-plan.md`) aligns node-for-node with the existing ROI time series with no cross-atlas correspondence step needed.
+
+**Tooling and normalization, resolved rather than assumed.** MRtrix3, FSL, and ANTs command-line tools (the field-standard pairing for this data) are not installable in this environment — resolved with DIPY (pip-installable) for CSD-based tractography and `antspyx` for applying HCP's nonlinear warp fields. A literature search specifically on streamline-count normalization found no field consensus (raw count, SIFT2/LiFE-weighted, length-normalized, volume-normalized, and log-transformed schemes are all in active use, with no agreed default) — so rather than bake in one contested choice at preprocessing time, the pipeline stores raw sufficient statistics (streamline count, mean streamline length, ROI volumes) and defers the normalization choice to analysis time (`src/neurolens/sc_normalization.py`). Chosen default: $S_{ij} = \log_{10}(1 + N_{ij})$ on the raw counts.
+
+**Single-subject smoke test (subject 100610, 2026-08-28), validated end to end.** All 300 Schaefer labels survive the MNI→native-diffusion-space warp (86% overlap with the diffusion brain mask); CSD + whole-brain probabilistic tractography produces 1.23M streamlines in ~36 minutes.
+
+**LiFE, investigated with real rigor and then dropped, not silently degraded.** LiFE (DIPY's streamline-weighting method, the intended SIFT2 analog) was tried at four different scales — the full 1.2M-streamline tractogram, a 200K global-random subsample, a 50K global-random subsample, and a 45,206-streamline *stratified* subsample specifically designed to guarantee every one of the subject's 52,968 real ROI-pair connections at least one representative streamline. All four were killed by the OS. The last attempt was run alone, with no competing processes, and confirmed via explicit exit-code capture to be **SIGKILL (137)** — ruling out streamline count, subsampling strategy, and process contention alike as the cause. Most likely driver: HCP's 288-direction gradient table (far denser than LiFE's published validation scale) overwhelms DIPY's per-voxel signal-prediction design matrix independent of how many streamlines are fit. LiFE was dropped from the pipeline's deliverables entirely rather than shipped as a zero-filled array that would look like a real null result without being one — raw count and mean length don't depend on it and are unaffected.
+
+**Batch runner, resumable and crash-isolated.** `scripts/run_dti_sc_batch.py` runs each subject's DIPY pipeline as an isolated subprocess (a crash during any one subject's tractography can't take down the whole multi-day orchestrator), skips subjects already completed, deletes each subject's raw diffusion volume and T1w file immediately after its arrays are built, and does not retain the full tractogram in batch mode (~1.2GB/subject × 174 would otherwise add ~200GB on top of the ~226GB of diffusion-volume downloads already budgeted). **Status as of this writing:** running now, ~30 min/subject measured across the first several subjects, ~4.3 days estimated for all 174 sequentially on one 8-core/16GB Mac.
+
+### 9.5 The three research extensions this infrastructure is being built for
+
+None of these are designed yet — named here as the destination this data-acquisition work is aimed at, the same way Case 2/3's design predated their MOTOR implementation:
+
+1. **Contrastive concept-mining on movie-watching's messier signal.** MOTOR's clean blocks mean every representation already converges on the same obvious concepts (§7). Movie-watching's continuous, mixed signal is the right setting to look for genuinely novel concepts in a Case-2-style contrastive setup, not just re-confirm what MOTOR already showed.
+2. **Generative forecasting of future ROI time series.** Already scoped in `case2-3-design-plan.md` §2.4 and partially explored for Case 2 on MOTOR via a frozen linear probe (`results/case2_forecasting_results.json`) — flagged in §8 as unstarted at real scale. Movie-watching's long, continuous timeseries is a structurally better fit for real sequence forecasting than MOTOR's short causal windows.
+3. **Edge-level concept attribution on the structural connectome.** "Which anatomical connections were responsible for a given concept" is the graph-native version of an idea already logged (`docs/interview-prep-neurolens-rag.md` §6.6 names GNNExplainer/PGExplainer specifically for this), waiting on the SC-GNN front-end this pipeline's node correspondence (§9.4) is designed to support.
+
+### 9.6 What's still open
+
+- The 174-subject-cohort-vs-shared-pool decision (§9.2) is unresolved.
+- A GNN front-end architecture, a movie-watching concept taxonomy, the forecasting objective's exact form, and the edge-attribution mechanism each need their own design pass before any of §9.5 is buildable.
+- A motor/movie/structural repo restructuring is planned (`docs/repo-restructuring-plan.md`) but the high-risk migration of existing motor content is deliberately deferred, not scheduled.
 - **The Case 1 vs. Case 3 attribution comparison in §7.2 uses resample 0 for the four §6 pipeline steps that need a concrete model (not the population-level TCAV parts), while §7.2 itself is averaged over all 30** — the two analyses use different amounts of the available population by design (§6's per-claim pipeline needs one concrete representation to run retrieval/stance/verdict against; §7.2 is a standalone population-level check), not an oversight, but worth stating plainly rather than letting the two "30 resamples" claims blur together.
