@@ -33,7 +33,7 @@ fiber orientation estimation (constrained spherical deconvolution, DIPY's CSD mo
   ↓
 whole-brain tractography (probabilistic, seeded from Schaefer-300 ROI boundaries)
   ↓
-per-ROI-pair: raw streamline count, mean streamline length, LiFE-weighted count (see Sec 5)
+per-ROI-pair: raw streamline count, mean streamline length (see Sec 5)
   +
 per-ROI: native-space volume (for volume normalization, computed once, applies to every pair touching that ROI)
   ↓
@@ -70,7 +70,7 @@ Every normalization scheme found in the literature search that doesn't require L
 
 ## 6. Rollout: one subject now, the full 174 later
 
-Two genuinely different steps, not one job at two scales: (1) build and smoke-test the single-subject DIPY pipeline (download → CSD → tractography → the four Sec 5 arrays) on one subject now, while it's cheap to iterate on bugs; (2) once that's validated, loop over all 174 subjects as a long-running batch job. Deliberately sequenced this way rather than writing the full-batch version first — a bug caught on subject 1 costs minutes; the same bug caught on subject 87 of 174 costs however long those 86 subjects took to (redundantly) process.
+Two genuinely different steps, not one job at two scales: (1) build and smoke-test the single-subject DIPY pipeline (download → CSD → tractography → the Sec 5 arrays) on one subject now, while it's cheap to iterate on bugs; (2) once that's validated, loop over all 174 subjects as a long-running batch job. Deliberately sequenced this way rather than writing the full-batch version first — a bug caught on subject 1 costs minutes; the same bug caught on subject 87 of 174 costs however long those 86 subjects took to (redundantly) process.
 
 **Step (1) result, subject 100610 (2026-08-28):** completed end to end. All 300 Schaefer atlas labels survive both the MNI→T1w-acpc nonlinear warp and the resample into native diffusion space (86% overlap with the diffusion brain mask). All three Sec 5 arrays produced and validated (`data/structural/processed/100610/`): `sc_streamline_count.npy` (52,968 nonzero ROI pairs, max 2,934 streamlines), `sc_mean_length.npy`, `roi_volumes.npy`. LiFE (the planned fourth array) was tried at four different scales and dropped entirely — Sec 3. Two real, non-LiFE bugs found and fixed by actually running it, not hypothetically: FSL's warp field needed manual reconstruction as an ANTs vector image (`scripts/warp_atlas_to_native.py`), and `utils.connectivity_matrix`/mean-length computation needed single-node-streamline filtering (`scripts/dti_sc_pipeline.py`). `scripts/run_dti_sc_batch.py` implements step (2): resumable, skips completed subjects, continues past a single subject's failure, deletes each subject's raw diffusion volume + T1w file immediately after its arrays are built (Sec 1's disk discipline), and does not retain the full tractogram (`.trk`) in batch mode — at ~1.2GB/subject that alone would add ~200GB on top of the diffusion-volume downloads.
 
