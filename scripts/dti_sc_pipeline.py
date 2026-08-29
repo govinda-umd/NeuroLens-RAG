@@ -1,6 +1,6 @@
 """Single-subject DTI -> structural connectome pipeline (DIPY-based smoke test).
 
-Produces the four sufficient-statistic arrays designed in
+Produces the sufficient-statistic arrays designed in
 docs/structural/dti-sc-pipeline-plan.md Sec 5, on the Schaefer-300 parcellation
 already warped into this subject's native diffusion space
 (scripts/warp_atlas_to_native.py, run separately -- this script assumes
@@ -109,57 +109,27 @@ def main(work_dir: Path, out_dir: Path, save_streamlines: bool = True) -> None:
         [(atlas == r).sum() * voxel_vol_mm3 for r in range(1, n_rois + 1)], dtype=np.float64
     )
 
-    print(f"[{time.time()-t0:.0f}s] Computing LiFE weights (streamline evaluation)...", flush=True)
-    # LiFE can't fit single-node streamlines (immediate-termination artifacts
-    # from tracking near mask boundaries) -- filter them first.
-    #
-    # On subject 100610, fitting LiFE on the full ~1.2M-streamline tractogram
-    # was silently OOM-killed after 50+ min on this 16GB machine (LiFE's
-    # published use cases top out around 500K streamlines; this project's
-    # whole-brain seed density produces far more). A follow-up attempt at
-    # 200K also died silently (no Python exception, no logged jetsam/OOM
-    # record found) -- the exact safe threshold on this hardware is not
-    # actually pinned down. Set conservatively low rather than re-guessing
-    # upward through more multi-minute trial runs; this step is isolated in
-    # its own subprocess by run_dti_sc_batch.py specifically so a failure
-    # here (silent kill or otherwise) only zeros out one subject's LiFE
-    # array instead of taking down the whole batch. LiFE's own validation
-    # (Pestilli et al. 2014) already relies on random streamline subsets for
-    # cross-validation, so subsampling before fitting is consistent with how
-    # the method is normally used, not a shortcut invented here.
-    LIFE_MAX_STREAMLINES = 50_000
-    lengths = np.array([len(s) for s in streamlines])
-    keep_idx = np.where(lengths >= 2)[0]
-    if len(keep_idx) > LIFE_MAX_STREAMLINES:
-        rng = np.random.default_rng(0)
-        keep_idx = np.sort(rng.choice(keep_idx, size=LIFE_MAX_STREAMLINES, replace=False))
-    keep_set = set(keep_idx.tolist())
-    old_to_new = {old: new for new, old in enumerate(keep_idx)}
-    streamlines_life = [streamlines[i] for i in keep_idx]
-    print(f"  using {len(streamlines_life)}/{len(streamlines)} streamlines for LiFE (filtered + subsampled)", flush=True)
-    try:
-        from dipy.tracking.life import FiberModel
-
-        fiber_model = FiberModel(gtab)
-        fiber_fit = fiber_model.fit(data, streamlines_life, affine=np.eye(4))
-        life_weights = fiber_fit.beta
-        life_matrix = np.zeros((n_rois, n_rois), dtype=np.float64)
-        for (i, j), idxs in grouping.items():
-            if i == 0 or j == 0 or not idxs:
-                continue
-            remapped = [old_to_new[k] for k in idxs if k in keep_set]
-            if remapped:
-                life_matrix[i - 1, j - 1] = float(np.sum(life_weights[remapped]))
-    except Exception as e:
-        print(f"  LiFE fitting failed ({e}); saving zeros as placeholder", flush=True)
-        life_matrix = np.zeros((n_rois, n_rois), dtype=np.float64)
+    # LiFE dropped entirely, not subsampled further: DIPY's FiberModel.fit()
+    # was confirmed SIGKILL'd (exit code 137, no catchable Python exception)
+    # on this 16GB machine at every scale tried -- 1.2M streamlines, a 200K
+    # global-random subsample, and a 45K per-ROI-pair-capped stratified
+    # subsample that guaranteed every connection at least one representative
+    # streamline. Killed within minutes even at 45K with no competing
+    # processes, which rules out streamline count as the actual memory
+    # driver -- more likely HCP's 288-direction gradient table (far more
+    # than LiFE's typical clinical-scan validation scale) blows up the
+    # per-voxel signal-prediction design matrix regardless of how few
+    # streamlines are fit. No further streamline-count-based fix addresses
+    # that. sc_streamline_count.npy and sc_mean_length.npy (Sec 5) don't
+    # depend on LiFE and are unaffected; the chosen normalization scheme
+    # (docs/structural/dti-sc-pipeline-plan.md Sec 5, log10(1+N) on raw
+    # counts, src/neurolens/sc_normalization.py) doesn't need it either.
 
     np.save(out_dir / "sc_streamline_count.npy", count_matrix)
-    np.save(out_dir / "sc_streamline_count_life.npy", life_matrix)
     np.save(out_dir / "sc_mean_length.npy", length_matrix)
     np.save(out_dir / "roi_volumes.npy", roi_volumes)
 
-    print(f"[{time.time()-t0:.0f}s] Saved 4 arrays to {out_dir}", flush=True)
+    print(f"[{time.time()-t0:.0f}s] Saved arrays to {out_dir}", flush=True)
     print(f"  sc_streamline_count: shape={count_matrix.shape}, nonzero={np.count_nonzero(count_matrix)}, max={count_matrix.max()}", flush=True)
     print(f"  Total wall time: {(time.time()-t0)/60:.1f} min", flush=True)
 

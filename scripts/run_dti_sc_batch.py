@@ -4,7 +4,7 @@ DTI+movie+all-7-task subjects (data/hcp_triple_modality_eligible_subjects.json
 
 Per subject: download diffusion + T1w + warp files from S3 -> warp Schaefer-300
 into native diffusion space (scripts/warp_atlas_to_native.py) -> DIPY CSD +
-probabilistic tractography -> the 4 sufficient-statistic arrays
+probabilistic tractography -> the sufficient-statistic arrays
 (scripts/dti_sc_pipeline.py) -> delete the raw diffusion volume and T1w file
 (only the compact arrays are kept; the .trk tractogram is NOT saved in batch
 mode -- at ~1.2GB/subject x 174 that alone would be ~200GB, on top of the
@@ -12,13 +12,19 @@ mode -- at ~1.2GB/subject x 174 that alone would be ~200GB, on top of the
 Sec 1).
 
 Real per-subject cost, measured on subject 100610 (this same pipeline,
-single-subject smoke test, 2026-08-28): ~30 min tractography + ~2 min
-LiFE (subsampled to 200K streamlines, Sec 3 note in dti_sc_pipeline.py) +
-download time. That's a genuinely multi-day job run sequentially on one
-8-core/16GB Mac, not an overnight one -- flagged explicitly here rather than
-silently run against the user's original "loop over them tonight" framing.
+single-subject smoke test, 2026-08-28): ~30 min tractography + download time.
+That's a genuinely multi-day job run sequentially on one 8-core/16GB Mac, not
+an overnight one -- flagged explicitly here rather than silently run against
+the user's original "loop over them tonight" framing.
 
-Resumable: skips any subject whose 4 output arrays already exist. Continues
+LiFE-weighted counts are NOT produced -- DIPY's FiberModel.fit() was
+confirmed SIGKILL'd on this machine at every streamline count tried (1.2M
+down to 45K), ruling out subsampling as a fix (docs/structural/dti-sc-pipeline-plan.md
+Sec 3). Only raw streamline count, mean length, and ROI volumes are stored;
+the chosen normalization (log10(1+N), src/neurolens/sc_normalization.py)
+only needs the raw count.
+
+Resumable: skips any subject whose output arrays already exist. Continues
 past a single subject's failure (logs it, moves on) rather than aborting the
 whole batch.
 
@@ -67,7 +73,6 @@ REQUIRED_S3_FILES = {
 
 OUTPUT_ARRAYS = [
     "sc_streamline_count.npy",
-    "sc_streamline_count_life.npy",
     "sc_mean_length.npy",
     "roi_volumes.npy",
 ]
@@ -82,16 +87,8 @@ def log(msg: str) -> None:
 
 
 def already_done(subject_id: str) -> bool:
-    import numpy as np
-
     out_dir = OUT_ROOT / subject_id
-    if not all((out_dir / f).exists() for f in OUTPUT_ARRAYS):
-        return False
-    # A subject can have all 4 files present but a zeroed-out LiFE array from
-    # a prior silent-kill failure (docs/structural/dti-sc-pipeline-plan.md
-    # Sec 3) -- don't let file-existence alone mark that subject "done".
-    life = np.load(out_dir / "sc_streamline_count_life.npy")
-    return bool(np.any(life != 0))
+    return all((out_dir / f).exists() for f in OUTPUT_ARRAYS)
 
 
 def download_subject(s3, subject_id: str, work_dir: Path) -> None:
@@ -117,12 +114,14 @@ def process_subject(s3, subject_id: str) -> None:
     warp_atlas_to_native(work_dir)
     log(f"{subject_id}: atlas warped, running DIPY pipeline in an isolated subprocess...")
 
-    # Run as a subprocess, not an in-process call: the LiFE fitting step
-    # inside dti_sc_pipeline.py has twice been silently killed by the OS on
-    # this 16GB machine (no catchable Python exception either time -- see
-    # docs/structural/dti-sc-pipeline-plan.md Sec 3). If that happened
-    # in-process, it would kill this entire multi-day, 174-subject batch
-    # orchestrator along with it. A subprocess crash here only fails this
+    # Run as a subprocess, not an in-process call: LiFE fitting was
+    # repeatedly SIGKILL'd by the OS on this 16GB machine before being
+    # dropped entirely (docs/structural/dti-sc-pipeline-plan.md Sec 3). Kept
+    # this architecture even with LiFE gone -- CSD/tractography itself is
+    # the same kind of large, long-running native computation, and an
+    # in-process crash there would just as easily take down this entire
+    # multi-day, 174-subject batch orchestrator. A subprocess crash here
+    # only fails this
     # one subject; the outer loop logs it and moves on.
     out_dir.mkdir(parents=True, exist_ok=True)
     result = subprocess.run(
