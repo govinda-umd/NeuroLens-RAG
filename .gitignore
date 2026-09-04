@@ -36,21 +36,12 @@ htmlcov/
 
 # Raw and processed datasets. data/papers/ and data/processed/ are the
 # CURRENT motor-task locations, not yet migrated to data/motor/... (see
-# docs/repo-restructuring-plan.md Sec 3 -- deliberately deferred). data/movie/
-# and data/structural/ are the new, low-risk skeleton for the planned
-# extensions -- empty except for READMEs until real data lands.
+# docs/repo-restructuring-plan.md Sec 3 -- deliberately deferred). Movie-
+# watching and structural-connectivity data now live in the separate
+# naturalistic-brain-dynamics repo (moved 2026-09-04), not here.
 data/processed/
 data/papers/*
 !data/papers/README.md
-
-data/movie/raw/*
-!data/movie/raw/README.md
-data/movie/processed/
-data/movie/papers/*
-!data/movie/papers/README.md
-
-data/structural/raw/
-data/structural/processed/
 
 data/interim/
 data/external/

@@ -143,9 +143,9 @@ Unanimous on every concept, similarity never below 0.994.
 - **The 100→200 subject scale-up is complete at the data level but never re-validated** under the current 30-resample protocol.
 - **The §3.2 baseline check is Case 1 only.** Whether Case 2/3's contrastive/self-supervised representations similarly fail to beat a flat-MLP baseline (or whether the objective itself is what makes GRU/Transformer's structure matter there) hasn't been tested.
 
-## 9. Beyond MOTOR: extending the research line (2026-08-28)
+## 9. Beyond MOTOR: extending the research line (2026-08-28, moved 2026-09-04)
 
-Everything above was built and validated on one task (MOTOR) and one modality (functional time series). §7.2 and §8 both flag the obvious next question directly: does any of this survive a messier task, and is there a genuinely different modality worth bringing in? This section is that extension, in progress — what's been decided, what's been built and run, and what's still just an idea, kept separate so the two aren't confused.
+Everything above was built and validated on one task (MOTOR) and one modality (functional time series). §7.2 and §8 both flag the obvious next question directly: does any of this survive a messier task, and is there a genuinely different modality worth bringing in? This section is a historical record of that extension work as it happened here — it has since outgrown "extension" status and moved to its own repository, **[naturalistic-brain-dynamics](../../naturalistic-brain-dynamics)**, once it became a genuinely separate line of research (structural connectivity + naturalistic movie-watching dynamics) rather than an add-on to this project's MOTOR-task + RAG-verification system. The content below is left as-is for the historical record; new work on this line happens in that repo, not here.
 
 ### 9.1 Why: extending the 2021 precursor paper's research line
 

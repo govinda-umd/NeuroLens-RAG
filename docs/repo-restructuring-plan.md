@@ -1,5 +1,9 @@
 # Repo Restructuring Plan: Motor / Movie-Watching / Structural Split
 
+**Superseded, 2026-09-04.** This plan proposed a subfolder split *within this repo*. The movie-watching and structural-connectivity work instead moved to its own separate repository, [naturalistic-brain-dynamics](../../naturalistic-brain-dynamics) — a cleaner boundary than any subfolder split could give, since that work had become a genuinely independent line of research rather than an extension of this repo's MOTOR-task + RAG-verification system. This document is kept for the historical record of the intermediate proposal; do not act on it.
+
+---
+
 > Proposal for reorganizing the repo so the motor-task work, the planned movie-watching extension (`docs/movie-watching-dataset-plan.md`), and the planned structural-connectivity extension (`docs/dti-sc-pipeline-plan.md`) each get their own space, instead of everything living in one flat, motor-assuming layout. Written up before executing anything invasive — the migration cost is real and worth seeing in full before committing to it.
 
 ## 1. Why this needs a real plan, not just "move the files"
