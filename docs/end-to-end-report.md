@@ -55,14 +55,14 @@ Before crediting GRU/Transformer's accuracy to learned temporal structure, a mor
 
 The §3.2 check was Case 1 only until now. FlattenMLP and MeanPoolMLP were plugged into Case 2's contrastive loss and Case 3's self-supervised loss as brain backbones, unmodified, across the same 30 resamples:
 
-| Model | Case 2 mean F1 | Case 3 mean F1 |
-|---|---|---|
-| GRU | 0.900 | 0.928 |
-| Transformer | 0.918 | 0.922 |
-| FlattenMLP | *pending final aggregate — see `results/baseline_mlp_case23_bootstrap_30resamples.json`* | *pending* |
-| MeanPoolMLP | *pending* | *pending* |
+| Model | Case 2 mean F1 (95% CI) | vs. GRU / Transformer | Case 3 mean F1 (95% CI) | vs. GRU / Transformer |
+|---|---|---|---|---|
+| GRU | 0.900 | — | 0.928 | — |
+| Transformer | 0.918 | — | 0.922 | — |
+| FlattenMLP | 0.899 [0.865, 0.925] | ties GRU (p=0.887); loses to Transformer (p<0.0001) | 0.892 [0.864, 0.917] | **loses to GRU (p<0.0001)**; loses to Transformer (p<0.0001) |
+| MeanPoolMLP | 0.647 [0.614, 0.682] | loses to both (p<0.0001) | 0.640 [0.591, 0.684] | loses to both (p<0.0001) |
 
-*(Placeholder table — replaced with final numbers once the 30-resample sweep completes; see the companion results file for per-resample data as it lands.)*
+**A genuinely new finding: the "flat MLP ties GRU" result does not generalize across paradigms.** Case 1's and Case 2's flat-MLP baselines both statistically tie GRU (Case 1: p=0.73; Case 2: p=0.887) — recurrence isn't demonstrably buying anything beyond raw aggregation under either supervised objective. But under Case 3's self-supervised objective, FlattenMLP **significantly loses** to GRU (p<0.0001). Recurrence appears to matter specifically when no label drives training directly — a genuinely paradigm-dependent result the Case-1-only version of this check could not have revealed, and the exact reason this extension was worth doing rather than assuming Case 1's finding generalized.
 
 ### 3.4 Temporal perturbation controls (2026-09-12, new): does destroying order at test time collapse an already-trained model?
 
