@@ -1,0 +1,402 @@
+[
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-010-chunk-000",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-009-chunk-001",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 2,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-019-chunk-009",
+    "bm25_rank": 3,
+    "frozen_minilm_rank": 2,
+    "adapted_minilm_rank": 2,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-014-chunk-002",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 5,
+    "adapted_minilm_rank": 4,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-005-chunk-004",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005272-main-page-003-chunk-001",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-page-007-chunk-002",
+    "bm25_rank": 68,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 2,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-page-006-chunk-000",
+    "bm25_rank": 2,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 1,
+    "adapted_minilm_reranked_rank": 1
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-page-006-chunk-004",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-page-004-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "1-s2.0-S1053811913005351-main-page-010-chunk-002",
+    "bm25_rank": 2,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-page-002-chunk-001",
+    "bm25_rank": 11,
+    "frozen_minilm_rank": 8,
+    "adapted_minilm_rank": 12,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-page-005-chunk-001",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-page-014-chunk-001",
+    "bm25_rank": 8,
+    "frozen_minilm_rank": 2,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "PIIS1364661313002167-page-004-chunk-004",
+    "bm25_rank": 87,
+    "frozen_minilm_rank": 27,
+    "adapted_minilm_rank": 8,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 4
+  },
+  {
+    "chunk_id": "bhx179-page-010-chunk-003",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "bhx179-page-007-chunk-002",
+    "bm25_rank": 3,
+    "frozen_minilm_rank": 33,
+    "adapted_minilm_rank": 31,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "bhx179-page-008-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 7,
+    "adapted_minilm_rank": 3,
+    "frozen_minilm_reranked_rank": 1,
+    "adapted_minilm_reranked_rank": 1
+  },
+  {
+    "chunk_id": "bhx179-page-007-chunk-001",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "bhx179-page-004-chunk-003",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-page-032-chunk-001",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-page-035-chunk-001",
+    "bm25_rank": 3,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-page-003-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 4,
+    "adapted_minilm_rank": 2,
+    "frozen_minilm_reranked_rank": 1,
+    "adapted_minilm_reranked_rank": 1
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-page-010-chunk-002",
+    "bm25_rank": 3,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-2024.09.14.613041-whole-body-motor-cortex-page-030-chunk-001",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 50,
+    "adapted_minilm_rank": 25,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-page-003-chunk-002",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-page-018-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 2,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-page-012-chunk-004",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "biorxiv-457002-digit-representations-page-009-chunk-000",
+    "bm25_rank": 101,
+    "frozen_minilm_rank": 6,
+    "adapted_minilm_rank": 3,
+    "frozen_minilm_reranked_rank": 18,
+    "adapted_minilm_reranked_rank": 19
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-000",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-004",
+    "bm25_rank": 2,
+    "frozen_minilm_rank": 3,
+    "adapted_minilm_rank": 3,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-002",
+    "bm25_rank": 101,
+    "frozen_minilm_rank": 304,
+    "adapted_minilm_rank": 308,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "ehrsson-et-al-2003-imagery-of-voluntary-movement-of-fingers-toes-and-tongue-activates-corresponding-body-part-specific-page-003-chunk-005",
+    "bm25_rank": 10,
+    "frozen_minilm_rank": 63,
+    "adapted_minilm_rank": 41,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-page-017-chunk-002",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-page-020-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-page-015-chunk-000",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 1,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "journal.pcbi.1008943-page-011-chunk-002",
+    "bm25_rank": 40,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-009-chunk-001",
+    "bm25_rank": 6,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-012-chunk-005",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "meier-et-al-2008-complex-organization-of-human-primary-motor-cortex-a-high-resolution-fmri-study-page-006-chunk-000",
+    "bm25_rank": 28,
+    "frozen_minilm_rank": 33,
+    "adapted_minilm_rank": 7,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 4
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-011-chunk-002",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-009-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 156,
+    "adapted_minilm_rank": 76,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-010-chunk-005",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-010-chunk-007",
+    "bm25_rank": 1036,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-014-chunk-004",
+    "bm25_rank": 2,
+    "frozen_minilm_rank": 2,
+    "adapted_minilm_rank": 1,
+    "frozen_minilm_reranked_rank": 3,
+    "adapted_minilm_reranked_rank": 3
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-001-chunk-003",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-008-chunk-000",
+    "bm25_rank": 0,
+    "frozen_minilm_rank": 12,
+    "adapted_minilm_rank": 8,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-003-chunk-006",
+    "bm25_rank": 41,
+    "frozen_minilm_rank": 0,
+    "adapted_minilm_rank": 0,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-004-chunk-000",
+    "bm25_rank": 1,
+    "frozen_minilm_rank": 83,
+    "adapted_minilm_rank": 83,
+    "frozen_minilm_reranked_rank": 20,
+    "adapted_minilm_reranked_rank": 20
+  },
+  {
+    "chunk_id": "thomas-yeo-et-al-2011-the-organization-of-the-human-cerebral-cortex-estimated-by-intrinsic-functional-connectivity-page-023-chunk-000",
+    "bm25_rank": 20,
+    "frozen_minilm_rank": 3,
+    "adapted_minilm_rank": 2,
+    "frozen_minilm_reranked_rank": 0,
+    "adapted_minilm_reranked_rank": 0
+  }
+]
