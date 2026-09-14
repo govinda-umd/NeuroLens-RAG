@@ -19,7 +19,9 @@ Full detail, every number, every experiment that produced it: **[docs/end-to-end
 
 ## Contributions
 
-Sole author and developer of this repository: architecture, training pipelines, interpretability mechanism, retrieval and verification system, statistical validation framework, and documentation.
+Sole author and developer: **Srinivas Govinda Surampudi**, Ph.D., Electrical and Computer Engineering, University of Maryland. govinda.surampudi@gmail.com
+
+I designed and implemented the architecture, training pipelines, interpretability mechanism, retrieval and verification system, statistical validation framework, and documentation.
 
 ## Installation and a minimal reproducible check
 
@@ -44,7 +46,7 @@ pytest tests/ -v
 - **Case 2, supervised-contrastive representation learning**: a symmetric multi-positive contrastive objective aligns a brain encoder and a text encoder of the six condition descriptions in a shared embedding space, with no classification head.
 - **Case 3, self-supervised representation learning**: a brain encoder is aligned to its own window's hemodynamic-response vector via a symmetric InfoNCE loss. No class label ever enters training; a linear probe fit after the fact provides the readout needed for accuracy and interpretability testing.
 - **Baseline and control battery**: flat and mean-pooled MLP baselines test whether learned temporal structure matters at all, temporal perturbation controls (shuffle, reverse, circular shift, mean-pool at test time) test whether a trained model actually relies on it, and ROI-network ablation controls test whether a suspected confound survives input-level lesioning. Every headline claim is checked against the simplest alternative explanation before being reported.
-- **Mechanistic interpretability**: four attribution methods (Saliency, Integrated Gradients, exact Shapley, LIME) identify which resting-state network drives a decode, operating at the level of the seven Yeo canonical networks over a Schaefer-300 cortical parcellation. Concept Activation Vectors (CAV/TCAV) test whether a model's decision is causally sensitive to a human-specified concept, with the derivation mechanism standardized across all three paradigms.
+- **Mechanistic interpretability**: four attribution methods (Saliency, Integrated Gradients, exact Shapley, LIME) identify which resting-state network drives a decode, operating at the level of the seven Yeo canonical networks over a Schaefer-300 cortical parcellation. Concept Activation Vectors (CAV/TCAV) test whether a model's output is locally sensitive to a human-specified concept direction, with the derivation mechanism standardized across all three paradigms.
 - **Literature-grounded verification, two versions**: a RAG system retrieves relevant neuroscience literature and converts extracted claims into concept tests against each model's own representation. The evidentiary verdict is computed deterministically rather than left to an LLM's free judgment. Two real bugs were found by actually running the full pipeline; the design history is documented in full.
 - **Population-level statistics**: every comparative claim is backed by repeated subject-level resampling and paired non-parametric tests, following Misra & Pessoa (2025, *eLife*).
 

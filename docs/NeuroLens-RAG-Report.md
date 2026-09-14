@@ -31,7 +31,7 @@ NeuroLens-RAG decodes six MOTOR-task conditions (baseline, left/right hand, left
 All three paradigms were implemented with matched GRU and Transformer backbones, enabling a controlled architecture comparison under each objective. On top of the trained models, we built:
 
 - a four-method attribution suite (two gradient-based, two perturbation-based) identifying which resting-state network drives a given decode;
-- a Concept Activation Vector (CAV/TCAV; Kim et al., 2018) procedure that tests whether a model's decision is causally sensitive to a human-specified concept direction in its own representation;
+- a Concept Activation Vector (CAV/TCAV; Kim et al., 2018) procedure that tests whether a model's output is locally sensitive to a human-specified concept direction in its own representation;
 - a retrieval-augmented generation system over a curated corpus of neuroscience papers, coupled to a local instruction-tuned language model; and
 - a verification loop in which literature-derived claims, extracted automatically from retrieved text, are converted into concept directions and tested against each model's representation. This turns retrieval from a citation lookup into a falsifiable audit of the model.
 
