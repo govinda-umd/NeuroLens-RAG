@@ -2,6 +2,8 @@
 
 *A representation-learning and interpretability framework for human fMRI decoding, validated against retrieved neuroscience literature.*
 
+> **This is a paper-style narrative write-up, kept for readability. Some numbers here are superseded** (e.g. the architecture-comparison claim below no longer holds at population scale — GRU wins under the self-supervised objective specifically). **For the current, authoritative results and every experiment that produced them, see [`docs/end-to-end-report.md`](end-to-end-report.md).**
+
 ---
 
 ## Abstract
